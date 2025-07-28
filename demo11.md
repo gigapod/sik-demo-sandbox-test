@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Demo 11
+title: SparkFun Inventor's Kit
 permalink: /demo11/
 custom_color: red
 custom_font: thicccboi
@@ -32,24 +32,24 @@ hero:
 
 # Services Section
 services:
-  title: What We Do?
-  subtitle: The service we offer is specifically designed to meet your needs.
+  title: The SparkFun Inventor's Kit
+  subtitle: Learn electronics, micropython programming and sensors while building an automated robot!
   service_items:
-    - icon: uil uil-phone-volume
-      title: 24/7 Support
-      text: Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.
+    - icon: uil uil-book-open
+      title: Get to Know the SIK
+      text: From an powerful SparkFun RedBoard IOT, to a breadboard, the SIK has all the parts needed for 16 projects!
       link: "#"
-    - icon: uil uil-shield-exclamation
-      title: Secure Payments
-      text: Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.
+    - icon: uil uil-ticket
+      title: Start Today
+      text:  With no tedious software installs or setup, the SIK delivers a frictionless eploration environment.
       link: "#"
-    - icon: uil uil-laptop-cloud
-      title: Daily Updates
-      text: Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.
+    - icon: uil uil-sliders-v-alt
+      title: Interactive Development
+      text: The SIK delviers hands-on project construction and interactive, notebook-based MicroPython development.
       link: "#"
-    - icon: uil uil-chart-line
-      title: Market Research
-      text: Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.
+    - icon: uil uil-robot
+      title: Innovative Projects
+      text: With Interactive and on-line development, the SIK includes 16 electronics projects that leverage MicroPython.
       link: "#"
 
 # Why Choose Us Section
