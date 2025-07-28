@@ -1,0 +1,66 @@
+    <div class="row align-items-center mb-10">
+      <div class="col-md-8 col-lg-9 col-xl-8 col-xxl-7">
+        <h2 class="display-2 mb-0">{{ page.projects.title }}</h2>
+      </div>
+      <!--/column -->
+      <div class="col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
+        <a href="{{ page.projects.button.url }}" class="btn btn-lg btn-primary btn-icon btn-icon-end mb-0">{{ page.projects.button.text }} <i class="uil uil-arrow-up-right"></i></a>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    
+    {% assign featured_projects = site.projects | where: "category", "Augmented Reality" | reverse  %}
+    {% for project in featured_projects | limit: 2 %}
+    {% assign colors = "violet,blue" | split: "," %}
+{% assign color_index = forloop.index0 | modulo: 2 %}
+{% assign current_color = colors[color_index] %}
+<div class="card bg-soft-{{ current_color }} mb-10">
+      <div class="card-body p-12 {% if forloop.last %}pb-0{% endif %}">
+        <div class="row {% if forloop.first %}gy-10 align-items-center{% endif %}">
+          <div class="col-lg-4 {% if forloop.first %}order-lg-2 offset-lg-1{% endif %} {% if forloop.last %}pb-12 align-self-center{% endif %}">
+            <div class="post-category fs-15 mb-3 text-{{ project.color | default: 'primary' }}">{{ project.category }}</div>
+            <h3 class="h1 post-title mb-3">{{ project.title }}</h3>
+            <p>{{ project.description | default: project.excerpt }}</p>
+            <a href="{{ project.url | relative_url }}" class="btn btn-sm btn-{{ project.color | default: 'primary' }} btn-icon btn-icon-end mb-0">See Project <i class="uil uil-arrow-up-right"></i></a>
+          </div>
+          <!-- /column -->
+          <div class="col-lg-7 {% if forloop.first %}{% else %}offset-lg-1 align-self-end{% endif %}">
+            <figure><img class="img-fluid" src="{{ project.thumbnail | default: project.hero_image | relative_url }}" srcset="{{ project.thumbnail | default: project.hero_image | relative_url }} 2x" alt="{{ project.title }}" /></figure>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/.card-body -->
+    </div>
+    <!--/.card -->
+    {% endfor %}
+    
+    <div class="row gx-md-8 gx-xl-10">
+      {% assign secondary_projects = site.projects | sort: 'date' | reverse | offset: 2  %}
+      {% for project in secondary_projects | limit: 2 %}
+      <div class="col-lg-6">
+        {% assign colors = "leaf,pink" | split: "," %}
+{% assign color_index = forloop.index0 | modulo: 2 %}
+{% assign current_color = colors[color_index] %}
+<div class="card bg-soft-{{ current_color }} {% unless forloop.last %}mb-10{% endunless %}">
+          <div class="card-body p-12 pb-0">
+            <div class="post-category fs-15 mb-3 text-{{ project.color | default: 'primary' }}">{{ project.category }}</div>
+            <h3 class="h1 post-title mb-3">{{ project.title }}</h3>
+            <p>{{ project.description | default: project.excerpt }}</p>
+            <a href="{{ project.url | relative_url }}" class="btn btn-sm btn-{{ project.color | default: 'primary' }} btn-icon btn-icon-end mb-10">See Project <i class="uil uil-arrow-up-right"></i></a>
+          </div>
+          <!--/.card-body -->
+          <img class="card-img-bottom" src="{{ project.thumbnail | default: project.hero_image | relative_url }}" srcset="{{ project.thumbnail | default: project.hero_image | relative_url }} 2x" alt="{{ project.title }}" />
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /column -->
+      {% endfor %}
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

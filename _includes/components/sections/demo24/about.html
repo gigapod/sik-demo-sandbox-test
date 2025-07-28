@@ -1,0 +1,55 @@
+{% if page.about.enable %}
+  <section class="wrapper bg-gray">
+    <div class="container py-14 py-md-16">
+      <div class="row gx-md-8 gx-xl-12 gy-6 align-items-center">
+        <div class="col-md-8 col-lg-6 order-lg-2 mx-auto">
+          <div class="img-mask mask-2">
+            <img src="{{ page.about.image | relative_url }}" alt="" />
+          </div>
+        </div>
+        <!--/column -->
+        <div class="col-lg-6">
+          <h2 class="display-5 mb-3">{{ page.about.title }}</h2>
+          <p class="lead fs-lg">{{ page.about.subtitle }}</p>
+          <p>{{ page.about.text }}</p>
+          <p>{{ page.about.text2 }}</p>
+          <a href="{{ page.about.button.url }}" class="btn btn-primary rounded-pill mt-2">{{ page.about.button.label }}</a>
+        </div>
+        <!--/column -->
+      </div>
+      <!-- /.row -->
+      <div class="row gx-md-8 gx-xl-12 mt-10 mt-md-13">
+        <div class="col-lg-4">
+          <h2 class="display-5 mb-3">{{ page.about.process.title }}</h2>
+          <p>{{ page.about.process.subtitle }}</p>
+        </div>
+        <!-- /column -->
+        <div class="col-lg-8">
+          <div class="row gy-6 gx-md-8 gx-xl-12">
+            {% for step in page.about.process.steps %}
+            <div class="col-md-6">
+              <div class="d-flex flex-row">
+                <div>
+                  <span class="icon btn btn-circle btn-primary pe-none me-4">
+                    <span class="number fs-18">{{ step.number }}</span>
+                  </span>
+                </div>
+                <div>
+                  <h4 class="mb-1">{{ step.title }}</h4>
+                  <p class="mb-0">{{ step.text }}</p>
+                </div>
+              </div>
+            </div>
+            <!--/column -->
+            {% endfor %}
+          </div>
+          <!--/.row -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  <!-- /.wrapper -->
+</section>
+{% endif %}

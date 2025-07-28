@@ -1,0 +1,31 @@
+<section class="wrapper image-wrapper bg-full bg-image bg-overlay {{ page.download.bg_overlay }}" data-image-src="{{ page.download.bg_image }}">
+  <div class="overflow-hidden" style="z-index:1;">
+    <div class="divider divider-alt text-light mx-n2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><g fill="currentColor"><polygon points="1440 100 0 15 0 0 1440 0 1440 100"/></g></svg>
+    </div>
+  </div>
+  <!-- /.overflow-hidden -->
+  <div class="container pt-10 pt-lg-10 pt-md-13 pb-8 pb-md-10 text-center text-lg-start">
+    <div class="row gx-0 gy-10">
+      <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 col-xl-5 position-relative">
+        {% for doodle in page.download.doodles %}
+        <img src="{{ doodle.image }}" class="{{ doodle.class }} position-absolute d-none d-lg-block" data-delay="1800" style="{{ doodle.style }}" alt="">
+        {% endfor %}
+        <h2 class="display-3 mb-4">{{ page.download.title }}</h2>
+        <p class="lead fs-24 lh-sm mb-7">{{ page.download.subtitle }}</p>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+          {% for button in page.download.store_buttons %}
+          <span><a href="{{ button.url }}" class="{% if forloop.first %}me-2{% endif %}"><img src="{{ button.image }}" class="h-11 rounded-xl" alt=""></a></span>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-6 ms-auto mt-lg-n15 mt-xl-n20">
+        <figure><img src="{{ page.download.device_image }}" srcset="{{ page.download.device_image2x }} 2x" alt=""></figure>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

@@ -1,0 +1,173 @@
+{% comment %}
+  Footer Layout Component
+  Supports multiple variations and styles
+  
+  Parameters:
+  - style: Footer style variation (default, centered, three-column, three-column-alt, four-column, six-column, seven-column, newsletter-specialized)
+  - bg_color: Background color class (bg-light, bg-dark, bg-navy, bg-soft-primary, etc.)
+  - text_color: Text color class (empty for dark text, text-inverse for light text)
+  - container_padding: Custom padding classes for the container
+  - cta: Whether to include a CTA section before footer widgets
+  - cta_title: Title for the CTA section
+  - cta_text: Text for the CTA section
+  - cta_button_text: Text for the CTA button
+  - cta_button_url: URL for the CTA button 
+  - cta_overlay_image: Optional overlay image for CTA section (used in style "centered-overlay")
+  - newsletter: Include newsletter form (specifically for style "default")
+{% endcomment %}
+
+{% assign footer_style = include.style | default: site.data.theme.footer.style | default: "default" %}
+{% assign bg_color = include.bg_color | default: site.data.theme.footer.bg_color | default: "bg-light" %}
+{% assign text_color = include.text_color | default: site.data.theme.footer.text_color | default: "" %}
+{% assign container_padding = include.container_padding | default: site.data.theme.footer.container_padding | default: "py-13 py-md-15" %}
+
+{% comment %}Determine text color based on background{% endcomment %}
+{% assign light_text = text_color contains "inverse" %}
+{% if bg_color contains "bg-white" or bg_color contains "bg-light" or bg_color contains "bg-soft-primary" %}
+  {% assign text_color = "text-dark" %}
+  {% assign light_text = false %}
+  {% assign link_class = site.data.footer.link_class %}
+{% endif %}
+
+{% assign newsletter = include.newsletter | default: true %}
+
+{% comment %}Handle CTA visibility and data based on footer style{% endcomment %}
+{% if footer_style == "centered" %}
+  {% if include.show_cta != nil %}
+    {% assign show_cta = include.show_cta %}
+  {% else %}
+    {% assign show_cta = site.data.footer.centered.cta.enabled %}
+  {% endif %}
+  {% assign cta_data = site.data.footer.centered.cta %}
+{% else %}
+  {% if include.cta != nil %}
+    {% assign show_cta = include.cta %}
+  {% else %}
+    {% assign show_cta = site.data.footer.cta.enabled %}
+  {% endif %}
+  {% assign cta_data = site.data.footer.cta %}
+{% endif %}
+
+
+{% assign widget_title_class = include.widget_title_class | default: site.data.theme.footer.widget_title_class | default: "text-dark" %}
+
+<footer class="{{ bg_color }} {{ text_color }}">
+  {% if footer_style == "centered-overlay" and show_cta %}
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-11 col-xxl-10 mx-auto">
+          <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-400 mt-n50p mb-n5" data-image-src="{{ include.cta_overlay_image | default: '/assets/img/photos/bg3.webp' | relative_url }}">
+            <div class="card-body p-6 p-md-11 d-lg-flex flex-row align-items-lg-center justify-content-md-between text-center text-lg-start">
+              <h3 class="display-6 mb-6 mb-lg-0 pe-lg-15 pe-xxl-18 text-white">{{ include.cta_title | default: site.data.footer.centered_overlay.cta_title }}</h3>
+              <a href="{{ include.cta_button_url | default: site.data.footer.centered_overlay.cta_button_url | default: '#' }}" class="btn btn-white rounded-pill mb-0 text-nowrap">{{ include.cta_button_text | default: site.data.footer.centered_overlay.cta_button_text | default: 'Join Us' }}</a>
+            </div>
+            <!--/.card-body -->
+          </div>
+          <!--/.card -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+  {% endif %}
+  
+  {% assign cta_title = include.cta_title | default: cta_data.title %}
+  {% assign cta_button_text = include.cta_button_text | default: cta_data.button_text %}
+  {% assign cta_button_url = include.cta_button_url | default: cta_data.button_url %}
+  
+    {% case footer_style %}
+  {% when "centered" %}
+    {% include components/footer/partials/footer-centered.html 
+      lightText=light_text
+      btnClassList=include.button_class
+      linkClass=link_class
+      show_cta=show_cta
+      cta_data=cta_data
+      cta_title=include.cta_title
+      cta_text=include.cta_text
+      cta_description=include.cta_description
+      cta_button_text=include.cta_button_text
+      cta_button_url=include.cta_button_url
+      cta_image=include.cta_image
+    %}
+  {% when "centered-overlay" %}
+    {% include components/footer/partials/footer-centered.html 
+      lightText=light_text
+      btnClassList=include.button_class
+      linkClass=link_class
+    %}
+    {% when "three-column" %}
+    <div class="container {{ container_padding }}">
+      {% if include.newsletter_cta %}
+        {% include components/footer/partials/footer-newsletter-cta.html 
+          newsletter_bg_image=include.newsletter_bg_image
+          newsletter_title=include.newsletter_title
+          newsletter_description=include.newsletter_description
+          newsletter_button_text=include.newsletter_button_text
+        %}
+      {% endif %}
+      {% include components/footer/partials/footer-three-column.html 
+        lightText=light_text
+        btnClassList=include.button_class
+        linkClass=link_class
+      %}
+    </div>
+  {% when "three-column-alt" %}
+  <div class="container {{ container_padding }}">
+    {% include components/footer/partials/footer-three-column-alt.html 
+      lightText=light_text
+      btnClassList=include.button_class
+      linkClass=link_class
+    %}
+    </div>
+  {% when "four-column" %}
+    {% include components/footer/partials/footer-four-column.html 
+      lightText=light_text
+      btnClassList=include.button_class
+      linkClass=link_class
+    %}
+  {% when "minimal" %}
+  <div class="container {{ container_padding }}">
+    {% include components/footer/partials/footer-minimal.html
+      lightText=light_text
+      linkClass=link_class
+    %}
+  </div>
+  {% when "minimal-alt" %}
+ 
+  {% include components/footer/partials/footer-minimal-alt.html
+    text_color=text_color
+    bg_color=bg_color
+    container_padding=container_padding
+  %}
+
+  {% when "blog" %}
+    {% include components/footer/partials/footer-blog.html
+      lightText=light_text
+      btnClassList=include.button_class
+      linkClass=link_class
+    %}
+  {% when "basic" %}
+    {% include components/footer/partials/footer-basic.html
+      lightText=light_text
+      linkClass=link_class
+    %}
+  {% else %}
+  <div class="container {{ container_padding }}">
+    {% if show_cta %}
+    <div class="d-lg-flex flex-row align-items-lg-center">
+      <h3 class="display-4 mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25 {% if light_text %}text-white{% endif %}">{{ cta_title }}</h3>
+      <a href="{{ cta_button_url }}" class="btn btn-primary rounded-pill mb-0 text-nowrap">{{ cta_button_text }}</a>
+    </div>
+    <hr class="mt-11 mb-12" />
+  {% endif %}
+    {% include components/footer/partials/footer-default.html 
+      lightText=light_text
+      btnClassList=include.button_class
+      newsletter=newsletter
+      linkClass=link_class
+    %}
+  </div>
+{% endcase %}  
+  <!-- /.container -->
+</footer>

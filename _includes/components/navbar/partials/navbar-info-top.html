@@ -1,0 +1,25 @@
+  {% assign bg_class = include.bg_class | default: "bg-primary" %}
+  {% assign text_class = include.text_class | default: "text-white" %}
+  {% assign font_class = include.font_class | default: "fw-bold fs-15" %}
+  {% assign icon_class = include.icon_class | default: "text-white fs-22" %}
+  {% assign link_class = include.link_class | default: "link-white hover" %}
+  {% assign margin_class = include.margin_class | default: "mb-2" %}
+  {% assign container_class = include.container_class | default: "py-2" %}
+
+  <div class="{{ bg_class }} {{ text_class }} {{ font_class }} {{ margin_class }}">
+    <div class="container {{ container_class }} d-md-flex flex-md-row">
+      <div class="d-flex flex-row align-items-center">
+        <div class="icon {{ icon_class }} mt-1 me-2"> <i class="uil uil-location-pin-alt"></i></div>
+        <address class="mb-0">{{ site.data.theme.address | default: 'Moonshine St. 14/05 Light City' }}</address>
+      </div>
+      <div class="d-flex flex-row align-items-center me-6 ms-auto">
+        <div class="icon {{ icon_class }} mt-1 me-2"> <i class="uil uil-phone-volume"></i></div>
+        <p class="mb-0">{{ site.data.theme.phone_number | default: '00 (123) 456 78 90' }}</p>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <div class="icon {{ icon_class }} mt-1 me-2"> <i class="uil uil-message"></i></div>
+        <p class="mb-0"><a href="mailto:{{ site.data.contact.email | default: 'sandbox@email.com' }}" class="{{ link_class }}">{{ site.data.contact.email | default: 'sandbox@email.com' }}</a></p>
+      </div>
+    </div>
+  </div>
+  

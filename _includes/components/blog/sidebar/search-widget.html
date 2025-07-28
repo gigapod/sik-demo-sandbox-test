@@ -1,0 +1,9 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">{{ include.widget.title | default: "Search" }}</h4>
+  <form class="search-form" action="/search.html" method="get">
+    <div class="form-floating mb-0">
+      <input id="search-form" type="text" class="form-control" placeholder="Search" name="query">
+      <label for="search-form">Search</label>
+    </div>
+  </form>
+</div>

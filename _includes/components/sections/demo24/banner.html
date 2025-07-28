@@ -1,0 +1,8 @@
+{% if page.banner.enable %}
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ page.banner.background | relative_url }}">
+  <div class="container py-16 py-md-19 text-center">
+    <h2 class="display-1 text-white mb-0">{{ page.banner.text }}</h2>
+  </div>
+  <!-- /.container -->
+</section>
+{% endif %}

@@ -1,0 +1,42 @@
+<section class="wrapper bg-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-10 col-lg-8 col-xl-9 col-xxl-8 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.pricing.title_tag }}</h2>
+        <h3 class="display-3 ls-sm mb-10 px-xl-15">{{ page.pricing.title }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="pricing-wrapper mb-10 mb-md-14">
+      <div class="row gx-0 gy-6">
+        {% for plan in page.pricing.plans %}
+        <div class="col-md-6 col-lg-3">
+          <div class="pricing card {% if plan.featured %}bg-gray{% else %}shadow-none{% endif %}">
+            <div class="card-body">
+              <h4 class="card-title ls-sm">{{ plan.name }}</h4>
+              <div class="prices text-dark">
+                <div class="price justify-content-start"><span class="price-currency">$</span><span class="price-value">{{ plan.price }}</span> <span class="price-duration">{{ plan.duration }}</span></div>
+              </div>
+              <!--/.prices -->
+              <ul class="icon-list bullet-green mt-7 mb-8">
+                {% for feature in plan.features %}
+                <li><i class="uil {% if feature.included %}uil-check{% else %}uil-times text-red{% endif %}"></i><span>{{ feature.text }}</span></li>
+                {% endfor %}
+              </ul>
+              <a href="{{ plan.button_url }}" class="btn {% if plan.featured %}btn-primary{% else %}btn-soft-primary{% endif %} rounded">{{ plan.button_text }}</a>
+            </div>
+            <!--/.card-body -->
+          </div>
+          <!--/.pricing -->
+        </div>
+        <!--/column -->
+        {% endfor %}
+      </div>
+      <!--/.row -->
+    </div>
+    <!--/.pricing-wrapper -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

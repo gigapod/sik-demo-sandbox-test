@@ -1,0 +1,22 @@
+
+    {% assign bg_class = include.bg_class | default: "bg-primary" %}
+    {% assign text_class = include.text_class | default: "text-white" %}
+    {% assign badge_bg = include.badge_bg | default: "bg-white" %}
+    {% assign badge_text = include.badge_text | default: "text-primary" %}
+    {% assign alert_type = include.alert_type | default: site.data.theme.alert.type %}
+    {% assign alert_text = include.alert_text | default: site.data.theme.alert.text %}
+    {% assign link_text = include.link_text | default: site.data.theme.alert.link_text %}
+    {% assign link_url = include.link_url | default: site.data.theme.alert.link_url %}
+    {% assign link_class = include.link_class | default: "alert-link link-white hover" %}
+
+    <div class="alert {{ bg_class }} {{ text_class }} alert-dismissible fade show rounded-0 mb-1 text-lg-center" role="alert">
+        <div class="container">
+            <div class="alert-inner d-flex justify-content-center align-items-center p-0">
+                <span class="badge badge-lg {{ badge_bg }} {{ badge_text }} text-uppercase rounded me-2">{{ alert_type }}</span>
+                {{ alert_text }}
+                <a href="{{ link_url }}" class="{{ link_class }} ms-1">{{ link_text }}</a>!
+            </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <!-- /.alert -->

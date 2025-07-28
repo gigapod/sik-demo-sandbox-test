@@ -1,0 +1,47 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+
+<div class="row gx-md-8 gy-10 align-items-center">
+  <div class="col-lg-6 offset-lg-1 order-lg-2 position-relative">
+    <figure class="rounded"><img class="img-fluid" src="{{ page.what_makes_different.image }}" srcset="{{ page.what_makes_different.image2x }} 2x" alt="" /></figure>
+    <div class="card shadow-lg position-absolute d-none d-md-block" style="top: 15%; left: -7%">
+      <div class="card-body py-4 px-5">
+        <div class="d-flex flex-row align-items-center">
+          <div>
+            <img src="{{ page.what_makes_different.card1.icon }}" class="svg-inject icon-svg icon-svg-sm solid-duo text-grape-fuchsia me-3" alt="" />
+          </div>
+          <div>
+            <h3 class="fs-25 counter mb-0 text-nowrap">{{ page.what_makes_different.card1.count }}</h3>
+            <p class="fs-16 lh-sm mb-0 text-nowrap">{{ page.what_makes_different.card1.text }}</p>
+          </div>
+        </div>
+      </div>
+      <!--/.card-body -->
+    </div>
+    <!--/.card -->
+    <div class="card shadow-lg position-absolute text-center d-none d-md-block" style="bottom: 10%; left: -10%;">
+      <div class="card-body p-6">
+        <div class="progressbar semi-circle fuchsia mb-3" data-value="{{ page.what_makes_different.card2.value }}"></div>
+        <h4 class="mb-0">{{ page.what_makes_different.card2.text }}</h4>
+      </div>
+      <!--/.card-body -->
+    </div>
+    <!--/.card -->
+  </div>
+  <!--/column -->
+  <div class="col-lg-5">
+    <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">{{ page.what_makes_different.title_tag }}</h2>
+    <h3 class="display-4 mb-4 me-lg-n5">{{ page.what_makes_different.title }}</h3>
+    <p class="mb-6">{{ page.what_makes_different.text }}</p>
+    <ul class="icon-list bullet-bg bullet-soft-primary">
+      {% for feature in page.what_makes_different.features %}
+      <li><i class="uil uil-check"></i>{{ feature.text }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->
+  </div>
+</section>
+<!-- /section -->

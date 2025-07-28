@@ -1,0 +1,242 @@
+--- 
+layout: doc
+title: Blocks - Clients 
+description: Copy any custom block snippet below and paste it on your page to build your website easily.
+---
+   
+<section id="snippet-1" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <p class="text-center mb-8">Trusted by over 2K+ clients across the world</p>
+    <div class="swiper-container clients mb-0" data-margin="30" data-dots="false" data-loop="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-speed="5000" data-items-xxl="7" data-items-xl="6" data-items-lg="5" data-items-md="4" data-items-xs="2">
+      <div class="swiper">
+        <div class="swiper-wrapper ticker">
+          {% for client in site.data.clients.clients %}
+          <div class="swiper-slide px-5">
+            {% if client.url and client.url != "#" %}
+            <a href="{{ client.url }}">
+              <img src="{{ client.image }}" alt="{{ client.name }}" />
+            </a>
+            {% else %}
+            <img src="{{ client.image }}" alt="{{ client.name }}" />
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        <!--/.swiper-wrapper -->
+      </div>
+      <!-- /.swiper -->
+    </div>
+    <!-- /.swiper-container -->
+  </div>
+  <!-- /.container -->
+  
+  <!-- HTML Section -->
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-snippet-1">View example's code</a>
+      </div>
+      <div id="collapse-snippet-1" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html1">Copy</button>
+            <div id="html1">
+              {% highlight html %}
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16">
+    <p class="text-center mb-8">Trusted by over 2K+ clients across the world</p>
+    <div class="swiper-container clients mb-0" data-margin="30" data-dots="false" data-loop="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-speed="5000" data-items-xxl="7" data-items-xl="6" data-items-lg="5" data-items-md="4" data-items-xs="2">
+      <div class="swiper">
+        <div class="swiper-wrapper ticker">
+          {% raw %}{% for client in site.data.clients.clients %}
+          <div class="swiper-slide px-5">
+            {% if client.url and client.url != "#" %}
+            <a href="{{ client.url }}">
+              <img src="{{ client.image }}" alt="{{ client.name }}" />
+            </a>
+            {% else %}
+            <img src="{{ client.image }}" alt="{{ client.name }}" />
+            {% endif %}
+          </div>
+          {% endfor %}{% endraw %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Snippet 1 code remains as provided in previous response -->
+
+<section id="snippet-2" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+      <div class="col-lg-4 mt-lg-2">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Our Clients</h2>
+        <h3 class="display-4 mb-3 pe-xxl-5">Trusted by over 300+ clients</h3>
+        <p class="lead fs-lg mb-0 pe-xxl-5">We bring solutions to make life easier for our customers.</p>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-8">
+        <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
+          {% for client in site.data.clients.clients %}
+          <div class="col">
+            <figure class="px-3 px-md-0 px-xxl-2">
+              {% if client.url and client.url != "#" %}
+              <a href="{{ client.url }}">
+                <img src="{{ client.image }}" alt="{{ client.name }}" />
+              </a>
+              {% else %}
+              <img src="{{ client.image }}" alt="{{ client.name }}" />
+              {% endif %}
+            </figure>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  
+  <!-- HTML Section -->
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-snippet-2">View example's code</a>
+      </div>
+      <div id="collapse-snippet-2" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html2">Copy</button>
+            <div id="html2">
+              {% highlight html %}
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+      <div class="col-lg-4 mt-lg-2">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Our Clients</h2>
+        <h3 class="display-4 mb-3 pe-xxl-5">Trusted by over 300+ clients</h3>
+        <p class="lead fs-lg mb-0 pe-xxl-5">We bring solutions to make life easier for our customers.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
+          {% raw %}{% for client in site.data.clients.clients %}
+          <div class="col">
+            <figure class="px-3 px-md-0 px-xxl-2">
+              {% if client.url and client.url != "#" %}
+              <a href="{{ client.url }}">
+                <img src="{{ client.image }}" alt="{{ client.name }}" />
+              </a>
+              {% else %}
+              <img src="{{ client.image }}" alt="{{ client.name }}" />
+              {% endif %}
+            </figure>
+          </div>
+          {% endfor %}{% endraw %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="snippet-3" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-4">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Our Clients</h2>
+        <h3 class="display-4 mb-3">Trusted by over 300+ clients</h3>
+        <p class="lead fs-lg mb-0">We bring solutions to make life easier for our customers.</p>
+      </div>
+      <!--/column -->
+      <div class="col-lg-8">
+        <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
+          {% for client in site.data.clients.clients %}
+          <div class="col">
+            <figure class="px-3 px-md-0 px-xxl-2">
+              {% if client.url and client.url != "#" %}
+              <a href="{{ client.url }}">
+                <img src="{{ client.image }}" alt="{{ client.name }}" />
+              </a>
+              {% else %}
+              <img src="{{ client.image }}" alt="{{ client.name }}" />
+              {% endif %}
+            </figure>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+  
+  <!-- HTML Section -->
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-snippet-3">View example's code</a>
+      </div>
+      <div id="collapse-snippet-3" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html3">Copy</button>
+            <div id="html3">
+              {% highlight html %}
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-4">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Our Clients</h2>
+        <h3 class="display-4 mb-3">Trusted by over 300+ clients</h3>
+        <p class="lead fs-lg mb-0">We bring solutions to make life easier for our customers.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
+          {% raw %}{% for client in site.data.clients.clients %}
+          <div class="col">
+            <figure class="px-3 px-md-0 px-xxl-2">
+              {% if client.url and client.url != "#" %}
+              <a href="{{ client.url }}">
+                <img src="{{ client.image }}" alt="{{ client.name }}" />
+              </a>
+              {% else %}
+              <img src="{{ client.image }}" alt="{{ client.name }}" />
+              {% endif %}
+            </figure>
+          </div>
+          {% endfor %}{% endraw %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

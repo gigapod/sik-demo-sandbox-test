@@ -1,0 +1,39 @@
+<section class="wrapper {{ page.testimonials.bg_color }}">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-lg-11 col-xxl-10 mx-auto text-center">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">{{ page.faq.title }}</h2>
+        <h3 class="display-4 mb-10 px-lg-12 px-xl-10 px-xxl-15">{{ page.faq.subtitle }}</h3>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="row">
+      <div class="col-lg-7 mx-auto">
+        <div id="accordion-3" class="accordion-wrapper">
+          {% for question in page.faq.questions %}
+          <div class="card accordion-item shadow-lg">
+            <div class="card-header" id="accordion-heading-3-{{ forloop.index }}">
+              <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-3-{{ forloop.index }}" aria-expanded="false" aria-controls="accordion-collapse-3-{{ forloop.index }}">{{ question.question }}</button>
+            </div>
+            <!-- /.card-header -->
+            <div id="accordion-collapse-3-{{ forloop.index }}" class="collapse" aria-labelledby="accordion-heading-3-{{ forloop.index }}" data-bs-target="#accordion-3">
+              <div class="card-body">
+                <p>{{ question.answer }}</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.collapse -->
+          </div>
+          <!-- /.card -->
+          {% endfor %}
+        </div>
+        <!-- /.accordion-wrapper -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

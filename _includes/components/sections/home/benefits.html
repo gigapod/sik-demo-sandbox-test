@@ -1,0 +1,23 @@
+<div class="row mb-8 text-center">
+  <div class="col-md-11 col-lg-10 col-xl-8 col-xxl-7 mx-auto">
+    <h2 class="display-2 mt-3 mb-3 mb-0 px-lg-10 px-xl-0">{{ page.benefits.title }}</h2>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+<div class="row mb-12 mb-md-14">
+  <div class="col-lg-10 col-xl-8 col-xxl-7 mx-auto">
+    <div class="row align-items-center counter-wrapper gy-6 text-center">
+      {% for counter in page.benefits.counters %}
+      <div class="col-md-4">
+        <h3 class="counter fs-50 text-primary mb-1">{{ counter.count }}</h3>
+        <p class="fs-18 mb-0">{{ counter.text }}</p>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->

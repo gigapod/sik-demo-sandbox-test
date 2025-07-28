@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+    %}
+  </header>
+  <!-- /header -->
+{% include components/header/header-project-detail.html
+   bg_class="bg-light" 
+   container_class="pt-10 pb-9 pt-md-14 pb-md-11"
+   center=true 
+%}
+
+<section class="wrapper bg-light wrapper-border">
+  <div class="container pb-14 pb-md-16">
+    <article>
+      <div class="post-slider mb-8 mb-md-12">
+        <div class="swiper-container dots-over" data-margin="5" data-dots="true" data-nav="true" data-autoheight="true">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for slide in page.top_slider %}
+              <div class="swiper-slide rounded">
+                <img src="{{ slide.image | relative_url }}" alt="{{ slide.title | default: page.title }}" />
+                {% if slide.title %}
+                <div class="caption-wrapper p-12">
+                  <div class="caption bg-white rounded px-4 py-3 ms-auto mt-auto animate__animated animate__slideInDown animate__delay-1s">
+                    <h5 class="mb-0">{{ slide.title }}</h5>
+                  </div>
+                  <!--/.caption -->
+                </div>
+                <!--/.caption-wrapper -->
+                {% endif %}
+              </div>
+              <!--/.swiper-slide -->
+              {% endfor %}
+            </div>
+            <!--/.swiper-wrapper -->
+          </div>
+          <!-- /.swiper -->
+        </div>
+        <!-- /.swiper-container -->
+      </div>
+      <!-- /.post-slider -->
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <h2 class="display-6 mb-4">{{ page.about_title }}</h2>
+          <div class="row gx-0">
+            <div class="col-md-9 text-justify">
+              {{ content }}
+            </div>
+            <!--/column -->
+            <div class="col-md-2 ms-auto">
+              <ul class="list-unstyled">
+                {% if page.date %}
+                <li>
+                  <h5 class="mb-1">Date</h5>
+                  <p>{{ page.date | date: "%d %b %Y" }}</p>
+                </li>
+                {% endif %}
+                {% if page.client_name %}
+                <li>
+                  <h5 class="mb-1">Client Name</h5>
+                  <p>{{ page.client_name }}</p>
+                </li>
+                {% endif %}
+              </ul>
+              {% if page.project_url %}
+              <a href="{{ page.project_url }}" class="more hover">See Project</a>
+              {% endif %}
+            </div>
+            <!--/column -->
+          </div>
+          <!--/.row -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!--/.row -->
+    </article>
+    <!-- /.project -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+{% include components/project-navigation.html %}
+
+<!-- FOOTER -->
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-dark" 
+  text_color="text-inverse"
+  cta=false
+  newsletter=true
+%}
+<!-- /footer -->
+</div>
+<!-- /.content-wrapper -->

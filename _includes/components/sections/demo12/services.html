@@ -1,0 +1,22 @@
+<section class="wrapper bg-light">
+  <div class="container pt-14 pt-md-17">
+    <div class="row gx-md-5 gy-5 mt-n18 mt-md-n21">
+      {% for item in page.services.services_items %}
+      <div class="col-md-6 col-xl-3">
+        <div class="card shadow-lg card-border-bottom border-soft-{{ item.color }}">
+          <div class="card-body">
+            <img src="{{ item.icon }}" class="svg-inject icon-svg icon-svg-md text-{{ item.color }} mb-3" alt="" />
+            <h4>{{ item.title }}</h4>
+            <p class="mb-2">{{ item.text }}</p>
+            <a href="{{ item.url }}" class="more hover link-{{ item.color }}">Learn More</a>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+    </div>
+    </section>

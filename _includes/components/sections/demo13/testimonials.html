@@ -1,0 +1,37 @@
+<section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-300 text-white" data-image-src="{{ page.testimonials.background }}">
+  <div class="container py-14 py-md-17">
+    <h2 class="display-4 mb-5 text-white text-center">{{ page.testimonials.title }}</h2>
+    <div class="row">
+      <div class="col-md-10 col-lg-8 mx-auto" data-cue="fadeIn">
+        <div class="swiper-container dots-light dots-closer text-center mb-6" data-margin="30" data-dots="true">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for testimonial in site.data.testimonials.testimonials %}
+              <div class="swiper-slide">
+                <blockquote class="border-0 fs-lg mb-0">
+                  <p>"{{ testimonial.quote }}"</p>
+                  <div class="blockquote-details justify-content-center">
+                    <img class="rounded-circle w-12" src="{{ testimonial.avatar_image }}" srcset="{{ testimonial.avatar_image2x }} 2x" alt="" />
+                    <div class="info">
+                      <h6 class="mb-1 text-white">{{ testimonial.name }}</h6> 
+                      <p class="mb-0">{{ testimonial.position }}</p> 
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <!--/.swiper-slide -->
+              {% endfor %}
+            </div>
+            <!--/.swiper-wrapper -->
+          </div>
+          <!--/.swiper -->
+        </div>
+        <!-- /.swiper-container -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

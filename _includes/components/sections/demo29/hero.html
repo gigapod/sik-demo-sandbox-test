@@ -1,0 +1,31 @@
+<section class="wrapper image-wrapper bg-full bg-image bg-overlay {{ page.hero.bg_overlay }}" data-image-src="{{ page.hero.bg_image }}">
+  <div class="container pt-16 pt-md-18 pb-9">
+    <div class="row gx-0 gy-10 align-items-center text-center text-lg-start">
+      <div class="col-lg-6 col-xxl-5 position-relative" data-cues="slideInDown" data-group="page-title" data-delay="700">
+        {% for doodle in page.hero.doodles %}
+        <img src="{{ doodle.image }}" class="{{ doodle.class }} position-absolute d-none d-lg-block" data-cue="fadeIn" data-delay="3000" style="{{ doodle.style }}" alt="">
+        {% endfor %}
+        <h1 class="display-1 fs-50 mb-4">{{ page.hero.title }}</h1>
+        <p class="lead fs-24 lh-sm mb-7">{{ page.hero.subtitle }}</p>
+        <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="1800">
+          {% for button in page.hero.store_buttons %}
+          <span><a href="{{ button.url }}" class="{% if forloop.first %}me-2{% endif %}"><img src="{{ button.image }}" class="h-11 rounded-xl" alt=""></a></span>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-6 ms-auto mb-n20 mb-xxl-n22" data-cues="slideInDown" data-delay="600">
+        <figure><img src="{{ page.hero.device_image }}" srcset="{{ page.hero.device_image2x }} 2x" alt=""></figure>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="overflow-hidden" style="z-index:1;">
+    <div class="divider text-light mx-n2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><g fill="currentColor"><polygon points="1440 100 0 100 0 85 1440 0 1440 100" /></g></svg>
+    </div>
+  </div>
+  <!-- /.overflow-hidden -->
+</section>

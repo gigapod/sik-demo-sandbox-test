@@ -1,0 +1,28 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container pt-14 pt-md-17 pb-md-20">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+      <div class="col-lg-4 text-center text-lg-start">
+        <h3 class="display-4 mb-3 pe-xl-15">{{ page.projects.title }}</h3>
+        <p class="lead fs-lg mb-0 pe-xxl-10">{{ page.projects.subtitle }}</p>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-8 mt-lg-2">
+        <div class="row align-items-center counter-wrapper gy-6 text-center">
+          {% for counter in page.projects.counters %}
+          <div class="col-md-4">
+            <img src="{{ counter.icon }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+            <h3 class="counter">{{ counter.count }}</h3>
+            <p>{{ counter.text }}</p>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,65 @@
+<section class="wrapper bg-light">
+  <div class="container pb-14 pb-md-17">
+    <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <div class="card shadow-lg me-lg-6">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">{{ page.strategy.steps[0].number }}</span></span>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ page.strategy.steps[0].title }}</h4>
+                <p class="mb-0">{{ page.strategy.steps[0].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card shadow-lg ms-lg-13 mt-6">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">{{ page.strategy.steps[1].number }}</span></span>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ page.strategy.steps[1].title }}</h4>
+                <p class="mb-0">{{ page.strategy.steps[1].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card shadow-lg mx-lg-6 mt-6">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">{{ page.strategy.steps[2].number }}</span></span>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ page.strategy.steps[2].title }}</h4>
+                <p class="mb-0">{{ page.strategy.steps[2].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h2 class="fs-16 text-uppercase text-primary mb-3">{{ page.strategy.title }}</h2>
+        <h3 class="display-3 mb-4">{{ page.strategy.subtitle }}</h3>
+        <p>{{ page.strategy.text }}</p>
+        <p class="mb-6">{{ page.strategy.text2 }}</p>
+        <a href="{{ page.strategy.button.url }}" class="{{ page.strategy.button.class }}">{{ page.strategy.button.label }}</a>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

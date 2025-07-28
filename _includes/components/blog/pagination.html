@@ -1,0 +1,50 @@
+{% if paginator.total_pages > 1 %}
+<nav class="d-flex justify-content-{{ include.alignment | default: 'center' }}" aria-label="pagination">
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
+        <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+      </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+      </a>
+    </li>
+    {% endif %}
+    
+    {% assign base_path = page.url | remove: 'index.html' | split: 'page' | first %}
+    {% if base_path == '' %}{% assign base_path = '/' %}{% endif %}
+    
+    {% for p in (1..paginator.total_pages) %}
+      {% if p == paginator.page %}
+        <li class="page-item active"><a class="page-link" href="#">{{ p }}</a></li>
+      {% else %}
+        <li class="page-item">
+          {% if p == 1 %}
+            <a class="page-link" href="{{ base_path | relative_url }}">{{ p }}</a>
+          {% else %}
+            <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">{{ p }}</a>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+    
+    {% if paginator.next_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
+        <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+      </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}

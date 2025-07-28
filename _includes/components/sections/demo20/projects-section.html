@@ -1,0 +1,49 @@
+<section class="wrapper bg-light">
+  <div class="container py-15 py-md-17">
+    <div class="row">
+      <div class="col-lg-11 col-xl-10 mb-10 mx-auto">
+        <h2 class="fs-16 text-uppercase text-muted text-center mb-3">{{ page.projects_section.title }}</h2>
+        <h3 class="display-3 text-center px-lg-5 px-xl-10 px-xxl-16 mb-0">{{ page.projects_section.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="grid grid-view projects-masonry">
+      <div class="row gx-md-8 gy-10 gy-md-13 isotope">
+        {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+        {% for project in sorted_projects limit: 6 %}
+        <div class="project item col-md-6 col-xl-4">
+          <figure class="rounded mb-6">
+            <img src="{{ project.thumbnail | default: project.hero_image | relative_url }}" 
+                 srcset="{{ project.thumbnail | default: project.hero_image | relative_url }} 2x" 
+                 alt="{{ project.title }}" />
+            <a class="item-link" 
+               href="{{ project.hero_image | default: project.thumbnail | relative_url }}" 
+               data-glightbox 
+               data-gallery="projects-group">
+              <i class="uil uil-focus-add"></i>
+            </a>
+          </figure>
+          <div class="project-details d-flex justify-content-center flex-column">
+            <div class="post-header">
+              <h2 class="post-title h3 fs-22">
+                <a href="{{ project.url | relative_url }}" class="link-dark">{{ project.title }}</a>
+              </h2>
+              <div class="post-category text-ash">{{ project.category }}</div>
+            </div>
+            <!-- /.post-header -->
+          </div>
+          <!-- /.project-details -->
+        </div>
+        <!-- /.item -->
+        {% endfor %}
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.grid -->
+    <div class="text-center mt-10">
+      <a href="{{ page.projects_section.button.url }}" class="btn btn-lg btn-primary rounded-pill">{{ page.projects_section.button.label }}</a>
+    </div>
+  </div>
+  <!-- /.container -->
+</section>

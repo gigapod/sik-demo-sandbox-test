@@ -1,0 +1,28 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container py-14 py-md-16">
+    <div class="row mb-8">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="fs-16 text-uppercase text-primary mb-3">{{ page.analyze.title_tag }}</h2>
+        <h3 class="display-4 mb-0">{{ page.analyze.title }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-lg-5 mx-auto">
+        <form action="#">
+          <div class="form-floating input-group">
+            <input type="url" class="form-control border-0" placeholder="Enter Website URL" id="analyze">
+            <label for="analyze">Enter Website URL</label>
+            <button class="btn btn-primary" type="button">{{ page.analyze.button_text }}</button>
+          </div>
+        </form>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <figure><img src="{{ page.analyze.bg_image }}" alt=""></figure>
+</section>
+<!-- /section -->

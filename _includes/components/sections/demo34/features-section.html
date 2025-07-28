@@ -1,0 +1,116 @@
+<section class="wrapper bg-light">
+  <div class="container pb-11 pb-md-14">
+    <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center mb-14 mb-md-16">
+      <div class="col-lg-6 position-relative">
+        <div class="shape rounded bg-soft-primary rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
+        <div class="row gx-md-5 gy-5 position-relative">
+          <div class="col-6">
+            {% for img in page.features1.images limit:2 %}
+            <img class="img-fluid rounded shadow-lg {% if forloop.first %}mb-5{% else %}d-flex col-10 ms-auto{% endif %}" data-cue="fadeIn" data-delay="{{ img.delay }}" src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" />
+            {% endfor %}
+          </div>
+          <!-- /column -->
+          <div class="col-6">
+            {% for img in page.features1.images offset:2 limit:2 %}
+            <img class="img-fluid rounded shadow-lg {% if forloop.first %}my-5{% else %}d-flex col-10{% endif %}" data-cue="fadeIn" data-delay="{{ img.delay }}" src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" />
+            {% endfor %}
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6 col-xl-5 col-xxl-4 offset-xl-1" data-cues="slideInRight" data-delay="1500" data-group="features-1">
+        <div class="d-flex flex-row mb-7">
+          <div>
+            <div class="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4"> <i class="{{ page.features1.icon }}"></i> </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ page.features1.title }}</h4>
+            <p class="mb-0">{{ page.features1.text }}</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row mb-7">
+          <div>
+            <div class="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4"> <i class="{{ page.features2.icon }}"></i> </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ page.features2.title }}</h4>
+            <p class="mb-0">{{ page.features2.text }}</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row">
+          <div>
+            <div class="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4"> <i class="{{ page.features3.icon }}"></i> </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ page.features3.title }}</h4>
+            <p class="mb-0">{{ page.features3.text }}</p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center mb-16 mb-md-22">
+      <div class="col-lg-6 offset-xl-1 position-relative order-lg-2">
+        <div class="shape rounded bg-soft-primary rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
+        <div class="row gx-md-5 gy-5 position-relative">
+          <div class="col-5">
+            {% for img in page.features4.images limit:2 %}
+            <img class="img-fluid rounded shadow-lg {% if forloop.first %}my-5 d-flex ms-auto{% else %}d-flex col-10 ms-auto{% endif %}" data-cue="fadeIn" data-delay="{{ img.delay }}" src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" />
+            {% endfor %}
+          </div>
+          <!-- /column -->
+          <div class="col-7">
+            {% for img in page.features4.images offset:2 limit:2 %}
+            <img class="img-fluid rounded shadow-lg {% if forloop.first %}mb-5{% else %}d-flex col-11{% endif %}" data-cue="fadeIn" data-delay="{{ img.delay }}" src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" />
+            {% endfor %}
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6 col-xl-5 col-xxl-4 offset-xxl-1" data-cues="slideInLeft" data-delay="1500" data-group="features-2">
+        <div class="d-flex flex-row mb-7">
+          <div>
+            <div class="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4"> <i class="{{ page.features4.icon }}"></i> </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ page.features4.title }}</h4>
+            <p class="mb-0">{{ page.features4.text }}</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row mb-7">
+          <div>
+            <div class="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4"> <i class="{{ page.features5.icon }}"></i> </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ page.features5.title }}</h4>
+            <p class="mb-0">{{ page.features5.text }}</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row">
+          <div>
+            <div class="icon btn btn-circle pe-none btn-soft-primary mt-1 me-4"> <i class="{{ page.features6.icon }}"></i> </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ page.features6.title }}</h4>
+            <p class="mb-0">{{ page.features6.text }}</p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+  <div class="overflow-hidden">
+    <div class="divider text-soft-primary mx-n2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="currentColor" d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"/></svg>
+    </div>
+  </div>
+  <!-- /.overflow-hidden -->
+</section>
+<!-- /section -->

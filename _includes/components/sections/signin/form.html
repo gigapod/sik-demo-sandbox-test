@@ -1,0 +1,56 @@
+<section class="wrapper bg-light">
+  <div class="container pb-14 pb-md-16">
+    <div class="row">
+      <div class="col mt-n19">
+        <div class="card shadow-lg">
+          <div class="row gx-0 text-center">
+            {% if page.signin_form.image %}
+            <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start d-none d-md-block" data-image-src="{{ page.signin_form.image.src }}">
+            </div>
+            {% endif %}
+            <!--/column -->
+            <div class="col-lg-6">
+              <div class="p-10 p-md-11 p-lg-13">
+                <h2 class="mb-3 text-start">{{ page.signin_form.title }}</h2>
+                <p class="lead mb-6 text-start">{{ page.signin_form.subtitle }}</p>
+                <form class="text-start mb-3">
+                  {% for field in page.signin_form.form.fields %}
+                  <div class="form-floating {% if field.type == 'password' %}password-field{% endif %} mb-4">
+                    <input type="{{ field.type }}" class="form-control" placeholder="{{ field.placeholder }}" id="{{ field.id }}">
+                    {% if field.type == 'password' %}
+                    <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                    {% endif %}
+                    <label for="{{ field.id }}">{{ field.label }}</label>
+                  </div>
+                  {% endfor %}
+                  <a class="btn {{ page.signin_form.form.button.class }}">{{ page.signin_form.form.button.label }}</a>
+                </form>
+                <!-- /form -->
+                {% for link in page.signin_form.links %}
+                <p class="mb-1"><a href="{{ link.url }}" class="hover">{{ link.label }}</a></p>
+                {% endfor %}
+                {% if page.signin_form.social.enabled %}
+                <div class="divider-icon my-4">or</div>
+                <nav class="nav social justify-content-center text-center">
+                  {% for platform in page.signin_form.social.platforms %}
+                  <a href="#" class="btn btn-circle btn-sm btn-{{ platform.name }}"><i class="uil {{ platform.icon }}"></i></a>
+                  {% endfor %}
+                </nav>
+                <!--/.social -->
+                {% endif %}
+              </div>
+              <!--/div -->
+            </div>
+            <!--/column -->
+          </div>
+          <!--/.row -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

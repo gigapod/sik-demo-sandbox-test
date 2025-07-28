@@ -1,0 +1,1122 @@
+--- 
+layout: doc
+title: Blocks - Facts
+description: Copy any custom block snippet below and paste it on your page to build your website easily.
+# Facts Section 1
+facts1:
+  enable: true
+  title: "Join Our Community"
+  lead_text: "We have considered our business solutions to support you on every stage of your growth."
+  description: "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+  items:
+    - icon: "uil-presentation-check"
+      color: "purple"
+      count: 7518
+      title: "Projects Done"
+    - icon: "uil-users-alt"
+      color: "red"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "uil-user-check"
+      color: "yellow"
+      count: 4537
+      title: "Expert Employees"
+    - icon: "uil-trophy"
+      color: "aqua"
+      count: 2184
+      title: "Awards Won"
+
+# Facts Section 2
+facts2:
+  enable: true
+  subtitle: "Company Facts"
+  title: "We are proud of our works"
+  items:
+    - icon: "/assets/img/icons/lineal/check.svg"
+      count: 7518
+      title: "Completed Projects"
+    - icon: "/assets/img/icons/lineal/user.svg"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "/assets/img/icons/lineal/briefcase-2.svg"
+      count: 2184
+      title: "Expert Employees"
+# Facts Section 3
+facts3:
+  enable: true
+  background_image: "/assets/img/photos/bg2.jpg"
+  items:
+    - count: 7518
+      title: "Completed Projects"
+    - count: 3472
+      title: "Happy Customers"
+    - count: 2184
+      title: "Expert Employees"
+    - count: 4523
+      title: "Awards Won"
+# Facts Section 4
+facts4:
+  enable: true
+  background_image: "/assets/img/map.png"
+  subtitle: "Join Our Community"
+  title: "We are trusted by over 5000+ clients. Join them now and grow your business."
+  items:
+    - count: 7518
+      title: "Completed Projects"
+    - count: 5472
+      title: "Happy Customers"
+    - count: 2184
+      title: "Expert Employees"
+# Facts Section 5
+facts5:
+  enable: true
+  items:
+    - icon: "uil-users-alt"
+      color: "red"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "uil-user-check"
+      color: "leaf"
+      count: 4537
+      title: "Expert Employees"
+    - icon: "uil-trophy"
+      color: "primary"
+      count: 2654
+      title: "Awards Won"
+# Facts Section 6
+facts6:
+  enable: true
+  items:
+    - icon: "/assets/img/icons/lineal/check.svg"
+      count: 7518
+      title: "Completed Projects"
+    - icon: "/assets/img/icons/lineal/user.svg"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "/assets/img/icons/lineal/briefcase-2.svg"
+      count: 2184
+      title: "Expert Employees"
+    - icon: "/assets/img/icons/lineal/award-2.svg"
+      count: 4523
+      title: "Awards Won"
+# Facts Section 7
+facts7:
+  enable: true
+  subtitle: "Save Time and Money"
+  title: "Save your time and money by choosing our"
+  highlight: "professional"
+  title_end: "team."
+  items:
+    - color: "fuchsia"
+      value: 95
+      title: "Customer Satisfaction"
+    - color: "orange"
+      value: 80
+      title: "Increased Revenue"
+# Facts Section 8
+facts8:
+  enable: true
+  subtitle: "Company Facts"
+  title: "Save your time and money by choosing our professional team."
+  items:
+    - color: "purple"
+      value: 75
+      title: "New Visitors"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+    - color: "leaf"
+      value: 80
+      title: "Social Media"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+    - color: "pink"
+      value: 60
+      title: "Referrals"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+    - color: "yellow"
+      value: 90
+      title: "Search Engines"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+# Facts Section 9
+facts9:
+  enable: true
+  subtitle: "Our Solutions"
+  title: "Just sit & relax while we take care of your business needs."
+  description: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna."
+  image: "/assets/img/illustrations/3d5.png"
+  image_2x: "/assets/img/illustrations/3d5@2x.png"
+  items:
+    - count: "99.7%"
+      title: "Customer Satisfaction"
+      rating: "five"
+    - count: "4x"
+      title: "New Visitors"
+      rating: "five"
+---
+{% if page.facts1.enable %}
+<section id="snippet-1" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row gx-lg-0 gy-10 align-items-center">
+      <div class="col-lg-6 order-lg-2 offset-lg-1 grid">
+        <div class="row gx-md-5 gy-5 align-items-center counter-wrapper isotope">
+          {% for item in page.facts1.items %}
+          <div class="item col-md-6">
+            <div class="card shadow-lg">
+              <div class="card-body">
+                <div class="d-flex d-lg-block d-xl-flex flex-row">
+                  <div>
+                    <div class="icon btn btn-circle btn-lg btn-soft-{{ item.color }} pe-none mx-auto me-4 mb-lg-3 mb-xl-0">
+                      <i class="uil {{ item.icon }}"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="counter mb-1">{{ item.count }}</h3>
+                    <p class="mb-0">{{ item.title }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="display-4 mb-3">{{ page.facts1.title }}</h2>
+        <p class="lead fs-lg">{{ page.facts1.lead_text }}</p>
+        <p class="mb-0">{{ page.facts1.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-1-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html1">Copy</button>
+            <div id="html1">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-0 gy-10 align-items-center">
+      <div class="col-lg-6 order-lg-2 offset-lg-1 grid">
+        <div class="row gx-md-5 gy-5 align-items-center counter-wrapper isotope">
+          {% for item in page.facts1.items %}
+          <div class="item col-md-6">
+            <div class="card shadow-lg">
+              <div class="card-body">
+                <div class="d-flex d-lg-block d-xl-flex flex-row">
+                  <div>
+                    <div class="icon btn btn-circle btn-lg btn-soft-{{ item.color }} pe-none mx-auto me-4 mb-lg-3 mb-xl-0">
+                      <i class="uil {{ item.icon }}"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="counter mb-1">{{ item.count }}</h3>
+                    <p class="mb-0">{{ item.title }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="display-4 mb-3">{{ page.facts1.title }}</h2>
+        <p class="lead fs-lg">{{ page.facts1.lead_text }}</p>
+        <p class="mb-0">{{ page.facts1.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-1-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data1">Copy</button>
+            <div id="data1">
+              {% highlight yaml %}
+# Facts Section 1
+facts1:
+  enable: true
+  title: "Join Our Community"
+  lead_text: "We have considered our business solutions to support you on every stage of your growth."
+  description: "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+  items:
+    - icon: "uil-presentation-check"
+      color: "purple"
+      count: 7518
+      title: "Projects Done"
+    - icon: "uil-users-alt"
+      color: "red"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "uil-user-check"
+      color: "yellow"
+      count: 4537
+      title: "Expert Employees"
+    - icon: "uil-trophy"
+      color: "aqua"
+      count: 2184
+      title: "Awards Won"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.facts2.enable %}
+<section id="snippet-2" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row">
+      <div class="col-lg-4">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">{{ page.facts2.subtitle }}</h2>
+        <h3 class="display-4 pe-xl-15">{{ page.facts2.title }}</h3>
+      </div>
+      <div class="col-lg-8">
+        <div class="row align-items-center counter-wrapper gy-6 text-center">
+          {% for item in page.facts2.items %}
+          <div class="col-md-4">
+            <img src="{{ item.icon }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+            <h3 class="counter">{{ item.count }}</h3>
+            <p class="mb-0">{{ item.title }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-2-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html2">Copy</button>
+            <div id="html2">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-lg-4">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">{{ page.facts2.subtitle }}</h2>
+        <h3 class="display-4 pe-xl-15">{{ page.facts2.title }}</h3>
+      </div>
+      <div class="col-lg-8">
+        <div class="row align-items-center counter-wrapper gy-6 text-center">
+          {% for item in page.facts2.items %}
+          <div class="col-md-4">
+            <img src="{{ item.icon }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+            <h3 class="counter">{{ item.count }}</h3>
+            <p class="mb-0">{{ item.title }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-2-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data2">Copy</button>
+            <div id="data2">
+              {% highlight yaml %}
+# Facts Section 2
+facts2:
+  enable: true
+  subtitle: "Company Facts"
+  title: "We are proud of our works"
+  items:
+    - icon: "/assets/img/icons/lineal/check.svg"
+      count: 7518
+      title: "Completed Projects"
+    - icon: "/assets/img/icons/lineal/user.svg"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "/assets/img/icons/lineal/briefcase-2.svg"
+      count: 2184
+      title: "Expert Employees"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.facts3.enable %}
+<section id="snippet-3" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <div class="card image-wrapper bg-full bg-image bg-overlay" data-image-src="{{ page.facts3.background_image }}">
+          <div class="card-body p-9 p-xl-10">
+            <div class="row align-items-center counter-wrapper gy-4 text-center text-white">
+              {% for item in page.facts3.items %}
+              <div class="col-6 col-lg-3">
+                <h3 class="counter counter-lg text-white">{{ item.count }}</h3>
+                <p>{{ item.title }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-3-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-3-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html3">Copy</button>
+            <div id="html3">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <div class="card image-wrapper bg-full bg-image bg-overlay" data-image-src="{{ page.facts3.background_image }}">
+          <div class="card-body p-9 p-xl-10">
+            <div class="row align-items-center counter-wrapper gy-4 text-center text-white">
+              {% for item in page.facts3.items %}
+              <div class="col-6 col-lg-3">
+                <h3 class="counter counter-lg text-white">{{ item.count }}</h3>
+                <p>{{ item.title }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-3-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-3-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data3">Copy</button>
+            <div id="data3">
+              {% highlight yaml %}
+# Facts Section 3
+facts3:
+  enable: true
+  background_image: "/assets/img/photos/bg2.jpg"
+  items:
+    - count: 7518
+      title: "Completed Projects"
+    - count: 3472
+      title: "Happy Customers"
+    - count: 2184
+      title: "Expert Employees"
+    - count: 4523
+      title: "Awards Won"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    <section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map" data-image-src="@@webRoot/assets/img/map.png">
+      <div class="container py-15 pt-md-17 pb-md-18">
+        <div class="row pt-md-12">
+          <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+            <h2 class="fs-15 text-uppercase text-muted mb-3">Join Our Community</h2>
+            <h3 class="display-4 mb-8 px-lg-12">We are trusted by over 5000+ clients. Join them now and grow your business.</h3>
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /column -->
+        <div class="row pb-md-12">
+          <div class="col-md-10 col-lg-9 col-xl-7 mx-auto">
+            <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
+              <div class="col-md-4 text-center">
+                <h3 class="counter counter-lg text-primary">7518</h3>
+                <p>Completed Projects</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-4 text-center">
+                <h3 class="counter counter-lg text-primary">5472</h3>
+                <p>Happy Customers</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-4 text-center">
+                <h3 class="counter counter-lg text-primary">2184</h3>
+                <p>Expert Employees</p>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    {% if page.facts4.enable %}
+<section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map" data-image-src="{{ page.facts4.background_image }}">
+  <div class="container py-15 pt-md-17 pb-md-18">
+    <div class="row pt-md-12">
+      <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.facts4.subtitle }}</h2>
+        <h3 class="display-4 mb-8 px-lg-12">{{ page.facts4.title }}</h3>
+      </div>
+    </div>
+    <div class="row pb-md-12">
+      <div class="col-md-10 col-lg-9 col-xl-7 mx-auto">
+        <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
+          {% for item in page.facts4.items %}
+          <div class="col-md-4 text-center">
+            <h3 class="counter counter-lg text-primary">{{ item.count }}</h3>
+            <p>{{ item.title }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-4-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html4">Copy</button>
+            <div id="html4">
+              {% highlight html %}
+<section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map" data-image-src="{{ page.facts4.background_image }}">
+  <div class="container py-14 py-md-16">
+    <div class="row pt-md-12">
+      <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.facts4.subtitle }}</h2>
+        <h3 class="display-4 mb-8 px-lg-12">{{ page.facts4.title }}</h3>
+      </div>
+    </div>
+    <div class="row pb-md-12">
+      <div class="col-md-10 col-lg-9 col-xl-7 mx-auto">
+        <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
+          {% for item in page.facts4.items %}
+          <div class="col-md-4 text-center">
+            <h3 class="counter counter-lg text-primary">{{ item.count }}</h3>
+            <p>{{ item.title }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-4-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data4">Copy</button>
+            <div id="data4">
+              {% highlight yaml %}
+# Facts Section 4
+facts4:
+  enable: true
+  background_image: "/assets/img/map.png"
+  subtitle: "Join Our Community"
+  title: "We are trusted by over 5000+ clients. Join them now and grow your business."
+  items:
+    - count: 7518
+      title: "Completed Projects"
+    - count: 5472
+      title: "Happy Customers"
+    - count: 2184
+      title: "Expert Employees"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.facts5.enable %}
+<section id="snippet-5" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row">
+      <div class="col-xl-10 col-xxl-9 mx-auto">
+        <div class="row align-items-center justify-content-center counter-wrapper gy-6">
+          {% for item in page.facts5.items %}
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <div class="icon btn btn-circle btn-lg btn-soft-{{ item.color }} pe-none mx-auto me-4 mb-lg-3 mb-xl-0">
+                      <i class="uil {{ item.icon }}"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="counter mb-1">{{ item.count }}</h3>
+                    <p class="mb-0">{{ item.title }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-5-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-5-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html5">Copy</button>
+            <div id="html5">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-xl-10 col-xxl-9 mx-auto">
+        <div class="row align-items-center justify-content-center counter-wrapper gy-6">
+          {% for item in page.facts5.items %}
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-row align-items-center">
+                  <div>
+                    <div class="icon btn btn-circle btn-lg btn-soft-{{ item.color }} pe-none mx-auto me-4 mb-lg-3 mb-xl-0">
+                      <i class="uil {{ item.icon }}"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="counter mb-1">{{ item.count }}</h3>
+                    <p class="mb-0">{{ item.title }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-5-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-5-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data5">Copy</button>
+            <div id="data5">
+              {% highlight yaml %}
+# Facts Section 5
+facts5:
+  enable: true
+  items:
+    - icon: "uil-users-alt"
+      color: "red"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "uil-user-check"
+      color: "leaf"
+      count: 4537
+      title: "Expert Employees"
+    - icon: "uil-trophy"
+      color: "primary"
+      count: 2654
+      title: "Awards Won"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.facts6.enable %}
+<section id="snippet-6" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <div class="row align-items-center counter-wrapper gy-6 text-center">
+          {% for item in page.facts6.items %}
+          <div class="col-md-3">
+            <img src="{{ item.icon }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+            <h3 class="counter">{{ item.count }}</h3>
+            <p>{{ item.title }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-6-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-6-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html6">Copy</button>
+            <div id="html6">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <div class="row align-items-center counter-wrapper gy-6 text-center">
+          {% for item in page.facts6.items %}
+          <div class="col-md-3">
+            <img src="{{ item.icon }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+            <h3 class="counter">{{ item.count }}</h3>
+            <p>{{ item.title }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-6-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-6-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data6">Copy</button>
+            <div id="data6">
+              {% highlight yaml %}
+# Facts Section 6
+facts6:
+  enable: true
+  items:
+    - icon: "/assets/img/icons/lineal/check.svg"
+      count: 7518
+      title: "Completed Projects"
+    - icon: "/assets/img/icons/lineal/user.svg"
+      count: 3472
+      title: "Happy Customers"
+    - icon: "/assets/img/icons/lineal/briefcase-2.svg"
+      count: 2184
+      title: "Expert Employees"
+    - icon: "/assets/img/icons/lineal/award-2.svg"
+      count: 4523
+      title: "Awards Won"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.facts7.enable %}
+<section id="snippet-7" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row align-items-center gy-8">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.facts7.subtitle }}</h2>
+        <h3 class="display-3 mb-0 pe-xl-10 pe-xxl-15">{{ page.facts7.title }} <span class="underline-3 style-2 yellow">{{ page.facts7.highlight }}</span> {{ page.facts7.title_end }}</h3>
+      </div>
+      <div class="col-lg-5">
+        <div class="row gy-6 text-center">
+          {% for item in page.facts7.items %}
+          <div class="col-md-6">
+            <div class="progressbar semi-circle {{ item.color }}" data-value="{{ item.value }}"></div>
+            <h4 class="mb-0">{{ item.title }}</h4>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-7-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-7-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html7">Copy</button>
+            <div id="html7">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row align-items-center gy-8">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.facts7.subtitle }}</h2>
+        <h3 class="display-3 mb-0 pe-xl-10 pe-xxl-15">{{ page.facts7.title }} <span class="underline-3 style-2 yellow">{{ page.facts7.highlight }}</span> {{ page.facts7.title_end }}</h3>
+      </div>
+      <div class="col-lg-5">
+        <div class="row gy-6 text-center">
+          {% for item in page.facts7.items %}
+          <div class="col-md-6">
+            <div class="progressbar semi-circle {{ item.color }}" data-value="{{ item.value }}"></div>
+            <h4 class="mb-0">{{ item.title }}</h4>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-7-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-7-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data7">Copy</button>
+            <div id="data7">
+              {% highlight yaml %}
+# Facts Section 7
+facts7:
+  enable: true
+  subtitle: "Save Time and Money"
+  title: "Save your time and money by choosing our"
+  highlight: "professional"
+  title_end: "team."
+  items:
+    - color: "fuchsia"
+      value: 95
+      title: "Customer Satisfaction"
+    - color: "orange"
+      value: 80
+      title: "Increased Revenue"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.facts8.enable %}
+<section id="snippet-8" class="section-frame overflow-hidden wrapper-border">
+  <div class="wrapper bg-soft-primary mb-md-13 mb-15" style="border-radius: 1rem;">
+    <div class="container py-17">
+      <div class="row text-center">
+        <div class="col-xl-11 col-xxl-10 mx-auto">
+          <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.facts8.subtitle }}</h2>
+          <h3 class="display-4 mb-10 px-lg-20 px-xl-20">{{ page.facts8.title }}</h3>
+          <div class="row gy-6 text-center">
+            {% for item in page.facts8.items %}
+            <div class="col-md-6 col-lg-3">
+              <div class="progressbar semi-circle {{ item.color }}" data-value="{{ item.value }}"></div>
+              <h4>{{ item.title }}</h4>
+              <p class="mb-0">{{ item.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-8-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-8-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html8">Copy</button>
+            <div id="html8">
+              {% highlight html %}
+<section class="section-frame overflow-hidden">
+  <div class="wrapper bg-soft-primary" style="border-radius: 1rem;">
+    <div class="container py-17">
+      <div class="row text-center">
+        <div class="col-xl-11 col-xxl-10 mx-auto">
+          <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.facts8.subtitle }}</h2>
+          <h3 class="display-4 mb-10 px-lg-20 px-xl-20">{{ page.facts8.title }}</h3>
+          <div class="row gy-6 text-center">
+            {% for item in page.facts8.items %}
+            <div class="col-md-6 col-lg-3">
+              <div class="progressbar semi-circle {{ item.color }}" data-value="{{ item.value }}"></div>
+              <h4>{{ item.title }}</h4>
+              <p class="mb-0">{{ item.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-8-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-8-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data8">Copy</button>
+            <div id="data8">
+              {% highlight yaml %}
+# Facts Section 8
+facts8:
+  enable: true
+  subtitle: "Company Facts"
+  title: "Save your time and money by choosing our professional team."
+  items:
+    - color: "purple"
+      value: 75
+      title: "New Visitors"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+    - color: "leaf"
+      value: 80
+      title: "Social Media"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+    - color: "pink"
+      value: 60
+      title: "Referrals"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+    - color: "yellow"
+      value: 90
+      title: "Search Engines"
+      description: "Maecenas faucibus mollis interdum. Aenean eu leo."
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.facts9.enable %}
+<section id="snippet-9" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row gx-3 gy-10 gy-lg-0 align-items-center">
+      <div class="col-lg-5 mx-auto order-lg-2">
+        <figure><img class="w-auto" src="{{ page.facts9.image }}" srcset="{{ page.facts9.image_2x }} 2x" alt="" /></figure>
+      </div>
+      <div class="col-lg-5 me-auto">
+        <h2 class="fs-16 text-uppercase text-primary mb-3">{{ page.facts9.subtitle }}</h2>
+        <h3 class="display-4 mb-5 pe-xxl-5">{{ page.facts9.title }}</h3>
+        <p class="mb-6">{{ page.facts9.description }}</p>
+        <div class="row align-items-center counter-wrapper gy-6">
+          {% for item in page.facts9.items %}
+          <div class="col-md-6">
+            <h3 class="counter counter-lg mb-1">{{ item.count }}</h3>
+            <h6 class="fs-17 mb-1">{{ item.title }}</h6>
+            <span class="ratings {{ item.rating }}"></span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-9-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-9-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html9">Copy</button>
+            <div id="html9">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-3 gy-10 gy-lg-0 align-items-center">
+      <div class="col-lg-5 mx-auto order-lg-2">
+        <figure><img class="w-auto" src="{{ page.facts9.image }}" srcset="{{ page.facts9.image_2x }} 2x" alt="" /></figure>
+      </div>
+      <div class="col-lg-5 me-auto">
+        <h2 class="fs-16 text-uppercase text-primary mb-3">{{ page.facts9.subtitle }}</h2>
+        <h3 class="display-4 mb-5 pe-xxl-5">{{ page.facts9.title }}</h3>
+        <p class="mb-6">{{ page.facts9.description }}</p>
+        <div class="row align-items-center counter-wrapper gy-6">
+          {% for item in page.facts9.items %}
+          <div class="col-md-6">
+            <h3 class="counter counter-lg mb-1">{{ item.count }}</h3>
+            <h6 class="fs-17 mb-1">{{ item.title }}</h6>
+            <span class="ratings {{ item.rating }}"></span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-9-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-9-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data9">Copy</button>
+            <div id="data9">
+              {% highlight yaml %}
+# Facts Section 9
+facts9:
+  enable: true
+  subtitle: "Our Solutions"
+  title: "Just sit & relax while we take care of your business needs."
+  description: "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna."
+  image: "/assets/img/illustrations/3d5.png"
+  image_2x: "/assets/img/illustrations/3d5@2x.png"
+  items:
+    - count: "99.7%"
+      title: "Customer Satisfaction"
+      rating: "five"
+    - count: "4x"
+      title: "New Visitors"
+      rating: "five"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+ 

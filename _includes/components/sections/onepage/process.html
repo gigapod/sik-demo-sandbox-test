@@ -1,0 +1,64 @@
+<section id="process">
+  <div class="wrapper bg-gray">
+    <div class="container py-14 py-md-17">
+      <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
+        <div class="col-lg-7">
+          <figure><img class="w-auto" src="{{ page.process.image }}" srcset="{{ page.process.image2x }}" alt="" /></figure>
+        </div>
+        <!--/column -->
+        <div class="col-lg-5">
+          <h2 class="fs-15 text-uppercase text-line text-primary mb-3">{{ page.process.subtitle }}</h2>
+          <h3 class="display-5 mb-7 pe-xxl-5">{{ page.process.title }}</h3>
+          
+          {% for step in page.process.steps %}
+          <div class="d-flex flex-row mb-4">
+            <div>
+              <img src="/assets/img/icons/lineal/{{ step.icon }}.svg" class="svg-inject icon-svg icon-svg-sm {{ step.iconColor }} me-4" alt="" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ step.title }}</h4>
+              <p class="mb-1">{{ step.text }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+        <div class="col-lg-7 order-lg-2">
+          <figure><img class="w-auto" src="{{ page.whychoose.image }}" srcset="{{ page.whychoose.image2x }}" alt="" /></figure>
+        </div>
+        <!--/column -->
+        <div class="col-lg-5">
+          <h2 class="fs-15 text-uppercase text-line text-primary mb-3">{{ page.whychoose.subtitle }}</h2>
+          <h3 class="display-5 mb-7">{{ page.whychoose.title }}</h3>
+          <div class="accordion accordion-wrapper" id="accordionExample">
+            {% for item in page.whychoose.accordion %}
+            <div class="card plain accordion-item">
+              <div class="card-header" id="heading{{ forloop.index }}">
+                <button class="accordion-button {% unless item.show %}collapsed{% endunless %}" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="{{ item.show }}" aria-controls="collapse{{ forloop.index }}"> {{ item.title }} </button>
+              </div>
+              <!--/.card-header -->
+              <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse {% if item.show %}show{% endif %}" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample">
+                <div class="card-body">
+                  <p>{{ item.text }}</p>
+                </div>
+                <!--/.card-body -->
+              </div>
+              <!--/.accordion-collapse -->
+            </div>
+            <!--/.accordion-item -->
+            {% endfor %}
+          </div>
+          <!--/.accordion -->
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+</section>
+<!-- /section -->

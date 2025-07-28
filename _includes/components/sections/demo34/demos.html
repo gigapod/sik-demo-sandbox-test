@@ -1,0 +1,63 @@
+<section class="wrapper bg-light" id="demos">
+  <div class="container py-14 py-md-18 pb-md-19">
+    <div class="row mb-10">
+      <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5 mx-auto">
+        <div class="counter-wrapper">
+          <h3 class="fs-70 mb-3 text-primary text-center counter">{{ page.demos.title_counter }}</h3>
+        </div>
+        <h2 class="display-3 mb-3 text-center mb-0">{{ page.demos.title }}</h2>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="demos-wrapper">
+      <h2 class="fs-16 text-uppercase text-muted mb-6 text-center">{{ page.demos.new_demos_title }}</h2>
+      {% for demo in page.demos.demos_list %}
+      <div class="project mb-10">
+        <div class="card bg-soft-{{ demo.background }}">
+          <div class="card-body ps-xl-12 py-0 overflow-hidden">
+            <div class="row gx-md-8 gx-xl-12 d-flex align-items-center">
+              <div class="col-lg-7">
+                <div class="row gx-7">
+                  {% for img in demo.images %}
+                  <div class="col-6">
+                    <figure class="itooltip itooltip-{{ demo.background }} {% if forloop.first %}mt-9{% endif %}" title='<h5 class="mb-0">Click to see the demo</h5>'><a href="{{ demo.button.url }}" target="_blank"><img class="{{ img.class }}" src="{{ img.image }}" srcset="{{ img.image2x }} 2x" alt="" /></a></figure>
+                  </div>
+                  <!-- /column -->
+                  {% endfor %}
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /column -->
+              <div class="col-lg-5 d-none d-lg-block">
+                <h2 class="post-title fs-30 mb-4">{{ demo.title }}</h2>
+                <ul class="icon-list bullet-{{ demo.background }} row ms-0 gy-2">
+                  {% for feature in demo.features %}
+                  <li class="col-md-6"><span><i class="uil uil-check"></i></span><span>{{ feature }}</span></li>
+                  {% endfor %}
+                </ul>
+                <a href="{{ demo.button.url }}" target="_blank" class="{{ demo.button.class }}">{{ demo.button.label }}</a>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.project -->
+      {% endfor %}
+      <div class="text-center mt-12"><a href="{{ page.demos.more_demos_button.url }}" class="{{ page.demos.more_demos_button.class }}">{{ page.demos.more_demos_button.label }}</a></div>
+    </div>
+    <!-- /.demos-wrapper -->
+  </div>
+  <!-- /.container -->
+  <div class="overflow-hidden">
+    <div class="divider text-soft-primary mx-n2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="currentColor" d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z"/></svg>
+    </div>
+  </div>
+  <!-- /.overflow-hidden -->
+</section>
+<!-- /section -->

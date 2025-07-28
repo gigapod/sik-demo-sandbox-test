@@ -1,0 +1,919 @@
+--- 
+layout: doc
+title: Blocks - Call to Action
+description: Copy any custom block snippet below and paste it on your page to build your website easily.
+
+# Simple CTA with Map Background
+cta1:
+  enable: true
+  bg_image: /assets/img/map.png
+  bg_class: "bg-auto no-overlay bg-map"
+  title: "Join Our Community"
+  text: "We are trusted by over 5000+ clients. Join them by using our services and grow your business."
+  button:
+    label: "Join Us"
+    url: "#"
+    style: "btn btn-primary rounded-pill"
+
+# Full Width CTA with Overlay
+cta2:
+  enable: true
+  bg_image: /assets/img/photos/bg3.jpg
+  bg_overlay: "bg-overlay-400"
+  title: "We are trusted by over 5000+ clients. Join them by using our services and grow your business."
+  button:
+    label: "Join Us"
+    url: "#"
+    style: "btn btn-white rounded-pill mb-0 text-nowrap"
+
+# Icon CTA
+cta3:
+  enable: true
+  icon: /assets/img/icons/lineal/puzzle-2.svg
+  title: "Join Our Community"
+  text: "We are trusted by over 5000+ clients. Join them by using our services and grow your business."
+  button:
+    label: "Join Us"
+    url: "#"
+    style: "btn btn-primary rounded"
+
+# Card CTA with Yellow Underline
+cta4:
+  enable: true
+  bg_image: /assets/img/photos/bg16.png
+  bg_overlay: "bg-overlay-300"
+  subtitle: "Join Our Community"
+  title: "We are trusted by over 5000+ clients. Join them now and grow your business."
+  title_highlight: "trusted"
+  highlight_style: "underline-3 style-2 yellow"
+  button:
+    label: "Get Started"
+    url: "#"
+    style: "btn btn-white rounded"
+
+# SEO Analysis CTA
+cta5:
+  enable: true
+  bg_class: "bg-soft-primary"
+  subtitle: "Analyze Now"
+  title: "Wonder how much faster your website can go? Easily check your SEO Score now."
+  form:
+    placeholder: "Enter Website URL"
+    button_text: "Analyze"
+    button_style: "btn btn-primary"
+
+# App Download CTA
+cta6:
+  enable: true
+  bg_class: "bg-soft-primary"
+  image: /assets/img/photos/devices2.png
+  image2x: /assets/img/photos/devices2@2x.png
+  title: "Get all of your steps, exercise, sleep and meds in one place."
+  text: "Sandbox is now available to download from both the App Store and Google Play Store."
+  buttons:
+    - label: "App Store"
+      icon: "uil-apple"
+      style: "btn btn-primary btn-icon btn-icon-start rounded me-2"
+    - label: "Google Play"
+      icon: "uil-google-play"
+      style: "btn btn-green btn-icon btn-icon-start rounded"
+
+# App Download CTA with Shapes
+cta7:
+  enable: true
+  bg_image: /assets/img/photos/bg23.png
+  bg_overlay: "bg-overlay-light-600"
+  title: "Manage all your bills, accounts & budgets in one place."
+  title_highlight: "one place"
+  highlight_style: "text-gradient gradient-7"
+  text: "Sandbox is available to download from both App Store and Google Play Store."
+  store_buttons:
+    - image: /assets/img/photos/button-appstore.svg
+      url: "#"
+    - image: /assets/img/photos/button-google-play.svg
+      url: "#"
+  shapes:
+    - image: /assets/img/svg/doodle2.svg
+      class: "h-15"
+      style: "bottom: 36%; right: -25%"
+    - image: /assets/img/svg/doodle6.svg
+      class: "h-14"
+      style: "top: -20%; left: -25%"
+  device_image: /assets/img/photos/devices6.png
+  device_image2x: /assets/img/photos/devices6@2x.png
+
+# Gradient Background CTA
+cta8:
+  enable: true
+  bg_class: "gradient-8 bg-lines"
+  subtitle: "Join Our Community"
+  title: "We are trusted by over 5000+ clients. Join them now and grow your business."
+  title_highlight: "trusted"
+  highlight_style: "underline-2 underline-gradient-6"
+  button:
+    label: "Join Us"
+    url: "#"
+    style: "btn btn-white"
+
+# Contact CTA with Shapes
+cta9:
+  enable: true
+  bg_image: /assets/img/photos/bg23.png
+  bg_overlay: "bg-overlay-light-500"
+  title: "Got a 👾 project in mind? Let's work together. ✌️"
+  text: "I bring rapid solutions to make the life of my clients easier. Have any questions? Reach out to me and I will get back to you shortly."
+  button:
+    label: "Contact Me"
+    url: "#"
+    style: "btn btn-lg btn-primary btn-icon btn-icon-end"
+    icon: "uil-arrow-up-right"
+  shapes:
+    - name: "yellow"
+      image: /assets/img/svg/pie.svg
+      class: "w-5"
+      style: "top: 18%; left: 5%"
+    - name: "leaf"
+      image: /assets/img/svg/scribble.svg
+      class: "w-10"
+      style: "bottom: 30%; left: 2%"
+    - name: "fuchsia"
+      image: /assets/img/svg/tri.svg
+      class: "w-6"
+      style: "top: 20%; right: 2%; transform: rotate(70deg)"
+    - name: "grape"
+      image: /assets/img/svg/circle.svg
+      class: "w-6"
+      style: "bottom: 28%; right: 5%"
+---
+    
+<section id="snippet-1" class="wrapper bg-light wrapper-border">
+  <div class="container pb-15 pb-md-17">
+    <!-- Preview Section -->
+    <section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center py-14 py-md-16 bg-map" data-image-src="{{ page.cta1.bg_image }}">
+      <div class="container py-0 py-md-18">
+        <div class="row">
+          <div class="col-lg-6 col-xl-5 mx-auto">
+            <h2 class="display-4 mb-3 text-center">{{ page.cta1.title }}</h2>
+            <p class="lead mb-5 px-md-16 px-lg-3">{{ page.cta1.text }}</p>
+            <a href="{{ page.cta1.button.url }}" class="{{ page.cta1.button.style }}">{{ page.cta1.button.label }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Section -->
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-html">View HTML code</a>
+      </div>
+      <div id="collapse-snippet-1-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html1">Copy</button>
+            <div id="html1">
+              {% highlight html %}
+{% raw %}
+<section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center py-14 py-md-16 bg-map" data-image-src="{{ page.cta1.bg_image }}">
+  <div class="container py-0 py-md-18">
+    <div class="row">
+      <div class="col-lg-6 col-xl-5 mx-auto">
+        <h2 class="display-4 mb-3 text-center">{{ page.cta1.title }}</h2>
+        <p class="lead mb-5 px-md-16 px-lg-3">{{ page.cta1.text }}</p>
+        <a href="{{ page.cta1.button.url }}" class="{{ page.cta1.button.style }}">{{ page.cta1.button.label }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endraw %}
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontmatter Section -->
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-yaml">View frontmatter</a>
+      </div>
+      <div id="collapse-snippet-1-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data1">Copy</button>
+            <div id="data1">
+              {% highlight yaml %}
+# CTA Section 1
+cta1:
+  enable: true
+  bg_image: /assets/img/map.png
+  title: "Join Our Community"
+  text: "We are trusted by over 5000+ clients. Join them by using our services and grow your business."
+  button:
+    label: "Join Us"
+    url: "#"
+    style: "btn btn-primary rounded-pill"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- /section -->
+    <section id="snippet-2" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <div class="row">
+          <div class="col-xl-10 mx-auto">
+            <div class="card image-wrapper bg-full bg-image bg-overlay {{ page.cta2.bg_overlay }}" data-image-src="{{ page.cta2.bg_image }}">
+              <div class="card-body p-6 p-md-11 d-lg-flex flex-row align-items-lg-center justify-content-md-between text-center text-lg-start">
+                <h3 class="display-6 mb-6 mb-lg-0 pe-lg-10 pe-xl-5 pe-xxl-18 text-white">{{ page.cta2.title }}</h3>
+                <a href="{{ page.cta2.button.url }}" class="{{ page.cta2.button.style }}">{{ page.cta2.button.label }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-snippet-2">View example's code</a>
+          </div>
+          <div id="collapse-snippet-2" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <pre class="language-html"><code>
+                  {% highlight html %}
+                  {% raw %}
+    <section class="wrapper bg-light">
+      <div class="container py-14 py-md-16">
+        <div class="row">
+          <div class="col-xl-10 mx-auto">
+            <div class="card image-wrapper bg-full bg-image bg-overlay {{ page.cta2.bg_overlay }}" data-image-src="{{ page.cta2.bg_image }}">
+              <div class="card-body p-6 p-md-11 d-lg-flex flex-row align-items-lg-center justify-content-md-between text-center text-lg-start">
+                <h3 class="display-6 mb-6 mb-lg-0 pe-lg-10 pe-xl-5 pe-xxl-18 text-white">{{ page.cta2.title }}</h3>
+                <a href="{{ page.cta2.button.url }}" class="{{ page.cta2.button.style }}">{{ page.cta2.button.label }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %}
+                  {% endhighlight %}
+                </code></pre>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-yaml">View frontmatter</a>
+          </div>
+          <div id="collapse-snippet-2-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data2">Copy</button>
+                <div id="data2">
+                  {% highlight yaml %}
+    # CTA Section 2
+    cta2:
+      enable: true
+      bg_image: /assets/img/photos/bg3.jpg
+      bg_overlay: bg-overlay-400
+      title: "We are trusted by over 5000+ clients. Join them by using our services and grow your business."
+      button:
+        label: "Join Us"
+        url: "#"
+        style: "btn btn-white rounded-pill mb-0 text-nowrap"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-3" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15 text-center">
+        <div class="row">
+          <div class="col-md-9 col-lg-7 col-xl-7 mx-auto text-center">
+            <img src="{{ page.cta3.icon }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+            <h2 class="display-4 mb-3">{{ page.cta3.title }}</h2>
+            <p class="lead fs-lg mb-6 px-xl-10 px-xxl-15">{{ page.cta3.text }}</p>
+            <a href="{{ page.cta3.button.url }}" class="{{ page.cta3.button.style }}">{{ page.cta3.button.label }}</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-snippet-3">View example's code</a>
+          </div>
+          <div id="collapse-snippet-3" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <pre class="language-html"><code>{% raw %}
+    <section class="wrapper bg-light">
+      <div class="container py-14 py-md-16 text-center">
+        <div class="row">
+          <div class="col-md-9 col-lg-7 col-xl-7 mx-auto text-center">
+            <img src="{{ page.cta3.icon }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+            <h2 class="display-4 mb-3">{{ page.cta3.title }}</h2>
+            <p class="lead fs-lg mb-6 px-xl-10 px-xxl-15">{{ page.cta3.text }}</p>
+            <a href="{{ page.cta3.button.url }}" class="{{ page.cta3.button.style }}">{{ page.cta3.button.label }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %}</code></pre>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-3-yaml">View frontmatter</a>
+          </div>
+          <div id="collapse-snippet-3-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data3">Copy</button>
+                <div id="data3">
+                  {% highlight yaml %}
+    # CTA Section 3
+    cta3:
+      enable: true
+      icon: /assets/img/icons/lineal/puzzle-2.svg
+      title: "Join Our Community"
+      text: "We are trusted by over 5000+ clients. Join them by using our services and grow your business."
+      button:
+        label: "Join Us"
+        url: "#"
+        style: "btn btn btn-primary rounded"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-4" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <div class="card image-wrapper bg-full bg-image bg-overlay {{ page.cta4.bg_overlay }}" data-image-src="{{ page.cta4.bg_image }}">
+          <div class="card-body p-10 p-xl-12">
+            <div class="row text-center">
+              <div class="col-xl-11 col-xxl-9 mx-auto">
+                <h2 class="fs-16 text-uppercase text-white mb-3">{{ page.cta4.subtitle }}</h2>
+                <h3 class="display-3 mb-8 px-lg-8 text-white">{{ page.cta4.title }} <span class="{{ page.cta4.highlight_style }}">{{ page.cta4.title_highlight }}</span></h3>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <span><a href="{{ page.cta4.button.url }}" class="{{ page.cta4.button.style }}">{{ page.cta4.button.label }}</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-html">View HTML code</a>
+          </div>
+          <div id="collapse-snippet-4-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <pre class="language-html"><code>{% highlight html %}{% raw %}
+    <section class="wrapper bg-light">
+      <div class="container pb-13 pb-md-15">
+        <div class="card image-wrapper bg-full bg-image bg-overlay {{ page.cta4.bg_overlay }}" data-image-src="{{ page.cta4.bg_image }}">
+          <div class="card-body p-10 p-xl-12">
+            <div class="row text-center">
+              <div class="col-xl-11 col-xxl-9 mx-auto">
+                <h2 class="fs-16 text-uppercase text-white mb-3">{{ page.cta4.subtitle }}</h2>
+                <h3 class="display-3 mb-8 px-lg-8 text-white">{{ page.cta4.title }} <span class="{{ page.cta4.highlight_style }}">{{ page.cta4.title_highlight }}</span></h3>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <span><a href="{{ page.cta4.button.url }}" class="{{ page.cta4.button.style }}">{{ page.cta4.button.label }}</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %}
+                  {% endhighlight %}</code></pre>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-yaml">View frontmatter</a>
+          </div>
+          <div id="collapse-snippet-4-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data4">Copy</button>
+                <div id="data4">
+                  {% highlight yaml %}
+    # CTA Section 4
+    cta4:
+      enable: true
+      bg_image: /assets/img/photos/bg16.png
+      bg_overlay: bg-overlay-300
+      subtitle: "Join Our Community"
+      title: "We are"
+      title_highlight: "trusted"
+      highlight_style: "underline-3 style-2 yellow"
+      button:
+        label: "Get Started"
+        url: "#"
+        style: "btn btn-white rounded"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-5" class="wrapper bg-light wrapper-border">
+      <div class="wrapper bg-soft-primary mb-12 mb-md-14">
+        <div class="container py-14 py-md-16">
+          <div class="row mb-8">
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="fs-16 text-uppercase text-primary mb-3">{{ page.cta5.subtitle }}</h2>
+              <h3 class="display-4 mb-0">{{ page.cta5.title }}</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 mx-auto">
+              <form action="#">
+                <div class="form-floating input-group">
+                  <input type="url" class="form-control border-0" placeholder="{{ page.cta5.input.placeholder }}" id="analyze">
+                  <label for="analyze">{{ page.cta5.input.label }}</label>
+                  <button class="btn btn-primary" type="button">{{ page.cta5.button.label }}</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-5-html">View HTML code</a>
+          </div>
+          <div id="collapse-snippet-5-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <pre class="language-html"><code>{% highlight html %}{% raw %}
+    <section class="wrapper bg-soft-primary">
+      <div class="container py-14 py-md-16">
+        <div class="row mb-8">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="fs-16 text-uppercase text-primary mb-3">{{ page.cta5.subtitle }}</h2>
+            <h3 class="display-4 mb-0">{{ page.cta5.title }}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 mx-auto">
+            <form action="#">
+              <div class="form-floating input-group">
+                <input type="url" class="form-control border-0" placeholder="{{ page.cta5.input.placeholder }}" id="analyze">
+                <label for="analyze">{{ page.cta5.input.label }}</label>
+                <button class="btn btn-primary" type="button">{{ page.cta5.button.label }}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %} {% endhighlight %}</code></pre>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-5-yaml">View frontmatter</a>
+          </div>
+          <div id="collapse-snippet-5-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data5">Copy</button>
+                <div id="data5">
+                  {% highlight yaml %}
+    # CTA Section 5
+    cta5:
+      enable: true
+      subtitle: "Analyze Now"
+      title: "Wonder how much faster your website can go? Easily check your SEO Score now."
+      input:
+        placeholder: "Enter Website URL"
+        label: "Enter Website URL"
+      button:
+        label: "Analyze"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-6" class="wrapper bg-light wrapper-border">
+      <div class="container pt-10 pb-15 py-lg-17 py-xl-20 py-xxl-22 position-relative">
+        <img class="position-lg-absolute col-12 col-lg-12 mt-lg-n50p mb-3 mb-md-10 mb-lg-0" src="{{ page.cta6.image }}" srcset="{{ page.cta6.image2x }} 2x" alt="" style="top: 50%; left: -23%;" />
+        <div class="row gx-lg-8 gx-xl-12 align-items-center">
+          <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-6 mt-md-n9 text-center text-lg-start">
+            <h1 class="display-4 mb-4 px-md-10 px-lg-0">{{ page.cta6.title }}</h1>
+            <p class="lead fs-lg mb-7 px-md-10 px-lg-0 pe-xxl-15">{{ page.cta6.text }}</p>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              {% for button in page.cta6.buttons %}
+              <span><a class="{{ button.style }}"><i class="{{ button.icon }}"></i> {{ button.label }}</a></span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-6-html">View HTML code</a>
+          </div>
+          <div id="collapse-snippet-6-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <pre class="language-html"><code>{% highlight html %}{% raw %}
+    <section class="wrapper bg-light">
+      <div class="container pt-10 pb-15 py-lg-17 py-xl-20 py-xxl-22 position-relative">
+        <img class="position-lg-absolute col-12 col-lg-12 mt-lg-n50p mb-3 mb-md-10 mb-lg-0" src="{{ page.cta6.image }}" srcset="{{ page.cta6.image2x }} 2x" alt="" style="top: 50%; left: -23%;" />
+        <div class="row gx-lg-8 gx-xl-12 align-items-center">
+          <div class="col-md-10 offset-md-1 col-lg-6 offset-lg-6 mt-md-n9 text-center text-lg-start">
+            <h1 class="display-4 mb-4 px-md-10 px-lg-0">{{ page.cta6.title }}</h1>
+            <p class="lead fs-lg mb-7 px-md-10 px-lg-0 pe-xxl-15">{{ page.cta6.text }}</p>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              {% for button in page.cta6.buttons %}
+              <span><a class="{{ button.style }}"><i class="{{ button.icon }}"></i> {{ button.label }}</a></span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %} {% endhighlight %}</code></pre>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-6-yaml">View frontmatter</a>
+          </div>
+          <div id="collapse-snippet-6-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data6">Copy</button>
+                <div id="data6">
+                  {% highlight yaml %}
+    # CTA Section 6
+    cta6:
+      enable: true
+      image: /assets/img/photos/devices2.png
+      image2x: /assets/img/photos/devices2@2x.png
+      title: "Get all of your steps, exercise, sleep and meds in one place."
+      text: "Sandbox is now available to download from both the App Store and Google Play Store."
+      buttons:
+        - label: "App Store"
+          icon: "uil uil-apple"
+          style: "btn btn-primary btn-icon btn-icon-start rounded me-2"
+        - label: "Google Play"
+          icon: "uil uil-google-play"
+          style: "btn btn-green btn-icon btn-icon-start rounded"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-7" class="wrapper bg-light wrapper-border">
+      <div class="pt-20 pb-10 position-relative">
+        <section class="wrapper image-wrapper bg-full bg-image bg-overlay bg-overlay-light-600" data-image-src="{{ page.cta7.bg_image }}">
+          <div class="overflow-hidden" style="z-index:1;">
+            <div class="divider divider-alt text-light mx-n2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><g fill="currentColor"><polygon points="1440 100 0 15 0 0 1440 0 1440 100"/></g></svg>
+            </div>
+          </div>
+          <div class="container pt-10 pt-lg-10 pt-md-13 pb-8 pb-md-10 text-center text-lg-start">
+            <div class="row gx-0 gy-10">
+              <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 col-xl-5 position-relative">
+                <img src="{{ page.cta7.doodle1 }}" class="h-15 position-absolute d-none d-lg-block" style="bottom: 36%; right: -25%" alt="">
+                <img src="{{ page.cta7.doodle2 }}" class="h-14 position-absolute d-none d-lg-block" style="top: -20%; left: -25%" alt="">
+                <h2 class="display-3 mb-4">{{ page.cta7.title }} <span class="text-gradient gradient-7">{{ page.cta7.title_highlight }}</span></h2>
+                <p class="lead fs-24 lh-sm mb-7">{{ page.cta7.text }}</p>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  {% for button in page.cta7.store_buttons %}
+                  <span><a href="{{ button.url }}" class="{{ button.class_name }}"><img src="{{ button.image }}" class="h-11 rounded-xl" alt=""></a></span>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="col-lg-6 ms-auto mt-lg-n15 mt-xl-n20">
+                <figure><img src="{{ page.cta7.device_image }}" srcset="{{ page.cta7.device_image2x }} 2x" alt=""></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-7-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-7-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html7">Copy</button>
+                <div id="html7">
+                  {% highlight html %}
+    {% raw %}
+    <section class="wrapper image-wrapper bg-full bg-image bg-overlay bg-overlay-light-600" data-image-src="{{ page.cta7.bg_image }}">
+      <div class="overflow-hidden" style="z-index:1;">
+        <div class="divider divider-alt text-light mx-n2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><g fill="currentColor"><polygon points="1440 100 0 15 0 0 1440 0 1440 100"/></g></svg>
+        </div>
+      </div>
+      <div class="container pt-10 pt-lg-10 pt-md-13 pb-8 pb-md-10 text-center text-lg-start">
+        <div class="row gx-0 gy-10">
+          <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 col-xl-5 position-relative">
+            <img src="{{ page.cta7.doodle1 }}" class="h-15 position-absolute d-none d-lg-block" style="bottom: 36%; right: -25%" alt="">
+            <img src="{{ page.cta7.doodle2 }}" class="h-14 position-absolute d-none d-lg-block" style="top: -20%; left: -25%" alt="">
+            <h2 class="display-3 mb-4">{{ page.cta7.title }} <span class="text-gradient gradient-7">{{ page.cta7.title_highlight }}</span></h2>
+            <p class="lead fs-24 lh-sm mb-7">{{ page.cta7.text }}</p>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              {% for button in page.cta7.store_buttons %}
+              <span><a href="{{ button.url }}" class="{{ button.class_name }}"><img src="{{ button.image }}" class="h-11 rounded-xl" alt=""></a></span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-lg-6 ms-auto mt-lg-n15 mt-xl-n20">
+            <figure><img src="{{ page.cta7.device_image }}" srcset="{{ page.cta7.device_image2x }} 2x" alt=""></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-7-yaml">
+              View frontmatter
+            </a>
+          </div>
+          <div id="collapse-snippet-7-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data7">Copy</button>
+                <div id="data7">
+                  {% highlight yaml %}
+    # CTA Section 7
+    cta7:
+      enable: true
+      bg_image: /assets/img/photos/bg23.png
+      doodle1: /assets/img/svg/doodle2.svg
+      doodle2: /assets/img/svg/doodle6.svg
+      title: "Manage all your bills, accounts & budgets in"
+      title_highlight: "one place"
+      text: "Sandbox is available to download from both App Store and Google Play Store."
+      device_image: /assets/img/photos/devices6.png
+      device_image2x: /assets/img/photos/devices6@2x.png
+      buttons:
+        - url: "#"
+          class_name: "me-2"
+          image: /assets/img/photos/button-appstore.svg
+        - url: "#"
+          class_name: ""
+          image: /assets/img/photos/button-google-play.svg
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-8" class="wrapper bg-light wrapper-border">
+      <div class="wrapper gradient-8 bg-lines">
+        <div class="container py-15 py-md-17 text-center">
+          <div class="row">
+            <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
+              <h2 class="fs-16 text-uppercase text-white mb-3">{{ page.cta8.subtitle }}</h2>
+              <h3 class="display-3 text-white mb-6">{{ page.cta8.title }} <span class="underline-2 underline-gradient-6"><em>{{ page.cta8.title_highlight }}</em></span></h3>
+              <a href="{{ page.cta8.button.url }}" class="btn btn-white">{{ page.cta8.button.label }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-8-html">View HTML code</a>
+          </div>
+          <div id="collapse-snippet-8-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <pre class="language-html"><code>{% highlight html %}{% raw %}<section class="wrapper bg-light wrapper-border">
+                  <div class="wrapper gradient-8 bg-lines">
+                    <div class="container py-15 py-md-17 text-center">
+                      <div class="row">
+                        <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
+                          <h2 class="fs-16 text-uppercase text-white mb-3">{{ page.cta8.subtitle }}</h2>
+                          <h3 class="display-3 text-white mb-6">{{ page.cta8.title }} <span class="underline-2 underline-gradient-6"><em>{{ page.cta8.title_highlight }}</em></span></h3>
+                          <a href="{{ page.cta8.button.url }}" class="btn btn-white">{{ page.cta8.button.label }}</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                {% endraw %} {% endhighlight %} </code></pre>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-8-yaml">View frontmatter</a>
+          </div>
+          <div id="collapse-snippet-8-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data8">Copy</button>
+                <div id="data8">
+                  {% highlight yaml %}
+    # CTA Section 8
+    cta8:
+      enable: true
+      subtitle: "Join Our Community"
+      title: "We are"
+      title_highlight: "trusted"
+      button:
+        label: "Join Us"
+        url: "#"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-9" class="wrapper bg-light wrapper-border">
+      <div class="pt-15 pb-10 position-relative">
+        <section class="section-frame mx-xxl-11 overflow-hidden">
+          <div class="wrapper image-wrapper bg-image bg-cover bg-overlay bg-overlay-light-500" data-image-src="{{ page.cta9.bg_image }}">
+            <div class="container py-16 py-md-18 text-center">
+              {% for shape in page.cta9.shapes %}
+              <div class="position-absolute shape {{ shape.class }} d-none d-lg-block {{ shape.width }}" style="top: {{ shape.position.top }}; left: {{ shape.position.left }}; right: {{ shape.position.right }}; bottom: {{ shape.position.bottom }}; {% if shape.position.rotate %}transform: rotate({{ shape.position.rotate }});{% endif %}">
+                <img src="/assets/img/svg/{{ shape.icon }}.svg" class="svg-inject icon-svg w-100 h-100" alt="" />
+              </div>
+              {% endfor %}
+              <div class="row">
+                <div class="col-lg-9 col-xxl-8 mx-auto">
+                  <h1 class="display-1 fs-70 mx-lg-n10 mx-xl-0 mb-5">{{ page.cta9.title }}</h1>
+                  <p class="lead fs-24 px-md-12 px-lg-0 mx-lg-n10 mx-xl-0 mb-8">{{ page.cta9.text }}</p>
+                  <a href="{{ page.cta9.button.url }}" class="btn btn-lg btn-primary btn-icon btn-icon-end">{{ page.cta9.button.label }} <i class="uil {{ page.cta9.button.icon }}"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-9-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-9-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html9">Copy</button>
+                <div id="html9">
+                  {% highlight html %}
+    {% raw %}
+    <section class="section-frame mx-xxl-11 overflow-hidden">
+      <div class="wrapper image-wrapper bg-image bg-cover bg-overlay bg-overlay-light-500" data-image-src="{{ page.cta9.bg_image }}">
+        <div class="container py-16 py-md-18 text-center">
+          {% for shape in page.cta9.shapes %}
+          <div class="position-absolute shape {{ shape.class }} d-none d-lg-block {{ shape.width }}" style="top: {{ shape.position.top }}; left: {{ shape.position.left }}; right: {{ shape.position.right }}; bottom: {{ shape.position.bottom }}; {% if shape.position.rotate %}transform: rotate({{ shape.position.rotate }});{% endif %}">
+            <img src="/assets/img/svg/{{ shape.icon }}.svg" class="svg-inject icon-svg w-100 h-100" alt="" />
+          </div>
+          {% endfor %}
+          <div class="row">
+            <div class="col-lg-9 col-xxl-8 mx-auto">
+              <h1 class="display-1 fs-70 mx-lg-n10 mx-xl-0 mb-5">{{ page.cta9.title }}</h1>
+              <p class="lead fs-24 px-md-12 px-lg-0 mx-lg-n10 mx-xl-0 mb-8">{{ page.cta9.text }}</p>
+              <a href="{{ page.cta9.button.url }}" class="btn btn-lg btn-primary btn-icon btn-icon-end">{{ page.cta9.button.label }} <i class="uil {{ page.cta9.button.icon }}"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-9-yaml">
+              View frontmatter
+            </a>
+          </div>
+          <div id="collapse-snippet-9-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data9">Copy</button>
+                <div id="data9">
+                  {% highlight yaml %}
+    # CTA Section 9
+    cta9:
+      enable: true
+      bg_image: /assets/img/photos/bg23.png
+      shapes:
+        - icon: pie
+          class: yellow
+          width: w-5
+          position:
+            top: 18%
+            left: 5%
+        - icon: scribble
+          class: leaf
+          width: w-10
+          position:
+            bottom: 30%
+            left: 2%
+        - icon: tri
+          class: fuchsia
+          width: w-6
+          position:
+            top: 20%
+            right: 2%
+            rotate: 70deg
+        - icon: circle
+          class: grape
+          width: w-6
+          position:
+            bottom: 28%
+            right: 5%
+      title: "Got a 👾 project in mind? Let's work together. ✌️"
+      text: "I bring rapid solutions to make the life of my clients easier. Have any questions? Reach out to me and I will get back to you shortly."
+      button:
+        label: "Contact Me"
+        icon: "uil-arrow-up-right"
+        url: "#"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+ 

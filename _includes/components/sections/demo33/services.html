@@ -1,0 +1,29 @@
+<section class="wrapper bg-light">
+  <div class="container py-16 py-md-18">
+    <div class="row d-flex align-items-start gy-10 mb-18 mb-md-20">
+      <div class="col-lg-5 position-lg-sticky" style="top: 8rem;">
+        <h3 class="display-2 mb-5">{{ page.services.title }}</h3>
+        <p class="mb-7">{{ page.services.description }}</p>
+        <a href="{{ page.services.button.url }}" class="btn btn-lg btn-primary btn-icon btn-icon-end">{{ page.services.button.text }} <i class="uil uil-arrow-up-right"></i></a>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-6 ms-auto">
+        {% for service in page.services.service_items %}
+        <div class="card bg-soft-{{ service.color }} mb-6">
+          <div class="card-body d-flex flex-row">
+            <div>
+              <img src="/assets/img/icons/lineal/{{ service.icon }}" class="svg-inject icon-svg icon-svg-md text-{{ service.color }} me-5" alt="" />
+            </div>
+            <div>
+              <h3 class="fs-21 mb-2">{{ service.title }}</h3>
+              <p class="mb-0">{{ service.text }}</p>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        {% endfor %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->

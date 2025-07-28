@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+    %}
+  </header>
+  <!-- /header -->
+
+  {% include components/header/header-projects-list.html 
+     bg_class="bg-gray"
+     frame_class="section-frame overflow-hidden"
+     container_class="py-13 py-md-17"
+     title_class="display-1 mb-1"
+     center=true
+  %}
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row mt-6">
+      <div class="col-xl-10 mx-auto">
+        <div class="projects-tiles">
+          {% assign categories = site.projects | map: "category" | uniq %}
+          {% for cat in categories %}
+            {% assign projects_in_category = site.projects | where: "category", cat %}
+            {% assign total_in_cat = projects_in_category | size %}
+            {% if total_in_cat > 0 %}
+            <div class="project grid grid-view mb-10">
+              <div class="row g-6 isotope">
+                <!-- Main featured project block for this category -->
+                <div class="item col-md-6">
+                  {% assign main_project = projects_in_category[0] %}
+                  <div class="project-details d-flex justify-content-center flex-column">
+                    <div class="post-header">
+                      <div class="post-category text-{{ main_project.color | default: 'red' }} mb-3">{{ main_project.category }}</div>
+                      <h2 class="post-title mb-3">{{ main_project.title }}</h2>
+                    </div>
+                    <div class="post-content">
+                      <p>{{ main_project.description | default: main_project.excerpt | strip_html | truncate: 120 }}</p>
+                      <a href="{{ main_project.url | relative_url }}" class="more hover link-{{ main_project.color | default: 'red' }}">See Project</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Thumbnail projects for same category -->
+                {% for thumb_project in projects_in_category offset:1 limit:3 %}
+                <div class="item col-md-6">
+                  <figure class="itooltip itooltip-light hover-scale rounded" title='<h5 class="mb-0">{{ thumb_project.title }}</h5>'>
+                    <a href="{{ thumb_project.url | relative_url }}">
+                      <img src="{{ thumb_project.thumbnail | default: thumb_project.hero_image | relative_url }}" alt="{{ thumb_project.title }}">
+                    </a>
+                  </figure>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    {% include components/projects/pagination.html %}
+  </div>
+</section>
+
+<!-- FOOTER -->
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-dark" 
+  text_color="text-inverse"
+  cta=false
+  newsletter=true
+%}
+<!-- /footer -->
+</div>

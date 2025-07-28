@@ -1,0 +1,18 @@
+{% if page.slideshow1.enable %}
+<div class="swiper-container swiper-auto swiper-auto-xs mb-8" data-margin="40" data-nav="false" data-dots="false" data-centered="true" data-loop="true" data-items-auto="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-resizeupdate="false" data-speed="7000">
+  <div class="swiper overflow-visible pe-none">
+    <div class="swiper-wrapper ticker">
+      {% for slide in page.slideshow1.slides %}
+      <div class="swiper-slide">
+        <figure class="rounded-xl shadow-xl">
+          <img src="{{ slide.image | relative_url }}" srcset="{{ slide.image2x | relative_url }} 2x" alt="" />
+        </figure>
+      </div>
+      {% endfor %}
+    </div>
+    <!--/.swiper-wrapper -->
+  </div>
+  <!-- /.swiper -->
+</div>
+<!-- /.swiper-container -->
+{% endif %}

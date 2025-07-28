@@ -1,0 +1,26 @@
+<section class="wrapper bg-dark text-inverse">
+  <div class="container py-14 py-md-16">
+    <figure class="rounded mt-md-n21 mt-lg-n23 mb-14" data-cue="slideInDown" data-delay="900">
+      <img src="{{ page.hero.image }}" srcset="{{ page.hero.image2x }} 2x" alt="" />
+    </figure>
+    <div class="row">
+      <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
+        <h3 class="display-4 text-white mb-10">{{ page.services.title }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-md-8 gy-8 text-center" data-cues="slideInDown" data-group="services">
+      {% for service in page.services.service_items %}
+      <div class="col-md-6 col-lg-3">
+        <div class="icon btn btn-circle btn-lg btn-primary pe-none mb-5"> <i class="{{ service.icon }}"></i> </div>
+        <h4 class="text-white">{{ service.title }}</h4>
+        <p class="mb-3">{{ service.text }}</p>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>

@@ -1,0 +1,90 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+    %}
+  </header>
+  <!-- /header -->
+
+  {% include components/header/header-projects-list.html 
+     bg_class="bg-light"
+     container_class="pt-10 pt-md-14"
+     center=true
+  %}
+
+<section class="wrapper bg-light">
+  <div class="container pt-9 pt-md-11 pb-14 pb-md-16">
+    <div class="projects-overflow mt-md-10 mb-10 mb-lg-15">
+      {% assign projects_list = paginator.posts %}
+      {% if projects_list.size == 0 %}
+        {% assign projects_list = site.projects %}
+      {% endif %}
+      
+      {% for project in projects_list %}
+      {% unless page.projects_category and page.projects_category != project.category %}
+      <div class="project item">
+        <div class="row">
+          {% assign position = forloop.index | modulo: 2 %}
+          {% if position == 0 %}
+          <figure class="col-lg-7 offset-lg-5 col-xl-6 offset-xl-5 rounded">
+            <img src="{{ project.thumbnail | default: project.hero_image | relative_url }}" alt="{{ project.title }}" />
+          </figure>
+          <div class="project-details d-flex justify-content-center flex-column" style="left: 18%; bottom: 25%;">
+          {% else %}
+          <figure class="col-lg-8 col-xl-7 offset-xl-1 rounded">
+            <img src="{{ project.thumbnail | default: project.hero_image | relative_url }}" alt="{{ project.title }}" />
+          </figure>
+          <div class="project-details d-flex justify-content-center flex-column" style="right: 10%; bottom: 25%;">
+          {% endif %}
+            <div class="card shadow rellax" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+              <div class="card-body">
+                <div class="post-header">
+                  {% if project.category %}
+                  <div class="post-category text-line text-{{ project.color | default: 'purple' }} mb-3">{{ project.category }}</div>
+                  {% endif %}
+                  <h2 class="post-title mb-3">{{ project.title }}</h2>
+                </div>
+                <div class="post-content">
+                  <p>{{ project.description | default: project.excerpt | strip_html | truncate: 120 }}</p>
+                  <a href="{{ project.url | relative_url }}" class="more hover link-{{ project.color | default: 'purple' }}">See Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endunless %}
+      {% endfor %}
+    </div>
+    <!-- /.projects-overflow -->
+
+    <!-- Pagination -->
+    {% include components/projects/pagination.html %}
+  </div>
+</section>
+<!-- /section -->
+
+<!-- FOOTER -->
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-dark" 
+  text_color="text-inverse"
+  cta=false
+  newsletter=true
+%}
+<!-- /footer -->
+</div>
+<!-- /.content-wrapper -->

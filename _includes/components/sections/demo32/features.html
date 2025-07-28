@@ -1,0 +1,53 @@
+<section class="{{ page.features.bg_class }}">
+  <div class="container py-15 py-md-17">
+    <div class="row gx-md-8 gy-10 align-items-center">
+      <div class="col-lg-6 offset-lg-1 order-lg-2 position-relative">
+        <figure class="rounded"><img class="img-fluid" src="{{ page.features.image }}" srcset="{{ page.features.image2x }} 2x" alt="" /></figure>
+        
+        {% for card in page.features.cards %}
+        {% if forloop.first %}
+        <div class="card shadow-lg position-absolute d-none d-md-block" style="{{ card.position }}">
+          <div class="card-body py-4 px-5">
+            <div class="d-flex flex-row align-items-center">
+              <div>
+                <div class="icon btn btn-block btn-soft-primary pe-none mx-auto me-4 w-10 h-10"> <i class="{{ card.icon }}"></i> </div>
+              </div>
+              <div>
+                <h3 class="fs-25 counter mb-0 text-nowrap">{{ card.count }}</h3>
+                <p class="fs-16 lh-sm mb-0 text-nowrap">{{ card.text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        {% else %}
+        <div class="card shadow-lg position-absolute text-center d-none d-md-block" style="{{ card.position }}">
+          <div class="card-body p-6">
+            <div class="progressbar semi-circle primary mb-3" data-value="{{ card.progressbar }}"></div>
+            <h4 class="mb-0">{{ card.text }}</h4>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        {% endif %}
+        {% endfor %}
+      </div>
+      <!--/column -->
+      <div class="col-lg-5">
+        <h2 class="{{ page.features.title_class }}">{{ page.features.title_tag }}</h2>
+        <h3 class="{{ page.features.main_title_class }}">{{ page.features.main_title }}</h3>
+        <p class="mb-6">{{ page.features.text }}</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          {% for feature in page.features.features_list %}
+          <li><i class="uil uil-check"></i>{{ feature.text }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

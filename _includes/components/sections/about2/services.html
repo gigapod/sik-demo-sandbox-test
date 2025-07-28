@@ -1,0 +1,44 @@
+<section class="wrapper bg-light">
+  <div class="container pb-14 pb-md-16">
+    <div class="row text-center mb-12 mb-md-15">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-n18 mt-md-n22">
+        <figure><img class="w-auto" src="{{ page.services.image }}" srcset="{{ page.services.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-lg-8 gx-xl-12 gy-6 mb-10 align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <ul class="progress-list">
+          {% for item in page.services.progress_list %}
+          <li>
+            <p>{{ item.name }}</p>
+            <div class="progressbar line {{ item.color }}" data-value="{{ item.value }}"></div>
+          </li>
+          {% endfor %}
+        </ul>
+        <!-- /.progress-list -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h3 class="display-5 mb-5">{{ page.services.title }}</h3>
+        <p>{{ page.services.text }}</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="row gx-lg-8 gx-xl-12 gy-6 gy-md-0 text-center">
+      {% for item in page.services.items %}
+      <div class="col-md-6 col-lg-3">
+        <img src="{{ site.baseurl }}/assets/img/icons/lineal/{{ item.icon }}.svg" class="svg-inject icon-svg icon-svg-md text-{{ item.icon_color }} mb-3" alt="" />
+        <h4>{{ item.title }}</h4>
+        <p class="mb-2">{{ item.text }}</p>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

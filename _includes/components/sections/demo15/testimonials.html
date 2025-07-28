@@ -1,0 +1,40 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container pt-16 pb-14 pb-md-0">
+    <div class="row gx-lg-8 gx-xl-0 align-items-center">
+      <div class="col-md-5 col-lg-5 col-xl-4 offset-xl-1 d-none d-md-flex position-relative align-self-end">
+        <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21 d-md-none d-lg-block" data-rellax-speed="1" style="top: 7rem; left: 1rem"></div>
+        <figure><img src="{{ page.testimonials.image }}" srcset="{{ page.testimonials.image2x }} 2x" alt=""></figure>
+      </div>
+      <!--/column -->
+      <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
+        <div class="swiper-container dots-start dots-closer mt-md-10 mb-md-15" data-margin="30" data-dots="true">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for testimonial in site.data.testimonials.testimonials %}
+              <div class="swiper-slide">
+                <blockquote class="icon fs-lg">
+                  <p>"{{ testimonial.quote }}"</p>
+                  <div class="blockquote-details">
+                    <div class="info ps-0">
+                      <h5 class="mb-1">{{ testimonial.name }}</h5>
+                      <p class="mb-0">{{ testimonial.position }}</p>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+              <!--/.swiper-slide -->
+              {% endfor %}
+            </div>
+            <!--/.swiper-wrapper -->
+          </div>
+          <!-- /.swiper -->
+        </div>
+        <!-- /.swiper-container -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

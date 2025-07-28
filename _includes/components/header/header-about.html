@@ -1,0 +1,15 @@
+<section class="wrapper {{ include.background_class | default: 'bg-soft-primary' }}">
+  <div class="container pt-10 pb-20 pt-md-14 pb-md-23 text-center">
+    <div class="row">
+      <div class="col-xl-6 mx-auto">
+        <h1 class="display-1 mb-4">{{ include.title | default: 'Hello! This is Sandbox' }}</h1>
+        <p class="lead fs-lg mb-0">{{ include.subtitle | default: 'A company turning ideas into beautiful things.' }}</p>
+      </div>
+    </div>
+  </div>
+  {% if include.figure_image %}
+    <figure class="position-absolute" style="bottom: 0; left: 0; z-index: 2;">
+      <img src="{{ include.figure_image }}" alt="" />
+    </figure>
+  {% endif %}
+</section>

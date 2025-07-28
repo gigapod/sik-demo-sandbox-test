@@ -1,0 +1,39 @@
+<section class="wrapper bg-light">
+<div class="container pt-15 pt-md-18">
+<div class="row gx-lg-0 gy-10 align-items-center ">
+  <div class="col-lg-6 order-lg-2 offset-lg-1 grid">
+    <div class="row gx-md-5 gy-5 align-items-center counter-wrapper isotope">
+      {% for counter in page.community.counters %}
+      <div class="item col-md-6">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <div class="d-flex d-lg-block d-xl-flex flex-row">
+              <div>
+                <div class="icon btn btn-circle btn-lg btn-soft-{{ counter.icon_color }} pe-none mx-auto me-4 mb-lg-3 mb-xl-0"> <i class="{{ counter.icon }}"></i> </div>
+              </div>
+              <div>
+                <h3 class="counter mb-1">{{ counter.number }}</h3>
+                <p class="mb-0">{{ counter.text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!--/column -->
+  <div class="col-lg-5">
+    <h2 class="display-4 mb-3">{{ page.community.title }}</h2>
+    <p class="lead fs-lg lh-sm">{{ page.community.subtitle }}</p>
+    <p class="mb-0">{{ page.community.text }}</p>
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->
+</div>
+</section>

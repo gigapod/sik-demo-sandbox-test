@@ -1,0 +1,123 @@
+---
+layout: default
+---
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-soft-primary">
+    {% if page.header_style == 'standard' %}
+      {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+      %}
+    {% else %}
+      {% include components/navbar/navbar.html
+        classList="center-nav transparent position-absolute navbar-dark"
+        logoBoth=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-white rounded-pill"
+        otherBtnText="Contact"
+      %}
+    {% endif %}
+  </header>
+  <!-- /HEADER -->
+
+  
+  {% include components/header/header-post.html 
+    header_style=page.header_style
+    background_image=page.header_image
+    category=page.category
+    title=page.title
+    meta_date=page.date
+    meta_author=page.author
+    meta_comments=page.comments
+    meta_likes=page.likes
+ %}
+ 
+
+
+
+  <section class="wrapper bg-light">
+    <div class="container {% if page.header_style == 'standard' %}pb-14 pb-md-16{% else %}py-14 py-md-16{% endif %}">
+      
+      {% if page.header_style == 'standard' %}
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="blog single mt-n17">
+      {% else %}
+      <div class="row gx-lg-8 gx-xl-12">
+        <div class="col-lg-8 {% if page.sidebar_position == 'left' %}order-lg-2{% endif %}">
+          <div class="blog single">
+      {% endif %}
+            
+            <div class="card">
+              {% include components/blog/post/featured-image.html image_url=page.featured_image image_alt=page.title %}
+              
+              <div class="card-body">
+                <div class="classic-view">
+                  <article class="post">
+                    <div class="post-content mb-5">
+                      {{ content }}
+                    </div>
+                    <div class="post-footer-meta border-top mt-5">
+                      {% if page.last_modified %}
+                        <p class="text-muted small">Last updated on {{ page.last_modified | date: "%d %B %Y" }}</p>
+                      {% else %}
+                        <p class="text-muted small">Published on {{ page.date | date: "%d %B %Y" }}</p>
+                      {% endif %}
+                    </div>
+                    
+                    {% include components/blog/post/post-footer.html %}
+                  </article>
+                </div>
+                
+                <hr />
+                {% include components/blog/author.html %}
+                <hr />
+                {% include components/blog/related-posts.html %}
+
+                {% if site.data.theme.disqus.enabled and page.comments != false %}
+                  {% include components/blog/disqus-comments.html %}
+                {% elsif site.data.theme.disqus.enabled == false and site.data.theme.disqus.demo_mode == true and page.comments != false %}
+                  <div class="alert alert-info mt-4" role="alert">
+                    {{ site.data.theme.disqus.demo_message }}
+                  </div>
+                {% endif %}
+
+                {% if page.header_style == 'standard' or page.header_style == 'overlay' %}
+                  <hr />
+                  {% include components/blog/post/post-navigation.html 
+                    previous_url=page.previous.url 
+                    next_url=page.next.url 
+                  %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% unless page.header_style == 'standard' and page.sidebar_position == false %}
+        <aside class="col-lg-4 sidebar mt-11 mt-lg-6 {% if page.sidebar_position == 'left' %}order-lg-1{% endif %}">
+          {% include components/blog/sidebar-widgets.html %}
+        </aside>
+        {% endunless %}
+      </div>
+    </div>
+  </section>
+
+  {% include components/footer/footer.html 
+    style="default"
+    bg_color="bg-dark" 
+    text_color="text-inverse"
+    cta=false
+    newsletter=true 
+  %}
+</div>

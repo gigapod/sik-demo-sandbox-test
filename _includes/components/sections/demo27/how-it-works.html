@@ -1,0 +1,33 @@
+<section class="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
+  <div class="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100" data-image-src="{{ page.how_it_works.bg_image }}">
+    <div class="divider text-gray divider-v-end d-none d-lg-block">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200"><g/><g><g><polygon fill="currentColor" points="48 0 0 0 48 1200 54 1200 54 0 48 0"/></g></g></svg>
+    </div>
+  </div>
+  <!--/column -->
+  <div class="container">
+    <div class="row gx-0">
+      <div class="col-lg-6 ms-auto">
+        <div class="pt-13 pb-15 pb-md-17 py-lg-16 ps-lg-15 pe-xxl-16">
+          <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.how_it_works.title_tag }}</h2>
+          <h3 class="display-3 ls-sm mb-7">{{ page.how_it_works.title }}</h3>
+          {% for step in page.how_it_works.steps %}
+          <div class="d-flex flex-row {% unless forloop.last %}mb-5{% endunless %}">
+            <div>
+              <img src="/assets/img/icons/lineal/{{ step.icon }}.svg" class="svg-inject icon-svg icon-svg-md text-{{ step.icon_color }} me-5 mt-1" alt="" />
+            </div>
+            <div>
+              <h4 class="fs-20 ls-sm">{{ step.title }}</h4>
+              <p class="mb-0">{{ step.text }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

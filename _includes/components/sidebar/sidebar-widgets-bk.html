@@ -1,0 +1,83 @@
+<!-- Sidebar Widgets Start -->
+<div class="widget">
+  <h4 class="widget-title mb-3">Search</h4>
+  <form class="search-form" action="/search.html" method="get">
+    <div class="form-floating mb-0">
+      <input id="search-form" type="text" class="form-control" placeholder="Search" name="query">
+      <label for="search-form">Search</label>
+    </div>
+  </form>
+  <!-- /.search-form -->
+</div>
+<!-- /.widget -->
+
+<div class="widget">
+  <h4 class="widget-title mb-3">About</h4>
+  <p>{{ site.data.theme.description }}</p>
+  <nav class="nav social">
+    {% for item in site.data.social.social_accounts.links %}
+    <a href="{{ item.url }}"><i class="{{ item.icon }}"></i></a>
+    {% endfor %}
+  </nav>
+  <!-- /.social -->
+</div>
+<!-- /.widget -->
+
+<div class="widget">
+  <h4 class="widget-title mb-3">Popular Posts</h4>
+  <ul class="image-list">
+    {% for post in site.posts limit:3 %}
+    <li>
+      <figure class="rounded"><a href="{{ post.url }}"><img src="{{ post.featured_image | default: '/assets/img/photos/a1.webp' }}" alt="{{ post.title }}" /></a></figure>
+      <div class="post-content">
+        <h6 class="mb-1"> <a class="link-dark" href="{{ post.url }}">{{ post.title }}</a> </h6>
+        <div class="post-meta">
+          <span class="post-date"><i class="uil uil-calendar-alt"></i>{{ post.date | date: "%d %b %Y" }}</span>
+        </div>
+        <!-- /.post-meta -->
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <!-- /.image-list -->
+</div>
+<!-- /.widget -->
+
+<div class="widget">
+  <h4 class="widget-title mb-3">Categories</h4>
+  <ul class="unordered-list bullet-primary text-reset">
+    {% assign categories = site.posts | map: "category" | uniq %}
+    {% for category in categories %}
+    <li><a href="/blog/category/{{ category | slugify }}/">{{ category }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<!-- /.widget -->
+
+<div class="widget">
+  <h4 class="widget-title mb-3">Tags</h4>
+  <ul class="list-unstyled tag-list">
+    {% assign tags = site.posts | map: "tags" | uniq | compact | flatten %}
+    {% for tag in tags %}
+    <li><a href="/blog/tag/{{ tag | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<!-- /.widget -->
+
+<div class="widget">
+  <h4 class="widget-title mb-3">Archives</h4>
+  <ul class="unordered-list bullet-primary text-reset">
+    {% assign dates = site.posts | map: "date" | uniq %}
+    {% for date in dates %}
+    {% capture month %}{{ date | date: '%B %Y' }}{% endcapture %}
+    {% capture month_url %}{{ date | date: '%Y/%m' }}{% endcapture %}
+    {% unless archive_dates contains month %}
+    <li><a href="/blog/{{ month_url }}/">{{ month }}</a></li>
+    {% capture archive_dates %}{{ archive_dates }}|{{ month }}{% endcapture %}
+    {% endunless %}
+    {% endfor %}
+  </ul>
+</div>
+<!-- /.widget -->
+<!-- Sidebar Widgets End -->

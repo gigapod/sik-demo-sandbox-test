@@ -1,0 +1,42 @@
+{% if page.portfolio.enable %}
+  <section class="wrapper bg-gray">
+    <div class="container py-15 py-md-17 text-center">
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 col-xxl-7 mx-auto mb-8">
+          <h2 class="display-5 mb-3">{{ page.portfolio.title }}</h2>
+          <p class="lead fs-lg">{{ page.portfolio.subtitle }}</p>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+      <div class="grid grid-view projects-masonry">
+        <div class="isotope-filter filter mb-10">
+          <ul>
+            {% for filter in page.portfolio.filters %}
+            <li><a class="filter-item{% if filter.active %} active{% endif %}" data-filter="{{ filter.key }}">{{ filter.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="row gx-md-6 gy-6 isotope">
+          {% for project in page.portfolio.projects %}
+          <div class="project item col-md-6 col-xl-4 {{ project.category }}">
+            <figure class="overlay overlay-1 rounded">
+              <a href="{{ project.full_img | relative_url }}" data-glightbox data-gallery="shots-group">
+                <img src="{{ project.img | relative_url }}" alt="" />
+              </a>
+              <figcaption>
+                <h5 class="from-top mb-0">{{ project.title }}</h5>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- /.project -->
+          {% endfor %}
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.grid -->
+    </div>
+    <!-- /.container -->
+  <!-- /.wrapper -->
+</section>
+{% endif %}

@@ -1,0 +1,32 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container py-14 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-7">
+        <figure><img class="w-auto" src="{{ page.contact.image }}" srcset="{{ page.contact.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5">
+        <h3 class="display-4 mb-7">{{ page.contact.title }}</h3>
+        {% for info in page.contact.contact_info %}
+        <div class="d-flex flex-row">
+          <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="{{ info.icon }}"></i> </div>
+          </div>
+          <div>
+            <h5 class="mb-1">{{ info.title }}</h5>
+            {% if info.link %}
+            <p class="mb-0"><a href="{{ info.link }}" class="link-body">{{ info.text }}</a></p>
+            {% else %}
+            <p {% unless forloop.last %}class="mb-0"{% endunless %}>{{ info.text }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

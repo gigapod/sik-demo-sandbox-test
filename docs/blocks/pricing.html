@@ -1,0 +1,759 @@
+--- 
+layout: doc
+title: Blocks - Pricing
+description: Copy any custom block snippet below and paste it on your page to build your website easily.
+
+pricing1:
+  enable: true
+  title: "Our Pricing"
+  description: "We offer <span class=\"underline\">great prices</span>, premium and quality products for your business."
+  trial_text: "Enjoy a"
+  trial_link: "#"
+  trial_link_text: "free 30-day trial"
+  button_text: "See All Prices"
+  button_url: "#"
+
+pricing2:
+  enable: true
+  title: "Our Pricing"
+  description: "We offer great prices, premium products and quality service for your business."
+
+pricing3:
+  enable: true
+  title: "Our Pricing"
+
+pricing4:
+  enable: true
+  title: "Our Pricing"
+  description: "We offer <span class=\"underline\">great prices</span>, premium and quality products for your business."
+  trial_text: "Enjoy a"
+  trial_link: "#"
+  trial_link_text: "free 30-day trial and experience the full service. No credit card required!"
+  button_text: "See All Prices"
+  button_url: "#"
+---
+  
+  {% if page.pricing1.enable %}
+  {% assign pricing_data = site.data.pricing_plans %}
+<section id="snippet-1" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row gy-6">
+      <div class="col-lg-4">
+        <h2 class="display-4 mt-lg-18 mb-3">{{ page.pricing1.title }}</h2>
+        <p class="lead fs-lg">{{ page.pricing1.description }}</p>
+        <p>{{ page.pricing1.trial_text }} <a href="{{ page.pricing1.trial_link }}" class="hover">{{ page.pricing1.trial_link_text }}</a></p>
+        <a href="{{ page.pricing1.button_url }}" class="btn btn-primary rounded-pill mt-2">{{ page.pricing1.button_text }}</a>
+      </div>
+      <!--/column -->
+      <div class="col-lg-7 offset-lg-1 pricing-wrapper">
+        <div class="pricing-switcher-wrapper switcher justify-content-start justify-content-lg-end">
+          <p class="mb-0 pe-3">Monthly</p>
+          <div class="pricing-switchers">
+            <div class="pricing-switcher pricing-switcher-active"></div>
+            <div class="pricing-switcher"></div>
+            <div class="switcher-button bg-primary"></div>
+          </div>
+          <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
+        </div>
+        <div class="row gy-6 position-relative mt-5">
+          <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="bottom: -0.5rem; right: -1.6rem;"></div>
+          <div class="shape rounded-circle bg-line red rellax w-18 h-18" data-rellax-speed="1" style="top: -1rem; left: -2rem;"></div>
+          
+          {% for plan in pricing_data.plans | limit:2 %}
+          <div class="col-md-6 {{ plan.planHighlightClass }}">
+            <div class="pricing card {{ plan.cardHighlightClass }}">
+              <div class="card-body pb-12">
+                <div class="icon btn btn-circle btn-lg {{ plan.iconButtonHighlightClass }} pe-none">
+                  <i class="{{ plan.icon }}"></i>
+                </div>
+                <div class="prices text-dark">
+                  <div class="price price-show justify-content-start">
+                    <span class="price-currency">{{ plan.pricing.monthly.currency }}</span>
+                    <span class="price-value">{{ plan.pricing.monthly.amount }}</span>
+                    <span class="price-duration">{{ plan.pricing.monthly.duration }}</span>
+                  </div>
+                  <div class="price price-hide price-hidden justify-content-start">
+                    <span class="price-currency">{{ plan.pricing.yearly.currency }}</span>
+                    <span class="price-value">{{ plan.pricing.yearly.amount }}</span>
+                    <span class="price-duration">{{ plan.pricing.yearly.duration }}</span>
+                  </div>
+                </div>
+                <!--/.prices -->
+                <h4 class="card-title mt-2">{{ plan.name }}</h4>
+                <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8">
+                  {% for feature in plan.features %}
+                  <li>
+                    <i class="uil {% if feature.enabled %}uil-check{% else %}uil-times bullet-soft-red{% endif %}"></i>
+                    <span>
+                      {% if feature.values[0] != "" and feature.values[0] != "-" %}
+                        <strong>{{ feature.values[0] }}</strong>
+                      {% endif %}
+                      {{ feature.name }}
+                    </span>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% for button in plan.choose_plan_btn %}
+                <a href="{{ button.link }}" class="btn {{ button.color }} {{ button.shape }}">{{ button.text }}</a>
+                {% endfor %}
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.pricing -->
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <!-- HTML Section -->
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-1-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html1">Copy</button>
+            <div id="html1">
+              {% highlight html %}
+{% raw %}
+<section class="wrapper bg-light">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row gy-6">
+      <div class="col-lg-4">
+        <h2 class="display-4 mt-lg-18 mb-3">Our Pricing</h2>
+        <p class="lead fs-lg">We offer <span class="underline">great prices</span>, premium and quality products for your business.</p>
+        <p>Enjoy a <a href="#" class="hover">free 30-day trial</a> and experience the full service. No credit card required!</p>
+        <a href="#" class="btn btn-primary rounded-pill mt-2">See All Prices</a>
+      </div>
+      <div class="col-lg-7 offset-lg-1 pricing-wrapper">
+        <div class="pricing-switcher-wrapper switcher justify-content-start justify-content-lg-end">
+          <p class="mb-0 pe-3">Monthly</p>
+          <div class="pricing-switchers">
+            <div class="pricing-switcher pricing-switcher-active"></div>
+            <div class="pricing-switcher"></div>
+            <div class="switcher-button bg-primary"></div>
+          </div>
+          <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
+        </div>
+        <div class="row gy-6 position-relative mt-5">
+          <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="bottom: -0.5rem; right: -1.6rem;"></div>
+          <div class="shape rounded-circle bg-line red rellax w-18 h-18" data-rellax-speed="1" style="top: -1rem; left: -2rem;"></div>
+          {% for plan in pricing_data.plans %}
+          <div class="col-md-6 {{ plan.planHighlightClass }}">
+            <div class="pricing card {{ plan.cardHighlightClass }}">
+              <div class="card-body pb-12">
+                <div class="icon btn btn-circle btn-lg {{ plan.iconButtonHighlightClass }} pe-none">
+                  <i class="{{ plan.icon }}"></i>
+                </div>
+                <div class="prices text-dark">
+                  <div class="price price-show justify-content-start">
+                    <span class="price-currency">{{ plan.pricing.monthly.currency }}</span>
+                    <span class="price-value">{{ plan.pricing.monthly.amount }}</span>
+                    <span class="price-duration">{{ plan.pricing.monthly.duration }}</span>
+                  </div>
+                  <div class="price price-hide price-hidden justify-content-start">
+                    <span class="price-currency">{{ plan.pricing.yearly.currency }}</span>
+                    <span class="price-value">{{ plan.pricing.yearly.amount }}</span>
+                    <span class="price-duration">{{ plan.pricing.yearly.duration }}</span>
+                  </div>
+                </div>
+                <h4 class="card-title mt-2">{{ plan.name }}</h4>
+                <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8">
+                  {% for feature in plan.features %}
+                  <li>
+                    <i class="uil {% if feature.enabled %}uil-check{% else %}uil-times bullet-soft-red{% endif %}"></i>
+                    <span>
+                      {% if feature.values[0] != "" and feature.values[0] != "-" %}
+                        <strong>{{ feature.values[0] }}</strong>
+                      {% endif %}
+                      {{ feature.name }}
+                    </span>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% for button in plan.choose_plan_btn %}
+                <a href="{{ button.link }}" class="btn {{ button.color }} {{ button.shape }}">{{ button.text }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endraw %}
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JSON Data Section -->
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-json">
+          View Yaml data
+        </a>
+      </div>
+      <div id="collapse-snippet-1-json" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data1">Copy</button>
+            <div id="data1">
+              {% highlight yaml %}
+pricing1:
+  enable: true
+  title: "Our Pricing"
+  description: "We offer <span class=\"underline\">great prices</span>, premium and quality products for your business."
+  trial_text: "Enjoy a"
+  trial_link: "#"
+  trial_link_text: "free 30-day trial"
+  button_text: "See All Prices"
+  button_url: "#"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.card -->
+  </div>
+  <!-- /.container -->
+</section>
+{% endif %}
+    <!-- /section -->
+{% if page.pricing2.enable %}
+{% assign pricing_data = site.data.pricing_plans %}
+<section id="snippet-2" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.pricing2.title }}</h2>
+        <h3 class="display-4 mb-15 mb-md-6 px-lg-10">{{ page.pricing2.description }}</h3>
+      </div>
+    </div>
+    <div class="pricing-wrapper position-relative">
+      <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="top: 2rem; right: -2.4rem;"></div>
+      <div class="shape rounded-circle bg-line red rellax w-18 h-18 d-none d-lg-block" data-rellax-speed="1" style="bottom: 0.5rem; left: -2.5rem;"></div>
+      <div class="pricing-switcher-wrapper switcher">
+        <p class="mb-0 pe-3">Monthly</p>
+        <div class="pricing-switchers">
+          <div class="pricing-switcher pricing-switcher-active"></div>
+          <div class="pricing-switcher"></div>
+          <div class="switcher-button bg-primary"></div>
+        </div>
+        <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
+      </div>
+      <div class="row gy-6 mt-3 mt-md-5">
+        {% for plan in pricing_data.plans | limit:3 %}
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing card text-center">
+            <div class="card-body">
+              <img src="/assets/img/icons/lineal/{{ plan.svg_icon }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+              <h4 class="card-title">{{ plan.name }}</h4>
+              <div class="prices text-dark">
+                <div class="price price-show">
+                  <span class="price-currency">{{ plan.pricing.monthly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.monthly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.monthly.duration }}</span>
+                </div>
+                <div class="price price-hide price-hidden">
+                  <span class="price-currency">{{ plan.pricing.yearly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.yearly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.yearly.duration }}</span>
+                </div>
+              </div>
+              <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
+                {% for feature in plan.features %}
+                <li>
+                  <i class="uil {% if feature.enabled %}uil-check{% else %}uil-times bullet-soft-red{% endif %}"></i>
+                  <span>
+                    {% if feature.values[0] != "" and feature.values[0] != "-" %}
+                      <strong>{{ feature.values[0] }}</strong>
+                    {% endif %}
+                    {{ feature.name }}
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+              {% for button in plan.choose_plan_btn %}
+              <a href="{{ button.link }}" class="btn {{ button.color }} {{ button.shape }}">{{ button.text }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <!-- HTML Section -->
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-2-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html2">Copy</button>
+            <div id="html2">
+              {% highlight html %}
+{% raw %}
+<section class="wrapper bg-light">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.pricing2.title }}</h2>
+        <h3 class="display-4 mb-15 mb-md-6 px-lg-10">{{ page.pricing2.description }}</h3>
+      </div>
+    </div>
+    <div class="pricing-wrapper position-relative">
+      <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="top: 2rem; right: -2.4rem;"></div>
+      <div class="shape rounded-circle bg-line red rellax w-18 h-18 d-none d-lg-block" data-rellax-speed="1" style="bottom: 0.5rem; left: -2.5rem;"></div>
+      <div class="pricing-switcher-wrapper switcher">
+        <p class="mb-0 pe-3">Monthly</p>
+        <div class="pricing-switchers">
+          <div class="pricing-switcher pricing-switcher-active"></div>
+          <div class="pricing-switcher"></div>
+          <div class="switcher-button bg-primary"></div>
+        </div>
+        <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
+      </div>
+      <div class="row gy-6 mt-3 mt-md-5">
+        {% for plan in pricing_data.plans | limit:3 %}
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing card text-center">
+            <div class="card-body">
+              <img src="/assets/img/icons/lineal/{{ plan.svg_icon }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+              <h4 class="card-title">{{ plan.name }}</h4>
+              <div class="prices text-dark">
+                <div class="price price-show">
+                  <span class="price-currency">{{ plan.pricing.monthly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.monthly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.monthly.duration }}</span>
+                </div>
+                <div class="price price-hide price-hidden">
+                  <span class="price-currency">{{ plan.pricing.yearly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.yearly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.yearly.duration }}</span>
+                </div>
+              </div>
+              <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8 text-start">
+                {% for feature in plan.features %}
+                <li>
+                  <i class="uil {% if feature.enabled %}uil-check{% else %}uil-times bullet-soft-red{% endif %}"></i>
+                  <span>
+                    {% if feature.values[0] != "" and feature.values[0] != "-" %}
+                      <strong>{{ feature.values[0] }}</strong>
+                    {% endif %}
+                    {{ feature.name }}
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+              {% for button in plan.choose_plan_btn %}
+              <a href="{{ button.link }}" class="btn {{ button.color }} {{ button.shape }}">{{ button.text }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+{% endraw %}
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JSON Data Section -->
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-json">
+          View Yaml data
+        </a>
+      </div>
+      <div id="collapse-snippet-2-json" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data2">Copy</button>
+            <div id="data2">
+              {% highlight yaml %}
+pricing2:
+  enable: true
+  title: "Our Pricing"
+  description: "We offer great prices, premium products and quality service for your business."
+
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    
+    {% if page.pricing3.enable %}
+    {% assign pricing_data = site.data.pricing_plans %}
+<section id="snippet-3" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <h2 class="display-5 mb-7 text-center">{{ page.pricing3.title }}</h2>
+    <div class="pricing-wrapper">
+      <div class="pricing-switcher-wrapper switcher">
+        <p class="mb-0 pe-3">Monthly</p>
+        <div class="pricing-switchers">
+          <div class="pricing-switcher pricing-switcher-active"></div>
+          <div class="pricing-switcher"></div>
+          <div class="switcher-button bg-primary"></div>
+        </div>
+        <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
+      </div>
+      <div class="row gx-0 gy-6 mt-2">
+        {% for plan in pricing_data.plans %}
+        <div class="col-md-6 col-lg-3">
+          <div class="pricing card {% if plan.planHighlightClass contains 'popular' %}bg-soft-primary{% else %}shadow-none{% endif %}">
+            <div class="card-body">
+              <div class="icon btn btn-circle btn-lg {% if plan.planHighlightClass contains 'popular' %}btn-primary{% else %}btn-soft-primary{% endif %} pe-none">
+                <i class="{{ plan.icon }}"></i>
+              </div>
+              <h4 class="card-title">{{ plan.name }}</h4>
+              <div class="prices text-dark">
+                <div class="price price-show justify-content-start">
+                  <span class="price-currency">{{ plan.pricing.monthly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.monthly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.monthly.duration }}</span>
+                </div>
+                <div class="price price-hide price-hidden justify-content-start">
+                  <span class="price-currency">{{ plan.pricing.yearly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.yearly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.yearly.duration }}</span>
+                </div>
+              </div>
+              <!--/.prices -->
+              <ul class="icon-list bullet-bg {% if plan.planHighlightClass contains 'popular' %}bullet-primary{% else %}bullet-soft-primary{% endif %} mt-7 mb-8">
+                {% for feature in plan.features %}
+                <li>
+                  <i class="uil {% if feature.enabled %}uil-check{% else %}uil-times bullet-soft-red{% endif %}"></i>
+                  <span>
+                    {% if feature.values[0] != "" and feature.values[0] != "-" %}
+                      <strong>{{ feature.values[0] }}</strong>
+                    {% endif %}
+                    {{ feature.name }}
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+              {% for button in plan.choose_plan_btn %}
+              <a href="{{ button.link }}" class="btn {% if plan.planHighlightClass contains 'popular' %}btn-primary{% else %}btn-soft-primary{% endif %} {{ button.shape }}">{{ button.text }}</a>
+              {% endfor %}
+            </div>
+            <!--/.card-body -->
+          </div>
+          <!--/.pricing -->
+        </div>
+        <!--/column -->
+        {% endfor %}
+      </div>
+      <!--/.row -->
+    </div>
+    <!--/.pricing-wrapper -->
+  </div>
+  <!-- /.container -->
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-3-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-3-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html3">Copy</button>
+            <div id="html3">
+              {% highlight html %}
+{% raw %}
+<section class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <h2 class="display-5 mb-7 text-center">Our Pricing</h2>
+    <div class="pricing-wrapper">
+      <div class="pricing-switcher-wrapper switcher">
+        <p class="mb-0 pe-3">Monthly</p>
+        <div class="pricing-switchers">
+          <div class="pricing-switcher pricing-switcher-active"></div>
+          <div class="pricing-switcher"></div>
+          <div class="switcher-button bg-primary"></div>
+        </div>
+        <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
+      </div>
+      <div class="row gx-0 gy-6 mt-2">
+        {% for plan in pricing_data.plans %}
+        <div class="col-md-6 col-lg-3">
+          <div class="pricing card {% if plan.planHighlightClass contains 'popular' %}bg-soft-primary{% else %}shadow-none{% endif %}">
+            <div class="card-body">
+              <div class="icon btn btn-circle btn-lg {% if plan.planHighlightClass contains 'popular' %}btn-primary{% else %}btn-soft-primary{% endif %} pe-none">
+                <i class="{{ plan.icon }}"></i>
+              </div>
+              <h4 class="card-title">{{ plan.name }}</h4>
+              <div class="prices text-dark">
+                <div class="price price-show justify-content-start">
+                  <span class="price-currency">{{ plan.pricing.monthly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.monthly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.monthly.duration }}</span>
+                </div>
+                <div class="price price-hide price-hidden justify-content-start">
+                  <span class="price-currency">{{ plan.pricing.yearly.currency }}</span>
+                  <span class="price-value">{{ plan.pricing.yearly.amount }}</span>
+                  <span class="price-duration">{{ plan.pricing.yearly.duration }}</span>
+                </div>
+              </div>
+              <ul class="icon-list bullet-bg {% if plan.planHighlightClass contains 'popular' %}bullet-primary{% else %}bullet-soft-primary{% endif %} mt-7 mb-8">
+                {% for feature in plan.features %}
+                <li>
+                  <i class="uil {% if feature.enabled %}uil-check{% else %}uil-times bullet-soft-red{% endif %}"></i>
+                  <span>
+                    {% if feature.values[0] != "" and feature.values[0] != "-" %}
+                      <strong>{{ feature.values[0] }}</strong>
+                    {% endif %}
+                    {{ feature.name }}
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+              {% for button in plan.choose_plan_btn %}
+              <a href="{{ button.link }}" class="btn {% if plan.planHighlightClass contains 'popular' %}btn-primary{% else %}btn-soft-primary{% endif %} {{ button.shape }}">{{ button.text }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endraw %}
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-3-json">
+          View Yaml data
+        </a>
+      </div>
+      <div id="collapse-snippet-3-json" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data3">Copy</button>
+            <div id="data3">
+              {% highlight Yaml %}
+pricing3:
+  enable: true
+  title: "Our Pricing"       
+  {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+    <!-- /section -->
+    {% if page.pricing4.enable %}
+    {% assign pricing_data = site.data.pricing_plans %}
+    <section id="snippet-4" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-11 pb-md-12">
+        <h2 class="display-4 mb-3">{{ page.pricing4.title }}</h2>
+        <p class="lead fs-lg">{{ page.pricing4.description }}</p>
+        <div class="row">
+          <div class="col-lg-4">
+            <p>{{ page.pricing4.trial_text }} <a href="{{ page.pricing4.trial_link }}" class="hover">{{ page.pricing4.trial_link_text }}</a></p>
+          </div>
+        </div>
+        <a href="{{ page.pricing4.button_url }}" class="btn btn-primary rounded-pill mt-2">{{ page.pricing4.button_text }}</a>
+        
+        <div class="table-responsive mt-10 mt-lg-0">
+          <table class="table table-borderless table-striped text-center">
+            <thead>
+              <tr>
+                <th class="w-25"></th>
+                {% for plan in pricing_data.plans %}
+                <th>
+                  <div class="h4 mb-1">{{ plan.name }}</div>
+                  <div class="fs-15 fw-normal text-secondary">{{ plan.pricing.monthly.currency }}{{ plan.pricing.monthly.amount }} / {{ plan.pricing.monthly.duration }}</div>
+                </th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for feature in pricing_data.plans[0].features %}
+              <tr>
+                <td class="option text-start">{{ feature.name }}</td>
+                {% for plan in pricing_data.plans %}
+                  {% assign matching_feature = plan.features[forloop.parentloop.index0] %}
+                  <td>
+                    {% if matching_feature.values[0] != "" and matching_feature.values[0] != "-" %}
+                      {{ matching_feature.values[0] }}
+                    {% elsif matching_feature.enabled %}
+                      <i class="uil uil-check bg-pale-primary text-primary rounded-circle p-1"></i>
+                    {% else %}
+                      -
+                    {% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+            <tfoot>
+              <tr>
+                <th class="w-25"></th>
+                {% for plan in pricing_data.plans %}
+                  <th>
+                    {% for button in plan.choose_plan_btn %}
+                    <a href="{{ button.link }}" class="btn btn-soft-primary rounded-pill mt-1">{{ button.text }}</a>
+                    {% endfor %}
+                  </th>
+                {% endfor %}
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-4-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html4">Copy</button>
+                <div id="html4">
+                  {% highlight html %}
+    {% raw %}
+    <section class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-11 pb-md-12">
+        <h2 class="display-4 mb-3">Our Pricing</h2>
+        <p class="lead fs-lg">We offer <span class="underline">great prices</span>, premium and quality products for your business.</p>
+        <div class="row">
+          <div class="col-lg-4">
+            <p>Enjoy a <a href="#" class="hover">free 30-day trial</a> and experience the full service. No credit card required!</p>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary rounded-pill mt-2">See All Prices</a>
+        
+        <div class="table-responsive mt-10 mt-lg-0">
+          <div class="table-responsive mt-10 mt-lg-0">
+            <table class="table table-borderless table-striped text-center">
+              <thead>
+                <tr>
+                  <th class="w-25"></th>
+                  {% for plan in pricing_data.plans %}
+                  <th>
+                    <div class="h4 mb-1">{{ plan.name }}</div>
+                    <div class="fs-15 fw-normal text-secondary">{{ plan.pricing.monthly.currency }}{{ plan.pricing.monthly.amount }} / {{ plan.pricing.monthly.duration }}</div>
+                  </th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for feature in pricing_data.plans[0].features %}
+                <tr>
+                  <td class="option text-start">{{ feature.name }}</td>
+                  {% for plan in pricing_data.plans %}
+                    {% assign matching_feature = plan.features[forloop.parentloop.index0] %}
+                    <td>
+                      {% if matching_feature.values[0] != "" and matching_feature.values[0] != "-" %}
+                        {{ matching_feature.values[0] }}
+                      {% elsif matching_feature.enabled %}
+                        <i class="uil uil-check bg-pale-primary text-primary rounded-circle p-1"></i>
+                      {% else %}
+                        -
+                      {% endif %}
+                    </td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th class="w-25"></th>
+                  {% for plan in pricing_data.plans %}
+                    <th>
+                      {% for button in plan.choose_plan_btn %}
+                      <a href="{{ button.link }}" class="btn btn-soft-primary rounded-pill mt-1">{{ button.text }}</a>
+                      {% endfor %}
+                    </th>
+                  {% endfor %}
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-json">
+              View Yaml data
+            </a>
+          </div>
+          <div id="collapse-snippet-4-json" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data4">Copy</button>
+                <div id="data4">
+                  {% highlight yaml %}
+pricing4:
+  enable: true
+  title: "Our Pricing"
+  description: "We offer <span class=\"underline\">great prices</span>, premium and quality products for your business."
+  trial_text: "Enjoy a"
+  trial_link: "#"
+  trial_link_text: "free 30-day trial and experience the full service. No credit card required!"
+  button_text: "See All Prices"
+  button_url: "#"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+    <!-- /section -->
+ 

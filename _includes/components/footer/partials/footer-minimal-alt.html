@@ -1,0 +1,79 @@
+{% assign footer = site.data.footer.minimal_alt %}
+{% assign bg = include.bg_color | default: footer.bg_color | default: "bg-light" %}
+{% assign text_color = include.text_color | default: "" %}
+
+{%- comment -%}
+Determine if we should use white text and light logo:
+- If text_color is explicitly set to inverse, force white text
+- Else, check if bg is dark (bg-dark, bg-navy, bg-primary, bg-gradient)
+- Otherwise, use dark text by default
+{%- endcomment -%}
+{% if text_color contains "inverse" %}
+  {% assign light_text = true %}
+{% elsif bg contains "bg-dark" or bg contains "bg-navy" or bg contains "bg-primary" or bg contains "bg-gradient" %}
+  {% assign light_text = true %}
+{% else %}
+  {% assign light_text = false %}
+{% endif %}
+
+<div class="container {{ footer.container_padding }} {% if light_text %}text-white{% else %}text-dark{% endif %}">
+  <div class="row {{ footer.column_spacing }}">
+    <div class="col-lg-4">
+      <div class="widget">
+        {% if light_text %}
+          <img class="mb-4" src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}"
+               srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="Logo Light" />
+        {% else %}
+          <img class="mb-4" src="{{ site.data.theme.dark_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}"
+               srcset="{{ site.data.theme.dark_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="Logo Dark" />
+        {% endif %}
+        <p class="lead mb-0">{{ footer.column_1.tagline }}</p>
+      </div>
+    </div>
+
+    <div class="col-lg-3 offset-lg-2">
+      <div class="widget">
+        <div class="d-flex flex-row">
+          <div>
+            <div class="icon {{ footer.column_2.icon_class }} {% if light_text %}text-white{% endif %}">
+              <i class="{{ footer.column_2.icon }}"></i>
+            </div>
+          </div>
+          <div>
+            <h5 class="mb-1 {% if light_text %}text-white{% endif %}">{{ footer.column_2.title }}</h5>
+            <p class="mb-0 {% if light_text %}text-white{% endif %}">{{ footer.column_2.primary }}<br />{{ footer.column_2.secondary }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <div class="widget">
+        <div class="d-flex flex-row">
+          <div>
+            <div class="icon {{ footer.column_3.icon_class }} {% if light_text %}text-white{% endif %}">
+              <i class="{{ footer.column_3.icon }}"></i>
+            </div>
+          </div>
+          <div class="align-self-start justify-content-start">
+            <h5 class="mb-1 {% if light_text %}text-white{% endif %}">{{ footer.column_3.title }}</h5>
+            <address class="{% if light_text %}text-white{% endif %}">{{ footer.column_3.text }}</address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mt-11 mt-md-12 mb-7" />
+
+  <div class="d-md-flex align-items-center justify-content-between">
+    <p class="mb-2 mb-lg-0 {% if light_text %}text-white{% endif %}">© {{ 'now' | date: "%Y" }} {{ site.data.theme.company_name | default: site.title }}. All rights reserved.</p>
+    {% if footer.social.enabled %}
+      <nav class="nav social {% if light_text %}social-white{% else %}social-mute{% endif %}">
+        {% for link in footer.social.links %}
+          <a href="{{ link.url }}"><i class="{{ link.icon }}"></i></a>
+        {% endfor %}
+      </nav>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<section class="wrapper bg-light">
+    <div class="container py-14 py-md-16">
+      <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
+        <div class="col-lg-7">
+          <figure>
+            <img class="w-auto" src="{{ page.section1.image }}" srcset="{{ page.section1.image2x }} 2x" alt="">
+          </figure>
+        </div>
+        <div class="col-lg-5">
+          <h3 class="display-4 mb-6 pe-xxl-6">{{ page.section1.title }}</h3>
+          <ul class="progress-list mt-3">
+            {% for item in page.section1.progress_items %}
+            <li>
+              <p>{{ item.name }}</p>
+              <div class="progressbar line {{ item.color }}" data-value="{{ item.value }}">
+                <svg viewBox="0 0 100 6" preserveAspectRatio="none" style="display: block; width: 100%;">
+                  <path d="M 0,3 L 100,3" stroke="#eee" stroke-width="6" fill-opacity="0"></path>
+                  <path d="M 0,3 L 100,3" stroke="#555" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 100px, 100px; stroke-dashoffset: {{ 100 | minus: item.value }}px;"></path>
+                </svg>
+                <div class="progressbar-text" style="color: inherit; position: absolute; right: 0px; top: -30px; padding: 0px; margin: 0px;">{{ item.value }} %</div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+  
+      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+        <div class="col-lg-7 order-lg-2">
+          <figure>
+            <img class="w-auto" src="{{ page.section2.image }}" srcset="{{ page.section2.image2x }} 2x" alt="">
+          </figure>
+        </div>
+        <div class="col-lg-5">
+          <h3 class="display-4 mb-5">{{ page.section2.title }}</h3>
+          <p class="mb-6">{{ page.section2.description }}</p>
+          <div class="row gy-3">
+            {% assign half = page.section2.features.size | divided_by: 2.0 | ceil %}
+            {% for feature in page.section2.features %}
+              {% if forloop.index0 == 0 or forloop.index0 == half %}
+                <div class="col-xl-6">
+                  <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              {% endif %}
+                    <li{% if forloop.index0 > 0 %} class="mt-3"{% endif %}>
+                      <span><i class="uil uil-check"></i></span>
+                      <span>{{ feature }}</span>
+                    </li>
+              {% if forloop.index == half or forloop.last %}
+                  </ul>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

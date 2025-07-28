@@ -1,0 +1,57 @@
+<section class="wrapper bg-light">
+<div class="container pt-15 pt-md-18">
+<div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-11">
+  <div class="col-lg-4">
+    <h3 class="display-4 mb-3 pe-xl-10">{{ page.team.title }}</h3>
+    <p class="lead fs-lg mb-0 pe-xxl-10">{{ page.team.subtitle | markdownify }}</p>
+  </div>
+  <!-- /column -->
+  <div class="col-lg-8 mt-lg-2">
+    <div class="row align-items-center counter-wrapper gy-6 text-center">
+      {% for counter in page.team.counters %}
+      <div class="col-md-4">
+        <img src="{{ counter.icon }}" class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
+        <h3 class="counter">{{ counter.count }}</h3>
+        <p>{{ counter.text }}</p>
+      </div>
+      {% endfor %}
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+<div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0">
+  {% for member in site.data.team.members limit:4 %}
+  <div class="col-md-6 col-lg-3">
+    <div class="position-relative">
+      <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
+      <div class="card shadow-lg">
+        <figure class="card-img-top">
+          <img class="img-fluid" 
+               src="{{ member.avatar_image }}" 
+               srcset="{{ member.avatar_image2x }} 2x" 
+               alt="{{ member.name }}" />
+        </figure>
+        <div class="card-body px-6 py-5">
+          <h4 class="mb-1">{{ member.name }}</h4>
+          <p class="mb-0">{{ member.role }}</p>
+          <nav class="nav social mb-0 mt-3">
+            {% for social in member.social %}
+            <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+            {% endfor %}
+          </nav>
+        </div>
+        <!--/.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /div -->
+  </div>
+  {% endfor %}
+  <!--/column -->
+</div>
+<!--/.row -->
+</div>
+</section>

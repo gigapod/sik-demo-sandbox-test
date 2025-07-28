@@ -1,0 +1,58 @@
+<section class="wrapper bg-light angled upper-end">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-6">
+      <div class="col-lg-4">
+        <h2 class="display-4 mt-lg-18 mb-3">{{ page.pricing.title }}</h2>
+        <p class="lead fs-lg">{{ page.pricing.subtitle }}</p>
+        <p>{{ page.pricing.text }}</p>
+        <a href="{{ page.pricing.button.url }}" class="btn btn-primary rounded-pill mt-2">{{ page.pricing.button.label }}</a>
+      </div>
+      <!--/column -->
+      <div class="col-lg-7 offset-lg-1 pricing-wrapper">
+        <div class="pricing-switcher-wrapper switcher justify-content-start justify-content-lg-end">
+          <p class="mb-0 pe-3">Monthly</p>
+          <div class="pricing-switchers">
+            <div class="pricing-switcher pricing-switcher-active"></div>
+            <div class="pricing-switcher"></div>
+            <div class="switcher-button bg-primary"></div>
+          </div>
+          <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
+        </div>
+        <div class="row gy-6 position-relative mt-5">
+          <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="bottom: -0.5rem; right: -1.6rem;"></div>
+          <div class="shape rounded-circle bg-line red rellax w-18 h-18" data-rellax-speed="1" style="top: -1rem; left: -2rem;"></div>
+          
+          {% for plan in page.pricing.plans %}
+          <div class="col-md-6 {% if plan.popular %}popular{% endif %}">
+            <div class="pricing card">
+              <div class="card-body pb-12">
+                <div class="prices text-dark">
+                  <div class="price price-show justify-content-start"><span class="price-currency">{{ plan.currency }}</span><span class="price-value">{{ plan.price_monthly }}</span> <span class="price-duration">mo</span></div>
+                  <div class="price price-hide price-hidden justify-content-start"><span class="price-currency">{{ plan.currency }}</span><span class="price-value">{{ plan.price_yearly }}</span> <span class="price-duration">yr</span></div>
+                </div>
+                <!--/.prices -->
+                <h4 class="card-title mt-2">{{ plan.name }}</h4>
+                <ul class="icon-list bullet-bg bullet-soft-primary mt-7 mb-8">
+                  {% for feature in plan.features %}
+                  <li><i class="uil {% if feature.highlight %}uil-check{% else %}uil-times bullet-soft-red{% endif %}"></i><span>{{ feature.text }}</span></li>
+                  {% endfor %}
+                </ul>
+                <a href="{{ plan.button.url }}" class="btn btn-primary rounded-pill">{{ plan.button.label }}</a>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.pricing -->
+          </div>
+          <!--/column -->
+          {% endfor %}
+          
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

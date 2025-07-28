@@ -1,0 +1,44 @@
+
+
+<div class="row text-center mt-20 mb-7">
+  <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+    <h2 class="{{ page.join_community.title_class }}">{{ page.join_community.title }}</h2>
+    <h3 class="{{ page.join_community.main_title_class }}">{{ page.join_community.main_title }}</h3>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+<div class="row mb-8">
+  <div class="col-md-10 col-lg-9 col-xl-7 mx-auto">
+    <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
+      {% for counter in page.join_community.counters %}
+      <div class="col-md-4 text-center">
+        <h3 class="counter counter-lg text-primary">{{ counter.count }}</h3>
+        <p>{{ counter.text }}</p>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+<div class="row position-relative" style="z-index: 1">
+  <div class="col-lg-10 col-xl-9 mx-auto mt-11 mb-sm-n20 mb-md-n22">
+    <figure><img class="img-fluid" src="{{ page.join_community.image }}" srcset="{{ page.join_community.image2x }} 2x" alt=""></figure>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+</div>
+<!-- /.container -->
+{% if page.join_community.divider %}
+<div class="overflow-hidden">
+  <div class="divider {{ page.join_community.divider_color }} mx-n2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70"><path fill="currentColor" d="M1440,70H0V45.16a5762.49,5762.49,0,0,1,1440,0Z"/></svg>
+  </div>
+</div>
+{% endif %}
+</section>
+<!-- /section -->

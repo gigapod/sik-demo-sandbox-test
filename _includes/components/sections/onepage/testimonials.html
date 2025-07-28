@@ -1,0 +1,54 @@
+<section id="testimonials">
+  <div class="wrapper bg-gray">
+    <div class="container py-14 py-md-17">
+      <div class="row gx-lg-8 gx-xl-12 gy-6 mb-15 align-items-center">
+        <div class="col-lg-7 order-lg-2">
+          <figure><img class="w-auto" src="{{ page.testimonials.image }}" srcset="{{ page.testimonials.image2x }}" alt="" /></figure>
+        </div>
+        <!--/column -->
+        <div class="col-lg-5 mt-lg-12">
+          <div class="swiper-container dots-closer mb-6" data-margin="30" data-dots="true">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                {% for testimonial in site.data.testimonials.testimonials %}
+                <div class="swiper-slide">
+                  <blockquote class="icon icon-top fs-lg text-center">
+                    <p>"{{ testimonial.quote }}"</p>
+                    <div class="blockquote-details justify-content-center text-center">
+                      <div class="info ps-0">
+                        <h5 class="mb-1">{{ testimonial.name }}</h5> 
+                        <p class="mb-0">{{ testimonial.position }}</p> 
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <!--/.swiper-slide -->
+                {% endfor %}
+              </div>
+              <!--/.swiper-wrapper -->
+            </div>
+            <!-- /.swiper -->
+          </div>
+          <!-- /.swiper-container -->
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      <div class="px-lg-5">
+        <div class="row gx-0 gx-md-8 gx-xl-12 gy-8 align-items-center">
+          {% for brand in page.clients.brands %}
+          <div class="col-4 col-md-2">
+            <figure class="px-5 px-md-0 px-lg-2 px-xl-3 px-xxl-4"><img src="{{ brand.image }}" alt="" /></figure>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /div -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+</section>
+<!-- /section -->

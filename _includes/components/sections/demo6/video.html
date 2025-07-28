@@ -1,0 +1,45 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <div class="mt-lg-n20 mt-xl-n22 mb-14 mb-md-16 position-relative" data-cue="slideInUp">
+          <a href="{{ page.video.video_url }}" class="btn btn-circle btn-primary btn-play ripple mx-auto mb-5 position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>
+          <figure class="rounded shadow"><img src="{{ page.video.poster }}" srcset="{{ page.video.poster2x }} 2x" alt=""></figure>
+        </div>
+        <h2 class="fs-15 text-uppercase text-muted mb-3 text-center">{{ page.video.title }}</h2>
+        <h3 class="display-4 mb-10 px-lg-12 px-xl-15 text-center">{{ page.video.subtitle }}</h3>
+        <div class="row" data-cue="fadeIn">
+          {% for faq_group in page.video.faq_groups %}
+          <div class="col-lg-6 mb-0">
+            <div id="{{ faq_group.id }}" class="accordion-wrapper">
+              {% for item in faq_group.items %}
+              <div class="card accordion-item">
+                <div class="card-header" id="{{ faq_group.id }}-heading-{{ forloop.index }}">
+                  <button class="{% unless item.active %}collapsed{% endunless %}" data-bs-toggle="collapse" data-bs-target="#{{ faq_group.id }}-collapse-{{ forloop.index }}" aria-expanded="{% if item.active %}true{% else %}false{% endif %}" aria-controls="{{ faq_group.id }}-collapse-{{ forloop.index }}">{{ item.title }}</button>
+                </div>
+                <!-- /.card-header -->
+                <div id="{{ faq_group.id }}-collapse-{{ forloop.index }}" class="collapse{% if item.active %} show{% endif %}" aria-labelledby="{{ faq_group.id }}-heading-{{ forloop.index }}" data-bs-target="#{{ faq_group.id }}">
+                  <div class="card-body">
+                    <p>{{ item.content }}</p>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.collapse -->
+              </div>
+              <!-- /.card -->
+              {% endfor %}
+            </div>
+            <!-- /.accordion-wrapper -->
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

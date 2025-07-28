@@ -1,0 +1,37 @@
+<section class="wrapper bg-light">
+  <div class="container pb-15 pb-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10">
+      <div class="col-lg-7 order-lg-2">
+        <figure><img class="w-auto" src="{{ page.why_choose.image }}" srcset="{{ page.why_choose.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5">
+        <h3 class="fs-16 text-uppercase text-muted mt-xxl-8 mb-3">{{ page.why_choose.subtitle }}</h3>
+        <h3 class="display-4 mb-6">{{ page.why_choose.title }}</h3>
+        <div class="accordion accordion-wrapper" id="accordionExample">
+          {% for item in page.why_choose.accordion_items %}
+          <div class="card plain accordion-item">
+            <div class="card-header" id="heading{{ forloop.index }}">
+              <button class="accordion-button {% unless item.expanded %}collapsed{% endunless %}" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="{% if item.expanded %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.index }}"> {{ item.title }} </button>
+            </div>
+            <!--/.card-header -->
+            <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse {% if item.expanded %}show{% endif %}" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample">
+              <div class="card-body">
+                <p>{{ item.content }}</p>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.accordion-collapse -->
+          </div>
+          <!--/.accordion-item -->
+          {% endfor %}
+        </div>
+        <!--/.accordion -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

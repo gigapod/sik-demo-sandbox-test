@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+    %}
+  </header>
+  <!-- /header -->
+{% include components/header/header-project-detail.html
+   bg_class="bg-soft-primary" 
+   container_class="pt-10 pb-19 pt-md-14 pb-md-22"
+   center=true 
+%}
+
+<section class="wrapper bg-light wrapper-border">
+  <div class="container pb-14 pb-md-16">
+    <div class="row">
+      <div class="col-12">
+        <article class="mt-n21">
+          <figure class="rounded mb-8 mb-md-12"><img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }}" /></figure>
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <h2 class="display-6 mb-4">{{ page.about_title }}</h2>
+              <div class="row gx-0">
+                <div class="col-md-9 text-justify">
+                  {{ content }}
+                </div>
+                <!--/column -->
+                <div class="col-md-2 ms-auto">
+                  <ul class="list-unstyled">
+                    {% if page.date %}
+                    <li>
+                      <h5 class="mb-1">Date</h5>
+                      <p>{{ page.date | date: "%d %b %Y" }}</p>
+                    </li>
+                    {% endif %}
+                    {% if page.client_name %}
+                    <li>
+                      <h5 class="mb-1">Client Name</h5>
+                      <p>{{ page.client_name }}</p>
+                    </li>
+                    {% endif %}
+                  </ul>
+                  {% if page.project_url %}
+                  <a href="{{ page.project_url }}" class="more hover">See Project</a>
+                  {% endif %}
+                </div>
+                <!--/column -->
+              </div>
+              <!--/.row -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!--/.row -->
+          
+          {% if page.gallery %}
+          <div class="row mt-5 gx-md-6 gy-6">
+            {% for image in page.gallery %}
+            <div class="item col-md-6">
+              <figure class="hover-scale rounded cursor-dark">
+                <a href="{{ image.url | relative_url }}" data-glightbox data-gallery="project-{{ page.slug }}">
+                  <img src="{{ image.url | relative_url }}" alt="{{ image.alt | default: page.title }}" />
+                </a>
+              </figure>
+            </div>
+            <!--/column -->
+            {% endfor %}
+          </div>
+          <!-- /.row -->
+          {% endif %}
+
+          {% if page.additional_content %}
+          <div class="row mt-8 mt-md-12">
+            <div class="col-md-10 offset-md-1 text-justify">
+              {{ page.additional_content }}
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+          {% endif %}
+        </article>
+        <!-- /.project -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+{% include components/project-navigation.html %}
+
+<!-- FOOTER -->
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-dark" 
+  text_color="text-inverse"
+  cta=false
+  newsletter=true
+%}
+<!-- /footer -->
+</div>
+<!-- /.content-wrapper -->

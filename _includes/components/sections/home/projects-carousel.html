@@ -1,0 +1,22 @@
+{% if page.projects_carousel.enable %}
+<div class="container-fluid px-xl-0 pb-16 pb-md-18">
+  <div class="swiper-container swiper-auto" data-margin="40" data-nav="false" data-centered="true" data-loop="true" data-items-auto="true">
+    <div class="swiper overflow-visible">
+      <div class="swiper-wrapper">
+        {% for item in page.projects_carousel.images %}
+        <div class="swiper-slide">
+          <figure class="rounded-xl shadow-xl">
+            <img src="{{ item.image | relative_url }}" srcset="{{ item.image2x | relative_url }} 2x" alt="" />
+          </figure>
+        </div>
+        <!--/.swiper-slide -->
+        {% endfor %}
+      </div>
+      <!--/.swiper-wrapper -->
+    </div>
+    <!-- /.swiper -->
+  </div>
+  <!-- /.swiper-container -->
+</div>
+<!-- /.container -->
+{% endif %}

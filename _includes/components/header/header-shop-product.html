@@ -1,0 +1,14 @@
+<section class="wrapper {{ include.background_class | default: 'bg-gray' }}">
+    <div class="container py-3 py-md-5">
+      <nav class="d-inline-block" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          {% for crumb in include.breadcrumb_items %}
+            <li class="breadcrumb-item {% if forloop.last %}active text-muted{% endif %}">
+              {% if forloop.last %}{{ crumb.title }}{% else %}<a href="{{ crumb.url }}">{{ crumb.title }}</a>{% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
+    </div>
+  </section>
+  

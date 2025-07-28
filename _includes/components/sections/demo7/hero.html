@@ -1,0 +1,27 @@
+<section class="wrapper bg-gradient-primary">
+  <div class="container py-14 pt-md-15 pb-md-18">
+    <div class="row text-center">
+      <div class="col-lg-9 col-xxl-7 mx-auto" data-cues="zoomIn" data-group="welcome" data-interval="-200">
+        <h2 class="display-1 mb-4">{{ page.hero.title }}</h2>
+        <p class="lead fs-24 lh-sm px-md-5 px-xl-15 px-xxl-10 mb-7">{{ page.hero.subtitle }}</p>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="d-flex justify-content-center" data-cues="slideInDown" data-group="join" data-delay="900">
+      {% for button in page.hero.buttons %}
+      <span><a href="{{ button.url }}" class="{{ button.class }}">{{ button.label }}</a></span>
+      {% endfor %}
+    </div>
+    <!-- /div -->
+    <div class="row mt-12" data-cue="fadeIn" data-delay="1600">
+      <div class="col-lg-8 mx-auto">
+        <figure><img class="img-fluid" src="{{ page.hero.image }}" srcset="{{ page.hero.image2x }} 2x" alt=""></figure>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

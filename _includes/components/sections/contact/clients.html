@@ -1,0 +1,29 @@
+<section class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map" data-image-src="{{ page.clients.bg_image }}">
+  <div class="container pt-0 pb-14 pt-md-16 pb-md-18">
+    <div class="row">
+      <div class="col-lg-9 col-xxl-8 mx-auto">
+        <h3 class="display-4 mb-8 px-xl-12">{{ page.clients.title }}</h3>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /column -->
+    <div class="row">
+      <div class="col-md-10 col-lg-9 col-xl-7 mx-auto">
+        <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
+          {% for stat in page.clients.stats %}
+          <div class="col-md-4 text-center">
+            <h3 class="counter counter-lg text-primary">{{ stat.count }}</h3>
+            <p>{{ stat.label }}</p>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

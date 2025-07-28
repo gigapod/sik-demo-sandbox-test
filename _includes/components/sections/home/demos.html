@@ -1,0 +1,55 @@
+<section class="wrapper bg-soft-primary overflow-hidden" id="demos">
+  <div class="container pt-16 pt-mb-18">
+    <div class="row mb-10">
+      <div class="col-md-9 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+        <div class="counter-wrapper">
+          <h3 class="fs-70 mb-3 text-primary text-center counter">{{ page.demos.count }}</h3>
+        </div>
+        <h2 class="display-2 mb-3 text-center mb-0 px-xxl-8">{{ page.demos.title }}</h2>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="demos-wrapper text-center mb-16 mb-md-18">
+      <h2 class="fs-17 text-uppercase text-muted mb-6">{{ page.demos.new_demos.subtitle }}</h2>
+      <div class="row mb-10 gx-md-8 gy-12">
+        {% for demo in page.demos.new_demos.items %}
+        <div class="col-md-6 col-lg-4">
+          <figure class="lift rounded-xl mb-6">
+            <a href="{{ '/demo' | append: demo.number | append: '.html' | relative_url }}" target="_blank">
+              <img class="shadow-xl" src="{{ demo.image | relative_url }}" srcset="{{ demo.image2x | relative_url }} 2x" alt="" />
+            </a>
+          </figure>
+          <h2 class="fs-22 mb-0">
+            <a href="{{ '/demo' | append: demo.number | append: '.html' | relative_url }}" class="link-dark">Layout {{ demo.number }}</a>
+          </h2>
+        </div>
+        <!-- /column -->
+        {% endfor %}
+        <div class="col-md-6 col-lg-4 d-none d-md-flex align-items-center justify-content-center flex-column">
+          <img src="{{ '/assets/img/icons/solid/layers.svg' | relative_url }}" class="svg-inject icon-svg icon-svg-sm solid-duo text-grape-fuchsia mt-md-n10 mb-4" alt="" />
+          <h3 class="fs-17 text-uppercase text-muted mb-4">Scroll for more</h3>
+          <a href="#prev-demos" class="btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl mx-1 scroll">Previous Demos <i class="uil uil-arrow-down-right"></i></a>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+      <h2 class="fs-17 text-uppercase text-muted pt-16 mt-n8 mb-6" id="prev-demos">{{ page.demos.prev_demos.subtitle }}</h2>
+      <div class="row mb-10 gx-md-8 gy-12">
+        {% for demo in page.demos.prev_demos.items %}
+        <div class="col-md-6 col-lg-4">
+          <figure class="lift rounded-xl mb-6">
+            <a href="{{ '/demo' | append: demo.number | append: '.html' | relative_url }}" target="_blank">
+              <img class="shadow-xl" src="{{ demo.image | relative_url }}" srcset="{{ demo.image2x | relative_url }} 2x" alt="" />
+            </a>
+          </figure>
+          <h2 class="fs-22 mb-0">
+            <a href="{{ '/demo' | append: demo.number | append: '.html' | relative_url }}" class="link-dark">Layout {{ demo.number }}</a>
+          </h2>
+        </div>
+        <!-- /column -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

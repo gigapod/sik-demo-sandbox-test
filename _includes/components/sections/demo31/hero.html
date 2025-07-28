@@ -1,0 +1,31 @@
+<section class="wrapper">
+  <div class="container pt-11 pt-md-13 pb-19 pb-md-17 text-center">
+    <div class="row">
+      <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto" data-cues="slideInDown" data-group="page-title" data-delay="500">
+        <h1 class="{{ page.hero.title_class }}">{{ page.hero.title }}</h1>
+        <p class="{{ page.hero.text_class }}">{{ page.hero.text }}</p>
+        <div>
+          <a href="{{ page.hero.button.url }}" class="{{ page.hero.button.class }}">{{ page.hero.button.label }}</a>
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto mt-11 mb-n21">
+        <figure><img class="img-fluid" src="{{ page.hero.image }}" srcset="{{ page.hero.image2x }} 2x" alt=""></figure>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  {% if page.hero.divider %}
+  <div class="overflow-hidden">
+    <div class="divider {{ page.hero.divider_color }} mx-n2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70"><path fill="currentColor" d="M1440,70H0V45.16a5762.49,5762.49,0,0,1,1440,0Z"/></svg>
+    </div>
+  </div>
+  {% endif %}
+</section>
+<!-- /section -->

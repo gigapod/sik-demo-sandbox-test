@@ -1,0 +1,271 @@
+# Main Footer Configuration
+
+# General Settings
+style: default          # Options: default, centered, centered-overlay, three-column, three-column-alt, four-column, minimal, blog, basic
+bg_color: bg-light      # Options: bg-light, bg-dark, bg-navy, bg-primary, bg-soft-primary, etc.
+text_color: ""          # Options: text-inverse (for light text on dark backgrounds)
+link_class: text-reset  # Default link style
+container_padding: py-13 py-md-15  # Custom padding classes for the container
+widget_title_class: text-dark  # Class for widget titles
+newsletter: true       # Whether to include newsletter form (only applicable for default style)
+
+# Call to Action Section
+cta:
+  enabled: false
+  title: Join our community by using our services and grow your business.
+  button_text: Try It For Free
+  button_url: "#"
+ 
+# Default Footer (4-column)
+column_2:
+  title: Get in Touch
+  address: Moonshine St. 14/05 Light City, London, United Kingdom
+  email: info@email.com
+  phone: 00 (123) 456 78 90
+  
+column_3:
+  title: Learn More
+  links:
+    - title: About Us
+      url: /about
+    - title: Our Story
+      url: /about#story
+    - title: Projects
+      url: /projects
+    - title: Terms of Use
+      url: /terms
+    - title: Privacy Policy
+      url: /privacy
+      
+newsletter:
+  title: Our Newsletter
+  description: Subscribe to our newsletter to get our news & deals delivered to you.
+  button_text: Join
+  form_action: https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a
+  # Optional custom HTML form
+  #custom_form: ""
+  
+# Centered Footer
+centered:
+  address:
+    title: Address
+    text: Moonshine St. 14/05 <br class="d-none d-md-block" /> Light City, London, UK
+  phone:
+    title: Phone
+    primary: 00 (123) 456 78 90
+    secondary: 00 (987) 654 32 10
+  email:
+    title: E-mail
+    primary: sandbox@email.com
+    secondary: help@sandbox.com
+  cta:
+    enabled: true
+    title: "Let's Talk"
+    text: "Let's make something great together. We are trusted by over 5000+ clients. Join them by using our services and grow your business."
+    description: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum."
+    button_text: "Join Us"
+    button_url: "#"
+    image: "/assets/img/photos/tm1.jpg"
+    
+# Centered Overlay Footer (variant of centered with overlay card)
+centered_overlay:
+  cta_title: We are trusted by over 5000+ clients. Join them by using our services and grow your business.
+  cta_button_text: Join Us
+  cta_button_url: "#" 
+  overlay_image: /assets/img/photos/bg3.webp
+    
+# Three Column Footer
+three_column:
+  cta_title: Join the Community
+  cta_text: Let's make something great together. We are trusted by over 5000+ clients. Join them by using our services and grow your business.
+  cta_button_text: Join Us
+  cta_button_url: "#"
+  
+  column_1:
+    title: Need Help?
+    links:
+      - title: Support
+        url: /support
+      - title: Get Started
+        url: /get-started
+      - title: Terms of Use
+        url: /terms
+      - title: Privacy Policy
+        url: /privacy
+        
+  column_2:
+    title: Learn More
+    links:
+      - title: About Us
+        url: /about
+      - title: Our Story
+        url: /about#story
+      - title: Projects
+        url: /projects
+      - title: Pricing
+        url: /pricing
+      - title: Features
+        url: /features
+        
+  column_3:
+    title: Get in Touch
+    address: Moonshine St. 14/05 Light City, London, United Kingdom
+    email: info@email.com
+    phone: 00 (123) 456 78 90
+    
+# Three Column Alt Footer (simplified version with logo in the first column)
+three_column_alt:
+  column_1:
+    title: Need Help?
+    links:
+      - title: Support
+        url: /support
+      - title: Get Started
+        url: /get-started
+      - title: Terms of Use
+        url: /terms
+      - title: Privacy Policy
+        url: /privacy
+        
+  column_2:
+    title: Learn More
+    links:
+      - title: About Us
+        url: /about
+      - title: Our Story
+        url: /about#story
+      - title: Projects
+        url: /projects
+      - title: Pricing
+        url: /pricing
+      - title: Features
+        url: /features
+        
+  column_3:
+    title: Get in Touch
+    address: Moonshine St. 14/05 Light City, London, United Kingdom
+    email: info@email.com
+    phone: 00 (123) 456 78 90
+
+# Four Column Footer (with icon-based contact info)
+four_column:
+  tagline: We are trusted by over 5000+ clients. Join them by using our services and grow your business.
+  column_1:
+    title: Phone
+    icon: uil uil-phone-volume
+    primary: 00 (123) 456 78 90
+    secondary: 00 (987) 654 32 10
+  column_2:
+    title: Address
+    icon: uil uil-location-pin-alt
+    text: Moonshine St. 14/05 Light City, London, United Kingdom
+    
+# Blog Footer (specialized for blogs with posts, categories, tags)
+blog:
+  column_1:
+    title: Popular Posts
+    # These will be auto-populated from your site's posts, or you can specify them manually
+    posts: []
+    default_image: /assets/img/photos/a
+  
+  column_2:
+    tags:
+      title: Tags
+      items:
+        - name: Still Life
+          url: /tag/still-life
+        - name: Urban
+          url: /tag/urban
+        - name: Nature
+          url: /tag/nature
+        - name: Landscape
+          url: /tag/landscape
+          
+    categories:
+      title: Categories
+      items:
+        - name: Lifestyle
+          count: 21
+          url: /category/lifestyle
+        - name: Photography
+          count: 19
+          url: /category/photography
+        - name: Journal
+          count: 16
+          url: /category/journal
+          
+  column_3:
+    title: Get in Touch
+    address: Moonshine St. 14/05 Light City, London, United Kingdom
+    email: info@email.com
+    phone: 00 (123) 456 78 90
+    social:
+      title: Elsewhere
+      
+  column_4:
+    learn_more:
+      title: Learn More
+      links:
+        - title: About Us
+          url: /about
+        - title: Our Story
+          url: /about#story
+        - title: Projects
+          url: /projects
+          
+    help:
+      title: Need Help?
+      links:
+        - title: Support
+          url: /support
+        - title: Get Started
+          url: /get-started
+        - title: Contact Us
+          url: /contact
+
+# Newsletter CTA Card Configuration
+newsletter_cta:
+  enabled: true
+  title: "Subscribe to our newsletter"
+  description: "Subscribe to our newsletter to get our news & deals delivered to you. Don't worry, we hate spam and we respect your privacy."
+  button_text: "Join"
+  bg_image: "/assets/img/photos/bg2.jpg"
+  form_action: "https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a"
+
+# Add this new style configuration
+minimal_alt:
+  style: minimal-alt
+  bg_color: bg-gray
+  container_padding: pt-13 pb-7
+  column_spacing: gx-lg-0 gy-6
+  
+  column_1:
+    tagline: "I'm Caitlyn Sandbox, a photographer specializing in food, drink and product photography."
+    
+  column_2:
+    title: "Phone"
+    icon: uil uil-phone-volume
+    icon_class: text-primary fs-28 me-4 mt-n1
+    primary: "00 (123) 456 78 90"
+    secondary: "00 (987) 654 32 10"
+    
+  column_3:
+    title: "Address"
+    icon: uil uil-location-pin-alt
+    icon_class: text-primary fs-28 me-4 mt-n1
+    text: "Moonshine St. 14/05 Light City, London, United Kingdom"
+    
+  social:
+    enabled: true
+    class: social-muted mb-0 text-md-end
+    links:
+      - icon: uil uil-twitter
+        url: "#"
+      - icon: uil uil-facebook-f
+        url: "#"
+      - icon: uil uil-dribbble
+        url: "#"
+      - icon: uil uil-instagram
+        url: "#"
+      - icon: uil uil-youtube
+        url: "#"

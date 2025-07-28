@@ -1,0 +1,63 @@
+    <div class="row gx-lg-8 gy-8 mt-5 mt-md-12 mt-lg-0 mb-15 align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <div class="row gx-md-5 gy-5" data-cues="fadeIn" data-group="images">
+          <div class="col-md-4 offset-md-2 align-self-end">
+            <figure class="rounded"><img src="/assets/img/photos/g1.jpg" srcset="/assets/img/photos/g1@2x.jpg 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-md-6 align-self-end">
+            <figure class="rounded"><img src="/assets/img/photos/g2.jpg" srcset="/assets/img/photos/g2@2x.jpg 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-md-6 offset-md-1">
+            <figure class="rounded"><img src="/assets/img/photos/g3.jpg" srcset="/assets/img/photos/g3@2x.jpg 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-md-4 align-self-start">
+            <figure class="rounded"><img src="/assets/img/photos/g4.jpg" srcset="/assets/img/photos/g4@2x.jpg 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h2 class="display-4 mb-3">{{ page.services.title }}</h2>
+        <p class="lead fs-lg mb-8 pe-xxl-2">{{ page.services.subtitle }}</p>
+        <div class="row gx-xl-10 gy-6" data-cues="slideInUp" data-group="services">
+          {% for service in page.services.service_items %}
+          <div class="col-md-6 col-lg-12 col-xl-6">
+            <div class="d-flex flex-row">
+              <div>
+                <div class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-5"> <i class="{{ service.icon }}"></i> </div>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ service.title }}</h4>
+                <p class="mb-0">{{ service.text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <h2 class="display-4 mb-3">{{ page.process.title }}</h2>
+    <p class="lead fs-lg mb-8">{{ page.process.subtitle }}</p>
+    <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line" data-cues="slideInUp" data-group="process">
+      {% for step in page.process.steps %}
+      <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg {% if step.active %}btn-primary{% else %}btn-soft-primary{% endif %} pe-none mb-4"><span class="number">{{ step.number }}</span></span>
+        <h4 class="mb-1">{{ step.title }}</h4>
+        <p>{{ step.text }}</p>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,28 @@
+{% if page.home.enable %}
+  <section class="wrapper bg-gray overflow-hidden">
+    <div class="container-fluid px-xl-0 pt-6 pb-10">
+      <div class="swiper-container swiper-auto" data-margin="30" data-dots="true" data-nav="true" data-centered="true" data-loop="true" data-items-auto="true">
+        <div class="swiper overflow-visible">
+          <div class="swiper-wrapper">
+            {% for slide in page.home.images %}
+            <div class="swiper-slide">
+              <figure class="rounded">
+                <img src="{{ slide.img | relative_url }}" alt="" />
+                <a class="item-link" href="{{ slide.img | relative_url }}" data-glightbox data-gallery="gallery-group">
+                  <i class="uil uil-focus-add"></i>
+                </a>
+              </figure>
+            </div>
+            <!--/.swiper-slide -->
+            {% endfor %}
+          </div>
+          <!--/.swiper-wrapper -->
+        </div>
+        <!-- /.swiper -->
+      </div>
+      <!-- /.swiper-container -->
+    </div>
+    <!-- /.container -->
+  <!-- /.overflow-hidden -->
+</section>
+{% endif %}

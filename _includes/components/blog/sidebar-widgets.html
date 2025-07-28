@@ -1,0 +1,13 @@
+{% if site.data.sidebar.widgets %}
+  {% for widget in site.data.sidebar.widgets %}
+    {% include components/blog/sidebar/{{ widget.name }}-widget.html widget=widget %}
+  {% endfor %}
+{% else %}
+  {% include components/blog/sidebar/search-widget.html %}
+  {% include components/blog/sidebar/about-widget.html %}
+  {% include components/blog/sidebar/author-box-widget.html %}
+  {% include components/blog/sidebar/popular-posts-widget.html %}
+  {% include components/blog/sidebar/categories-widget.html %}
+  {% include components/blog/sidebar/tags-widget.html %}
+  {% include components/blog/sidebar/archives-widget.html %}
+{% endif %}

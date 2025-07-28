@@ -1,0 +1,25 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">{{ widget.title }}</h4>
+  {% assign tag_limit = widget.limit | default: 10 %}
+  
+  {% comment %}
+  Create an empty array and then populate it with tag names
+  to avoid the gsub error when processing site.tags
+  {% endcomment %}
+  
+  {% assign tags_array = "" | split: "" %}
+  {% for tag in site.tags %}
+    {% if tag.first %}
+      {% assign tags_array = tags_array | push: tag.first %}
+    {% endif %}
+  {% endfor %}
+  
+  {% assign sorted_tags = tags_array | sort %}
+  {% assign limited_tags = sorted_tags | slice: 0, tag_limit %}
+  
+  <ul class="list-unstyled tag-list">
+    {% for tag in limited_tags %}
+      <li><a href="/blog/tag/{{ tag | slugify }}/" class="btn btn-soft-ash btn-sm rounded-pill">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

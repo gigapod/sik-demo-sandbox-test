@@ -1,0 +1,35 @@
+<section class="wrapper bg-white">
+  <div class="container pt-14 pt-md-17">
+    <div class="row gx-3 gy-10 align-items-center">
+      <div class="col-lg-6">
+        <figure><img class="w-auto" src="{{ page.why_choose.image }}" srcset="{{ page.why_choose.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5 ms-auto">
+        <h2 class="fs-16 text-uppercase text-grape mb-3">{{ page.why_choose.title_tag }}</h2>
+        <h3 class="display-4 mb-8">{{ page.why_choose.title }}</h3>
+        <div class="row gy-6">
+          {% for feature in page.why_choose.features %}
+          <div class="col-md-6">
+            <div class="d-flex flex-row">
+              <div>
+                <img src="/assets/img/icons/solid/{{ feature.icon }}.svg" class="svg-inject icon-svg icon-svg-xs solid-mono text-grape me-4" alt="" />
+              </div>
+              <div>
+                <h4 class="mb-1">{{ feature.title }}</h4>
+                <p class="mb-0">{{ feature.text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row --> 
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

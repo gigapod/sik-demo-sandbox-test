@@ -1,0 +1,70 @@
+{
+  "testimonials": [
+    {
+      "name": "Coriss Ambady",
+      "position": "Financial Analyst",
+      "avatar_image": "/assets/img/avatars/te1.webp",
+      "avatar_image2x": "/assets/img/avatars/te1@2x.webp",
+      "quote": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Vel augue laoreet rutrum faucibus dolor auctor ",
+      "ratings": 5,
+      "background_color": "grape",
+      "shadow": "shadow-none",
+      "rounded": "rounded-xl"
+    }, 
+    {
+      "name": "Cory Zamora",
+      "position": "Marketing Specialist",
+      "avatar_image": "/assets/img/avatars/te2.webp",
+      "avatar_image2x": "/assets/img/avatars/te2@2x.webp",
+      "quote": "Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+      "ratings": 5,
+      "background_color": "leaf",
+      "shadow": "shadow-none",
+      "rounded": "rounded-xl"
+    },
+    {
+      "name": "Nikolas Brooten",
+      "position": "Sales Manager",
+      "avatar_image": "/assets/img/avatars/te3.webp",
+      "avatar_image2x": "/assets/img/avatars/te3@2x.webp",
+      "quote": "Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum. ",
+      "ratings": 5,
+      "background_color": "orange",
+      "shadow": "shadow-none",
+      "rounded": "rounded-xl"
+    },
+    {
+      "name": "Coriss Juker",
+      "position": "Market Analyst",
+      "avatar_image": "/assets/img/avatars/te4.webp",
+      "avatar_image2x": "/assets/img/avatars/te4@2x.webp",
+      "quote": "Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien.",
+      "ratings": 5,
+      "background_color": "pink",
+      "shadow": "shadow-none",
+      "rounded": "rounded-xl"
+    },
+    {
+      "name": "Jackie Sanders",
+      "position": "Investment Planner",
+      "avatar_image": "/assets/img/avatars/te5.webp",
+      "avatar_image2x": "/assets/img/avatars/te5@2x.webp",
+      "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus magnis dis montes, nascetur ridiculus mus.",
+      "ratings": 5,
+      "background_color": "blue",
+      "shadow": "shadow-none",
+      "rounded": "rounded-xl"
+    },
+    {
+      "name": "Laura Widerski",
+      "position": "Sales Specialist",
+      "avatar_image": "/assets/img/avatars/te6.webp",
+      "avatar_image2x": "/assets/img/avatars/te6@2x.webp",
+      "quote": "Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue.",
+      "ratings": 5,
+      "background_color": "yellow",
+      "shadow": "shadow-none",
+      "rounded": "rounded-xl"
+    }
+  ]
+}

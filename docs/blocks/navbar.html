@@ -1,0 +1,921 @@
+--- 
+layout: doc
+title: Blocks - Navbar
+description: Copy any custom block snippet below and paste it on your page to build your website easily.
+---
+ 
+  <style>
+    section header.image-wrapper:not(.mobile) {
+      background-attachment: scroll !important;
+    }
+    section header.image-wrapper,
+    section .navbar  {
+      z-index: 2 !important;
+    }
+    section .navbar .hamburger,
+    section .navbar [data-bs-toggle="offcanvas"],
+    section .navbar .btn {
+      pointer-events: none;
+    }
+    section .navbar .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  </style>
+
+
+    <section class="wrapper bg-light">
+      <div class="container pt-15 pt-md-17">
+        <div class="alert alert-primary alert-icon" role="alert"><i class="uil uil-exclamation-circle"></i> Note that since we show multiple navbar examples on docs, offcanvas navigation, offcanvas info and modals are disabled on the examples, but their codes are intact and will work properly on the template.</div>
+        <div class="alert alert-primary alert-icon" role="alert"><i class="uil uil-exclamation-circle"></i> Disable dropdown hover by adding <code class="code bg-primary text-white mt-n1">.hover-none</code> class to <code class="code bg-primary text-white mt-n1">.navbar</code> on Include <mark class="doc bg-primary text-white  mt-n1">classList</mark>.</div>
+        <div class="alert alert-primary alert-icon" role="alert"><i class="uil uil-exclamation-circle"></i> Disable carets on dropdown parents by adding <code class="code bg-primary text-white mt-n1">.caret-none</code> class to <code class="code bg-primary text-white mt-n1">.navbar</code> on Include <mark class="doc bg-primary text-white  mt-n1">classList</mark>.</div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <section id="snippet-1" class="wrapper bg-light wrapper-border">
+      <div class="container pt-12">
+        <h2 class="mb-3">Center Nav - Transparent Background</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo1.html" class="external" target="_blank">Demo 1</a> or <a href="/demo4.html" class="external" target="_blank">Demo 4</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper">
+          {% include components/navbar/navbar.html 
+            classList="navbar-light navbar-light"
+            logoAlt=true
+            otherClassList="w-100 d-flex ms-auto"
+            otherLanguageSelect=true
+            otherInfo=true
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-1">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-1" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}{% include components/navbar/navbar.html 
+  classList="navbar-light navbar-light"
+  logoAlt=true
+  otherClassList="w-100 d-flex ms-auto"
+  otherLanguageSelect=true
+  otherInfo=true
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-2" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Center Nav - Transparent Background - Light Text</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo3/" class="external" target="_blank">Demo 3</a> or <a href="/demo15/" class="external" target="_blank">Demo 15</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper image-wrapper bg-image pb-1" data-image-src="/assets/img/photos/bg3.jpg">
+          {% include components/navbar/navbar.html 
+            wrapperClass="bg-dark"
+            classList="center-nav transparent navbar-dark"
+            logoBoth=true
+            logoAlt="logo-dark"
+            otherClassList="w-100 d-flex ms-auto"
+            otherSearch=true
+            otherBtn=true
+            otherBtnClassList="btn btn-sm btn-primary rounded"
+            otherBtnText="Contact"
+            otherBtnLink="/contact.html"
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-2">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-2" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+{% include components/navbar/navbar.html 
+  wrapperClass="bg-dark"
+  classList="center-nav transparent navbar-dark"
+  logoBoth=true
+  logoAlt="logo-dark"
+  otherClassList="w-100 d-flex ms-auto"
+  otherSearch=true
+  otherBtn=true
+  otherBtnClassList="btn btn-sm btn-primary rounded"
+  otherBtnText="Contact"
+  otherBtnLink="/contact/"
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-3" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Center Nav - Light Background</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo4/" class="external" target="_blank">Demo4</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary py-5">
+          {% include components/navbar/navbar.html 
+            wrapperClass=""
+            classList="center-nav transparent navbar-light navbar-bg-light"
+            centerNav=true
+            logoAlt=true
+            otherClassList="w-100 d-flex ms-auto"
+            otherSocial=true
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-3">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-3" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+{% include components/navbar/navbar.html 
+  wrapperClass=""
+  classList="center-nav transparent navbar-light navbar-bg-light"
+  centerNav=true
+  logoAlt=true
+  otherClassList="w-100 d-flex ms-auto"
+  otherSocial=true
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-4" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Center Nav - Dark Background</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary">
+         
+          {% include components/navbar/navbar.html 
+            wrapperClass=""
+            classList="center-nav navbar-dark navbar-bg-dark"
+            centerNav=true
+            logoLight=true
+            otherClassList="w-100 d-flex ms-auto"
+            otherLanguageSelect=true
+            otherBtn=true
+            otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+            otherBtnText="Contact"
+            otherBtnLink="/contact/"
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+         
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-4">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-4" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html">{% raw %}
+{% include components/navbar/navbar.html 
+  wrapperClass=""
+  classList="center-nav navbar-dark navbar-bg-dark"
+  centerNav=true
+  logoLight=true
+  otherClassList="w-100 d-flex ms-auto"
+  otherLanguageSelect=true
+  otherBtn=true
+  otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+  otherBtnText="Contact"
+  otherBtnLink="/contact/"
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-5" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Center Nav - Fancy</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo7/" class="external" target="_blank">Demo 7</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary pb-10">
+          {% include components/navbar/navbar-fancy.html 
+            wrapperClass=""
+            classList="fancy navbar-light navbar-bg-light caret-none"
+            centerNav=true
+            fancy=true
+            logoAlt=true
+            otherClassList="w-100 d-flex ms-auto"
+            otherSocial=true
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-5">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-5" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+{% include components/navbar/navbar-fancy.html 
+  wrapperClass=""
+  classList="fancy navbar-light navbar-bg-light caret-none"
+  centerNav=true
+  fancy=true
+  logoAlt=true
+  otherClassList="w-100 d-flex ms-auto"
+  otherSocial=true
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-6" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Classic - Transparent Background</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo6.html" class="external" target="_blank">Demo 6</a> or <a href="/demo8.html" class="external" target="_blank">Demo 8</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper">
+          {% include components/navbar/navbar.html 
+            topAlert=true
+            wrapperClass="bg-soft-primary"
+            classList="classic transparent navbar-light"
+            logoAlt="logo-dark"
+            otherClassList="ms-lg-4"
+            otherBtn=true
+            otherBtnClassList="btn btn-sm btn-primary rounded"
+            otherBtnText="Free Trial"
+            otherBtnLink="#"
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-6">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-6" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar.html 
+    topAlert=true
+    wrapperClass="bg-soft-primary"
+    classList="classic transparent navbar-light"
+    logoAlt="logo-dark"
+    otherClassList="ms-lg-4"
+    otherBtn=true
+    otherBtnClassList="btn btn-sm btn-primary rounded"
+    otherBtnText="Free Trial"
+    otherBtnLink="#"
+%}
+{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-7" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Classic - Transparent Background - Light Text</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo11.html" class="external" target="_blank">Demo 11</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper image-wrapper bg-image pb-1" data-image-src="/assets/img/photos/bg3.jpg">
+          {% include components/navbar/navbar.html 
+            topAlert=false
+            wrapperClass="bg-soft-primary"
+            classList="classic transparent navbar-dark"
+            logoBoth=true
+            logoAlt="logo-dark"
+            otherClassList="ms-lg-4"
+            otherBtn=true
+            otherBtnClassList="btn btn-sm btn-white rounded-pill"
+            otherBtnText="Free Trial"
+            otherBtnLink="#"
+            
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-7">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-7" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+{% include components/navbar/navbar.html 
+  topAlert=false
+  wrapperClass="bg-soft-primary"
+  classList="classic transparent navbar-dark"
+  logoBoth=true
+  logoAlt="logo-dark"
+  otherClassList="ms-lg-4"
+  otherBtn=true
+  otherBtnClassList="btn btn-sm btn-white rounded-pill"
+  otherBtnText="Free Trial"
+  otherBtnLink="#"
+  
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-8" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Classic - Light Background</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary py-5">
+          
+        {% include components/navbar/navbar.html 
+            topAlert=false
+            wrapperClass="bg-soft-primary"
+            classList="classic navbar-light navbar-bg-light"
+            logoAlt="logo-dark"
+            otherClassList="ms-lg-4"
+            otherBtn=true
+            otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+            otherBtnText="Free Trial"
+            otherBtnLink="#"
+            
+        %}
+        </header>
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-8">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-8" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+{% include components/navbar/navbar.html 
+  topAlert=false
+  wrapperClass="bg-soft-primary"
+  classList="classic navbar-light navbar-bg-light"
+  logoAlt="logo-dark"
+  otherClassList="ms-lg-4"
+  otherBtn=true
+  otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+  otherBtnText="Free Trial"
+  otherBtnLink="#"
+  
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-9" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Classic - Dark Background</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper">
+          {% include components/navbar/navbar.html 
+            topAlert=false
+            classList="classic navbar-dark navbar-bg-dark"
+            logoBoth=true
+            logoAlt="logo-dark"
+            otherClassList="ms-lg-4"
+            otherBtn=true
+            otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+            otherBtnText="Free Trial"
+            otherBtnLink="#"
+            
+        %}
+        
+        
+        </header>
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-9">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-9" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar.html 
+    topAlert=false
+    classList="classic navbar-dark navbar-bg-dark"
+    logoBoth=true
+    logoAlt="logo-dark"
+    otherClassList="ms-lg-4"
+    otherBtn=true
+    otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+    otherBtnText="Free Trial"
+    otherBtnLink="#"
+    
+%}{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-10" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Classic - Fancy</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary pb-10">
+          {% include components/navbar/navbar-fancy.html 
+            wrapperClass=""
+            classList="fancy navbar-light navbar-bg-light"
+            fancy=true
+            logoAlt="logo-light"
+            otherClassList=" d-flex ms-auto"
+            otherBtn=true
+            otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+            otherBtnText="Free Trial"
+            otherBtnLink="#"
+           
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-10">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-10" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar-fancy.html 
+    wrapperClass=""
+    classList="fancy navbar-light navbar-bg-light"
+    fancy=true
+    logoAlt="logo-light"
+    otherClassList=" d-flex ms-auto"
+    otherBtn=true
+    otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+    otherBtnText="Free Trial"
+    otherBtnLink="#"
+   
+%}
+{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-11" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Center Logo - Transparent Background</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper">
+          {% include components/navbar/navbar-center-logo.html 
+            classList="center-logo  navbar-dark navbar-bg-dark"
+            logoBoth=true
+            logoAlt="logo-dark"
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-11">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-11" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar-center-logo.html 
+    classList="center-logo  navbar-dark navbar-bg-dark"
+    logoBoth=true
+    logoAlt="logo-dark"
+%}
+{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-12" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Center Logo - Transparent Background - Light Text</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo13.html" class="external" target="_blank">Demo 13</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper image-wrapper bg-image pb-1" data-image-src="/assets/img/photos/bg3.jpg">
+          {% include components/navbar/navbar-center-logo.html 
+            classList="center-logo transparent navbar-dark"
+            fancy=false
+            logoBoth=true
+            logoLight=true
+        %}
+        </header>
+        <!-- /header -->
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-12">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-12" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar-center-logo.html 
+    classList="center-logo transparent navbar-dark"
+    fancy=false
+    logoBoth=true
+    logoLight=true
+%}
+{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-13" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Center Logo - Light Background</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary py-5">
+          {% include components/navbar/navbar-center-logo.html 
+            classList="center-logo navbar-light navbar-bg-light"
+            fancy=false
+            logoBoth=true
+            logoAlt="logo-dark"
+        %}
+        </header>
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-13">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-13" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar-center-logo.html 
+    classList="center-logo navbar-light navbar-bg-light"
+    fancy=false
+    logoBoth=true
+    logoAlt="logo-dark"
+%}
+{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-14" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Center Logo - Dark Background</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary">
+          {% include components/navbar/navbar-center-logo.html 
+            classList="center-logo transparent navbar-dark navbar-bg-dark"
+            fancy=false
+            logoBoth=true
+            logoLight=true
+        %}
+        </header>
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-14">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-14" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar-center-logo.html 
+    classList="center-logo transparent navbar-dark"
+    fancy=false
+    logoBoth=true
+    logoLight=true
+%}
+{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-15" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-0">Center Logo - Fancy</h2>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary pb-10">
+          {% include components/navbar/navbar-center-logo.html 
+            classList="center-logo fancy navbar-light navbar-bg-light"
+            fancy=true
+            logoBoth=true
+            logoAlt="logo-dark"
+           %}
+        </header>
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-15">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-15" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar-center-logo.html 
+    classList="center-logo fancy navbar-light navbar-bg-light"
+    fancy=true
+    logoBoth=true
+    logoAlt="logo-dark"
+   %} {% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-16" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Extended</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo12.html" class="external" target="_blank">Demo 12</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary pb-10">
+          {% include components/navbar/navbar-extended.html 
+            otherLanguageSelect=true
+                
+            %} 
+        </header>
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-16">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-16" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+<pre class="language-html"><code>{% raw %}
+  {% include components/navbar/navbar-extended.html 
+    otherLanguageSelect=true    
+    %} 
+{% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="snippet-17" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17">
+        <h2 class="mb-3">Extended - Alternative</h2>
+        <p class="lead mb-0">Check out some of the live examples: <a href="/demo24.html" class="external" target="_blank">Demo 24</a>.</p>
+      </div>
+      <!-- /.container -->
+      <div class="container-fluid pt-10 pt-md-12 pb-12 pb-md-14 px-xxl-10">
+        <header class="wrapper bg-soft-primary pb-10">
+          {% include components/navbar/navbar-extended-alt.html 
+            classList="extended extended-alt navbar-light navbar-bg-light"
+            onePageDemo=true
+            logoAlt="logo-dark"
+            otherSearch=true
+            otherInfo=true
+        %}
+        </header>
+      </div>
+      <!-- /.container -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!--/.card-footer -->
+          <div class="card-footer position-relative">
+            <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-gulp-header-17">View example's Include code</a>
+          </div>
+          <!--/.card-footer -->
+          <div id="collapse-gulp-header-17" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+    <pre class="language-html"><code>{% raw %}
+      {% include components/navbar/navbar-extended-alt.html 
+        classList="extended extended-alt navbar-light navbar-bg-light"
+        onePageDemo=true
+        logoAlt="logo-dark"
+        otherSearch=true
+        otherInfo=true
+    %}
+    {% endraw %}</code></pre>
+              </div>
+              <!--/.code-wrapper-inner -->
+            </div>
+            <!--/.code-wrapper -->
+          </div>
+          <!--/.card-footer -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+ 

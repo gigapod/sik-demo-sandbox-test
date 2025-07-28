@@ -1,0 +1,32 @@
+
+{% assign bg_class = include.bg_class | default: "bg-light" %}
+{% assign frame_class = include.frame_class | default: "" %}
+{% assign container_class = include.container_class | default: "pt-10 pt-md-14" %}
+{% assign title_class = include.title_class | default: "display-1 mb-3" %}
+{% assign center = include.center | default: false %}
+
+{% if frame_class != "" %}
+<section class="{{ frame_class }}">
+  <div class="wrapper {{ bg_class }}">
+{% else %}
+<section class="wrapper {{ bg_class }}">
+{% endif %}
+  <div class="container {{ container_class }} {% if center %}text-center{% endif %}">
+    <div class="row">
+      <div class="{% if frame_class != "" %}col-lg-10 col-xxl-8{% else %}col-md-8 col-lg-7 col-xl-6 col-xxl-5{% endif %} {% if center %}mx-auto{% endif %}">
+        <h1 class="{{ title_class }}">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="lead {% if frame_class != "" %}px-md-12 px-lg-12 px-xl-15 px-xxl-18{% else %}fs-lg pe-lg-15 pe-xxl-12{% endif %}">{{ page.description }}</p>
+        {% endif %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+{% if frame_class != "" %}
+  </div>
+  <!-- /.wrapper -->
+{% endif %}
+</section>
+<!-- /section -->

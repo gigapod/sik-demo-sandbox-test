@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+    %}
+  </header>
+  <!-- /header -->
+  {% include components/header/header-projects-list.html 
+    bg_class="bg-light"
+    title_class="display-1 mb-0"
+ %}
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="grid grid-view projects-masonry">
+      {% if page.filters %}
+      <div class="isotope-filter filter mb-10">
+        <p>Filter:</p>
+        <ul>
+          <li><a class="filter-item active" data-filter="*">All</a></li>
+          {% for filter in page.filters %}
+          <li><a class="filter-item" data-filter=".{{ filter | slugify }}">{{ filter }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <div class="row gx-md-10 gy-10 gy-md-13 isotope">
+        {% assign projects_to_show = paginator.posts %}
+        {% if projects_to_show.size == 0 %}
+          {% assign projects_to_show = site.projects %}
+        {% endif %}
+        
+        {% for project in projects_to_show %}
+        {% unless page.projects_category and page.projects_category != project.category %}
+          <div class="project item col-md-6 {{ project.category | slugify }}">
+            <figure class="lift rounded mb-6">
+              <a href="{{ project.url | relative_url }}">
+                <img src="{{ project.thumbnail | default: project.hero_image | relative_url }}" alt="{{ project.title }}" />
+              </a>
+            </figure>
+            <div class="project-details d-flex justify-content-center flex-column">
+              <div class="post-header">
+                {% if project.category %}
+                <div class="post-category text-line mb-2 text-{{ project.color | default: 'purple' }}">{{ project.category }}</div>
+                {% endif %}
+                <h3 class="post-title">{{ project.title }}</h3>
+              </div>
+              <!-- /.post-header -->
+            </div>
+            <!-- /.project-details -->
+          </div>
+          <!-- /.project -->
+        {% endunless %}
+        {% endfor %}
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.grid -->
+
+    <!-- Pagination -->
+    {% include components/projects/pagination.html %}
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+<!-- FOOTER -->
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-dark" 
+  text_color="text-inverse"
+  cta=false
+  newsletter=true
+%}
+<!-- /footer -->
+</div>
+<!-- /.content-wrapper -->

@@ -1,0 +1,27 @@
+<section class="wrapper bg-light">
+  <div class="container pb-14 pb-md-16">
+    <div class="row">
+      <div class="col mt-n19 mb-16">
+        <div class="card shadow-lg">
+          <div class="row gx-0">
+            <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start d-none d-md-block" data-image-src="{{ page.contact_card.image }}">
+            </div>
+            <!--/column -->
+            <div class="col-lg-6">
+              <div class="p-10 p-md-11 p-lg-13">
+                <h2 class="display-4 mb-3">{{ page.contact_card.title }}</h2>
+                <p class="lead fs-lg">{{ page.contact_card.lead_text }}</p>
+                <p>{{ page.contact_card.text }}</p>
+                <a href="{{ page.contact_card.button.url }}" class="btn btn-primary rounded-pill mt-2">{{ page.contact_card.button.label }}</a>
+              </div>
+              <!--/div -->
+            </div>
+            <!--/column -->
+          </div>
+          <!--/.row -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->

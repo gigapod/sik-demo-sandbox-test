@@ -1,0 +1,17 @@
+<section id="{{ include.id }}" class="wrapper {% if include.index == 1 %}pt-16{% else %}py-16{% endif %}">
+  <div class="card">
+    <div class="card-body p-10">
+      <h2 class="mb-3">{{ include.title }}</h2>
+      {{ include.content | markdownify }}
+      {% if include.list_items %}
+      <ul class="icon-list bullet-bg bullet-soft-primary {% if include.last %}mb-0{% endif %}">
+        {% for item in include.list_items %}
+        <li><span><i class="uil uil-check"></i></span><span>{{ item.text }}</span></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <!--/.card-body -->
+  </div>
+  <!--/.card -->
+</section>

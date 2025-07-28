@@ -1,0 +1,141 @@
+<section class="wrapper bg-gray">
+  <div class="container">
+    <div class="row gx-lg-8 gx-xl-12 mt-17">
+      <div class="col-lg-8">
+        <div class="blog classic-view">
+          {% assign featured_posts = site.posts | where: "author", "Jane Smith" | where: "featured", true | sort: "date" | reverse %}
+          {% for post in featured_posts | limit: 1 %}
+          <article class="post">
+            <div class="card shadow-lg">
+              {% if post.featured_image %}
+              <figure class="card-img-top overlay overlay-1">
+                <a href="{{ post.url }}"><img src="{{ post.featured_image }}" alt="{{ post.title }}" /></a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              {% endif %}
+              
+              {% if post.video_id %}
+              <div class="card-img-top">
+                <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="{{ post.video_id }}"></div>
+              </div>
+              {% endif %}
+              
+              <div class="card-body">
+                <div class="post-header">
+                  <div class="post-category">
+                    <a href="{{ post.category_link }}" class="hover link-{{ post.category_color }}" rel="category">{{ post.category }}</a>
+                  </div>
+                  <h2 class="post-title mt-1 mb-0">
+                    <a class="link-navy" href="{{ post.url }}">{{ post.title }}</a>
+                  </h2>
+                </div>
+                <div class="post-content">
+                  <p>{{ post.excerpt }}</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <ul class="post-meta d-flex mb-0">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%B %d, %Y" }}</span></li>
+                  <li class="post-author">
+                    <a href="/blog/author/{{ post.author | slugify }}/">
+                      <i class="uil uil-user"></i><span>By {{ post.author }}</span>
+                    </a>
+                  </li>
+                  <li class="post-comments">
+                    <a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments }}<span> Comments</span></a>
+                  </li>
+                  <li class="post-likes ms-auto">
+                    <i class="uil uil-heart-alt"></i>{{ post.likes }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+
+        <div class="blog grid grid-view">
+          <div class="row isotope gx-md-8 gy-8 mb-8">
+            {% assign grid_posts = site.posts | where: "author", "Jane Smith" | where_exp: "post", "post.featured != true" | sort: "date" | reverse %}
+            {% for post in grid_posts | limit: 4 %}
+            <article class="item post col-md-6">
+              <div class="card shadow-lg">
+                <figure class="card-img-top overlay overlay-1">
+                  <a href="{{ post.url }}">
+                    <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                  </a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category">
+                      <a href="{{ post.category_link }}" class="hover link-{{ post.category_color }}" rel="category">{{ post.category }}</a>
+                    </div>
+                    <h2 class="post-title h3 mt-1 mb-3">
+                      <a class="link-navy" href="{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                  </div>
+                  <div class="post-content">
+                    <p>{{ post.excerpt }}</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date">
+                      <i class="uil uil-calendar-alt"></i>
+                      <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                    </li>
+                    <li class="post-comments">
+                      <a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments }}</a>
+                    </li>
+                    <li class="post-likes ms-auto">
+                      <i class="uil uil-heart-alt"></i>{{ post.likes }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Optional Pagination if using Jekyll paginate -->
+        {% if paginator.total_pages > 1 %}
+        <nav class="d-flex" aria-label="pagination">
+          <ul class="pagination pagination-alt">
+            {% if paginator.previous_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ paginator.previous_page_path }}" aria-label="Previous">
+                <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% for page_number in (1..paginator.total_pages) %}
+            <li class="page-item {% if page_number == paginator.page %}active{% endif %}">
+              <a class="page-link" href="{{ paginator.previous_page_path | replace: paginator.page, page_number }}">{{ page_number }}</a>
+            </li>
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next">
+                <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+        {% endif %}
+      </div>
+
+      <aside class="col-lg-4 sidebar mt-8 mt-lg-0">
+        {% include components/blog/sidebar-widgets.html %}
+      </aside>
+    </div>
+  </div>
+</section>

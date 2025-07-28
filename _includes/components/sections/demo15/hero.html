@@ -1,0 +1,48 @@
+<section class="wrapper bg-dark">
+  <div class="swiper-container swiper-hero dots-over" data-margin="0" data-autoplay="true" data-autoplaytime="7000" data-nav="true" data-dots="true" data-items="1">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% for slide in page.hero.slides %}
+        <div class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image" data-image-src="{{ slide.background }}">
+          <div class="container h-100">
+            <div class="row h-100">
+              {% if slide.position == "left" %}
+              <div class="col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6 col-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start">
+                <h2 class="display-1 fs-56 mb-4 text-white {% if slide.animation %}animate__animated animate__slideInDown animate__delay-1s{% endif %}">{{ slide.title }}</h2>
+                <p class="lead fs-23 lh-sm mb-7 text-white {% if slide.animation %}animate__animated animate__slideInRight animate__delay-2s{% endif %}">{{ slide.subtitle }}</p>
+                {% if slide.button %}
+                <div class="{% if slide.animation %}animate__animated animate__slideInUp animate__delay-3s{% endif %}"><a href="{{ slide.button.url }}" class="{{ slide.button.class }}">{{ slide.button.label }}</a></div>
+                {% endif %}
+              </div>
+              {% elsif slide.position == "center" %}
+              <div class="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center">
+                <h2 class="display-1 fs-56 mb-4 text-white {% if slide.animation %}animate__animated animate__slideInDown animate__delay-1s{% endif %}">{{ slide.title }}</h2>
+                <p class="lead fs-23 lh-sm mb-7 text-white {% if slide.animation %}animate__animated animate__slideInRight animate__delay-2s{% endif %}">{{ slide.subtitle }}</p>
+                {% if slide.video_url %}
+                <div class="{% if slide.animation %}animate__animated animate__slideInUp animate__delay-3s{% endif %}"><a href="{{ slide.video_url }}" class="btn btn-circle btn-white btn-play ripple mx-auto mb-5" data-glightbox><i class="icn-caret-right"></i></a></div>
+                {% endif %}
+              </div>
+              {% else %}
+              <div class="col-md-10 offset-md-1 col-lg-7 offset-lg-5 col-xl-6 offset-xl-6 col-xxl-5 offset-xxl-6 text-center text-lg-start justify-content-center align-self-center align-items-start">
+                <h2 class="display-1 fs-56 mb-4 text-white {% if slide.animation %}animate__animated animate__slideInDown animate__delay-1s{% endif %}">{{ slide.title }}</h2>
+                <p class="lead fs-23 lh-sm mb-7 text-white {% if slide.animation %}animate__animated animate__slideInRight animate__delay-2s{% endif %}">{{ slide.subtitle }}</p>
+                {% if slide.button %}
+                <div class="{% if slide.animation %}animate__animated animate__slideInUp animate__delay-3s{% endif %}"><a href="{{ slide.button.url }}" class="{{ slide.button.class }}">{{ slide.button.label }}</a></div>
+                {% endif %}
+              </div>
+              {% endif %}
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/.container -->
+        </div>
+        <!--/.swiper-slide -->
+        {% endfor %}
+      </div>
+      <!--/.swiper-wrapper -->
+    </div>
+    <!-- /.swiper -->
+  </div>
+  <!-- /.swiper-container -->
+</section>
+<!-- /section -->

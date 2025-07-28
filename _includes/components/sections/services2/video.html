@@ -1,0 +1,40 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container py-14 pt-md-16 pt-lg-0 pb-md-16">
+    <div class="row text-center">
+      <div class="col-lg-10 mx-auto">
+        <div class="mt-lg-n20 mt-xl-n22 position-relative">
+          <div class="shape bg-dot red rellax w-16 h-18" data-rellax-speed="1" style="top: 1rem; left: -3.9rem;"></div>
+          <div class="shape rounded-circle bg-line primary rellax w-18 h-18" data-rellax-speed="1" style="bottom: 2rem; right: -3rem;"></div>
+          <video poster="{{ page.video.poster }}" class="player" playsinline controls preload="none">
+            <source src="{{ page.video.url }}" type="video/mp4">
+            <source src="{{ page.video.webm_url }}" type="video/webm">
+          </video>
+        </div>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="row text-center">
+      <div class="col-lg-9 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3 mt-12">{{ page.process.title }}</h2>
+        <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">{{ page.process.subtitle }}</h3>
+        <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9">
+          {% for step in page.process.steps %}
+          <div class="col-md-4">
+            <img src="/assets/img/icons/lineal/{{ step.icon }}.svg" class="svg-inject icon-svg icon-svg-md text-{{ step.color }} mb-3" alt="" />
+            <h4 class="mb-1">{{ step.number }}. {{ step.title }}</h4>
+            <p>{{ step.text }}</p>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

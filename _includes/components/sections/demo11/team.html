@@ -1,0 +1,35 @@
+<section class="wrapper bg-light">
+  <div class="container pt-14 pt-md-17">
+<div class="row mb-3">
+  <div class="col-md-10 col-lg-12 col-xl-10 col-xxl-9 mx-auto text-center">
+    <h2 class="fs-15 text-uppercase text-primary mb-3">{{ page.team.title }}</h2>
+    <h3 class="display-4 mb-7 px-lg-19 px-xl-18">{{ page.team.subtitle }}</h3>
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->
+<div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0">
+  {% for member in site.data.team.members | limit: 4 %}
+  <div class="col-md-6 col-lg-3">
+    <div class="position-relative">
+      <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
+      <div class="card">
+        <figure class="card-img-top"><img class="img-fluid" src="{{ member.avatar_image }}" srcset="{{ member.avatar_image2x }} 2x" alt="" /></figure>
+        <div class="card-body px-6 py-5">
+          <h4 class="mb-1">{{ member.name }}</h4>
+          <p class="mb-0">{{ member.role }}</p>
+        </div>
+        <!--/.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /div -->
+  </div>
+  <!--/column -->
+  {% endfor %}
+</div>
+<!--/.row -->
+</div>
+<!-- /.container -->
+</section>
+<!-- /section -->

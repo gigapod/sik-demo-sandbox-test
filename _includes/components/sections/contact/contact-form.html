@@ -1,0 +1,47 @@
+<h2 class="display-4 mb-3 text-center">{{ page.contact_form.title }}</h2>
+<p class="lead text-center mb-10">{{ page.contact_form.subtitle }}</p>
+<form class="contact-form needs-validation" method="post" action="https://formsubmit.io/send/{{ site.data.theme.formsubmit_key }}" novalidate>
+  <div class="messages"></div>
+  <div class="row gx-4">
+    {% for field in page.contact_form.fields %}
+      <div class="{{ field.col }}">
+        {% if field.type == 'text' or field.type == 'email' %}
+        <div class="form-floating mb-4">
+          <input id="{{ field.id }}" type="{{ field.type }}" name="{{ field.name }}" class="form-control" placeholder="{{ field.placeholder }}" {% if field.required %}required{% endif %}>
+          <label for="{{ field.id }}">{{ field.label }}</label>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Please {% if field.type == 'email' %}provide a valid email address{% else %}enter your {{ field.name }}{% endif %}.
+          </div>
+        </div>
+        {% elsif field.type == 'select' %}
+        <div class="form-select-wrapper mb-4">
+          <select class="form-select" id="{{ field.id }}" name="{{ field.name }}" {% if field.required %}required{% endif %}>
+            <option selected disabled value="">{{ field.label }}</option>
+            {% for option in field.options %}
+            <option value="{{ option.value }}">{{ option.label }}</option>
+            {% endfor %}
+          </select>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please select a department.</div>
+        </div>
+        {% elsif field.type == 'textarea' %}
+        <div class="form-floating mb-4">
+          <textarea id="{{ field.id }}" name="{{ field.name }}" class="form-control" placeholder="{{ field.placeholder }}" style="height: {{ field.height }}" {% if field.required %}required{% endif %}></textarea>
+          <label for="{{ field.id }}">{{ field.label }}</label>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your messsage.</div>
+        </div>
+        {% endif %}
+      </div>
+      <!-- /column -->
+    {% endfor %}
+    <div class="col-12 text-center">
+      <input type="submit" class="{{ page.contact_form.button.class }}" value="{{ page.contact_form.button.label }}">
+      <p class="text-muted">{{ page.contact_form.note }}</p>
+    </div>
+    <!-- /column -->
+  </div>
+  <!-- /.row -->
+</form>
+<!-- /form -->

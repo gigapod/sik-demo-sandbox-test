@@ -1,0 +1,28 @@
+<section class="wrapper bg-light">
+  <div class="container pb-15 pb-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-7">
+        <figure><img class="w-auto" src="{{ page.how_it_works.image }}" srcset="{{ page.how_it_works.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5">
+        <h3 class="fs-16 text-uppercase text-muted mb-3">{{ page.how_it_works.subtitle }}</h3>
+        <h3 class="display-4 mb-6">{{ page.how_it_works.title }}</h3>
+        <div class="row gy-4">
+          {% for step in page.how_it_works.steps %}
+          <div class="col-md-6">
+            <h4><span class="text-primary">{{ step.number }}.</span> {{ step.title }}</h4>
+            <p class="mb-0">{{ step.text }}</p>
+          </div>
+          {% endfor %}
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

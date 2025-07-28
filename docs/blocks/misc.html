@@ -1,0 +1,578 @@
+---
+layout: doc
+title: Blocks - Misc
+description: Copy any custom block snippet below and paste it on your page to build your website easily.
+
+# Jobs Section 1
+jobs1:
+  enable: true
+  subtitle: "Job Positions"
+  title: "We're always searching for amazing people to join our team. Take a look at our current openings."
+  positions:
+    - title: "Senior Graphic Designer"
+      type: "Full Time"
+      location: "San Francisco, US"
+      url: "#"
+      initials: "SD"
+      avatar_bg: "bg-red"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+    - title: "UI/UX Designer"
+      type: "Remote"
+      location: "Anywhere"
+      url: "#"
+      initials: "UX"
+      avatar_bg: "bg-green"
+      badge_bg: "bg-pale-aqua"
+      badge_text: "text-aqua"
+    - title: "Multimedia Artist & Animator"
+      type: "Full Time"
+      location: "Birmingham, UK"
+      url: "#"
+      initials: "AN"
+      avatar_bg: "bg-yellow"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+    - title: "Front End Developer"
+      type: "Part Time"
+      location: "Sydney, AU"
+      url: "#"
+      initials: "FD"
+      avatar_bg: "bg-purple"
+      badge_bg: "bg-pale-violet"
+      badge_text: "text-violet"
+    - title: "Mobile Developer"
+      type: "Full Time"
+      location: "San Francisco, US"
+      url: "#"
+      initials: "MD"
+      avatar_bg: "bg-orange"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+    - title: ".NET Developer"
+      type: "Full Time"
+      location: "Manchester, UK"
+      url: "#"
+      initials: "ND"
+      avatar_bg: "bg-pink"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+  cta:
+    title: "Can't find the right position?"
+    description: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur."
+    button:
+      url: "#"
+      text: "Get in Touch"
+
+# Jobs Section 2
+jobs2:
+  enable: true
+  subtitle: "Job Positions"
+  title: "We're always searching for amazing people to join our team. Take a look at our current openings."
+  filters:
+    - label: "Position"
+      options:
+        - value: "position1"
+          text: "Business"
+        - value: "position2"
+          text: "Design"
+        - value: "position3"
+          text: "Development"
+        - value: "position4"
+          text: "Engineering"
+        - value: "position5"
+          text: "Finance"
+        - value: "position6"
+          text: "Marketing"
+    - label: "Type"
+      options:
+        - value: "type1"
+          text: "Full-time"
+        - value: "type3"
+          text: "Part-time"
+        - value: "type4"
+          text: "Remote"
+    - label: "Location"
+      options:
+        - value: "location1"
+          text: "Chicago, US"
+        - value: "location2"
+          text: "New York, US"
+        - value: "location3"
+          text: "Michigan, US"
+        - value: "location4"
+          text: "Los Angles, US"
+        - value: "location5"
+          text: "Moscow, Russia"
+        - value: "location6"
+          text: "Sydney, Australia"
+        - value: "location7"
+          text: "Birmingham, UK"
+        - value: "location8"
+          text: "Manchester, UK"
+        - value: "location9"
+          text: "Beijing, China"
+  categories:
+    - name: "Design"
+      positions:
+        - title: "Senior Graphic Designer"
+          type: "Full time"
+          location: "San Francisco, US"
+          url: "#"
+          initials: "GD"
+          avatar_bg: "bg-red"
+        - title: "UI/UX Designer"
+          type: "Remote"
+          location: "Anywhere"
+          url: "#"
+          initials: "UX"
+          avatar_bg: "bg-green"
+        - title: "Multimedia Artist & Animator"
+          type: "Full time"
+          location: "Birmingham, UK"
+          url: "#"
+          initials: "AN"
+          avatar_bg: "bg-yellow"
+    - name: "Development"
+      positions:
+        - title: "Front End Developer"
+          type: "Part time"
+          location: "Sydney, AU"
+          url: "#"
+          initials: "FE"
+          avatar_bg: "bg-purple"
+        - title: "Mobile Developer"
+          type: "Full-time"
+          location: "San Francisco, US"
+          url: "#"
+          initials: "MD"
+          avatar_bg: "bg-orange"
+        - title: ".NET Developer"
+          type: "Full time"
+          location: "Manchester, UK"
+          url: "#"
+          initials: "NT"
+          avatar_bg: "bg-pink"
+---
+
+
+{% if page.jobs1.enable %}
+<section id="snippet-1" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+    <div class="row text-center">
+      <div class="col-xl-10 mx-auto">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">{{ page.jobs1.subtitle }}</h2>
+        <h3 class="display-4 mb-10 px-xxl-15">{{ page.jobs1.title }}</h3>
+      </div>
+    </div>
+
+    <div class="row gy-6">
+      {% for job in page.jobs1.positions %}
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ job.url }}" class="card shadow-lg lift h-100">
+          <div class="card-body p-5 d-flex flex-row">
+            <div>
+              <span class="avatar {{ job.avatar_bg }} text-white w-11 h-11 fs-20 me-4">{{ job.initials }}</span>
+            </div>
+            <div>
+              <span class="badge {{ job.badge_bg }} {{ job.badge_text }} rounded py-1 mb-2">{{ job.type }}</span>
+              <h4 class="mb-1">{{ job.title }}</h4>
+              <p class="mb-0 text-body">{{ job.location }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="row mt-11">
+      <div class="col-lg-6 col-xl-5 mx-auto text-center">
+        <h2 class="display-6 mb-3">{{ page.jobs1.cta.title }}</h2>
+        <p class="lead mb-5 px-md-16 px-lg-3">{{ page.jobs1.cta.description }}</p>
+        <a href="{{ page.jobs1.cta.button.url }}" class="btn btn-primary rounded-pill">{{ page.jobs1.cta.button.text }}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-1-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html1">Copy</button>
+            <div id="html1">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row text-center">
+      <div class="col-xl-10 mx-auto">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">{{ page.jobs1.subtitle }}</h2>
+        <h3 class="display-4 mb-10 px-xxl-15">{{ page.jobs1.title }}</h3>
+      </div>
+    </div>
+
+    <div class="row gy-6">
+      {% for job in page.jobs1.positions %}
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ job.url }}" class="card shadow-lg lift h-100">
+          <div class="card-body p-5 d-flex flex-row">
+            <div>
+              <span class="avatar {{ job.avatar_bg }} text-white w-11 h-11 fs-20 me-4">{{ job.initials }}</span>
+            </div>
+            <div>
+              <span class="badge {{ job.badge_bg }} {{ job.badge_text }} rounded py-1 mb-2">{{ job.type }}</span>
+              <h4 class="mb-1">{{ job.title }}</h4>
+              <p class="mb-0 text-body">{{ job.location }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="row mt-11">
+      <div class="col-lg-6 col-xl-5 mx-auto text-center">
+        <h2 class="display-6 mb-3">{{ page.jobs1.cta.title }}</h2>
+        <p class="lead mb-5 px-md-16 px-lg-3">{{ page.jobs1.cta.description }}</p>
+        <a href="{{ page.jobs1.cta.button.url }}" class="btn btn-primary rounded-pill">{{ page.jobs1.cta.button.text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-1-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data1">Copy</button>
+            <div id="data1">
+              {% highlight yaml %}
+# Jobs Section 1
+jobs1:
+  enable: true
+  subtitle: "Job Positions"
+  title: "We're always searching for amazing people to join our team. Take a look at our current openings."
+  positions:
+    - title: "Senior Graphic Designer"
+      type: "Full Time"
+      location: "San Francisco, US"
+      url: "#"
+      initials: "SD"
+      avatar_bg: "bg-red"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+    - title: "UI/UX Designer"
+      type: "Remote"
+      location: "Anywhere"
+      url: "#"
+      initials: "UX"
+      avatar_bg: "bg-green"
+      badge_bg: "bg-pale-aqua"
+      badge_text: "text-aqua"
+    - title: "Multimedia Artist & Animator"
+      type: "Full Time"
+      location: "Birmingham, UK"
+      url: "#"
+      initials: "AN"
+      avatar_bg: "bg-yellow"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+    - title: "Front End Developer"
+      type: "Part Time"
+      location: "Sydney, AU"
+      url: "#"
+      initials: "FD"
+      avatar_bg: "bg-purple"
+      badge_bg: "bg-pale-violet"
+      badge_text: "text-violet"
+    - title: "Mobile Developer"
+      type: "Full Time"
+      location: "San Francisco, US"
+      url: "#"
+      initials: "MD"
+      avatar_bg: "bg-orange"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+    - title: ".NET Developer"
+      type: "Full Time"
+      location: "Manchester, UK"
+      url: "#"
+      initials: "ND"
+      avatar_bg: "bg-pink"
+      badge_bg: "bg-pale-blue"
+      badge_text: "text-blue"
+  cta:
+    title: "Can't find the right position?"
+    description: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur."
+    button:
+      url: "#"
+      text: "Get in Touch"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+		<!-- /section -->
+		{% if page.jobs2.enable %}
+<section id="snippet-2" class="wrapper bg-light wrapper-border">
+  <div class="container pt-15 pt-md-17 pb-13 pb-md-14">
+    <div class="row text-center">
+      <div class="col-xl-10 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.jobs2.subtitle }}</h2>
+        <h3 class="display-4 mb-10 px-xxl-15">{{ page.jobs2.title }}</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <form class="filter-form mb-10">
+          <div class="row">
+            {% for filter in page.jobs2.filters %}
+            <div class="col-md-4 mb-3">
+              <div class="form-select-wrapper">
+                <select class="form-select" aria-label="">
+                  <option selected>{{ filter.label }}</option>
+                  {% for option in filter.options %}
+                  <option value="{{ option.value }}">{{ option.text }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </form>
+
+        {% for category in page.jobs2.categories %}
+        <div class="job-list {% unless forloop.last %}mb-10{% endunless %}">
+          <h3 class="mb-4">{{ category.name }}</h3>
+          {% for job in category.positions %}
+          <a href="{{ job.url }}" class="card mb-4 lift">
+            <div class="card-body p-5">
+              <span class="row justify-content-between align-items-center">
+                <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                  <span class="avatar {{ job.avatar_bg }} text-white w-9 h-9 fs-17 me-3">{{ job.initials }}</span>
+                  {{ job.title }}
+                </span>
+                <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                  <i class="uil uil-clock me-1"></i> {{ job.type }}
+                </span>
+                <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                  <i class="uil uil-location-arrow me-1"></i> {{ job.location }}
+                </span>
+                <span class="d-none d-lg-block col-1 text-center text-body">
+                  <i class="uil uil-angle-right-b"></i>
+                </span>
+              </span>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-15 pb-md-17">
+    <div class="card">
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-html">
+          View HTML code
+        </a>
+      </div>
+      <div id="collapse-snippet-2-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#html2">Copy</button>
+            <div id="html2">
+              {% highlight html %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row text-center">
+      <div class="col-xl-10 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.jobs2.subtitle }}</h2>
+        <h3 class="display-4 mb-10 px-xxl-15">{{ page.jobs2.title }}</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <form class="filter-form mb-10">
+          <div class="row">
+            {% for filter in page.jobs2.filters %}
+            <div class="col-md-4 mb-3">
+              <div class="form-select-wrapper">
+                <select class="form-select" aria-label="">
+                  <option selected>{{ filter.label }}</option>
+                  {% for option in filter.options %}
+                  <option value="{{ option.value }}">{{ option.text }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </form>
+
+        {% for category in page.jobs2.categories %}
+        <div class="job-list {% unless forloop.last %}mb-10{% endunless %}">
+          <h3 class="mb-4">{{ category.name }}</h3>
+          {% for job in category.positions %}
+          <a href="{{ job.url }}" class="card mb-4 lift">
+            <div class="card-body p-5">
+              <span class="row justify-content-between align-items-center">
+                <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
+                  <span class="avatar {{ job.avatar_bg }} text-white w-9 h-9 fs-17 me-3">{{ job.initials }}</span>
+                  {{ job.title }}
+                </span>
+                <span class="col-5 col-md-3 text-body d-flex align-items-center">
+                  <i class="uil uil-clock me-1"></i> {{ job.type }}
+                </span>
+                <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
+                  <i class="uil uil-location-arrow me-1"></i> {{ job.location }}
+                </span>
+                <span class="d-none d-lg-block col-1 text-center text-body">
+                  <i class="uil uil-angle-right-b"></i>
+                </span>
+              </span>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer border-0 position-relative">
+        <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-yaml">
+          View frontmatter
+        </a>
+      </div>
+      <div id="collapse-snippet-2-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+            <button class="btn-clipboard" data-clipboard-target="#data2">Copy</button>
+            <div id="data2">
+              {% highlight yaml %}
+# Jobs Section 2
+jobs2:
+  enable: true
+  subtitle: "Job Positions"
+  title: "We're always searching for amazing people to join our team. Take a look at our current openings."
+  filters:
+    - label: "Position"
+      options:
+        - value: "position1"
+          text: "Business"
+        - value: "position2"
+          text: "Design"
+        - value: "position3"
+          text: "Development"
+        - value: "position4"
+          text: "Engineering"
+        - value: "position5"
+          text: "Finance"
+        - value: "position6"
+          text: "Marketing"
+    - label: "Type"
+      options:
+        - value: "type1"
+          text: "Full-time"
+        - value: "type3"
+          text: "Part-time"
+        - value: "type4"
+          text: "Remote"
+    - label: "Location"
+      options:
+        - value: "location1"
+          text: "Chicago, US"
+        - value: "location2"
+          text: "New York, US"
+        - value: "location3"
+          text: "Michigan, US"
+        - value: "location4"
+          text: "Los Angles, US"
+        - value: "location5"
+          text: "Moscow, Russia"
+        - value: "location6"
+          text: "Sydney, Australia"
+        - value: "location7"
+          text: "Birmingham, UK"
+        - value: "location8"
+          text: "Manchester, UK"
+        - value: "location9"
+          text: "Beijing, China"
+  categories:
+    - name: "Design"
+      positions:
+        - title: "Senior Graphic Designer"
+          type: "Full time"
+          location: "San Francisco, US"
+          url: "#"
+          initials: "GD"
+          avatar_bg: "bg-red"
+        - title: "UI/UX Designer"
+          type: "Remote"
+          location: "Anywhere"
+          url: "#"
+          initials: "UX"
+          avatar_bg: "bg-green"
+        - title: "Multimedia Artist & Animator"
+          type: "Full time"
+          location: "Birmingham, UK"
+          url: "#"
+          initials: "AN"
+          avatar_bg: "bg-yellow"
+    - name: "Development"
+      positions:
+        - title: "Front End Developer"
+          type: "Part time"
+          location: "Sydney, AU"
+          url: "#"
+          initials: "FE"
+          avatar_bg: "bg-purple"
+        - title: "Mobile Developer"
+          type: "Full-time"
+          location: "San Francisco, US"
+          url: "#"
+          initials: "MD"
+          avatar_bg: "bg-orange"
+        - title: ".NET Developer"
+          type: "Full time"
+          location: "Manchester, UK"
+          url: "#"
+          initials: "NT"
+          avatar_bg: "bg-pink"
+              {% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

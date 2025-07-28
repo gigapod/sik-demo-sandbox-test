@@ -1,0 +1,37 @@
+{% assign style_key = include.header_style | default: 'blog-list' %}
+{% assign style = site.data.header.styles[style_key] %}
+
+<section class="{{ style.section_classes }}">
+  <div class="container {{ style.container_classes }}">
+    <div class="row">
+      <div class="{{ style.column_classes }}">
+        {% if include.content_type %}
+          <div class="post-category text-line">
+            <span class="text-muted">{{ include.content_type }}</span>
+          </div>
+        {% endif %}
+
+        {% if include.prefix %}
+          <p class="lead mb-3">{{ include.prefix }}</p>
+        {% endif %}
+
+        <h1 class="{{ style.title_classes }}">
+          {% if include.hash %}#{% endif %}
+          {{ include.title | default: site.data.header.defaults.blog_list.title }}
+        </h1>
+
+        {% if include.subtitle %}
+          <p class="{{ style.text_classes }}">{{ include.subtitle }}</p>
+        {% endif %}
+
+        {% if include.meta %}
+          <ul class="post-meta mb-5">
+            {% if include.meta.position %}<li><i class="uil uil-user"></i><span>{{ include.meta.position }}</span></li>{% endif %}
+            {% if include.meta.email %}<li><i class="uil uil-envelope"></i><a href="mailto:{{ include.meta.email }}">{{ include.meta.email }}</a></li>{% endif %}
+            {% if include.meta.location %}<li><i class="uil uil-map-marker"></i><span>{{ include.meta.location }}</span></li>{% endif %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

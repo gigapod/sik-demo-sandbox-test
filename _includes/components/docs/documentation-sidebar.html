@@ -1,0 +1,37 @@
+<aside class="col-xl-2 sidebar doc-sidebar mt-md-0 py-16 d-none d-xl-block">
+    {% assign doc_menu = site.data.navigation.main | where: "title", "Documentation" | first %}
+    {% for column in doc_menu.items %}
+      <div class="widget pb-3">
+        <h6 class="widget-title fs-17 mb-2">{{ column.title }}</h6>
+        <nav>
+          <ul class="list-unstyled fs-sm lh-sm text-reset">
+            {% for link in column.submenu %}
+              <li>
+                <a href="{{ link.url | relative_url }}" {% if page.url == link.url or page.url == link.url | append: "/" %}class="active"{% endif %}>
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+  
+      {% if column.second_title %}
+        <div class="widget pb-3">
+          <h6 class="widget-title fs-17 mb-2">{{ column.second_title }}</h6>
+          <nav>
+            <ul class="list-unstyled fs-sm lh-sm text-reset">
+              {% for link in column.second_submenu %}
+                <li>
+                  <a href="{{ link.url | relative_url }}" {% if page.url == link.url or page.url == link.url | append: "/" %}class="active"{% endif %}>
+                    {{ link.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </aside>
+  

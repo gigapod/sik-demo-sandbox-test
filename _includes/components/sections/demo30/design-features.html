@@ -1,0 +1,44 @@
+<section class="wrapper overflow-hidden bg-soft-primary">
+  <div class="container py-15 py-md-17">
+    <div class="row">
+      <div class="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
+        <h2 class="display-2 mb-4">{{ page.design_features.title }}</h2>
+        <p class="lead fs-lg mb-11">{{ page.design_features.subtitle }}</p>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+
+    {% for section in page.design_features.sections %}
+    <div class="row gx-lg-0 gy-10 align-items-center {% if section.order == 2 %}flex-row-reverse{% endif %}">
+      <div class="col-lg-7 position-relative">
+        <div class="position-absolute" style="top: 50%; left: 50%; width: 140%; height: auto; transform: translate(-50%,-50%); z-index:-1"><img class="w-100" src="/assets/img/photos/blurry.png" alt=""></div>
+        <figure><img src="{{ section.image }}" srcset="{{ section.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-4 {% if section.order == 1 %}ms-auto{% else %}me-auto{% endif %}">
+        <h2 class="display-5 mb-2 {% if section.order == 1 %}mt-xxl-n10{% endif %}">{{ section.title }}</h2>
+        <p class="mb-8">{{ section.subtitle }}</p>
+        
+        {% for feature in section.features %}
+        <div class="d-flex flex-row mb-6">
+          <div>
+            <div class="svg-bg bg-white rounded-xl shadow-xl me-5">
+              <img src="/assets/img/icons/solid/{{ feature.icon }}.svg" class="svg-inject icon-svg solid-duo text-grape-fuchsia" alt="" />
+            </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ feature.title }}</h4>
+            <p class="mb-0">{{ feature.text }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endfor %}
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,36 @@
+<section class="wrapper bg-light">
+    <div class="container pt-16 pt-md-18 pb-16 pb-md-18">
+<div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center">
+  <div class="col-md-8 col-lg-6 offset-lg-1 order-lg-2 position-relative">
+    <div class="shape rounded-circle bg-line primary rellax w-18 h-18" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+    <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; left: -1.5rem; width: 85%; height: 90%; "></div>
+    <figure class="rounded"><img src="{{ page.why_us.image }}" srcset="{{ page.why_us.image2x }} 2x" alt=""></figure>
+  </div>
+  <!--/column -->
+  <div class="col-lg-5">
+    <h2 class="fs-16 text-uppercase text-line text-primary mb-3">{{ page.why_us.title }}</h2>
+    <h3 class="display-4 mb-7">{{ page.why_us.subtitle }}</h3>
+    <div class="accordion accordion-wrapper" id="accordionExample">
+      {% for item in page.why_us.accordion_items %}
+      <div class="card plain accordion-item">
+        <div class="card-header" id="heading{{ forloop.index }}">
+          <button class="accordion-button {% unless item.show %}collapsed{% endunless %}" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="{{ item.show }}" aria-controls="collapse{{ forloop.index }}"> {{ item.title }} </button>
+        </div>
+        <!--/.card-header -->
+        <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse {% if item.show %}show{% endif %}" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample">
+          <div class="card-body">
+            <p>{{ item.content }}</p>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.accordion-collapse -->
+      </div>
+      <!--/.accordion-item -->
+      {% endfor %}
+    </div>
+    <!--/.accordion -->
+  </div>
+  <!--/column -->
+</div>
+</div>
+</section>

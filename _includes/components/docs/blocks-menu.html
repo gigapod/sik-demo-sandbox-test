@@ -1,0 +1,19 @@
+<section class="wrapper bg-light wrapper-border">
+    <div class="container py-11">
+      <h2 class="h5">Filter Blocks:</h2>
+      <ul class="list-inline mb-0">
+        {% for menu in site.data.navigation.main %}
+          {% if menu.title == "Blocks" %}
+            {% for block in menu.items %}
+              <li class="list-inline-item me-1 mb-2">
+                <a href="{{ block.url | relative_url }}" class="btn btn-soft-ash btn-sm rounded {% if page.url contains block.url %}text-primary pe-none{% endif %}">
+                  {{ block.title }}
+                </a>
+              </li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  

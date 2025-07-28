@@ -1,0 +1,82 @@
+{% if page.services.enable %}
+  <section class="wrapper bg-gray">
+    <div class="container py-15 py-md-17">
+      <div class="row gx-lg-0 gy-10 align-items-center">
+        <div class="col-lg-6">
+          <div class="row g-6 text-center">
+            <div class="col-md-6">
+              <div class="card shadow-lg mb-6">
+                <figure class="card-img-top overlay overlay-1">
+                  <a href="#"><img class="img-fluid" src="{{ page.services.categories[0].img | relative_url }}" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">View Gallery</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-0">{{ page.services.categories[0].title }}</h3>
+                </div>
+                <!--/.card-body -->
+              </div>
+              <!-- /.card -->
+              <div class="card shadow-lg">
+                <figure class="card-img-top overlay overlay-1">
+                  <a href="#"><img class="img-fluid" src="{{ page.services.categories[2].img | relative_url }}" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">View Gallery</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-0">{{ page.services.categories[2].title }}</h3>
+                </div>
+                <!--/.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /column -->
+            <div class="col-md-6">
+              <div class="card shadow-lg mt-md-6 mb-6">
+                <figure class="card-img-top overlay overlay-1">
+                  <a href="#"><img class="img-fluid" src="{{ page.services.categories[1].img | relative_url }}" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">View Gallery</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-0">{{ page.services.categories[1].title }}</h3>
+                </div>
+                <!--/.card-body -->
+              </div>
+              <!-- /.card -->
+              <div class="card shadow-lg">
+                <figure class="card-img-top overlay overlay-1">
+                  <a href="#"><img class="img-fluid" src="{{ page.services.categories[3].img | relative_url }}" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">View Gallery</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-0">{{ page.services.categories[3].title }}</h3>
+                </div>
+                <!--/.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /column -->
+        <div class="col-lg-5 offset-lg-1">
+          <h2 class="display-5 mb-3">{{ page.services.title }}</h2>
+          <p class="lead fs-lg">{{ page.services.subtitle }}</p>
+          <p>{{ page.services.text }}</p>
+          <a href="{{ page.services.button.url }}" class="btn btn-primary rounded-pill mt-2">{{ page.services.button.label }}</a>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  <!-- /.wrapper -->
+</section>
+{% endif %}

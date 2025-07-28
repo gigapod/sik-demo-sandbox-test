@@ -1,0 +1,27 @@
+<section class="wrapper bg-gray">
+  <div class="container">
+    <div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0 text-center">
+      {% for item in page.categories.items %}
+      <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="card shadow-lg">
+          <figure class="card-img-top overlay overlay-1">
+            <a href="{{ item.link }}"><img class="img-fluid" src="{{ item.image }}" alt="" /></a>
+            <figcaption>
+              <h5 class="from-top mb-0">{{ item.details }}</h5>
+            </figcaption>
+          </figure>
+          <div class="card-body p-5">
+            <h4 class="mb-0">{{ item.title }}</h4>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

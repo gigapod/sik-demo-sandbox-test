@@ -1,0 +1,43 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row text-center">
+      <div class="col-xl-10 mx-auto">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">{{ page.jobs.title }}</h2>
+        <h3 class="display-4 mb-10 px-xxl-15">{{ page.jobs.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gy-6">
+      {% for job in page.jobs.positions %}
+      <div class="col-md-6 col-lg-4">
+        <a href="#" class="card shadow-lg lift h-100">
+          <div class="card-body p-5 d-flex flex-row">
+            <div>
+              <span class="avatar {{ job.avatar_bg }} text-white w-11 h-11 fs-20 me-4">{{ job.avatar }}</span>
+            </div>
+            <div>
+              <span class="badge {{ job.badge_bg }} rounded py-1 mb-2">{{ job.badge }}</span>
+              <h4 class="mb-1">{{ job.title }}</h4>
+              <p class="mb-0 text-body">{{ job.location }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+    <div class="row mt-11">
+      <div class="col-lg-6 col-xl-5 mx-auto text-center">
+        <h2 class="display-6 mb-3">{{ page.jobs.cta.title }}</h2>
+        <p class="lead mb-5 px-md-16 px-lg-3">{{ page.jobs.cta.text }}</p>
+        <a href="{{ page.jobs.cta.button.url }}" class="btn btn-primary rounded-pill">{{ page.jobs.cta.button.label }}</a>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

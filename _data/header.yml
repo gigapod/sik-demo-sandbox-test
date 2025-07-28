@@ -1,0 +1,35 @@
+styles:
+  standard:
+    section_classes: "wrapper bg-soft-primary"
+    container_classes: "pt-10 pb-19 pt-md-14 pb-md-20 text-center"
+    column_classes: "col-md-10 col-xl-8 mx-auto"
+    title_classes: "display-1 mb-4"
+    text_classes: ""
+    show_category: true
+    overlay: false
+
+  overlay:
+    section_classes: "wrapper image-wrapper bg-image bg-overlay text-white"
+    container_classes: "pt-18 pb-15 pt-md-20 pb-md-19 text-center"
+    column_classes: "col-md-10 col-xl-8 mx-auto"
+    title_classes: "display-1 mb-4 text-white"
+    text_classes: "text-white"
+    show_category: true
+    overlay: true
+    default_background_image: "/assets/img/photos/post-overlay-default.jpg"
+
+  blog-list:
+    section_classes: "wrapper bg-soft-primary"
+    container_classes: "pt-10 pb-19 pt-md-14 pb-md-20 text-center"
+    column_classes: "col-md-7 col-lg-6 col-xl-5 mx-auto"
+    title_classes: "display-1 mb-3"
+    text_classes: "lead px-lg-5 px-xxl-8"
+    overlay: false
+  
+  blog-list-framed:
+    section_classes: "section-frame overflow-hidden wrapper bg-soft-primary"
+    container_classes: "py-12 py-md-16 text-center"
+    column_classes: "col-md-7 col-lg-6 col-xl-5 mx-auto"
+    title_classes: "display-1 mb-3"
+    text_classes: "lead px-lg-5 px-xxl-8"
+    overlay: false

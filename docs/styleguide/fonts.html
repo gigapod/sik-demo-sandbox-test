@@ -1,0 +1,92 @@
+---
+layout: doc
+title: "Fonts"
+description: "Learn how to use custom fonts in Sandbox."
+toc: true
+---
+
+    
+        
+          <section id="snippet-1" class="wrapper pt-16">
+            <h2 class="mb-5">Font Options</h2>
+            <div class="card">
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li class="mb-2"><h6 class="d-inline">Manrope</h6><p class="d-inline"> <a href="{{ '/demo12.html' | relative_url }}" class="external" target="_blank">Demo 12</a>, <a href="{{ '/demo16.html' | relative_url }}" class="external" target="_blank">Demo 16</a>, <a href="{{ '/demo17.html' | relative_url }}" class="external" target="_blank">Demo 17</a></p></li>
+                  <li class="mb-2"><h6 class="d-inline">Thicccboi (thicccboi.css)</h6><p class="d-inline"> <a href="{{ '/demo3.html' | relative_url }}" class="external" target="_blank">Demo 3</a>, <a href="{{ '/demo5.html' | relative_url }}" class="external" target="_blank">Demo 5</a>, <a href="{{ '/demo6.html' | relative_url }}" class="external" target="_blank">Demo 6</a></p></li>
+                  <li class="mb-2"><h6 class="d-inline">DM Serif + Manrope (dm.css)</h6><p class="d-inline mb-0"> <a href="{{ '/demo2.html' | relative_url }}" class="external" target="_blank">Demo 2</a>, <a href="{{ '/demo4.html' | relative_url }}" class="external" target="_blank">Demo 4</a>, <a href="{{ '/demo8.html' | relative_url }}" class="external" target="_blank">Demo 8</a></p></li>
+                  <li class="mb-2"><h6 class="d-inline">Urbanist (urbanist.css)</h6><p class="d-inline mb-0"> <a href="{{ '/demo19.html' | relative_url }}" class="external" target="_blank">Demo 19</a>, <a href="{{ '/demo20.html' | relative_url }}" class="external" target="_blank">Demo 20</a>, <a href="{{ '/demo21.html' | relative_url }}" class="external" target="_blank">Demo 21</a></p></li>
+                  <li><h6 class="d-inline">Space Grotesk (space.css)</h6><p class="d-inline mb-0"> <a href="{{ '/demo28.html' | relative_url }}" class="external" target="_blank">Demo 28</a>, <a href="{{ '/demo29.html' | relative_url }}" class="external" target="_blank">Demo 29</a>, <a href="{{ '/demo30.html' | relative_url }}" class="external" target="_blank">Demo 30</a></p></li>
+                </ul>
+                <p class="mb-0">Manrope is the default font in Sandbox. If you wish to use one of the other available font options, add the link of the font CSS file you wish to use inside the <code class="code">&lt;head&gt;</code> tag, right after <mark class="doc">style.css</mark> link, in all your HTML pages.</p>
+              </div>
+              <!--/.card-body -->
+              <div class="card-footer position-relative">
+                <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-1">View example's code</a>
+              </div>
+              <!--/.card-footer -->
+              <div id="collapse-1" class="card-footer bg-dark p-0 accordion-collapse collapse">
+                <div class="code-wrapper">
+                  <div class="code-wrapper-inner">
+<pre class="language-html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./assets/css/style.css&quot;&gt;
+&lt;link rel=&quot;preload&quot; href=&quot;./assets/css/fonts/thicccboi.css&quot; as=&quot;style&quot; onload=&quot;this.rel=&apos;stylesheet&apos;&quot;&gt;</code></pre>
+                  </div>
+                  <!--/.code-wrapper-inner -->
+                </div>
+                <!--/.code-wrapper -->
+              </div>
+              <!--/.card-footer -->
+            </div>
+            <!--/.card -->
+          </section>
+          <section id="snippet-2" class="wrapper pt-16">
+            <h2 class="mb-5">Google Fonts</h2>
+            <div class="card">
+              <div class="card-body">
+                <p class="mb-0">To use a custom Google Font, open <code class="file">src/assets/scss/user-variables.scss</code>, and use the example code below to add @import link and name of your font.</p>
+              </div>
+              <!--/.card-body -->
+              <div class="card-footer position-relative">
+                <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-2">View example's code</a>
+              </div>
+              <!--/.card-footer -->
+              <div id="collapse-2" class="card-footer bg-dark p-0 accordion-collapse collapse">
+                <div class="code-wrapper">
+                  <div class="code-wrapper-inner">
+<pre class="language-scss"><code>$path-to-fonts: &apos;GOOGLE FONT URL&apos;;
+$font-family-sans-serif: GOOGLE FONT NAME;</code></pre>
+                  </div>
+                  <!--/.code-wrapper-inner -->
+                </div>
+                <!--/.code-wrapper -->
+              </div>
+              <!--/.card-footer -->
+            </div>
+            <!--/.card -->
+          </section>
+          <section id="snippet-3" class="wrapper py-16">
+            <h2 class="mb-5">@font-face</h2>
+            <div class="card">
+              <div class="card-body">
+                <p class="mb-0">To use a custom font with @font-face, first add the font files inside folder <code class="folder">src/assets/fonts/</code> Then use the example below to import your custom font.</p>
+              </div>
+              <!--/.card-body -->
+              <div class="card-footer position-relative">
+                <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-3">View example's code</a>
+              </div>
+              <!--/.card-footer -->
+              <div id="collapse-3" class="card-footer bg-dark p-0 accordion-collapse collapse">
+                <div class="code-wrapper">
+                  <div class="code-wrapper-inner">
+<pre class="language-scss"><code>$path-to-fonts: &apos;../fonts/myfont/myfont.css&apos;;
+$font-family-sans-serif: &quot;My Font Name&quot;, sans-serif;</code></pre>
+                  </div>
+                  <!--/.code-wrapper-inner -->
+                </div>
+                <!--/.code-wrapper -->
+              </div>
+              <!--/.card-footer -->
+            </div>
+            <!--/.card -->
+          </section>
+     

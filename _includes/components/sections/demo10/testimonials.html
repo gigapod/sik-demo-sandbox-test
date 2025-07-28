@@ -1,0 +1,43 @@
+<section class="wrapper bg-light">
+  <div class="container pt-16 pt-md-18">
+    <div class="card shadow-lg mt-n18 mt-md-n23 mb-14 mb-md-18" data-cue="slideInDown">
+      <div class="row gx-0">
+        <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start" data-image-src="/assets/img/photos/tm1.jpg">
+        </div>
+        <!--/column -->
+        <div class="col-lg-6">
+          <div class="p-10 p-md-11 p-lg-13">
+            <div class="swiper-container dots-closer mb-6" data-margin="30" data-dots="true">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  {% for testimonial in site.data.testimonials.testimonials %}
+                  <div class="swiper-slide">
+                    <blockquote class="icon icon-top fs-lg text-center">
+                      <p>{{ testimonial.quote }}</p>
+                      <div class="blockquote-details justify-content-center text-center">
+                        <div class="info ps-0">
+                          <h5 class="mb-1">{{ testimonial.name }}</h5>
+                          <p class="mb-0">{{ testimonial.position }}</p>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                  <!--/.swiper-slide -->
+                  {% endfor %}
+                </div>
+                <!--/.swiper-wrapper -->
+              </div>
+              <!--/.swiper -->
+            </div>
+            <!-- /.swiper-container -->
+          </div>
+          <!--/div -->
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.container -->
+</section>

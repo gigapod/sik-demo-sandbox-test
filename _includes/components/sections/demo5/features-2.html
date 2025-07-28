@@ -1,0 +1,54 @@
+<section class="wrapper bg-light">
+    <div class="container">
+<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center mb-14 mb-md-18">
+  <div class="col-lg-6 position-relative order-lg-2">
+    <div class="shape rounded bg-pale-{{ page.features_2.color }} rellax d-block" data-rellax-speed="0" style="top: 50%; left: 50%; width: 50%; height: 60%; transform: translate(-50%,-50%);z-index:0"></div>
+    <div class="row gx-md-5 gy-5 position-relative">
+      <div class="col-5">
+        {% assign feature_image1 = page.features_2.images[0] %}
+        {% assign feature_image2 = page.features_2.images[1] %}
+        <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" data-cue="fadeIn" data-delay="{{ feature_image1.delay }}" src="{{ feature_image1.image }}" srcset="{{ feature_image1.image2x }} 2x" alt="" />
+        <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" data-cue="fadeIn" data-delay="{{ feature_image2.delay }}" src="{{ feature_image2.image }}" srcset="{{ feature_image2.image2x }} 2x" alt="" />
+      </div>
+      <!-- /column -->
+      <div class="col-7">
+        {% assign feature_image3 = page.features_2.images[2] %}
+        {% assign feature_image4 = page.features_2.images[3] %}
+        <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="{{ feature_image3.delay }}" src="{{ feature_image3.image }}" srcset="{{ feature_image3.image2x }} 2x" alt="" />
+        <img class="img-fluid rounded shadow-lg d-flex col-11" data-cue="fadeIn" data-delay="{{ feature_image4.delay }}" src="{{ feature_image4.image }}" srcset="{{ feature_image4.image2x }} 2x" alt="" />
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!--/column -->
+  <div class="col-lg-6">
+    <h3 class="display-4 mb-5">{{ page.features_2.title }}</h3>
+    <p class="mb-5">{{ page.features_2.text }}</p>
+    <div class="row gy-3">
+      <div class="col-xl-6">
+        <ul class="icon-list bullet-bg bullet-soft-{{ page.features_2.color }} mb-0">
+          {% for feature in page.features_2.features limit:2 %}
+          <li {% if forloop.index == 2 %}class="mt-3"{% endif %}><span><i class="uil uil-check"></i></span><span>{{ feature.text }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!--/column -->
+      <div class="col-xl-6">
+        <ul class="icon-list bullet-bg bullet-soft-{{ page.features_2.color }} mb-0">
+          {% for feature in page.features_2.features offset:2 limit:2 %}
+          <li {% if forloop.index == 2 %}class="mt-3"{% endif %}><span><i class="uil uil-check"></i></span><span>{{ feature.text }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->
+</div>
+<!-- /.container -->
+</section>
+<!-- /section -->

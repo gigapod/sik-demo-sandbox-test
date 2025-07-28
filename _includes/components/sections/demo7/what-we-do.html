@@ -1,0 +1,68 @@
+<section class="wrapper bg-light">
+  <div class="container">
+    <div class="row gx-lg-0 gy-10 align-items-center">
+      <div class="col-lg-6">
+        <div class="row g-6 text-center">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-lg-12">
+                <figure class="rounded mb-6"><img src="{{ page.what_we_do.services[0].image }}" srcset="{{ page.what_we_do.services[0].image2x }} 2x" alt=""></figure>
+              </div>
+              <!-- /column -->
+              <div class="col-lg-12">
+                <div class="card shadow-lg">
+                  <div class="card-body">
+                    <div class="icon btn btn-circle btn-lg btn-soft-{{ page.what_we_do.services[0].icon_color }} pe-none mb-3"> <i class="{{ page.what_we_do.services[0].icon }}"></i> </div>
+                    <h4>{{ page.what_we_do.services[0].title }}</h4>
+                    <p class="mb-2">{{ page.what_we_do.services[0].text }}</p>
+                    <a href="{{ page.what_we_do.services[0].learn_more_url }}" class="more hover link-{{ page.what_we_do.services[0].icon_color }}">Learn More</a>
+                  </div>
+                  <!--/.card-body -->
+                </div>
+                <!--/.card -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-lg-12 order-md-2">
+                <figure class="rounded mb-6 mb-md-0"><img src="{{ page.what_we_do.services[1].image }}" srcset="{{ page.what_we_do.services[1].image2x }} 2x" alt=""></figure>
+              </div>
+              <!-- /column -->
+              <div class="col-lg-12">
+                <div class="card shadow-lg mb-md-6 mt-lg-6">
+                  <div class="card-body">
+                    <div class="icon btn btn-circle btn-lg btn-soft-{{ page.what_we_do.services[1].icon_color }} pe-none mb-3"> <i class="{{ page.what_we_do.services[1].icon }}"></i> </div>
+                    <h4>{{ page.what_we_do.services[1].title }}</h4>
+                    <p class="mb-2">{{ page.what_we_do.services[1].text }}</p>
+                    <a href="{{ page.what_we_do.services[1].learn_more_url }}" class="more hover link-{{ page.what_we_do.services[1].icon_color }}">Learn More</a>
+                  </div>
+                  <!--/.card-body -->
+                </div>
+                <!--/.card -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+      <div class="col-lg-5 offset-lg-1">
+        <h2 class="display-4 mb-3">{{ page.what_we_do.title }}</h2>
+        <p class="lead fs-lg lh-sm">{{ page.what_we_do.subtitle }}</p>
+        <p>{{ page.what_we_do.text }}</p>
+        <a href="{{ page.what_we_do.button_url }}" class="btn btn-primary rounded-pill mt-3">{{ page.what_we_do.button_text }}</a>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

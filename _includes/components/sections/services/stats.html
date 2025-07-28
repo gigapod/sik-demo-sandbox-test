@@ -1,0 +1,37 @@
+<section class="wrapper bg-light angled upper-end">
+  <div class="container">
+    <div class="row mb-8">
+      <div class="col-12 mt-n20">
+        <figure class="rounded">
+          <img src="{{ page.stats.image }}" srcset="{{ page.stats.image2x }} 2x" alt="" />
+        </figure>
+        <div class="row">
+          <div class="col-xl-10 mx-auto">
+            <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-400 text-white mt-n5 mt-lg-0 mt-lg-n50p mb-lg-n50p border-radius-lg-top" data-image-src="{{ page.stats.card_bg_image }}">
+              <div class="card-body p-9 p-xl-10">
+                <div class="row align-items-center counter-wrapper gy-4 text-center">
+                  {% for item in page.stats.items %}
+                  <div class="col-6 col-lg-3">
+                    <h3 class="counter counter-lg text-white">{{ item.count }}</h3>
+                    <p>{{ item.label }}</p>
+                  </div>
+                  <!--/column -->
+                  {% endfor %}
+                </div>
+                <!--/.row -->
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

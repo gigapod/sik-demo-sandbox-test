@@ -1,0 +1,69 @@
+{% comment %}
+Post header component
+Props: header_style, header_image, category, title, date, author, comments, likes, excerpt
+{% endcomment %}
+{% assign header_style = page.header_style %}
+{% assign header_image = page.header_image %}
+{% assign category = page.category %}
+{% assign title = page.title %}
+{% assign date = page.date %}
+{% assign author = page.author %}
+{% assign comments = page.comments %}
+{% assign likes = page.likes %}
+{% assign excerpt = page.excerpt %}
+
+
+{% if header_style == 'overlay' %}
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ header_image }}">
+  <div class="container pt-18 pb-15 pt-md-20 pb-md-19 text-center">
+    <div class="row">
+      <div class="col-md-10 col-xl-8 mx-auto">
+        <div class="post-header">
+          <div class="post-category text-line text-white">
+            <a href="/blog/category/{{ category | slugify }}/" class="text-reset" rel="category">{{ category }}</a>
+          </div>
+          <h1 class="display-1 mb-4 text-white">{{ title }}</h1>
+          <ul class="post-meta text-white">
+            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ date | date: "%d %b %Y" }}</span></li>
+            <li class="post-author"><i class="uil uil-user"></i><a href="/authors/{{ author | slugify }}" class="text-reset"><span>By {{ author }}</span></a></li>
+            {% if comments %}<li class="post-comments"><i class="uil uil-comment"></i><a href="#comments" class="text-reset">{{ comments }}<span> Comments</span></a></li>{% endif %}
+            {% if likes %}<li class="post-likes"><i class="uil uil-heart-alt"></i><a href="#" class="text-reset">{{ likes }}<span> Likes</span></a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% elsif header_style == 'standard' %}
+<section class="wrapper bg-soft-primary">
+  <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+    <div class="row">
+      <div class="col-md-10 col-xl-8 mx-auto">
+        <div class="post-header">
+          <div class="post-category text-line">
+            <a href="/blog/category/{{ category | slugify }}/" class="hover" rel="category">{{ category }}</a>
+          </div>
+          <h1 class="display-1 mb-4">{{ title }}</h1>
+          <ul class="post-meta mb-5">
+            <li class="post-date"><i class="uil uil-calendar-alt"></i><a href="/blog/{{ date | date: '%Y' }}/{{ date | date: '%m' }}/" class="hover"><span>{{ date | date: "%d %b %Y" }}</span></a></li>
+            <li class="post-author"><a href="/authors/{{ author | slugify }}"><i class="uil uil-user"></i><span>By {{ author }}</span></a></li>
+            {% if comments %}<li class="post-comments"><a href="#comments"><i class="uil uil-comment"></i>{{ comments }}<span> Comments</span></a></li>{% endif %}
+            {% if likes %}<li class="post-likes"><a href="#"><i class="uil uil-heart-alt"></i>{{ likes }}<span> Likes</span></a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<header class="wrapper bg-soft-primary">
+  <div class="container pt-10 pb-10 pt-md-14 pb-md-14 text-center">
+    <div class="row">
+      <div class="col-md-8 col-lg-7 col-xl-6 mx-auto">
+        <h1 class="display-1 mb-3">{{ title }}</h1>
+        <p class="lead mb-0">{{ excerpt }}</p>
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}

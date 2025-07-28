@@ -1,0 +1,22 @@
+{% comment %}
+Post navigation component
+Props: previous_url, next_url
+{% endcomment %}
+{% assign previous_url = page.previous.url %}
+{% assign next_url = page.next.url %}
+<div class="post-nav d-flex">
+  {% if previous_url %}
+  <span class="me-auto">
+    <a href="{{ previous_url }}" class="btn btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0 me-1">
+      <i class="uil uil-arrow-left"></i> Previous Post
+    </a>
+  </span>
+  {% endif %}
+  {% if next_url %}
+  <span>
+    <a href="{{ next_url }}" class="btn btn-soft-ash rounded-pill btn-icon btn-icon-end mb-0">
+      Next Post <i class="uil uil-arrow-right"></i>
+    </a>
+  </span>
+  {% endif %}
+</div>

@@ -1,0 +1,74 @@
+<section class="{{ page.why_choose_us.bg_class }}">
+  <div class="container py-15 py-md-17">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+        <h2 class="{{ page.why_choose_us.title_class }}">{{ page.why_choose_us.title_tag }}</h2>
+        <h3 class="{{ page.why_choose_us.main_title_class }}">{{ page.why_choose_us.main_title }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <ul class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
+      {% for tab in page.why_choose_us.tabs %}
+      <li class="nav-item"> 
+        <a class="nav-link d-flex flex-row {% if tab.active %}active{% endif %}" data-bs-toggle="tab" href="#{{ tab.id }}">
+          <div><img src="{{ tab.icon }}" class="w-13 me-5" alt="" /></div>
+          <div> 
+            <h3 class="mb-2">{{ tab.title }}</h3>
+            <p>{{ tab.subtitle }}</p>
+          </div>
+        </a> 
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- /.nav-tabs -->
+    <div class="tab-content mt-6 mt-lg-8 mb-md-9">
+      {% for tab in page.why_choose_us.tabs %}
+      <div class="tab-pane fade {% if tab.active %}show active{% endif %}" id="{{ tab.id }}">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-lg-6 {% if forloop.index == 2 %}order-lg-2{% endif %}">
+            <div class="row gx-md-5 gy-5 {% if forloop.index == 2 %}align-self-end{% endif %}">
+              {% if tab.id == 'tab2-1' %}
+              <div class="col-6">
+                <img class="img-fluid rounded shadow-lg d-flex ms-auto" src="{{ tab.images[0].image }}" srcset="{{ tab.images[0].image2x }} 2x" alt="" />
+              </div>
+              <div class="col-6">
+                <img class="img-fluid rounded shadow-lg mb-5" src="{{ tab.images[1].image }}" srcset="{{ tab.images[1].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-10" src="{{ tab.images[2].image }}" srcset="{{ tab.images[2].image2x }} 2x" alt="" />
+              </div>
+              {% else %}
+              <div class="col-{% if forloop.index == 2 %}5{% else %}6{% endif %}">
+                <img class="img-fluid rounded shadow-lg {% if forloop.index == 2 %}my-5 d-flex ms-auto{% endif %}" src="{{ tab.images[0].image }}" srcset="{{ tab.images[0].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-{% if forloop.index == 2 %}10{% else %}10{% endif %} {% if forloop.index == 2 %}ms-auto{% endif %}" src="{{ tab.images[1].image }}" srcset="{{ tab.images[1].image2x }} 2x" alt="" />
+              </div>
+              <div class="col-{% if forloop.index == 2 %}7{% else %}6{% endif %}">
+                <img class="img-fluid rounded shadow-lg {% if forloop.index != 3 %}mb-5{% else %}my-5{% endif %}" src="{{ tab.images[2].image }}" srcset="{{ tab.images[2].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-{% if forloop.index == 1 %}11{% else %}10{% endif %}" src="{{ tab.images[3].image }}" srcset="{{ tab.images[3].image2x }} 2x" alt="" />
+              </div>
+              {% endif %}
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/column -->
+          <div class="col-lg-6">
+            <h2 class="mb-3">{{ tab.content_title }}</h2>
+            <p>{{ tab.content_text }}</p>
+            <ul class="icon-list bullet-bg bullet-soft-primary">
+              {% for feature in tab.features %}
+              <li><i class="uil uil-check"></i>{{ feature.text }}</li>
+              {% endfor %}
+            </ul>
+            <a href="#" class="btn btn-primary mt-2">Learn More</a>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.tab-pane -->
+      {% endfor %}
+    </div>
+    <!-- /.tab-content -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

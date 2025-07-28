@@ -1,0 +1,63 @@
+<section class="{{ page.video.bg_class }}">
+  <div class="container py-15 py-md-17 position-relative">
+    <div class="row gy-10 gy-sm-13 gx-md-8 gx-xl-12 align-items-center mb-10 mb-md-12">
+      <div class="col-lg-6">
+        <div class="row gx-md-5 gy-5">
+          <div class="col-md-6">
+            <figure class="rounded"><img src="{{ page.about.images[0].image }}" srcset="{{ page.about.images[0].image2x }} 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-md-6 align-self-end">
+            <figure class="rounded"><img src="{{ page.about.images[1].image }}" srcset="{{ page.about.images[1].image2x }} 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-12">
+            <figure class="rounded mx-md-5"><img src="{{ page.about.images[2].image }}" srcset="{{ page.about.images[2].image2x }} 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h2 class="{{ page.about.title_class }}">{{ page.about.title_tag }}</h2>
+        <h3 class="{{ page.about.main_title_class }}">{{ page.about.main_title }}</h3>
+        <p class="mb-6">{{ page.about.text }}</p>
+        <div class="row align-items-center counter-wrapper gy-6">
+          {% for counter in page.about.counters %}
+          <div class="col-md-6">
+            <h3 class="counter counter-lg mb-1">{{ counter.count }}</h3>
+            <h5 class="mb-0">{{ counter.text }}</h5>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+
+    <div class="row gx-lg-8 gx-xl-12 gy-6 mb-7 mb-md-9">
+      {% for item in page.values.items %}
+      <div class="col-lg-4">
+        <div class="d-flex flex-row">
+          <div>
+            <div class="icon btn btn-block pe-none btn-soft-primary me-4 w-10 h-10"> <span class="number fs-18">{{ item.number }}</span> </div>
+          </div>
+          <div>
+            <h3>{{ item.title }}</h3>
+            <p class="mb-2">{{ item.text }}</p>
+          </div>
+        </div>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+
+    <div class="text-center"><a href="#" class="btn btn-primary">More Details</a></div>
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

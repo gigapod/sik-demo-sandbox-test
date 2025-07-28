@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg {{ include.classList }}">
+  <div class="container">
+    <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
+      <div class="navbar-brand w-100">
+        <a href="{{ '/' | relative_url }}">
+          {% if include.logoLight %}
+            <img src="{{ '/assets/img/logo-light.webp' | relative_url }}" srcset="{{ '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+          {% elsif include.logoBoth %}
+            <img class="logo-dark" src="{{ '/assets/img/logo.webp' | relative_url }}" srcset="{{ '/assets/img/logo@2x.webp' | relative_url }} 2x" alt="" />
+            <img class="logo-light" src="{{ '/assets/img/logo-light.webp' | relative_url }}" srcset="{{ '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+          {% elsif include.logoAlt %}
+            <img src="{{ '/assets/img/logo-dark.webp' | relative_url }}" srcset="{{ '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />
+          {% else %}
+            <img src="{{ '/assets/img/logo.webp' | relative_url }}" srcset="{{ '/assets/img/logo@2x.webp' | relative_url }} 2x" alt="" />
+          {% endif %}
+        </a>
+      </div>
+      <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+        <div class="offcanvas-header d-lg-none">
+          <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo-light.webp' | relative_url }}" srcset="{{ '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" /></a>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+          {% include components/navigation/navigation.html %}
+          
+          <div class="d-lg-none mt-auto pt-6 pb-6 order-4">
+            <a href="mailto:info@email.com" class="link-inverse">info@email.com</a><br /> 
+            00 (123) 456 78 90 <br />
+            <nav class="nav social social-white mt-4">
+              {% for social in site.data.theme.social_accounts.links limit:site.data.theme.social_accounts.links_shown %}
+                <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+              {% endfor %}
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <div class="navbar-other {{ include.otherClassList }}">
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+          {% if include.otherLanguageSelect %}
+          <li class="nav-item dropdown language-select text-uppercase">
+            <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a class="dropdown-item" href="#">En</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="#">De</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="#">Es</a></li>
+            </ul>
+          </li>
+          {% endif %}
+          {% if include.otherSocial %}
+        <li class="nav-item">
+          <nav class="nav social social-muted mb-0 ms-auto me-4">
+            {% assign limit = site.data.social.social_accounts.links_shown | default: 4 %}
+            {% for social in site.data.social.social_accounts.links limit:limit %}
+            <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+            {% endfor %}
+          </nav>
+        </li>
+        {% endif %}
+          {% if include.otherBtn %}
+          <li class="nav-item d-none d-md-block">
+            {% if include.otherBtnModal %}
+            <a href="#" class="{{ include.otherBtnClassList }}" data-bs-toggle="modal" data-bs-target="#modal-signin">{{ include.otherBtnText }}</a>
+            {% else %}
+            <a href="{{ include.otherBtnLink }}" class="{{ include.otherBtnClassList }}">{{ include.otherBtnText }}</a>
+            {% endif %}
+          </li>
+          {% endif %}
+          
+          {% if include.otherInfo %}
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i class="uil uil-info-circle"></i></a></li>
+          {% endif %}
+          
+          <li class="nav-item d-lg-none">
+            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

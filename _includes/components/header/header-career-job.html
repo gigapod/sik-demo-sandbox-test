@@ -1,0 +1,17 @@
+<section class="wrapper {{ include.background_class | default: 'bg-soft-primary' }}">
+    <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+      <div class="row">
+        <div class="col-md-10 col-xl-8 mx-auto">
+          <div class="post-header">
+            <h1 class="display-1 mb-5">{{ include.title | default: 'Job Position Title' }}</h1>
+            <ul class="post-meta fs-17 mb-5">
+              <li><i class="uil uil-clock"></i> {{ include.position_type | default: 'Full time' }}</li>
+              <li><i class="uil uil-location-arrow"></i> {{ include.location | default: 'Location' }}</li>
+              <li><i class="uil uil-building"></i> {{ include.department | default: 'Department' }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  

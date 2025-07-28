@@ -1,0 +1,35 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row text-center">
+      <div class="col-lg-9 col-xl-8 mx-auto">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.services.title }}</h2>
+        <h3 class="display-4 mb-10 px-xxl-10">{{ page.services.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-xxl-11 mx-auto">
+        <div class="row gx-lg-8 gx-xl-12 gy-11 text-center d-flex align-items-end">
+          {% for item in page.services.service_items %}
+          <div class="col-sm-8 col-md-6 col-lg-4 mx-auto">
+            <div class="px-md-3 px-lg-0 px-xl-3">
+              <div class="icon btn btn-block btn-lg btn-soft-{{ item.color_class }} pe-none mb-5"> <i class="{{ item.icon }}"></i> </div>
+              <h3 class="fs-22">{{ item.title }}</h3>
+              <p class="mb-2">{{ item.text }}</p>
+              <a href="{{ item.link_url }}" class="more hover link-{{ item.color_class }}">{{ item.link_text }}</a>
+            </div>
+            <!--/.px -->
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

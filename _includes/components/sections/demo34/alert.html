@@ -1,0 +1,10 @@
+<div class="alert bg-{{ page.alert.bg_color }} text-white fade show rounded-0 mb-1 text-center" role="alert">
+  <div class="container">
+    <div class="alert-inner d-flex justify-content-center align-items-center p-0">
+      <p class="mb-0">{{ page.alert.text }} <a href="{{ page.alert.link_url }}" class="link-white hover d-inline-flex align-items-center" {% if page.alert.open_in_new_tab %}target="_blank"{% endif %}>{{ page.alert.link_text }} <i class="uil uil-arrow-up-right"></i></a></p>
+    </div>
+    <!-- /.alert-inner -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.alert -->

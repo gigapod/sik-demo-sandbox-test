@@ -1,0 +1,52 @@
+<section class="wrapper {{ page.team.bg_color }}">
+  <div class="container py-14 py-md-16">
+    <div class="row mb-3">
+      <div class="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
+        <img src="/assets/img/icons/lineal/team.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+        <h2 class="display-4 mb-3 px-lg-14">{{ page.team.title }}</h2>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="position-relative">
+      <div class="shape rounded-circle bg-soft-yellow rellax w-16 h-16" data-rellax-speed="1" style="bottom: 0.5rem; right: -1.7rem;"></div>
+      <div class="shape rounded-circle bg-line red rellax w-16 h-16" data-rellax-speed="1" style="top: 0.5rem; left: -1.7rem;"></div>
+      <div class="swiper-container dots-closer mb-6" data-margin="0" data-dots="true" data-items-xxl="4" data-items-xl="3" data-items-lg="3" data-items-md="2" data-items-xs="1">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            {% for member in site.data.team.members %}
+            <div class="swiper-slide">
+              <div class="item-inner">
+                <div class="card">
+                  <div class="card-body">
+                    <img class="rounded-circle w-15 mb-4" src="{{ member.avatar_image }}" srcset="{{ member.avatar_image2x }} 2x" alt="" />
+                    <h4 class="mb-1">{{ member.name }}</h4>
+                    <div class="meta mb-2">{{ member.role }}</div>
+                    <p class="mb-2">{{ member.bio }}</p>
+                    <nav class="nav social mb-0">
+                      {% for social in member.social %}
+                      <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                      {% endfor %}
+                    </nav>
+                    <!-- /.social -->
+                  </div>
+                  <!--/.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.item-inner -->
+            </div>
+            <!--/.swiper-slide -->
+            {% endfor %}
+          </div>
+          <!--/.swiper-wrapper -->
+        </div>
+        <!-- /.swiper -->
+      </div>
+      <!-- /.swiper-container -->
+    </div>
+    <!-- /.position-relative -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

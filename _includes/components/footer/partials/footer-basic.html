@@ -1,0 +1,31 @@
+<div class="row gy-2 gy-lg-0">
+  <div class="col-md-4">
+    <div class="widget">
+      {% if include.lightText %}
+        <img class="mb-4" src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}" 
+             srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+      {% else %}
+        <img class="mb-4" src="{{ site.data.theme.dark_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}" 
+             srcset="{{ site.data.theme.dark_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />
+      {% endif %}
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  <div class="col-md-8 text-md-end d-flex align-items-center justify-content-md-end">
+    <p class="mb-0 me-4">© {{ site.time | date: '%Y' }} {{ site.data.theme.company_name | default: site.title | default: 'Sandbox' }}. All rights reserved.</p>
+    <nav class="nav social {% if include.lightText %}social-white{% endif %} mb-0">
+      {% for social in site.data.social.social_accounts.links | default: site.data.theme.social_accounts.links %}
+        <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+      {% endfor %}
+      {% if site.data.social.social_accounts.links.size == 0 %}
+        <a href="#"><i class="uil uil-twitter"></i></a>
+        <a href="#"><i class="uil uil-facebook-f"></i></a>
+        <a href="#"><i class="uil uil-instagram"></i></a>
+      {% endif %}
+    </nav>
+    <!-- /.social -->
+  </div>
+  <!-- /column -->
+</div>
+<!--/.row -->

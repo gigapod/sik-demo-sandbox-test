@@ -1,0 +1,8 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">{{ include.widget.title | default: "Categories" }}</h4>
+  <ul class="unordered-list bullet-primary text-reset">
+    {% for category in site.categories %}
+    <li><a href="/blog/category/{{ category[0] | slugify }}/">{{ category[0] }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

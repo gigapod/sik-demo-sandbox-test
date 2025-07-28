@@ -1,0 +1,26 @@
+<section class="wrapper {{ include.background_class | default: 'bg-gray' }}">
+    <div class="container py-12 py-md-16 text-center">
+      <div class="row">
+        <div class="col-lg-10 col-xxl-8 mx-auto">
+          <h1 class="display-1 mb-3">{{ include.title | default: 'Shop Layout' }}</h1>
+          {% if include.subtitle %}
+            <p class="lead mb-1">{{ include.subtitle }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% if include.breadcrumb_items %}
+      <div class="container py-3 py-md-5">
+        <nav class="d-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            {% for crumb in include.breadcrumb_items %}
+              <li class="breadcrumb-item {% if forloop.last %}active{% endif %}">
+                {% if forloop.last %}{{ crumb.title }}{% else %}<a href="{{ crumb.url }}">{{ crumb.title }}</a>{% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        </nav>
+      </div>
+    {% endif %}
+  </section>
+  

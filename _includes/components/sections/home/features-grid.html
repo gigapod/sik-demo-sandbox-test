@@ -1,0 +1,13 @@
+<div class="container pb-6 pb-md-8">
+  <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 gx-md-8 gy-10 text-center justify-content-center pb-16 pb-md-18">
+    {% for item in page.features_grid.items %}
+    <div class="col">
+      <img class="mb-4" src="{{ item.image | relative_url }}" srcset="{{ item.image2x | relative_url }} 2x" alt="" />
+      <h4>{{ item.title }}</h4>
+    </div>
+    <!--/column -->
+    {% endfor %}
+  </div>
+  <!--/.row -->
+</div>
+<!--/.container -->

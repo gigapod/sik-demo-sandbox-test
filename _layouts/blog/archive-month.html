@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+    %}
+  </header>
+  <!-- /header -->
+  {% capture month_year %}{{ page.date | date: "%B %Y" }}{% endcapture %}
+  {% include components/header/header-blog-list.html 
+    header_style=layout.header_style
+    prefix="Posts from"
+    title=month_year
+  %}
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12">
+      <div class="col-lg-8">
+        <div class="blog classic-view">
+          {% for post in page.posts %}
+          <article class="post mb-12">
+            <div class="card">
+              {% if post.featured_image %}
+              <figure class="card-img-top overlay overlay-1 hover-scale">
+                <a href="{{ post.url }}">
+                  <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                </a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              {% endif %}
+              <div class="card-body">
+                <div class="post-header">
+                  <div class="post-category text-line">
+                    <a href="/blog/category/{{ post.category | slugify }}/" class="hover" rel="category">{{ post.category }}</a>
+                  </div>
+                  <!-- /.post-category -->
+                  <h2 class="post-title mt-1 mb-0"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+                </div>
+                <!-- /.post-header -->
+                <div class="post-content">
+                  <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                </div>
+                <!-- /.post-content -->
+              </div>
+              <!--/.card-body -->
+              <div class="card-footer">
+                <ul class="post-meta d-flex mb-0">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                  <li class="post-author"><a href="/authors/{{ post.author | slugify }}"><i class="uil uil-user"></i><span>{{ post.author }}</span></a></li>
+                  {% if post.comments %}<li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments }}</a></li>{% endif %}
+                  <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>{{ post.likes }}</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+          </article>
+          <!-- /.post -->
+          {% endfor %}
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /column -->
+
+      <aside class="col-lg-4 sidebar mt-8 mt-lg-6">
+        {% include components/blog/sidebar-widgets.html %}
+      </aside>
+      <!-- /column .sidebar -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+ <!-- FOOTER -->
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-dark" 
+  text_color="text-inverse"
+  cta=false
+  newsletter=true
+%}
+<!-- /footer -->
+</div>

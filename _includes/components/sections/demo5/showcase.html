@@ -1,0 +1,14 @@
+<section class="wrapper bg-light ">
+  <div class="container">
+    <div class="row gx-0 mb-16 mb-mb-20">
+      <div class="col-9 col-sm-10 col-lg-9 mx-auto mt-n15 mt-md-n20" data-cues data-group="images" data-delay="1500">
+        <img class="img-fluid mx-auto rounded shadow-lg" data-cue="slideInUp" src="{{ page.showcase.main_image }}" srcset="{{ page.showcase.main_image2x }} 2x" alt="" />
+        {% for img in page.showcase.floating_images %}
+        <img class="position-absolute rounded shadow-lg" data-cue="{% if forloop.index == 1 %}slideInRight{% else %}slideInLeft{% endif %}" src="{{ img.image }}" srcset="{{ img.image2x }} 2x" style="{{ img.position }}" alt="" />
+        {% endfor %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+</section>

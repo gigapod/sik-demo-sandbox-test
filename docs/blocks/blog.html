@@ -1,0 +1,739 @@
+--- 
+layout: doc
+title: Blocks - Blog
+description: Copy any custom block snippet below and paste it on your page to build your website easily.
+
+# Blog Section 1
+blog1:
+  enable: true
+  title: "Our Journal"
+  description: "Here are the latest company news from our blog that got the most attention."
+# Blog Section 2
+blog2:
+  enable: true
+  title: "Our Journal"
+  description: "Here are the latest company news from our blog that got the most attention."
+  button_text: "View All Posts"
+  button_url: "/blog"
+# Blog Section 3
+blog3:
+  enable: true
+  title: "Latest News"
+  description: "Here are the latest company news from our blog that got the most attention."
+# Blog Section 4
+blog4:
+  enable: true
+  title: "Company news from our blog that got the most attention."
+  button_text: "View All News"
+  button_url: "#"
+# Blog Section 5
+blog5:
+  enable: true
+  title: "Latest Blog Posts"
+  description: "Here are the latest posts from my blog that grabbed the most attention."
+---
+    <section id="snippet-1" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <h2 class="display-4 mb-3 text-center">Our Journal</h2>
+        <p class="lead fs-lg mb-10 text-center px-md-16 px-lg-21 px-xl-0">{{ page.blog1.description }}</p>
+        <div class="swiper-container blog grid-view mb-6" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for post in site.posts limit:3 %}
+              <div class="swiper-slide">
+                <article>
+                  <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                    <a href="{{ post.url }}"> 
+                      <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                    </a>
+                    <figcaption>
+                      <h5 class="from-top mb-0">Read More</h5>
+                    </figcaption>
+                  </figure>
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                    </div>
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+                  </div>
+                  <div class="post-footer">
+                    <ul class="post-meta">
+                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                      <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code Display Section -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-1-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html1">Copy</button>
+                <div id="html1">
+                  {% highlight html %}
+{% raw %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <h2 class="display-4 mb-3 text-center">Our Journal</h2>
+    <p class="lead fs-lg mb-10 text-center px-md-16 px-lg-21 px-xl-0">{{ page.blog1.description }}</p>
+    <div class="swiper-container blog grid-view mb-6" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for post in site.posts limit:3 %}
+          <div class="swiper-slide">
+            <article>
+              <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                <a href="{{ post.url }}"> 
+                  <img src="{{ post.image }}" alt="{{ post.title }}" />
+                </a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                <div class="post-category text-line">
+                  <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+              </div>
+              <div class="post-footer">
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                  <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-1-yaml">
+              View frontmatter
+            </a>
+          </div>
+          <div id="collapse-snippet-1-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data1">Copy</button>
+                <div id="data1">
+                  {% highlight yaml %}
+# Blog Section 1
+blog1:
+  enable: true
+  title: "Our Journal"
+  description: "Here are the latest company news from our blog that got the most attention."
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-2" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+          <div class="col-lg-4 mt-lg-2">
+            <h2 class="display-4 mb-3">{{ page.blog2.title }}</h2>
+            <p class="lead fs-lg mb-6 pe-xxl-5">{{ page.blog2.description }}</p>
+            <a href="{{ page.blog2.button_url }}" class="btn btn-soft-primary rounded-pill">{{ page.blog2.button_text }}</a>
+          </div>
+          <!-- /column -->
+          <div class="col-lg-8">
+            <div class="swiper-container blog grid-view mb-6" data-margin="30" data-dots="true" data-items-md="2" data-items-xs="1">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  {% for post in site.posts limit:4 %}
+                  <div class="swiper-slide">
+                    <article>
+                      <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                        <a href="{{ post.url }}"> 
+                          <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                        </a>
+                        <figcaption>
+                          <h5 class="from-top mb-0">Read More</h5>
+                        </figcaption>
+                      </figure>
+                      <div class="post-header">
+                        <div class="post-category text-line">
+                          <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                        </div>
+                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+                      </div>
+                      <div class="post-footer">
+                        <ul class="post-meta mb-0">
+                          <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                          <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                        </ul>
+                      </div>
+                    </article>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Code Display Section -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-2-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html2">Copy</button>
+                <div id="html2">
+                  {% highlight html %}
+    {% raw %}
+    <!-- Your converted HTML code here -->
+    {% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-2-yaml">
+              View frontmatter
+            </a>
+          </div>
+          <div id="collapse-snippet-2-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data2">Copy</button>
+                <div id="data2">
+                  {% highlight yaml %}
+    # Blog Section 2
+    blog2:
+      enable: true
+      title: "Our Journal"
+      description: "Here are the latest news from our blog that got the most attention."
+      button_text: "View All News"
+      button_url: "/blog"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-3" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <div class="row">
+          <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+            <h2 class="display-4 mb-3 text-center">Latest News</h2>
+            <p class="lead fs-lg mb-10 text-center">Here are the latest company news from our blog that got the most attention.</p>
+          </div>
+        </div>
+        <div class="swiper-container blog grid-view mb-10" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for post in site.posts limit:6 %}
+              <div class="swiper-slide">
+                <article>
+                  <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                    <a href="{{ post.url }}">
+                      <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                    </a>
+                    <figcaption>
+                      <h5 class="from-top mb-0">Read More</h5>
+                    </figcaption>
+                  </figure>
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                    </div>
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+                  </div>
+                  <div class="post-footer">
+                    <ul class="post-meta">
+                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                      <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code Display Section -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-3-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-3-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html3">Copy</button>
+                <div id="html3">
+                  {% highlight html %}
+{% raw %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+        <h2 class="display-4 mb-3 text-center">Latest News</h2>
+        <p class="lead fs-lg mb-10 text-center">{{ page.blog3.description }}</p>
+      </div>
+    </div>
+    <div class="swiper-container blog grid-view mb-10" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for post in site.posts limit:6 %}
+          <div class="swiper-slide">
+            <article>
+              <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                <a href="{{ post.url }}">
+                  <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                </a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                <div class="post-category text-line">
+                  <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+              </div>
+              <div class="post-footer">
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                  <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-3-yaml">
+              View frontmatter
+            </a>
+          </div>
+          <div id="collapse-snippet-3-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data3">Copy</button>
+                <div id="data3">
+                  {% highlight yaml %}
+# Blog Section 3
+blog3:
+  enable: true
+  title: "Latest News"
+  description: "Here are the latest company news from our blog that got the most attention."
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-4" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <div class="row align-items-center mb-10">
+          <div class="col-md-8 col-lg-9 col-xl-8 col-xxl-7 pe-xl-20">
+            <h2 class="display-4 mb-0">{{ page.blog4.title }}</h2>
+          </div>
+          <div class="col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
+            <a href="{{ page.blog4.button_url }}" class="btn btn-soft-primary rounded-pill mb-0">{{ page.blog4.button_text }}</a>
+          </div>
+        </div>
+        <div class="row gx-lg-8 gx-xl-11 gy-10 blog grid-view">
+          <div class="col-lg-8">
+            {% assign featured_post = site.posts.first %}
+            <article class="post">
+             {% if featured_post.images %}
+              <div class="post-slider rounded mb-6">
+                <div class="swiper-container dots-over" data-margin="5" data-dots="true">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      {% for image in featured_post.images %}
+                      <div class="swiper-slide"><img src="{{  featured_post.images }}" alt="" /></div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              <div class="post-header mb-5">
+                <div class="post-category text-line">
+                  <a href="/category/{{ featured_post.category | slugify }}" class="hover" rel="category">{{ featured_post.category }}</a>
+                </div>
+                <h2 class="post-title mt-1 mb-4"><a class="link-dark" href="{{ featured_post.url }}">{{ featured_post.title }}</a></h2>
+                <ul class="post-meta mb-0">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ featured_post.date | date: "%d %b %Y" }}</span></li>
+                  <li class="post-author"><a href="#"><i class="uil uil-user"></i><span>By {{ featured_post.author | default: site.author }}</span></a></li>
+                  <li class="post-comments"><a href="{{ featured_post.url }}#comments"><i class="uil uil-comment"></i>{{ featured_post.comments | default: 0 }}<span> Comments</span></a></li>
+                </ul>
+              </div>
+              <div class="post-content">
+                <p>{{ featured_post.excerpt }}</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <div class="row gy-10">
+              {% for post in site.posts offset:1 limit:2 %}
+              <div class="col-md-6 col-lg-12">
+                <article class="post">
+                  <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                    <a href="{{ post.url }}"> 
+                      <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                    </a>
+                    <figcaption>
+                      <h5 class="from-top mb-0">Read More</h5>
+                    </figcaption>
+                  </figure>
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                    </div>
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+                  </div>
+                  <div class="post-footer">
+                    <ul class="post-meta">
+                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                      <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code Display Section -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-4-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html4">Copy</button>
+                <div id="html4">
+                  {% highlight html %}
+{% raw %}
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row align-items-center mb-10">
+      <div class="col-md-8 col-lg-9 col-xl-8 col-xxl-7 pe-xl-20">
+        <h2 class="display-4 mb-0">{{ page.blog4.title }}</h2>
+      </div>
+      <div class="col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
+        <a href="{{ page.blog4.button_url }}" class="btn btn-soft-primary rounded-pill mb-0">{{ page.blog4.button_text }}</a>
+      </div>
+    </div>
+    <div class="row gx-lg-8 gx-xl-11 gy-10 blog grid-view">
+      <div class="col-lg-8">
+        {% assign featured_post = site.posts.first %}
+        <article class="post">
+          {% if featured_post.images %}
+          <div class="post-slider rounded mb-6">
+            <div class="swiper-container dots-over" data-margin="5" data-dots="true">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  {% for image in featured_post.images %}
+                  <div class="swiper-slide"><img src="{{ image }}" alt="" /></div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          <div class="post-header mb-5">
+            <div class="post-category text-line">
+              <a href="/category/{{ featured_post.category | slugify }}" class="hover" rel="category">{{ featured_post.category }}</a>
+            </div>
+            <h2 class="post-title mt-1 mb-4"><a class="link-dark" href="{{ featured_post.url }}">{{ featured_post.title }}</a></h2>
+            <ul class="post-meta mb-0">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ featured_post.date | date: "%d %b %Y" }}</span></li>
+              <li class="post-author"><a href="#"><i class="uil uil-user"></i><span>By {{ featured_post.author | default: site.author }}</span></a></li>
+              <li class="post-comments"><a href="{{ featured_post.url }}#comments"><i class="uil uil-comment"></i>{{ featured_post.comments | default: 0 }}<span> Comments</span></a></li>
+            </ul>
+          </div>
+          <div class="post-content">
+            <p>{{ featured_post.excerpt }}</p>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-4">
+        <div class="row gy-10">
+          {% for post in site.posts offset:1 limit:2 %}
+          <div class="col-md-6 col-lg-12">
+            <article class="post">
+              <figure class="overlay overlay-1 hover-scale rounded mb-5">
+                <a href="{{ post.url }}"> 
+                  <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                </a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                <div class="post-category text-line">
+                  <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+              </div>
+              <div class="post-footer">
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                  <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-4-yaml">
+              View frontmatter
+            </a>
+          </div>
+          <div id="collapse-snippet-4-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data4">Copy</button>
+                <div id="data4">
+                  {% highlight yaml %}
+# Blog Section 4
+blog4:
+  enable: true
+  title: "Company News"
+  description: "Company news from our blog that got the most attention."
+  button_text: "View All News"
+  button_url: "#"
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section -->
+    <section id="snippet-5" class="wrapper bg-light wrapper-border">
+      <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+        <div class="overflow-hidden">
+          <div class="container py-14 py-md-16">
+            <div class="row">
+              <div class="col-xl-7 col-xxl-6 mx-auto text-center">
+                <i class="icn-flower text-primary fs-30 opacity-25"></i>
+                <h2 class="display-5 text-center mt-2 mb-10">{{ page.blog5.description }}</h2>
+              </div>
+            </div>
+            <div class="swiper-container nav-bottom nav-color mb-14" data-margin="30" data-dots="false" data-nav="true" data-items-lg="3" data-items-md="2" data-items-xs="1">
+              <div class="swiper overflow-visible pb-2">
+                <div class="swiper-wrapper">
+                  {% for post in site.posts limit:6 %}
+                  <div class="swiper-slide">
+                    <article>
+                      <div class="card shadow-lg">
+                        <figure class="card-img-top overlay overlay-1">
+                          <a href="{{ post.url }}"> 
+                            <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                          </a>
+                          <figcaption>
+                            <h5 class="from-top mb-0">Read More</h5>
+                          </figcaption>
+                        </figure>
+                        <div class="card-body p-6">
+                          <div class="post-header">
+                            <div class="post-category">
+                              <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                            </div>
+                            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+                          </div>
+                          <div class="post-footer">
+                            <ul class="post-meta d-flex mb-0">
+                              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                              <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Code Display Section -->
+      <div class="container pb-15 pb-md-17">
+        <div class="card">
+          <!-- HTML Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-5-html">
+              View HTML code
+            </a>
+          </div>
+          <div id="collapse-snippet-5-html" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#html5">Copy</button>
+                <div id="html5">
+                  {% highlight html %}
+    {% raw %}
+    <section class="wrapper bg-light">
+      <div class="overflow-hidden">
+        <div class="container py-14 py-md-16">
+          <div class="row">
+            <div class="col-xl-7 col-xxl-6 mx-auto text-center">
+              <i class="icn-flower text-primary fs-30 opacity-25"></i>
+              <h2 class="display-5 text-center mt-2 mb-10">{{ page.blog5.description }}</h2>
+            </div>
+          </div>
+          <div class="swiper-container nav-bottom nav-color mb-14" data-margin="30" data-dots="false" data-nav="true" data-items-lg="3" data-items-md="2" data-items-xs="1">
+            <div class="swiper overflow-visible pb-2">
+              <div class="swiper-wrapper">
+                {% for post in site.posts limit:6 %}
+                <div class="swiper-slide">
+                  <article>
+                    <div class="card shadow-lg">
+                      <figure class="card-img-top overlay overlay-1">
+                        <a href="{{ post.url }}"> 
+                          <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                        </a>
+                        <figcaption>
+                          <h5 class="from-top mb-0">Read More</h5>
+                        </figcaption>
+                      </figure>
+                      <div class="card-body p-6">
+                        <div class="post-header">
+                          <div class="post-category">
+                            <a href="/category/{{ post.category | slugify }}" class="hover" rel="category">{{ post.category }}</a>
+                          </div>
+                          <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h2>
+                        </div>
+                        <div class="post-footer">
+                          <ul class="post-meta d-flex mb-0">
+                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+                            <li class="post-comments"><a href="{{ post.url }}#comments"><i class="uil uil-comment"></i>{{ post.comments | default: 0 }}</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endraw %}
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Frontmatter Section -->
+          <div class="card-footer border-0 position-relative">
+            <a class="collapse-link collapsed" data-bs-toggle="collapse" href="#collapse-snippet-5-yaml">
+              View frontmatter
+            </a>
+          </div>
+          <div id="collapse-snippet-5-yaml" class="card-footer bg-dark p-0 accordion-collapse collapse">
+            <div class="code-wrapper">
+              <div class="code-wrapper-inner">
+                <button class="btn-clipboard" data-clipboard-target="#data5">Copy</button>
+                <div id="data5">
+                  {% highlight yaml %}
+    # Blog Section 5
+    blog5:
+      enable: true
+      title: "Latest Blog Posts"
+      description: "Here are the latest posts from my blog that grabbed the most attention."
+                  {% endhighlight %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /section --> 
+ 

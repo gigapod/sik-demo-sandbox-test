@@ -1,0 +1,95 @@
+<section class="wrapper bg-light">
+  <div class="container pt-14 pt-md-17 pb-md-25">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.why_choose_us.title }}</h2>
+        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ page.why_choose_us.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <ul
+      class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
+      {% for tab in page.why_choose_us.tabs %}
+      <li class="nav-item">
+        <a class="nav-link d-flex flex-row {% if tab.active %}active{% endif %}" data-bs-toggle="tab"
+          href="#{{ tab.id }}">
+          <div><img src="{{ tab.icon }}" class="svg-inject icon-svg icon-svg-md {{ tab.icon_color }} me-4" alt="" />
+          </div>
+          <div>
+            <h4 class="mb-1">{{ tab.title }}</h4>
+            <p>{{ tab.description }}</p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- /.nav-tabs -->
+    <div class="tab-content mt-6 mt-lg-8 mb-md-9">
+      {% for tab in page.why_choose_us.tabs %}
+      <div class="tab-pane fade {% if tab.active %}show active{% endif %}" id="{{ tab.id }}">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-lg-6{% unless tab.id == 'tab2-1' %} order-lg-2{% endunless %}">
+            <div class="row gx-md-5 gy-5 align-items-center">
+              {% if tab.id == 'tab2-1' %}
+              <div class="col-6">
+                <img class="img-fluid rounded shadow-lg d-flex ms-auto" src="{{ tab.image_group[0].image }}"
+                  srcset="{{ tab.image_group[0].image2x }} 2x" alt="" />
+              </div>
+              <div class="col-6">
+                <img class="img-fluid rounded shadow-lg mb-5" src="{{ tab.image_group[1].image }}"
+                  srcset="{{ tab.image_group[1].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-10" src="{{ tab.image_group[2].image }}"
+                  srcset="{{ tab.image_group[2].image2x }} 2x" alt="" />
+              </div>
+              {% elsif tab.id == 'tab2-2' %}
+              <div class="col-5">
+                <img class="img-fluid rounded shadow-lg my-5 d-flex ms-auto" src="{{ tab.image_group[0].image }}"
+                  srcset="{{ tab.image_group[0].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" src="{{ tab.image_group[1].image }}"
+                  srcset="{{ tab.image_group[1].image2x }} 2x" alt="" />
+              </div>
+              <div class="col-7">
+                <img class="img-fluid rounded shadow-lg mb-5" src="{{ tab.image_group[2].image }}"
+                  srcset="{{ tab.image_group[2].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-11" src="{{ tab.image_group[3].image }}"
+                  srcset="{{ tab.image_group[3].image2x }} 2x" alt="" />
+              </div>
+              {% elsif tab.id == 'tab2-3' %}
+              <div class="col-6">
+                <img class="img-fluid rounded shadow-lg mb-5" src="{{ tab.image_group[0].image }}"
+                  srcset="{{ tab.image_group[0].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-10 ms-auto" src="{{ tab.image_group[1].image }}"
+                  srcset="{{ tab.image_group[1].image2x }} 2x" alt="" />
+              </div>
+              <div class="col-6">
+                <img class="img-fluid rounded shadow-lg my-5" src="{{ tab.image_group[2].image }}"
+                  srcset="{{ tab.image_group[2].image2x }} 2x" alt="" />
+                <img class="img-fluid rounded shadow-lg d-flex col-10" src="{{ tab.image_group[3].image }}"
+                  srcset="{{ tab.image_group[3].image2x }} 2x" alt="" />
+              </div>
+              {% endif %}
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/column -->
+          <div class="col-lg-6">
+            <h2 class="mb-3">{{ tab.content_title }}</h2>
+            <p>{{ tab.content_text }}</p>
+            <ul class="icon-list bullet-bg bullet-soft-{{ tab.icon_color | split: '-' | last }}">
+              {% for feature in tab.features %}
+              <li><i class="uil uil-check"></i>{{ feature.text }}</li>
+              {% endfor %}
+            </ul>
+            <a href="{{ tab.button.url }}" class="{{ tab.button.class }}">{{ tab.button.label }}</a>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.tab-pane -->
+      {% endfor %}
+    </div>
+    <!-- /.tab-content -->
+  </div>
+</section>

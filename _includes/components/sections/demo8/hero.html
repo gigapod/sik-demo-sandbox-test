@@ -1,0 +1,49 @@
+<section class="wrapper bg-light">
+  <div class="container">
+    <div class="card bg-soft-primary rounded-4 mt-2 mb-13 mb-md-17">
+      <div class="card-body p-md-10 py-xl-11 px-xl-15">
+        <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
+          <div class="col-lg-6 order-lg-2 d-flex position-relative">
+            <img class="img-fluid ms-auto mx-auto me-lg-8" src="{{ page.hero.image }}" srcset="{{ page.hero.image2x }} 2x" alt="" data-cue="fadeIn">
+            {% if page.hero.happy_clients.enable %}
+            <div data-cue="slideInRight" data-delay="300">
+              <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
+                <div class="card-body py-4 px-5">
+                  <div class="d-flex flex-row align-items-center">
+                    <div>
+                      <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
+                    </div>
+                    <div>
+                      <h3 class="counter mb-0 text-nowrap">{{ page.hero.happy_clients.count }}</h3>
+                      <p class="fs-14 lh-sm mb-0 text-nowrap">{{ page.hero.happy_clients.text }}</p>
+                    </div>
+                  </div>
+                </div>
+                <!--/.card-body -->
+              </div>
+              <!--/.card -->
+            </div>
+            {% endif %}
+            <!--/div -->
+          </div>
+          <!--/column -->
+          <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600">
+            <h1 class="display-2 mb-5">{{ page.hero.title }}</h1>
+            <p class="lead fs-lg lh-sm mb-7 pe-xl-10">{{ page.hero.subtitle }}</p>
+            <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
+              {% for button in page.hero.buttons %}
+              <span><a href="{{ button.url }}" class="{{ button.class }}">{{ button.label }}</a></span>
+              {% endfor %}
+            </div>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.card-body -->
+    </div>
+    <!--/.card -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

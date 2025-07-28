@@ -1,0 +1,37 @@
+<section class="wrapper bg-light">
+  <div class="container pt-14 pt-md-19">
+    <div class="row">
+      <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto text-center">
+        <h3 class="fs-16 text-uppercase text-muted">{{ page.projects.subtitle }}</h3>
+        <h2 class="display-5 mb-6">{{ page.projects.title }}</h2>
+      </div>
+    </div>
+    
+    <div class="swiper-container grid-view mb-6" 
+         data-margin="30"
+         data-dots="false"
+         data-nav="true"
+         data-items-xs="1"
+         data-items-sm="2"
+         data-items-md="2"
+         data-items-lg="3">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% assign sorted_projects = site.projects | where: "category", "Products" | reverse %}
+          {% for project in sorted_projects limit: page.projects.limit %}
+          <div class="swiper-slide">
+            <figure class="rounded mb-6">
+              <img src="{{ project.thumbnail | default: project.hero_image | relative_url }}" 
+                   alt="{{ project.title }}" />
+              <a class="item-link" href="{{ project.url | relative_url }}">
+                <i class="uil uil-link"></i>
+              </a>
+            </figure>
+            
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">{{ include.widget.title | default: "Archives" }}</h4>
+  <ul class="unordered-list bullet-primary text-reset">
+    {% assign months = site.posts | map: 'date' | uniq %}
+    {% assign archive_dates = '' %}
+    {% for date in months %}
+      {% capture month %}{{ date | date: '%B %Y' }}{% endcapture %}
+      {% capture month_url %}{{ date | date: '%Y/%m' }}{% endcapture %}
+      {% unless archive_dates contains month %}
+        <li><a href="/blog/{{ month_url }}/">{{ month }}</a></li>
+        {% capture archive_dates %}{{ archive_dates }}|{{ month }}{% endcapture %}
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,44 @@
+{
+  "clients": [
+    {
+      "name": "Client 1",
+      "image": "/assets/img/brands/c1.webp",
+      "url": "#"
+    },
+    {
+      "name": "Client 2",
+      "image": "/assets/img/brands/c2.webp",
+      "url": "#"
+    },
+    {
+      "name": "Client 3",
+      "image": "/assets/img/brands/c3.webp",
+      "url": "#"
+    },
+    {
+      "name": "Client 4",
+      "image": "/assets/img/brands/c4.webp",
+      "url": "#"
+    },
+    {
+      "name": "Client 5",
+      "image": "/assets/img/brands/c5.webp",
+      "url": "#"
+    },
+    {
+      "name": "Client 6",
+      "image": "/assets/img/brands/c6.webp",
+      "url": "#"
+    },
+    {
+      "name": "Client 7",
+      "image": "/assets/img/brands/c7.webp",
+      "url": "#"
+    },
+    {
+      "name": "Client 8",
+      "image": "/assets/img/brands/c8.webp",
+      "url": "#"
+    }
+  ]
+}

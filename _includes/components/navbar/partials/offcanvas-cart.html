@@ -1,0 +1,77 @@
+<div class="offcanvas offcanvas-end" id="offcanvas-cart" data-bs-scroll="true">
+  <div class="offcanvas-header">
+    <h3 class="mb-0">Your Cart</h3>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div class="shopping-cart">
+      {% if site.data.theme.cart_items %}
+        {% for item in site.data.theme.cart_items %}
+        <div class="shopping-cart-item d-flex justify-content-between mb-4">
+          <div class="d-flex flex-row">
+            <figure class="rounded w-17"><img src="{{ item.image | relative_url }}" alt="{{ item.title }}"></figure>
+            <div class="w-100 ms-4">
+              <h3 class="post-title fs-16 lh-xs mb-1">{{ item.title }}</h3>
+              <div class="small">{{ item.quantity }} x {{ item.price }}</div>
+            </div>
+          </div>
+          <div>
+            <a href="#" class="link-dark"><i class="uil uil-trash-alt"></i></a>
+          </div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <!-- Default items if no data is provided -->
+        <div class="shopping-cart-item d-flex justify-content-between mb-4">
+          <div class="d-flex flex-row">
+            <figure class="rounded w-17"><img src="{{ '/assets/img/photos/checkout-1.webp' | relative_url }}" alt=""></figure>
+            <div class="w-100 ms-4">
+              <h3 class="post-title fs-16 lh-xs mb-1">Neon Coral Blouse</h3>
+              <div class="small">1 x $55.00</div>
+            </div>
+          </div>
+          <div>
+            <a href="#" class="link-dark"><i class="uil uil-trash-alt"></i></a>
+          </div>
+        </div>
+        <div class="shopping-cart-item d-flex justify-content-between mb-4">
+          <div class="d-flex flex-row">
+            <figure class="rounded w-17"><img src="{{ '/assets/img/photos/checkout-2.webp' | relative_url }}" alt=""></figure>
+            <div class="w-100 ms-4">
+              <h3 class="post-title fs-16 lh-xs mb-1">Flared Denim Skirt</h3>
+              <div class="small">1 x $65.00</div>
+            </div>
+          </div>
+          <div>
+            <a href="#" class="link-dark"><i class="uil uil-trash-alt"></i></a>
+          </div>
+        </div>
+        <div class="shopping-cart-item d-flex justify-content-between mb-4">
+          <div class="d-flex flex-row">
+            <figure class="rounded w-17"><img src="{{ '/assets/img/photos/checkout-3.webp' | relative_url }}" alt=""></figure>
+            <div class="w-100 ms-4">
+              <h3 class="post-title fs-16 lh-xs mb-1">Cotton White Tee</h3>
+              <div class="small">1 x $25.00</div>
+            </div>
+          </div>
+          <div>
+            <a href="#" class="link-dark"><i class="uil uil-trash-alt"></i></a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <!-- /.shopping-cart-->
+    <div class="offcanvas-footer flex-column text-center">
+      <div class="d-flex w-100 justify-content-between mb-4">
+        <span>Subtotal:</span>
+        <span class="fw-bold">{{ site.data.theme.cart_subtotal | default: '$145.00' }}</span>
+      </div>
+      <a href="{{ site.data.theme.cart_checkout_url | default: '/shop-checkout.html' | relative_url }}" class="btn btn-primary btn-icon btn-icon-start rounded w-100 mb-4">
+        <i class="uil uil-credit-card fs-18"></i> Checkout
+      </a>
+      <p class="fs-14 mb-0">Free shipping on all orders over {{ site.data.theme.cart_free_shipping_threshold | default: '$100' }}</p>
+    </div>
+    <!-- /.offcanvas-footer-->
+  </div>
+  <!-- /.offcanvas-body -->
+</div>

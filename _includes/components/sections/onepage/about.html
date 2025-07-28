@@ -1,0 +1,46 @@
+<section id="about">
+  <div class="wrapper bg-light">
+    <div class="container py-14 py-md-17">
+      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+        <div class="col-lg-4">
+          <h2 class="fs-15 text-uppercase text-line text-primary text-center mb-3">{{ page.team.subtitle }}</h2>
+          <h3 class="display-5 mb-5">{{ page.team.title }}</h3>
+          <p>{{ page.team.text }}</p>
+          <a href="{{ page.team.button.url }}" class="btn btn-primary rounded-pill mt-3">{{ page.team.button.label }}</a>
+        </div>
+        <!--/column -->
+        <div class="col-lg-8">
+          <div class="swiper-container text-center mb-6" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                {% for member in site.data.team.members %}
+                <div class="swiper-slide">
+                  <img class="rounded-circle w-20 mx-auto mb-4" src="{{ member.avatar_image }}" srcset="{{ member.avatar_image2x }} 2x" alt="{{ member.name }}" />
+                  <h4 class="mb-1">{{ member.name }}</h4>
+                  <div class="meta mb-2">{{ member.role }}</div>
+                  <p class="mb-2">{{ member.bio }}</p>
+                  <nav class="nav social justify-content-center text-center mb-0">
+                    {% for social in member.social %}
+                    <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                    {% endfor %}
+                  </nav>
+                  <!-- /.social -->
+                </div>
+                <!--/.swiper-slide -->
+                {% endfor %}
+              </div>
+              <!--/.swiper-wrapper -->
+            </div>
+            <!-- /.swiper -->
+          </div>
+          <!-- /.swiper-container -->
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+</section>
+<!-- /section -->

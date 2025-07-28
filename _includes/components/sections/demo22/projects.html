@@ -1,0 +1,51 @@
+<section class="wrapper bg-light">
+  <div class="container pt-15 pt-md-17">
+    <div class="row">
+      <div class="col-lg-10 col-xl-8 mx-auto text-center">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.projects.title }}</h2>
+        <h3 class="display-4 mb-10 px-xxl-10">{{ page.projects.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="swiper-container grid-view mb-5" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% assign sorted_projects = site.projects | where: "category", "Decoration" | reverse %}
+          {% for project in sorted_projects limit: 6 %}
+          <div class="swiper-slide">
+            <figure class="rounded mb-6">
+              <img src="{{ project.thumbnail | default: project.hero_image | relative_url }}" 
+                   srcset="{{ project.thumbnail | default: project.hero_image | relative_url }} 2x" 
+                   alt="{{ project.title }}" />
+              <a class="item-link" 
+                 href="{{ project.hero_image | default: project.thumbnail | relative_url }}" 
+                 data-glightbox 
+                 data-gallery="projects-group">
+                <i class="uil uil-focus-add"></i>
+              </a>
+            </figure>
+            <div class="project-details d-flex justify-content-center flex-column">
+              <div class="post-header">
+                <h2 class="post-title h3">
+                  <a href="{{ project.url | relative_url }}" class="link-dark">{{ project.title }}</a>
+                </h2>
+                <div class="post-category text-ash">{{ project.category }}</div>
+              </div>
+              <!-- /.post-header -->
+            </div>
+            <!-- /.project-details -->
+          </div>
+          <!--/.swiper-slide -->
+          {% endfor %}
+        </div>
+        <!--/.swiper-wrapper -->
+      </div>
+      <!-- /.swiper -->
+    </div>
+    <!-- /.swiper-container -->
+
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

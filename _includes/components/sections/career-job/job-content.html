@@ -1,0 +1,71 @@
+<section class="wrapper bg-light">
+  <div class="container pb-14 pb-md-16">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="blog single mt-n17">
+          <div class="card shadow-lg">
+            <div class="card-body">
+              <h2 class="h1 mb-3">{{ page.job_description.title }}</h2>
+              {{ page.job_description.content | markdownify }}
+              
+              <h3 class="h2 mb-3 mt-9">{{ page.responsibilities.title }}</h3>
+              <p>{{ page.responsibilities.intro }}</p>
+              <div class="row gy-3 gx-xl-8">
+                <div class="col-xl-6">
+                  <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                    {% assign half = page.responsibilities.items.size | divided_by: 2.0 | ceil %}
+                    {% for item in page.responsibilities.items limit: half %}
+                    <li><span><i class="uil uil-check"></i></span><span>{{ item }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <!--/column -->
+                <div class="col-xl-6">
+                  <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                    {% for item in page.responsibilities.items offset: half %}
+                    <li><span><i class="uil uil-check"></i></span><span>{{ item }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <!--/column -->
+              </div>
+              <!--/.row -->
+              
+              <h3 class="h2 mb-3 mt-9">{{ page.requirements.title }}</h3>
+              <p>{{ page.requirements.intro }}</p>
+              <div class="row gy-3 gx-xl-8 mb-10">
+                <div class="col-xl-6">
+                  <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                    {% assign half = page.requirements.items.size | divided_by: 2.0 | ceil %}
+                    {% for item in page.requirements.items limit: half %}
+                    <li><span><i class="uil uil-check"></i></span><span>{{ item }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <!--/column -->
+                <div class="col-xl-6">
+                  <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                    {% for item in page.requirements.items offset: half %}
+                    <li><span><i class="uil uil-check"></i></span><span>{{ item }}</span></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <!--/column -->
+              </div>
+              <!--/.row -->
+              
+              <a href="mailto:{{ page.job.apply_button.email }}" class="btn btn-primary rounded-pill">{{ page.job.apply_button.label }}</a>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

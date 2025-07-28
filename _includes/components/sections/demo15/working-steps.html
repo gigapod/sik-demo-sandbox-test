@@ -1,0 +1,73 @@
+<section class="wrapper bg-light angled lower-end">
+  <div class="container pt-14 pt-md-17 pb-14 pb-md-17">
+    <div class="row mb-5">
+      <div class="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center">
+        <img src="{{ page.working_steps.icon }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+        <h2 class="display-4 mb-4 px-lg-14">{{ page.working_steps.title }}</h2>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <div class="card me-lg-6">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">{{ page.working_steps.steps[0].number }}</span></span>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ page.working_steps.steps[0].title }}</h4>
+                <p class="mb-0">{{ page.working_steps.steps[0].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card ms-lg-13 mt-6">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">{{ page.working_steps.steps[1].number }}</span></span>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ page.working_steps.steps[1].title }}</h4>
+                <p class="mb-0">{{ page.working_steps.steps[1].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card mx-lg-6 mt-6">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span class="number">{{ page.working_steps.steps[2].number }}</span></span>
+              </div>
+              <div>
+                <h4 class="mb-1">{{ page.working_steps.steps[2].title }}</h4>
+                <p class="mb-0">{{ page.working_steps.steps[2].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h2 class="display-6 mb-3">{{ page.working_steps.how_it_works.title }}</h2>
+        <p class="lead fs-lg pe-lg-5">{{ page.working_steps.how_it_works.subtitle }}</p>
+        <p>{{ page.working_steps.how_it_works.text1 }}</p>
+        <p class="mb-6">{{ page.working_steps.how_it_works.text2 }}</p>
+        <a href="{{ page.working_steps.how_it_works.button.url }}" class="{{ page.working_steps.how_it_works.button.class }}">{{ page.working_steps.how_it_works.button.label }}</a>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

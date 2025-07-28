@@ -1,0 +1,30 @@
+<section class="wrapper overflow-hidden">
+  <div class="container pt-16 pt-md-18 text-center position-relative">
+    <div class="position-absolute" style="top: -7%; left: 50%; transform: translateX(-50%);">
+      <img src="{{ '/assets/img/photos/blurry.png' | relative_url }}" alt="">
+    </div>
+    <div class="row position-relative mb-9 mb-md-11">
+      <div class="col-lg-10 col-xl-9 col-xxl-7 mx-auto">
+        <div>
+          <img src="{{ page.cta.icon | relative_url }}" srcset="{{ page.cta.icon2x | relative_url }} 2x" alt="" />
+          <h1 class="display-1 fs-64 mt-5 mb-5">{{ page.cta.title }}</h1>
+          <p class="lead fs-24 mb-8 px-lg-12 px-xl-14 px-xxl-10">{{ page.cta.subtitle }}</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <span>
+            <a href="{{ page.cta.button.url }}" class="{{ page.cta.button.class }}" {% if page.cta.button.target %}target="{{ page.cta.button.target }}"{% endif %}>
+              {{ page.cta.button.label }} {% if page.cta.button.icon %}<i class="{{ page.cta.button.icon }}"></i>{% endif %}
+            </a>
+          </span>
+        </div>
+        <!-- /div -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="container text-center">
+    <img class="img-fluid position-relative" style="z-index: 2;" src="{{ page.cta.image | relative_url }}" srcset="{{ page.cta.image2x | relative_url }} 2x" alt="" />
+  </div>
+</section>

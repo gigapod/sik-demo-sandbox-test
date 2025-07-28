@@ -1,0 +1,44 @@
+<section class="wrapper bg-gray">
+  <div class="container pt-10">
+    <div class="swiper-container blog grid-view mb-16" data-margin="30" data-dots="true" data-items-lg="2" data-items-md="1" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% assign featured_posts = site.posts | where: "author", "Jane Smith" | where_exp: "post", "post.featured_image != nil" | sort: "date" | reverse %}
+          {% for post in featured_posts limit: 4 %}
+          <div class="swiper-slide">
+            <figure class="overlay caption caption-overlay rounded mb-0">
+              <a href="{{ post.url }}"> 
+                <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+              </a>
+              <figcaption>
+                <span class="badge badge-lg bg-white text-uppercase mb-3">{{ post.category }}</span>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <ul class="post-meta text-white mb-0">
+                  <li class="post-date">
+                    <i class="uil uil-calendar-alt"></i>
+                    <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                  </li>
+                  <li class="post-author">
+                    <a href="/blog/author/{{ post.author | slugify }}/">
+                      <i class="uil uil-user"></i>
+                      <span>By {{ post.author }}</span>
+                    </a>
+                  </li>
+                  <li class="post-comments">
+                    <a href="{{ post.url }}#comments">
+                      <i class="uil uil-comment"></i>
+                      {{ post.comments | default: 0 }}<span> Comments</span>
+                    </a>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

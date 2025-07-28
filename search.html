@@ -1,0 +1,172 @@
+---
+layout: default
+title: Search Results
+permalink: /search.html
+---
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-soft-primary">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherInfo=true
+    %}
+  </header>
+  <!-- /header -->
+<header class="wrapper bg-soft-primary">
+  <div class="container pt-10 pb-10 pt-md-14 pb-md-14 text-center">
+    <div class="row">
+      <div class="col-md-8 col-lg-7 col-xl-6 mx-auto">
+        <h1 class="display-1 mb-3">Search Results</h1>
+        <p class="lead mb-0" id="search-summary">Displaying results for your query</p>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</header>
+<!-- /header -->
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12">
+      <div class="col-lg-8">
+        <div class="blog classic-view" id="search-results">
+          <!-- Search results will be displayed here via JavaScript -->
+          <p class="text-center" id="search-loading">Loading results...</p>
+          <p class="text-center d-none" id="search-no-results">No results found for your query.</p>
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /column -->
+
+      <aside class="col-lg-4 sidebar mt-8 mt-lg-6">
+        {% include components/blog/sidebar-widgets.html %}
+      </aside>
+      <!-- /column .sidebar -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+ <!-- FOOTER -->
+ {% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-navy" 
+  text_color="text-inverse"
+  cta=true
+  newsletter=true
+%}
+<!-- /footer -->
+</div>
+<!-- /.content-wrapper -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var searchResults = document.getElementById('search-results');
+  var searchLoading = document.getElementById('search-loading');
+  var searchNoResults = document.getElementById('search-no-results');
+  var searchSummary = document.getElementById('search-summary');
+  
+  // Get the query parameter from the URL
+  var urlParams = new URLSearchParams(window.location.search);
+  var query = urlParams.get('query');
+  
+  if (query) {
+    // Update the search summary
+    searchSummary.textContent = 'Displaying results for "' + query + '"';
+    
+    // Use Jekyll's generated site data to search for posts
+    // This is a simplified client-side search implementation
+    fetch('/search-data.json')
+      .then(response => response.json())
+      .then(data => {
+        var results = [];
+        
+        // Simple search algorithm - check if query is in title, content or tags
+        data.forEach(function(item) {
+          if (
+            item.title.toLowerCase().includes(query.toLowerCase()) || 
+            item.content.toLowerCase().includes(query.toLowerCase()) ||
+            (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))) ||
+            (item.category && item.category.toLowerCase().includes(query.toLowerCase()))
+          ) {
+            results.push(item);
+          }
+        });
+        
+        searchLoading.classList.add('d-none');
+        
+        if (results.length === 0) {
+          searchNoResults.classList.remove('d-none');
+        } else {
+          results.forEach(function(result) {
+            // Create elements for each result
+            var article = document.createElement('article');
+            article.className = 'post mb-12';
+            
+            var card = document.createElement('div');
+            card.className = 'card';
+            
+            var html = '';
+            
+            if (result.image) {
+              html += '<figure class="card-img-top overlay overlay-1 hover-scale">' +
+                      '<a href="' + result.url + '">' +
+                      '<img src="' + result.image + '" alt="' + result.title + '" />' +
+                      '</a>' +
+                      '<figcaption><h5 class="from-top mb-0">Read More</h5></figcaption>' +
+                      '</figure>';
+            }
+            
+            html += '<div class="card-body">' +
+                    '<div class="post-header">';
+            
+            if (result.category) {
+              html += '<div class="post-category text-line">' +
+                      '<a href="/blog/category/' + result.category.toLowerCase().replace(/\s+/g, '-') + '/" class="hover" rel="category">' + result.category + '</a>' +
+                      '</div>';
+            }
+            
+            html += '<h2 class="post-title mt-1 mb-0"><a class="link-dark" href="' + result.url + '">' + result.title + '</a></h2>' +
+                    '</div>' +
+                    '<div class="post-content">' +
+                    '<p>' + (result.excerpt ? result.excerpt : result.content.substring(0, 150) + '...') + '</p>' +
+                    '</div>' +
+                    '</div>';
+            
+            if (result.date) {
+              html += '<div class="card-footer">' +
+                      '<ul class="post-meta d-flex mb-0">' +
+                      '<li class="post-date"><i class="uil uil-calendar-alt"></i><span>' + result.date + '</span></li>';
+              
+              if (result.author) {
+                html += '<li class="post-author"><a href="/authors/' + result.author.toLowerCase().replace(/\s+/g, '-') + '/"><i class="uil uil-user"></i><span>' + result.author + '</span></a></li>';
+              }
+              
+              html += '</ul></div>';
+            }
+            
+            card.innerHTML = html;
+            article.appendChild(card);
+            searchResults.appendChild(article);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching search data:', error);
+        searchLoading.textContent = 'Error loading search results. Please try again later.';
+      });
+  } else {
+    searchLoading.classList.add('d-none');
+    searchNoResults.textContent = 'Please enter a search query.';
+    searchNoResults.classList.remove('d-none');
+    searchSummary.textContent = 'No search query provided';
+  }
+});
+</script>

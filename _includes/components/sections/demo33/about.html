@@ -1,0 +1,46 @@
+<section class="wrapper bg-light">
+  <div class="container py-16 py-md-18">
+    <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center mt-lg-18 mb-16 mb-md-18">
+      <div class="col-md-8 col-lg-6 mx-auto">
+        <div class="img-mask mask-3 px-xxl-5"><img src="{{ page.about.image }}" srcset="{{ page.about.image2x }} 2x" alt="" /></div>
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h2 class="display-2 mb-3">{{ page.about.title }}</h2>
+        <p class="lead fs-24">{{ page.about.lead }}</p>
+        {% for paragraph in page.about.description %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+        <a href="{{ page.about.button.url }}" class="btn btn-primary btn-icon btn-icon-end mt-2">{{ page.about.button.text }} <i class="uil uil-arrow-up-right"></i></a>
+      </div>
+      <!--/column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-md-8 gx-xl-12 gy-10">
+      <div class="col-lg-5 mx-auto">
+        <h2 class="display-2 mb-3">{{ page.about.experience.title }}</h2>
+        <p class="lead fs-24 pe-xxl-8">{{ page.about.experience.lead }}</p>
+        <a href="{{ page.about.experience.button.url }}" class="btn btn-primary btn-icon btn-icon-end mt-2">{{ page.about.experience.button.text }} <i class="uil uil-arrow-up-right"></i></a>
+      </div>
+      <!--/column -->
+      <div class="col-lg-7">
+        <ul class="timeline">
+          {% for item in page.about.experience.items %}
+          <li class="timeline-item">
+            <div class="timeline-info meta fs-14">{{ item.period }}</div>
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!--/column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

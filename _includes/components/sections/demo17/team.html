@@ -1,0 +1,32 @@
+<div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+  <div class="col-md-8 col-lg-6 order-lg-2">
+    <figure class="rounded"><img src="{{ page.team.image }}" srcset="{{ page.team.image2x }} 2x" alt=""></figure>
+  </div>
+  <!--/column -->
+  <div class="col-lg-6">
+    <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.team.subtitle }}</h2>
+    <h3 class="display-4 mb-5">{{ page.team.title }}</h3>
+    <p class="mb-6">{{ page.team.text }}</p>
+    <div class="row gy-3 gx-xl-8">
+      <div class="col-xl-6">
+        <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+          {% for feature in page.team.features limit:2 %}
+          <li class="{% if forloop.index > 1 %}mt-3{% endif %}"><span><i class="uil uil-check"></i></span><span>{{ feature.text }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!--/column -->
+      <div class="col-xl-6">
+        <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+          {% for feature in page.team.features offset:2 limit:2 %}
+          <li class="{% if forloop.index > 1 %}mt-3{% endif %}"><span><i class="uil uil-check"></i></span><span>{{ feature.text }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->

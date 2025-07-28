@@ -1,0 +1,9 @@
+<div>
+    <a href="mailto:{{ site.data.theme.email | default: 'info@email.com' }}" class="link-inverse">{{ site.data.theme.email | default: 'info@email.com' }}</a>
+    <br>{{ site.data.theme.phone_number | default: '00 (123) 456 78 90' }}<br>
+    <nav class="nav social social-white mt-4">
+      {% for social in site.data.theme.social_accounts.links limit:site.data.theme.social_accounts.links_shown %}
+        <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+      {% endfor %}
+    </nav>
+  </div>

@@ -1,0 +1,42 @@
+<section class="wrapper bg-light">
+  <div class="container mb-20">
+    <div class="row">
+      <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center position-relative">
+        {% for doodle in page.testimonials.doodles %}
+        <img src="{{ doodle.image }}" class="{{ doodle.class }} position-absolute d-none d-lg-block" style="{{ doodle.style }}" alt="">
+        {% endfor %}
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.testimonials.title }}</h2>
+        <h3 class="display-3 mb-11 px-xl-10 px-xxl-13">{{ page.testimonials.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="grid mb-12">
+      <div class="row isotope gy-6">
+        {% for testimonial in site.data.testimonials.testimonials %}
+        <div class="item col-md-6 col-xl-4">
+          <div class="card shadow-none rounded-xl bg-soft-{% cycle 'primary', 'purple', 'leaf', 'navy', 'fuchsia', 'sky' %}">           
+             <div class="card-body">
+              <blockquote class="icon mb-0">
+                <p>{{ testimonial.quote }}</p>
+                <div class="blockquote-details">
+                  <div class="info ps-0">
+                    <h5 class="mb-1">{{ testimonial.name }}</h5>
+                    <p class="mb-0">{{ testimonial.position }}</p>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!--/column -->
+        {% endfor %}
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.grid-view -->
+  </div>
+  <!-- /.container -->
+</section>

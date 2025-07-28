@@ -1,0 +1,43 @@
+<div class="row text-center">
+  <div class="col-md-10 col-lg-9 col-xxl-7 mx-auto mb-12">
+    <h2 class="{{ page.services.title_class }}">{{ page.services.title }}</h2>
+    <h3 class="{{ page.services.main_title_class }}">{{ page.services.main_title }}</h3>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+
+{% for service in page.services.service_items %}
+<div class="row gy-10 align-items-center {% unless forloop.last %}mb-15 mb-md-17{% endunless %}">
+  {% if service.reverse %}
+  <div class="col-lg-7 order-lg-2">
+    <figure><img class="img-fluid" src="{{ service.image }}" srcset="{{ service.image2x }} 2x" alt="" /></figure>
+  </div>
+  <!-- /column -->
+  <div class="col-lg-4 me-auto">
+  {% else %}
+  <div class="col-lg-7">
+    <figure><img class="img-fluid" src="{{ service.image }}" srcset="{{ service.image2x }} 2x" alt="" /></figure>
+  </div>
+  <!-- /column -->
+  <div class="col-lg-4 ms-auto">
+  {% endif %}
+    <div class="svg-bg {{ service.icon_class }} rounded mb-5"> <img src="{{ service.icon }}" class="svg-inject icon-svg solid {{ service.icon_text_class }}" alt="" /> </div>
+    <h3 class="h1 post-title ls-sm mb-3">{{ service.title }}</h3>
+    <p>{{ service.text }}</p>
+    <ul class="icon-list bullet-bg bullet-soft-{{ service.icon_text_class | remove: 'text-' }}">
+      {% for feature in service.features %}
+      <li><i class="uil uil-check"></i>{{ feature.text }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ service.button.url }}" class="{{ service.button.class }}">{{ service.button.label }}</a>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+{% endfor %}
+
+</div>
+<!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,41 @@
+<section class="wrapper bg-light">
+  <div class="container py-15 py-md-17">
+    <div class="row text-center mb-14">
+      <div class="col-lg-10 mx-auto position-relative">
+        <div class="position-relative">
+          {% for shape in page.video_section.shapes %}
+          <div class="shape {{ shape.shape }} rellax w-18 h-18" data-rellax-speed="1" style="{{ shape.position }}">
+            <img src="/assets/img/svg/{{ shape.type }}.svg" class="svg-inject icon-svg w-100 h-100" alt="" />
+          </div>
+          {% endfor %}
+          <video poster="{{ page.video_section.poster }}" class="player" playsinline controls preload="none">
+            <source src="{{ page.video_section.video_mp4 }}" type="video/mp4">
+            <source src="{{ page.video_section.video_webm }}" type="video/webm">
+          </video>
+        </div>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+<div class="row text-center">
+  <div class="col-lg-10 mx-auto">
+    <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.process_section.title }}</h2>
+    <h3 class="display-3 text-center px-xl-10 px-xxl-15 mb-10">{{ page.process_section.subtitle }}</h3>
+    <div class="row gx-lg-8 gx-xl-12 process-wrapper arrow text-center">
+      {% for step in page.process_section.steps %}
+      <div class="col-md-4"> <img src="/assets/img/icons/solid/{{ step.icon }}.svg" class="svg-inject icon-svg icon-svg-sm solid-duo text-purple-pink mb-4" alt="" />
+        <h3 class="fs-22">{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

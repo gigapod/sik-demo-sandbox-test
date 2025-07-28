@@ -1,0 +1,96 @@
+<div class="row gy-6 gy-lg-0">
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      {% if include.lightText %}
+        <img class="mb-4" src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}" 
+             srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+      {% else %}
+        <img class="mb-4" src="{{ site.data.theme.dark_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}" 
+             srcset="{{ site.data.theme.dark_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />
+      {% endif %}
+      <p class="mb-4">© {{ site.time | date: '%Y' }} {{ site.data.theme.company_name | default: site.title | default: 'Sandbox' }}. <br class="d-none d-lg-block" />All rights reserved.</p>
+      <nav class="nav social {% if include.lightText %}social-white{% endif %}">
+        {% for social in site.data.social.social_accounts.links | default: site.data.theme.social_accounts.links %}
+          <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+        {% endfor %}
+      </nav>
+      <!-- /.social -->
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.column_2.title | default: 'Get in Touch' }}</h4>
+      <address class="pe-xl-15 pe-xxl-17">{{ site.data.footer.column_2.address | default: site.data.theme.address | default: 'Moonshine St. 14/05 Light City, London, United Kingdom' }}</address>
+      <a href="mailto:{{ site.data.footer.column_2.email | default: site.data.theme.email | default: 'info@email.com' }}" {% if !include.lightText %}class="link-body"{% endif %}>
+        {{ site.data.footer.column_2.email | default: site.data.theme.email | default: 'info@email.com' }}
+      </a><br /> 
+      {{ site.data.footer.column_2.phone | default: site.data.theme.phone | default: '00 (123) 456 78 90' }}
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.column_3.title | default: 'Learn More' }}</h4>
+      <ul class="list-unstyled {{ include.linkClass }} text-reset mb-0">
+        {% for link in site.data.footer.column_3.links %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        {% if site.data.footer.column_3.links.size == 0 %}
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  {% if include.newsletter %}
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.newsletter.title | default: 'Our Newsletter' }}</h4>
+      <p class="mb-5">{{ site.data.footer.newsletter.description | default: 'Subscribe to our newsletter to get our news & deals delivered to you.' }}</p>
+      <div class="newsletter-wrapper">
+        {% if site.data.footer.newsletter.custom_form %}
+          {{ site.data.footer.newsletter.custom_form }}
+        {% else %}
+        <!-- Begin Mailchimp Signup Form -->
+        <div id="mc_embed_signup">
+          <form action="{{ site.data.footer.newsletter.form_action | default: 'https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a' }}" 
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" 
+                class="validate {% if include.lightText %}dark-fields{% endif %}" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <div class="mc-field-group input-group form-floating">
+                <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL">
+                <label for="mce-EMAIL">Email Address</label>
+                <input type="submit" value="{{ site.data.footer.newsletter.button_text | default: 'Join' }}" 
+                       name="subscribe" id="mc-embedded-subscribe" 
+                       class="btn btn-primary {% if include.btnClassList %}{{ include.btnClassList }}{% endif %}">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1" value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--End mc_embed_signup-->
+        {% endif %}
+      </div>
+      <!-- /.newsletter-wrapper -->
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  {% endif %}
+</div>
+<!--/.row -->

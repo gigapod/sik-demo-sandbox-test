@@ -1,0 +1,26 @@
+<div class="row gx-lg-0 gy-10 align-items-center mb-16 mb-md-18">
+  <div class="col-lg-7 position-relative">
+    <div class="position-absolute" style="top: 50%; left: 50%; width: 140%; height: auto; transform: translate(-50%,-50%); z-index:0"><img class="w-100" src="{{ '/assets/img/photos/blurry.png' | relative_url }}" alt=""></div>
+    <figure class="position-relative" style="z-index: 2;">
+      <img src="{{ page.features1.image | relative_url }}" srcset="{{ page.features1.image2x | relative_url }} 2x" alt="" />
+    </figure>
+  </div>
+  <!--/column -->
+  <div class="col-lg-4 ms-auto">
+    {% for feature in page.features1.features %}
+    <div class="d-flex flex-row mb-6">
+      <div>
+        <div class="svg-bg bg-white rounded-xl shadow-xl me-5">
+          <img src="{{ '/assets/img/icons/solid/' | append: feature.icon | append: '.svg' | relative_url }}" class="svg-inject icon-svg solid-duo text-grape-fuchsia" alt="" />
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-1">{{ feature.title }}</h4>
+        <p class="mb-0">{{ feature.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->

@@ -1,0 +1,51 @@
+
+{% assign bg_class = include.bg_class | default: "bg-light" %}
+{% assign text_class = include.text_class | default: "" %}
+{% assign container_class = include.container_class | default: "pt-10 pb-9 pt-md-14 pb-md-11" %}
+{% assign center = include.center | default: false %}
+
+{% if include.bg_image %}
+<section class="wrapper image-wrapper {{ bg_class }} {{ include.overlay }}" data-image-src="{{ include.bg_image | relative_url }}">
+  <div class="container {{ container_class }} {% if center %}text-center{% endif %}">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 col-xl-7 {% if center %}mx-auto{% endif %}">
+        <div class="post-header">
+          {% if page.category %}
+          <div class="post-category text-line {% if text_class %}{{ text_class }}{% endif %}">
+            <a href="#" class="{% if text_class contains 'text-white' %}text-reset{% else %}hover{% endif %}" rel="category">{{ page.category }}</a>
+          </div>
+          {% endif %}
+          <h1 class="display-1 mb-3 {% if text_class %}{{ text_class }}{% endif %}">{{ page.title }}</h1>
+          {% if page.description %}
+          <p class="lead {% if text_class %}{{ text_class }}{% endif %} px-md-12 px-lg-12 px-xl-15 px-xxl-18">{{ page.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% elsif include.banner_image %}
+<section class="wrapper image-wrapper bg-image bg-cover bg-height" data-image-src="{{ include.banner_image | relative_url }}" style="background-image: url({{ include.banner_image | relative_url }});">
+</section>
+{% else %}
+<section class="wrapper {{ bg_class }}">
+  <div class="container {{ container_class }} {% if center %}text-center{% endif %}">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 col-xl-7 {% if center %}mx-auto{% endif %}">
+        <div class="post-header">
+          {% if page.category %}
+          <div class="post-category text-line {% if text_class %}{{ text_class }}{% endif %}">
+            <a href="#" class="{% if text_class contains 'text-white' %}text-reset{% else %}hover{% endif %}" rel="category">{{ page.category }}</a>
+          </div>
+          {% endif %}
+          <h1 class="display-1 mb-3 {% if text_class %}{{ text_class }}{% endif %}">{{ page.title }}</h1>
+          {% if page.description %}
+          <p class="lead {% if text_class %}{{ text_class }}{% endif %} px-md-12 px-lg-12 px-xl-15 px-xxl-18">{{ page.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<!-- /section -->

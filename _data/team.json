@@ -1,0 +1,143 @@
+{
+    "members": [
+      {
+        "name": "Coriss Ambady",
+        "role": "Financial Analyst",
+        "bio": "Fermentum massa justo sit amet risus morbi leo.",
+        "avatar_image": "/assets/img/avatars/te1.webp",
+        "avatar_image2x": "/assets/img/avatars/te1@2x.webp",
+        "bio_image": "/assets/img/avatars/t1.webp",
+        "bio_image2x": "/assets/img/avatars/t1@2x.webp",
+        "social": [
+          {
+            "url": "#",
+            "icon": "uil uil-twitter"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-facebook-f"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-dribbble"
+          }
+        ]
+      },
+      {
+        "name": "Cory Zamora",
+        "role": "Marketing Specialist",
+        "bio": "Fermentum massa justo sit amet risus morbi leo.",
+        "avatar_image": "/assets/img/avatars/te2.webp",
+        "avatar_image2x": "/assets/img/avatars/te2@2x.webp",
+        "bio_image": "/assets/img/avatars/t2.webp",
+        "bio_image2x": "/assets/img/avatars/t2@2x.webp",
+        "social": [
+          {
+            "url": "#",
+            "icon": "uil uil-twitter"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-facebook-f"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-dribbble"
+          }
+        ]
+      },
+      {
+        "name": "Nikolas Brooten",
+        "role": "Sales Manager",
+        "bio": "Fermentum massa justo sit amet risus morbi leo.",
+        "avatar_image": "/assets/img/avatars/te3.webp",
+        "avatar_image2x": "/assets/img/avatars/te3@2x.webp",
+        "bio_image": "/assets/img/avatars/t3.webp",
+        "bio_image2x": "/assets/img/avatars/t3@2x.webp",
+        "social": [
+          {
+            "url": "#",
+            "icon": "uil uil-twitter"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-facebook-f"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-dribbble"
+          }
+        ]
+      },
+      {
+        "name": "Jackie Sanders",
+        "role": "Investment Planner",
+        "bio": "Fermentum massa justo sit amet risus morbi leo.",
+        "avatar_image": "/assets/img/avatars/te4.webp",
+        "avatar_image2x": "/assets/img/avatars/te4@2x.webp",
+        "bio_image": "/assets/img/avatars/t4.webp",
+        "bio_image2x": "/assets/img/avatars/t4@2x.webp",
+        "social": [
+          {
+            "url": "#",
+            "icon": "uil uil-twitter"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-facebook-f"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-dribbble"
+          }
+        ]
+      },
+      {
+        "name": "Laura Widerski",
+        "role": "Sales Specialist",
+        "bio": "Fermentum massa justo sit amet risus morbi leo.",
+        "avatar_image": "./assets/img/avatars/te5.webp",
+        "avatar_image2x": "/assets/img/avatars/te5@2x.webp",
+        "bio_image": "/assets/img/avatars/t5.webp",
+        "bio_image2x": "/assets/img/avatars/t5@2x.webp",
+        "social": [
+          {
+            "url": "#",
+            "icon": "uil uil-twitter"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-facebook-f"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-dribbble"
+          }
+        ]
+      },
+      {
+        "name": "Tina Geller",
+        "role": "Financial Analyst",
+        "bio": "Fermentum massa justo sit amet risus morbi leo.",
+        "avatar_image": "./assets/img/avatars/te6.webp",
+        "avatar_image2x": "/assets/img/avatars/te6@2x.webp",
+        "bio_image": "/assets/img/avatars/t6.webp",
+        "bio_image2x": "/assets/img/avatars/t6@2x.webp",
+        "social": [
+          {
+            "url": "#",
+            "icon": "uil uil-twitter"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-facebook-f"
+          },
+          {
+            "url": "#",
+            "icon": "uil uil-dribbble"
+          }
+        ]
+      }
+    ]
+  }
+  

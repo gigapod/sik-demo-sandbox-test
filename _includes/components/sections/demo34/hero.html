@@ -1,0 +1,55 @@
+<section class="wrapper {{ page.hero.background }}">
+  <div class="container pt-10 pt-md-14">
+    <div class="row gx-2 gy-10 align-items-center">
+      <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-5 text-center text-lg-start order-2 order-lg-0" data-cues="slideInDown" data-group="page-title" data-delay="600">
+        <h1 class="display-1 mb-5 mx-md-10 mx-lg-0">{{ page.hero.title }} <br /><span class="typer text-primary text-nowrap" data-delay="100" data-words="{% for item in page.hero.typed_text %}{{ item }}{% unless forloop.last %},{% endunless %}{% endfor %}"></span><span class="cursor text-primary" data-owner="typer"></span></h1>
+        <p class="lead fs-23 mb-7">{{ page.hero.subtitle }}</p>
+        <div class="d-flex justify-content-center justify-content-lg-start mb-4" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
+          <span><a class="{{ page.hero.button.class }}" href="{{ page.hero.button.url }}">{{ page.hero.button.label }}</a></span>
+        </div>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-6 ms-auto position-relative">
+        <div class="row g-4">
+          <div class="col-4 d-flex flex-column ms-auto" data-cues="fadeIn" data-group="col-start" data-delay="900">
+            {% for item in page.hero.images limit:3 %}
+            <div class="ms-auto {% if forloop.first %}mt-6{% else %}mt-4{% endif %}">
+              <img class="img-fluid rounded shadow-lg" src="{{ item.image }}" srcset="{{ item.image2x }} 2x" alt="" />
+            </div>
+            {% endfor %}
+          </div>
+          <!-- /column -->
+          <div class="col-4" data-cues="fadeIn" data-group="col-middle">
+            {% for item in page.hero.images offset:3 limit:3 %}
+            <div>
+              <img class="w-100 img-fluid rounded shadow-lg {% unless forloop.first %}mt-4{% endunless %}" src="{{ item.image }}" srcset="{{ item.image2x }} 2x" alt="" />
+            </div>
+            {% endfor %}
+          </div>
+          <!-- /column -->
+          <div class="col-4 d-flex flex-column" data-cues="fadeIn" data-group="col-end" data-delay="900">
+            {% for item in page.hero.images offset:6 limit:2 %}
+            <div class="{% if forloop.first %}mt-8{% else %}mt-4 mb-10{% endif %}">
+              <img class="img-fluid rounded shadow-lg" src="{{ item.image }}" srcset="{{ item.image2x }} 2x" alt="" />
+            </div>
+            {% endfor %}
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        {% if page.hero.jquery_badge.enable %}
+        <div class="position-relative mt-n20 mb-20" data-cue="fadeIn" data-delay="1800">
+          <div class="btn btn-circle btn-fuchsia pe-none ripple position-absolute counter-wrapper flex-column d-none d-xxl-flex" style="bottom: 0; right: -8%; width: 120px; height: 120px;">
+            <h3 class="fs-26 text-white mt-n1 mb-0">{{ page.hero.jquery_badge.text }}</h3>
+            <p>jQuery</p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

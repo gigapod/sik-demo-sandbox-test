@@ -1,0 +1,93 @@
+<section class="wrapper pattern-wrapper bg-image section-frame" data-image-src="/assets/img/pattern.png">
+  <div class="container pt-15 pt-md-17 pb-14 pb-md-17">
+    <div class="row gx-lg-0 gy-10 align-items-center mb-18">
+      <div class="col-lg-6 order-lg-2 ms-lg-auto">
+        <div class="card rounded-xl me-lg-6 bg-pale-grape">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-block btn-lg shadow-xl rounded-xl btn-white pe-none me-4"><span class="number text-grape">{{ page.process.steps[0].number }}</span></span>
+              </div>
+              <div>
+                <h3 class="mb-1 text-grape">{{ page.process.steps[0].title }}</h3>
+                <p class="mb-0">{{ page.process.steps[0].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card rounded-xl ms-lg-13 mt-6 bg-pale-fuchsia">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-block btn-lg shadow-xl rounded-xl btn-white pe-none me-4"><span class="number text-fuchsia">{{ page.process.steps[1].number }}</span></span>
+              </div>
+              <div>
+                <h3 class="mb-1 text-fuchsia">{{ page.process.steps[1].title }}</h3>
+                <p class="mb-0">{{ page.process.steps[1].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+        <div class="card rounded-xl mx-lg-6 mt-6 bg-pale-green">
+          <div class="card-body p-6">
+            <div class="d-flex flex-row">
+              <div>
+                <span class="icon btn btn-block btn-lg shadow-xl rounded-xl btn-white pe-none me-4"><span class="number text-green">{{ page.process.steps[2].number }}</span></span>
+              </div>
+              <div>
+                <h3 class="mb-1 text-green">{{ page.process.steps[2].title }}</h3>
+                <p class="mb-0">{{ page.process.steps[2].text }}</p>
+              </div>
+            </div>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-5 text-inverse">
+        <h2 class="display-2 mb-3 text-white">{{ page.process.title }}</h2>
+        <p class="lead fs-lg pe-lg-5">{{ page.process.subtitle }}</p>
+        <p>{{ page.process.text }}</p>
+        <p class="mb-6">{{ page.process.text2 }}</p>
+        <a href="{{ page.process.button_url }}" class="btn btn-white rounded-xl mb-0">{{ page.process.button_text }}</a>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="row gx-lg-0 gy-10 align-items-center text-inverse">
+      <div class="col-lg-6">
+        <figure><img class="img-auto" src="{{ page.solutions.image }}" srcset="{{ page.solutions.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5 ms-lg-auto">
+        <h2 class="display-2 mb-3 text-white">{{ page.solutions.title }}</h2>
+        <p class="lead fs-lg pe-lg-5">{{ page.solutions.subtitle }}</p>
+        <p class="mb-6">{{ page.solutions.text }}</p>
+        <div class="row align-items-center counter-wrapper gy-6">
+          {% for stat in page.solutions.stats %}
+          <div class="col-md-6">
+            <h3 class="counter counter-lg mb-1 text-white">{{ stat.value }}</h3>
+            <h5 class="mb-1 text-white">{{ stat.label }}</h5>
+            {% if forloop.first %}
+            <span class="ratings five text-red"></span>
+            {% else %}
+            <span class="ratings five"></span>
+            {% endif %}
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,54 @@
+<div class="row gy-10 gx-lg-8 gx-xl-12 mb-16 align-items-center">
+  <div class="col-lg-7 position-relative">
+    <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0; left: -1.4rem; z-index: 0;"></div>
+    <div class="row gx-md-5 gy-5">
+      <div class="col-md-6">
+        <figure class="rounded mt-md-10 position-relative">
+          <img src="{{ page.contact_info.image1 }}" srcset="{{ page.contact_info.image1_2x }} 2x" alt="">
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="col-md-6">
+        <div class="row gx-md-5 gy-5">
+          <div class="col-md-12 order-md-2">
+            <figure class="rounded">
+              <img src="{{ page.contact_info.image2 }}" srcset="{{ page.contact_info.image2_2x }} 2x" alt="">
+            </figure>
+          </div>
+          <!--/column -->
+          <div class="col-md-10">
+            <div class="card bg-pale-primary text-center counter-wrapper">
+              <div class="card-body py-11">
+                <h3 class="counter text-nowrap">{{ page.contact_info.counter.value }}</h3>
+                <p class="mb-0">{{ page.contact_info.counter.label }}</p>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!--/column -->
+  <div class="col-lg-5">
+    <h2 class="display-4 mb-8">{{ page.contact_info.title }}</h2>
+    {% for item in page.contact_info.items %}
+    <div class="d-flex flex-row">
+      <div>
+        <div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-{{ item.icon }}"></i> </div>
+      </div>
+      <div>
+        <h5 class="mb-1">{{ item.title }}</h5>
+        <p {% if forloop.last %}class="mb-0"{% endif %}>{{ item.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->

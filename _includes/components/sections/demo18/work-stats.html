@@ -1,0 +1,37 @@
+<section class="wrapper bg-light">
+  <div class="container-card">
+    <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-light-500 pb-15" data-image-src="{{ page.hero.bg_image }}">
+      <div class="card-body py-14 px-0">
+        <div class="container">
+          <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+            <div class="col-lg-4 text-center text-lg-start">
+              <h3 class="display-4 mb-3 pe-xxl-15">{{ page.work_stats.title }}</h3>
+              <p class="lead fs-lg mb-0 pe-xxl-10">{{ page.work_stats.subtitle }}</p>
+            </div>
+            <!-- /column -->
+            <div class="col-lg-8 mt-lg-2">
+              <div class="row align-items-center counter-wrapper gy-6 text-center">
+                {% for stat in page.work_stats.stats %}
+                <div class="col-md-4">
+                  <img src="{{ stat.icon }}" class="svg-inject icon-svg icon-svg-sm solid-duo text-grape-fuchsia mb-3" alt="" />
+                  <h3 class="counter">{{ stat.count }}</h3>
+                  <p class="mb-0">{{ stat.text }}</p>
+                </div>
+                <!--/column -->
+                {% endfor %}
+              </div>
+              <!--/.row -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!--/.card-body -->
+    </div>
+    <!--/.card -->
+  </div>
+  <!-- /.container-card -->
+</section>
+<!-- /section -->

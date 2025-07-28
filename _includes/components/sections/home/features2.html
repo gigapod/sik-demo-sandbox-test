@@ -1,0 +1,33 @@
+<div class="row gx-lg-0 gy-10 align-items-center">
+  <div class="col-lg-7 position-relative order-lg-2">
+    <div class="position-absolute" style="top: 50%; left: 50%; width: 140%; height: auto; transform: translate(-50%,-50%); z-index:0"><img class="w-100" src="{{ '/assets/img/photos/blurry.png' | relative_url }}" alt=""></div>
+    <figure class="position-relative" style="z-index: 2;">
+      <img src="{{ page.features2.image | relative_url }}" srcset="{{ page.features2.image2x | relative_url }} 2x" alt="" />
+    </figure>
+  </div>
+  <!--/column -->
+  <div class="col-lg-4 me-auto">
+    {% for feature in page.features2.features %}
+    <div class="d-flex flex-row mb-6">
+      <div>
+        <div class="svg-bg bg-white rounded-xl shadow-xl me-5">
+          <img src="{{ '/assets/img/icons/solid/' | append: feature.icon | append: '.svg' | relative_url }}" class="svg-inject icon-svg solid-duo text-grape-fuchsia" alt="" />
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-1">{{ feature.title }}</h4>
+        <p class="mb-0">{{ feature.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->
+<div class="row mb-8 text-center mt-17 mt-md-19 mb-9 mb-md-11">
+  <div class="col-md-11 col-lg-10 col-xl-8 col-xxl-7 mx-auto">
+    <h2 class="display-2 mb-0 px-lg-10 px-xl-0">Build your website using the powerful features of Sandbox</h2>
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->

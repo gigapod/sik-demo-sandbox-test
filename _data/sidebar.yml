@@ -1,0 +1,17 @@
+widgets:
+  - name: search
+    title: "Search"
+  - name: about
+    title: "About Us"
+  - name: author-box
+    title: "About the Author"
+  - name: popular-posts
+    title: "Popular Posts"
+    limit: 5
+  - name: categories
+    title: "Browse Categories"
+  - name: tags
+    title: "Popular Tags"
+    limit: 10
+  - name: archives
+    title: "Archives"

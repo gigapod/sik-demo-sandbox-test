@@ -1,0 +1,41 @@
+<section class="wrapper overflow-hidden bg-soft-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
+        <h2 class="display-2 mb-4">{{ page.portfolio.title }}</h2>
+        <p class="lead fs-lg mb-11">{{ page.portfolio.subtitle }}</p>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="swiper-container swiper-auto swiper-auto-xs mb-8" data-margin="40" data-nav="false" data-dots="false" data-centered="true" data-loop="true" data-items-auto="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-resizeupdate="false" data-speed="7000">
+    <div class="swiper overflow-visible pe-none">
+      <div class="swiper-wrapper ticker">
+        {% for slide in page.portfolio.autoplay1 %}
+        <div class="swiper-slide"><figure class="rounded-xl shadow-xl"><img src="{{ slide.image }}" srcset="{{ slide.image2x }} 2x" alt="" /></figure></div>
+        {% endfor %}
+      </div>
+      <!--/.swiper-wrapper -->
+    </div>
+    <!-- /.swiper -->
+  </div>
+  <!-- /.swiper-container -->
+  <div class="swiper-container swiper-auto swiper-auto-xs" data-margin="40" data-nav="false" data-dots="false" data-centered="true" data-loop="true" data-items-auto="true" data-autoplay="true" data-autoplaytime="1" data-drag="false" data-resizeupdate="false" data-speed="7000">
+    <div class="swiper overflow-visible pe-none" dir="rtl">
+      <div class="swiper-wrapper ticker">
+        {% for slide in page.portfolio.autoplay2 %}
+        <div class="swiper-slide"><figure class="rounded-xl shadow-xl"><img src="{{ slide.image }}" srcset="{{ slide.image2x }} 2x" alt="" /></figure></div>
+        {% endfor %}
+      </div>
+      <!--/.swiper-wrapper -->
+    </div>
+    <!-- /.swiper -->
+  </div>
+  <!-- /.swiper-container -->
+  <div class="text-center mt-8 mb-15 mb-md-18 mb-lg-25">
+    <a href="{{ page.portfolio.button_url }}" class="btn btn-lg btn-primary rounded-xl">{{ page.portfolio.button_text }}</a>
+  </div>
+</section>
+<!-- /section -->

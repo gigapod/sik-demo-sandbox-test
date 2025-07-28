@@ -1,0 +1,32 @@
+<link rel="shortcut icon" href="{{site.data.theme.favicon | relative_url}}" />
+<link rel="stylesheet" href="{{ "/assets/css/plugins.css" | relative_url }}">
+{% if site.data.theme.font_icons_scheme %}
+<!-- Global Font Icons Scheme -->
+<link rel="stylesheet" href="{{ site.data.theme.font_icons_scheme }}">
+{% endif %}
+<link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+
+{% if site.data.theme.color_scheme %}
+<!-- Global Color Scheme for all Pages-->
+{% for stylesheet in site.data.theme.color_scheme %}
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/colors/{{stylesheet}}.css">
+{% endfor %}
+{% elsif page.custom_color %}
+{% for stylesheet in page.custom_color %}
+<!-- custom color page wise-->
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/colors/{{stylesheet}}.css">
+{% endfor %}
+{% endif %}
+
+{% if site.data.theme.font_scheme %}
+<!-- Global Font Scheme font-->
+{% for stylesheet in site.data.theme.font_scheme %}
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/fonts/{{ stylesheet }}.css">
+{% endfor %}
+{% elsif page.custom_font %}
+{% for stylesheet in page.custom_font %}
+<!-- Custom Font Scheme Page Wise-->
+<link rel="preload" type="text/css" href="{{ site.baseurl }}/assets/css/fonts/{{ stylesheet }}.css" onload="this.rel='stylesheet'">
+{% endfor %}
+{% endif %}
+

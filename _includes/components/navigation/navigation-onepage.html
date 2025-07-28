@@ -1,0 +1,5 @@
+<ul class="navbar-nav">
+  {% for link in site.data.navigation.onepage.links %}
+  <li class="nav-item"><a class="nav-link scroll" href="{{ link.url }}">{{ link.text }}</a></li>
+  {% endfor %}
+</ul>

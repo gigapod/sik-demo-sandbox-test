@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <!-- HEADER -->
+  <header class="wrapper bg-light">
+    {% include components/navbar/navbar.html 
+        classList="center-nav transparent navbar-light"
+        centerNav=true
+        logoAlt=true
+        otherClassList="w-100 d-flex ms-auto"
+        otherLanguageSelect=true
+        otherBtn=true
+        otherBtnClassList="btn btn-sm btn-primary rounded-pill"
+        otherBtnText="Contact"
+        otherBtnLink="/contact.html"
+    %}
+  </header>
+  <!-- /header -->
+{% include components/header/header-project-detail.html
+   bg_class="bg-image" 
+   bg_image=page.bg_image
+   overlay="bg-overlay"
+   text_class="text-white"
+   container_class="pt-17 pb-12 pt-md-19 pb-md-16"
+   center=true 
+%}
+
+<section class="wrapper bg-light wrapper-border">
+  <div class="container pt-14 pt-md-16 pb-13 pb-md-15">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <article>
+          <h2 class="display-6 mb-4">{{ page.about_title }}</h2>
+          <div class="row gx-0">
+            <div class="col-md-9 text-justify">
+              {{ content }}
+            </div>
+            <!--/column -->
+            <div class="col-md-2 ms-auto">
+              <ul class="list-unstyled">
+                {% if page.date %}
+                <li>
+                  <h5 class="mb-1">Date</h5>
+                  <p>{{ page.date | date: "%d %b %Y" }}</p>
+                </li>
+                {% endif %}
+                {% if page.client_name %}
+                <li>
+                  <h5 class="mb-1">Client Name</h5>
+                  <p>{{ page.client_name }}</p>
+                </li>
+                {% endif %}
+              </ul>
+              {% if page.project_url %}
+              <a href="{{ page.project_url }}" class="more hover">See Project</a>
+              {% endif %}
+            </div>
+            <!--/column -->
+          </div>
+          <!--/.row -->
+        </article>
+        <!-- /.project -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  
+  {% if page.carousel_images %}
+  <div class="container-fluid px-md-6">
+    <div class="swiper-container blog grid-view mb-17 mb-md-19" data-margin="30" data-nav="true" data-dots="true" data-items-xxl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for image in page.carousel_images %}
+          <div class="swiper-slide">
+            <figure class="rounded">
+              <img src="{{ image | relative_url }}" alt="{{ page.title }}" />
+            </figure>
+          </div>
+          <!--/.swiper-slide -->
+          {% endfor %}
+        </div>
+        <!--/.swiper-wrapper -->
+      </div>
+      <!-- /.swiper -->
+    </div>
+    <!-- /.swiper-container -->
+  </div>
+  <!-- /.container-fluid -->
+  {% endif %}
+</section>
+<!-- /section -->
+
+{% include components/project-navigation.html %}
+
+<!-- FOOTER -->
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-dark" 
+  text_color="text-inverse"
+  cta=false
+  newsletter=true
+%}
+<!-- /footer -->
+</div>
+<!-- /.content-wrapper -->

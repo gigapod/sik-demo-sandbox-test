@@ -1,0 +1,65 @@
+<section class="{{ page.case_studies.bg_class }}">
+  <div class="container py-15 py-md-17">
+    <div class="row text-center">
+      <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+        <h2 class="{{ page.case_studies.title_class }}">{{ page.case_studies.title_tag }}</h2>
+        <h3 class="{{ page.case_studies.main_title_class }}">{{ page.case_studies.main_title }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row grid-view gy-6">
+      {% assign sorted_projects = site.projects | where: "category", "Products" | reverse %}
+      {% for project in sorted_projects limit: 6 %}
+      <div class="col-md-6 col-lg-4">
+        <article>
+          <div class="card shadow-lg">
+            <figure class="card-img-top overlay overlay-1 hover-scale">
+              <a href="{{ project.url | relative_url }}"> 
+                <img src="{{ project.thumbnail | default: project.hero_image | relative_url }}" alt="{{ project.title }}" />
+              </a>
+              <figcaption>
+                <h5 class="from-top mb-0">Read More</h5>
+              </figcaption>
+            </figure>
+            <div class="card-body">
+              <div class="post-header">
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a class="link-dark" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                </h2>
+              </div>
+              <!-- /.post-header -->
+              <div class="post-content">
+                <p>{{ project.description | default: project.excerpt }}</p>
+              </div>
+              <!-- /.post-content -->
+            </div>
+            <!--/.card-body -->
+            <div class="card-footer">
+              <ul class="post-meta d-flex mb-0">
+                <li class="post-date">
+                  <i class="uil uil-calendar-alt"></i>
+                  <span>{{ project.date | date: "%d %b %Y" }}</span>
+                </li>
+                <li class="post-comments">
+                  <a href="{{ project.url | relative_url }}">
+                    <i class="uil uil-file-alt fs-15"></i>{{ project.category }}
+                  </a>
+                </li>
+              </ul>
+              <!-- /.post-meta -->
+            </div>
+            <!-- /.card-footer -->
+          </div>
+          <!-- /.card -->
+        </article>
+        <!-- /article -->
+      </div>
+      <!-- /column -->
+      {% endfor %}
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,127 @@
+{% assign container_padding = include.container_padding | default: site.data.footer.container_padding | default: "py-13 py-md-15" %}
+
+<div class="container {{ container_padding }}">
+<div class="row gy-6 gy-lg-0">
+  <div class="col-md-4 col-lg-3">
+    <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.blog.column_1.title | default: 'Popular Posts' }}</h4>
+    <ul class="image-list">
+      {% assign footer_posts = site.data.footer.blog.column_1.posts | default: site.posts %}
+      {% for post in footer_posts limit:3 %}
+        <li{% if forloop.index > 1 %} class="mt-5"{% endif %}>
+          <figure class="rounded">
+            <a href="{{ post.url | relative_url }}">
+              {% assign post_image = post.image | default: site.data.footer.blog.default_image | default: '/assets/img/photos/a' | append: forloop.index | append: '.webp' %}
+              <img src="{{ post_image | relative_url }}" alt="{{ post.title }}">
+            </a>
+          </figure>
+          <div class="post-content">
+            <h6 class="mb-2">
+              <a class="link-dark {{ include.lightText | default: 'text-reset' }}" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h6>
+            <ul class="post-meta">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ post.date | date: "%d %b %Y" }}</span></li>
+            </ul>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- /column -->
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.blog.column_2.tags.title | default: 'Tags' }}</h4>
+      <ul class="list-unstyled tag-list">
+        {% for tag in site.data.footer.blog.column_2.tags.items %}
+          <li>
+            <a href="{{ tag.url | default: '#' }}" class="btn btn-soft-ash {% if include.lightText %}text-white{% endif %} btn-sm rounded-pill">{{ tag.name }}</a>
+          </li>
+        {% endfor %}
+        {% if site.data.footer.blog.column_2.tags.items.size == 0 %}
+          <li><a href="#" class="btn btn-soft-ash {% if include.lightText %}text-white{% endif %} btn-sm rounded-pill">Still Life</a></li>
+          <li><a href="#" class="btn btn-soft-ash {% if include.lightText %}text-white{% endif %} btn-sm rounded-pill">Urban</a></li>
+          <li><a href="#" class="btn btn-soft-ash {% if include.lightText %}text-white{% endif %} btn-sm rounded-pill">Nature</a></li>
+          <li><a href="#" class="btn btn-soft-ash {% if include.lightText %}text-white{% endif %} btn-sm rounded-pill">Landscape</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.blog.column_2.categories.title | default: 'Categories' }}</h4>
+      <ul class="unordered-list {% if include.lightText %}text-reset bullet-white{% endif %}">
+        {% for category in site.data.footer.blog.column_2.categories.items %}
+          <li><a href="{{ category.url | default: '#' }}">{{ category.name }} ({{ category.count | default: '0' }})</a></li>
+        {% endfor %}
+        {% if site.data.footer.blog.column_2.categories.items.size == 0 %}
+          <li><a href="#">Lifestyle (21)</a></li>
+          <li><a href="#">Photography (19)</a></li>
+          <li><a href="#">Journal (16)</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.blog.column_3.title | default: 'Get in Touch' }}</h4>
+      <address>{{ site.data.footer.blog.column_3.address | default: site.data.theme.address | default: 'Moonshine St. 14/05 Light City, London, United Kingdom' }}</address>
+      <a href="mailto:{{ site.data.footer.blog.column_3.email | default: site.data.theme.email | default: 'info@email.com' }}">
+        {{ site.data.footer.blog.column_3.email | default: site.data.theme.email | default: 'info@email.com' }}
+      </a><br /> 
+      {{ site.data.footer.blog.column_3.phone | default: site.data.theme.phone | default: '00 (123) 456 78 90' }}
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.blog.column_3.social.title | default: 'Elsewhere' }}</h4>
+      <nav class="nav social {% if include.lightText %}social-white{% endif %}">
+        {% for social in site.data.social.social_accounts.links | default: site.data.theme.social_accounts.links %}
+          <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+        {% endfor %}
+        {% if site.data.social.social_accounts.links.size == 0 %}
+          <a href="#"><i class="uil uil-twitter"></i></a>
+          <a href="#"><i class="uil uil-facebook-f"></i></a>
+          <a href="#"><i class="uil uil-dribbble"></i></a>
+          <a href="#"><i class="uil uil-instagram"></i></a>
+          <a href="#"><i class="uil uil-youtube"></i></a>
+        {% endif %}
+      </nav>
+      <!-- /.social -->
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.blog.column_4.learn_more.title | default: 'Learn More' }}</h4>
+      <ul class="list-unstyled {% if include.lightText %}text-reset{% endif %} mb-0">
+        {% for link in site.data.footer.blog.column_4.learn_more.links %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        {% if site.data.footer.blog.column_4.learn_more.links.size == 0 %}
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Projects</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      <h4 class="widget-title {% if include.lightText %}text-white{% endif %} mb-3">{{ site.data.footer.blog.column_4.help.title | default: 'Need Help?' }}</h4>
+      <ul class="list-unstyled {% if include.lightText %}text-reset{% endif %} mb-0">
+        {% for link in site.data.footer.blog.column_4.help.links %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        {% if site.data.footer.blog.column_4.help.links.size == 0 %}
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Get Started</a></li>
+          <li><a href="#">Contact Us</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+</div>
+<!--/.row -->
+<p class="mt-6 mb-0 text-center">© {{ site.time | date: '%Y' }} {{ site.data.theme.company_name | default: site.title | default: 'Sandbox' }}. All rights reserved.</p>
+</div>

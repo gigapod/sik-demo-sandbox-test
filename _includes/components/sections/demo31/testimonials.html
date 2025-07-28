@@ -1,0 +1,50 @@
+<section class="wrapper bg-light">
+  <div class="container py-16 py-md-18">
+    <div class="{{ page.testimonials.bg_class }} mb-16 mb-md-18">
+      <div class="card-body py-14 px-lg-0">
+        <div class="row text-center">
+          <div class="col-lg-9 col-xl-8 mx-auto">
+            <h2 class="{{ page.testimonials.title_class }}">{{ page.testimonials.title }}</h2>
+            <h3 class="{{ page.testimonials.main_title_class }}">{{ page.testimonials.main_title }}</h3>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="row gx-lg-8 gx-xl-12 align-items-center">
+          <div class="col-lg-5 ms-auto col-xl-4 d-none d-lg-flex">
+            <div class="img-mask mask-3"><img src="{{ page.testimonials.image }}" srcset="{{ page.testimonials.image2x }} 2x" alt="" /></div>
+          </div>
+          <!--/column -->
+          <div class="col-lg-6 col-xl-6 col-xxl-5 me-auto">
+            <div class="swiper-container dots-start dots-closer mb-6" data-margin="30" data-dots="true">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  {% for testimonial in site.data.testimonials.testimonials %}
+                  <div class="swiper-slide">
+                    <span class="ratings five mb-3"></span>
+                    <blockquote class="border-0 fs-lg mb-0">
+                      <p>"{{ testimonial.quote }}"</p>
+                      <div class="blockquote-details">
+                        <div class="info ps-0">
+                          <h5 class="mb-1">{{ testimonial.name }}</h5>
+                          <p class="mb-0">{{ testimonial.position }}</p>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                  <!--/.swiper-slide -->
+                  {% endfor %}
+                </div>
+                <!--/.swiper-wrapper -->
+              </div>
+              <!-- /.swiper -->
+            </div>
+            <!-- /.swiper-container -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.card-body -->
+    </div>
+    <!--/.card -->

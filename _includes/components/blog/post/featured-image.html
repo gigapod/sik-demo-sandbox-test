@@ -1,0 +1,8 @@
+{% assign image_url = image_url | default: page.featured_image %}
+{% if image_url %}
+<figure class="card-img-top">
+  <img src="{{ image_url | relative_url }}" alt="{{ image_alt }}" loading="lazy" decoding="async">
+</figure>
+{% else %}
+<p>Inside featured image include: ❌ No image_url or fallback found.</p>
+{% endif %}

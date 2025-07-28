@@ -1,0 +1,124 @@
+<nav class="navbar navbar-expand-lg {{ include.classList }}">
+  {% if include.fancy != true %}
+    <div class="container justify-content-between align-items-center">
+  {% endif %}
+  {% if include.fancy %}
+    <div class="container">
+    <div class="navbar-collapse-wrapper bg-white d-lg-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
+  {% endif %}
+    <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none">
+      <div class="navbar-brand"><a href="{{ '/' | relative_url }}">
+        {% if include.logoBoth != true %}       
+          {% if include.logoLight != true %}
+            <img src="{{ site.data.theme.logo_1x | default: '/assets/img/logo.webp' | relative_url }}" 
+                 srcset="{{ site.data.theme.logo_2x | default: '/assets/img/logo@2x.webp' | relative_url }} 2x" alt="" />
+          {% endif %}
+          {% if include.logoLight %}
+            <img src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}" 
+                 srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+          {% endif %}
+        {% endif %}
+        {% if include.logoBoth %}
+          <img class="logo-dark" src="{{ site.data.theme.black_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}" 
+               srcset="{{ site.data.theme.black_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />
+          <img class="logo-light" src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}" 
+               srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+        {% endif %}
+      </a></div>
+      <div class="navbar-other ms-auto">
+        <ul class="navbar-nav flex-row align-items-center">
+          <li class="nav-item d-lg-none">
+            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    {% if include.fancy != true %}
+      <div class="navbar-collapse-wrapper d-flex flex-row align-items-center w-100">
+    {% endif %}
+    {% if include.fancy %}
+      <div class="navbar-collapse-inner d-flex flex-row align-items-center w-100 mt-0">
+    {% endif %}
+      <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+        <div class="offcanvas-header mx-lg-auto order-0 order-lg-1 d-lg-flex px-lg-15">
+          {% if include.logoBoth != true %}
+            {% if include.logoLight != true %}
+              <a href="{{ '/' | relative_url }}" class="transition-none d-none d-lg-flex">
+                <img src="{{ site.data.theme.logo_1x | default: '/assets/img/logo.webp' | relative_url }}" 
+                     srcset="{{ site.data.theme.logo_2x | default: '/assets/img/logo@2x.webp' | relative_url }} 2x" alt="" />
+              </a>
+            {% endif %}
+            {% if include.logoLight %}
+              <img class="transition-none d-none d-lg-flex logo-light" 
+                   src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}" 
+                   srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+            {% endif %}
+          {% endif %}
+          {% if include.logoBoth %}
+            <a href="{{ '/' | relative_url }}" class="transition-none d-none d-lg-flex">
+              <img class="logo-dark" src="{{ site.data.theme.black_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}" 
+                   srcset="{{ site.data.theme.black_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />
+              <img class="logo-light" src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}" 
+                   srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+            </a>
+          {% endif %}
+          <h3 class="text-white fs-30 mb-0 d-lg-none">{{ site.data.theme.site_name | default: 'Sandbox' }}</h3>
+          <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        {% if include.onePage != true and include.onePageDemo != true %}
+          {% if include.docs != true %}
+            {% include components/navigation/navigation.html centerLogo=true %}
+          {% endif %}
+          {% if include.docs %}
+            {% include components/navigation/docs-navigation.html centerLogo=true %}
+          {% endif %}
+        {% endif %}
+        
+        {% if include.onePage %}
+          {% include components/navigation/navigation-onepage.html centerLogo=true %}
+        {% endif %}
+        
+        {% if include.onePageDemo %}
+          {% include components/navigation/navigation-onepage-demo.html centerLogo=true %}
+        {% endif %}
+        
+        <div class="offcanvas-body d-lg-none order-4 mt-auto">
+          <div class="offcanvas-footer">
+            {% include components/navigation/offcanvas-footer.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  {% if include.fancy != true %}
+  </div>
+  {% endif %}
+  {% if include.fancy %}
+    </div>
+  </div>
+  {% endif %}
+</nav>
+
+{% if include.otherBtnModal %}
+  <!-- Include modals as needed -->
+  {% if include.otherBtnModal == "modal-signin" %}
+    {% include helpers/modal-signin.html %}
+  {% endif %}
+  {% if include.otherBtnModal == "modal-signup" %}
+    {% include helpers/modal-signup.html %}
+  {% endif %}
+{% endif %}
+
+{% if include.otherInfo %}
+  {% include components/navbar/offcanvas-info.html %}
+{% endif %}
+
+{% if include.otherShop %}
+  {% include components/navbar/partials/offcanvas-cart.html %}
+{% endif %}
+
+{% if include.otherSearch %}
+  {% include components/navbar/partials/offcanvas-search.html %}
+{% endif %}

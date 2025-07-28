@@ -1,0 +1,53 @@
+<section class="wrapper bg-light">
+  <div class="container pb-15 pb-md-17">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{page.tabs.title_prefix}}</h2>
+        <h3 class="display-3 mb-10 px-xl-10 px-xxl-15">{{page.tabs.title}}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <ul class="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
+      {% for tab in page.tabs.tabs_items %}
+      <li class="nav-item">
+        <a class="nav-link d-flex flex-row {% if tab.active %}active{% endif %}" data-bs-toggle="tab" href="#tab2-{{forloop.index}}">
+          <div><img src="{{tab.icon}}" class="svg-inject icon-svg icon-svg-sm solid-mono text-{{tab.icon_color}} me-4" alt="" /></div>
+          <div>
+            <h4>{{tab.title}}</h4>
+            <p>{{tab.text}}</p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <!-- /.nav-tabs -->
+    <div class="tab-content mt-6 mt-lg-8">
+      {% for tab in page.tabs.tabs_items %}
+      <div class="tab-pane fade {% if tab.active %}show active{% endif %}" id="tab2-{{forloop.index}}">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-lg-6 {% if tab.content_image_order == 2 %}order-lg-2{% endif %}">
+            <figure class="rounded shadow-lg"><img src="{{tab.content_image}}" srcset="{{tab.content_image2x}} 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-lg-6">
+            <h2 class="mb-3">{{tab.content_title}}</h2>
+            <p>{{tab.content_text}}</p>
+            <ul class="icon-list bullet-bg bullet-soft-{{tab.content_button_color}}">
+              {% for item in tab.content_list %}
+              <li><i class="uil uil-check"></i>{{item}}</li>
+              {% endfor %}
+            </ul>
+            <a href="{{tab.content_button_url}}" class="btn btn-{{tab.content_button_color}} mt-2">{{tab.content_button}}</a>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.tab-pane -->
+      {% endfor %}
+    </div>
+    <!-- /.tab-content -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

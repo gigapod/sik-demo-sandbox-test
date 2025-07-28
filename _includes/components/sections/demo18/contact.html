@@ -1,0 +1,44 @@
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-17">
+<div class="row gx-3 gy-10 align-items-center">
+  <div class="col-lg-6">
+    <figure><img class="w-auto" src="{{ page.contact.image }}" srcset="{{ page.contact.image2x }} 2x" alt="" /></figure>
+  </div>
+  <!--/column -->
+  <div class="col-lg-5 offset-lg-1">
+    <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">{{ page.contact.title_tag }}</h2>
+    <h3 class="display-4 mb-8">{{ page.contact.title }}</h3>
+    <div class="d-flex flex-row">
+      <div>
+        <img src="{{ page.contact.address.icon }}" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
+      </div>
+      <div>
+        <h5 class="mb-0">{{ page.contact.address.title }}</h5>
+        <address>{{ page.contact.address.text }}</address>
+      </div>
+    </div>
+    <div class="d-flex flex-row">
+      <div>
+        <img src="{{ page.contact.phone.icon }}" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
+      </div>
+      <div>
+        <h5 class="mb-0">{{ page.contact.phone.title }}</h5>
+        <p>{{ page.contact.phone.text }}</p>
+      </div>
+    </div>
+    <div class="d-flex flex-row">
+      <div>
+        <img src="{{ page.contact.email.icon }}" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
+      </div>
+      <div>
+        <h5 class="mb-0">{{ page.contact.email.title }}</h5>
+        <p class="mb-0"><a href="mailto:{{ page.contact.email.text }}" class="link-body">{{ page.contact.email.text }}</a></p>
+      </div>
+    </div>
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->
+</div>
+</section>
+<!-- /section -->

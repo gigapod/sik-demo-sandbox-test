@@ -1,0 +1,58 @@
+<section class="wrapper {{ page.testimonials.card_bg_class }}">
+  <div class="container py-15 pt-md-0 pb-md-17 text-center">
+    <div class="row text-center">
+      <div class="col-xl-9 mx-auto">
+        <div class="card shadow-lg mt-md-n16 mb-15 mb-md-17">
+          <div class="card-body p-9 p-xl-12">
+            <div class="row gx-0">
+              <div class="col-xxl-9 mx-auto">
+                <div class="swiper-container dots-closer mb-6" data-margin="30" data-dots="true">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      {% for testimonial in site.data.testimonials.testimonials %}
+                      <div class="swiper-slide">
+                        <span class="ratings five mb-3"></span>
+                        <blockquote class="border-0 fs-lg mb-2">
+                          <p>"{{ testimonial.quote }}"</p>
+                          <div class="blockquote-details justify-content-center">
+                            <img class="rounded-circle w-12" src="{{ testimonial.image }}" srcset="{{ testimonial.image2x }} 2x" alt="" />
+                            <div class="info">
+                              <h5 class="mb-1">{{ testimonial.name }}</h5>
+                              <p class="mb-0">{{ testimonial.position }}</p>
+                            </div>
+                          </div>
+                        </blockquote>
+                      </div>
+                      <!--/.swiper-slide -->
+                      {% endfor %}
+                    </div>
+                    <!--/.swiper-wrapper -->
+                  </div>
+                  <!--/.swiper -->
+                </div>
+                <!-- /.swiper-container -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto text-center">
+        <h2 class="{{ page.join_community.title_class }}">{{ page.join_community.title_tag }}</h2>
+        <h3 class="{{ page.join_community.main_title_class }}">{{ page.join_community.main_title }}</h3>
+        <a href="{{ page.join_community.button.url }}" class="{{ page.join_community.button.class }}">{{ page.join_community.button.label }}</a>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

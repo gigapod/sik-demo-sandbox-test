@@ -1,0 +1,30 @@
+<section class="wrapper bg-white">
+  <div class="container pt-14 pt-md-17">
+    <div class="row gx-3 gy-10 gy-lg-0 align-items-center">
+      <div class="col-lg-5 mx-auto order-lg-2">
+        <figure><img class="w-auto" src="{{ page.solutions.image }}" srcset="{{ page.solutions.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5 me-auto">
+        <h2 class="fs-16 text-uppercase text-grape mb-3">{{ page.solutions.title_tag }}</h2>
+        <h3 class="display-4 mb-5 pe-xxl-5">{{ page.solutions.title }}</h3>
+        <p class="mb-6">{{ page.solutions.text }}</p>
+        <div class="row align-items-center counter-wrapper gy-6">
+          {% for stat in page.solutions.stats %}
+          <div class="col-md-6">
+            <h3 class="counter counter-lg mb-1">{{ stat.value }}</h3>
+            <h6 class="fs-17 mb-1">{{ stat.label }}</h6>
+            <span class="ratings five"></span>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,26 @@
+<section class="wrapper bg-light">
+  <div class="container pb-15 pb-md-17">
+    <div class="row gx-md-5 gy-5 mt-n19">
+      {% for service in page.services.service_cards %}
+      <div class="col-md-6 col-xl-3">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <img src="{{service.icon}}" class="svg-inject icon-svg icon-svg-sm solid-mono text-{{service.icon_color}} mb-3" alt="" />
+            <h4>{{service.title}}</h4>
+            <p class="mb-2">{{service.text}}</p>
+            <a href="{{service.link_url}}" class="more hover link-{{service.link_color}}">{{service.link_text}}</a>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+    
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

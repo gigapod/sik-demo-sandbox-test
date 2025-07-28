@@ -1,0 +1,68 @@
+//----------------------------------------------------------//
+//	CLOSE BUTTON
+//----------------------------------------------------------//
+.btn-close {
+  font-family: "Unicons";
+  width: $btn-close-width;
+  height: $btn-close-height;
+  padding: $btn-close-padding-y $btn-close-padding-x;
+  background: none;
+  border: 0;
+  border-radius: 0.4rem;
+  
+  &::before {
+    content: $btn-close-content;
+    font-size: $btn-close-font-size;
+    color: $btn-close-color;
+  }
+  
+  &:hover {
+    background-color: $btn-close-hover-bg;
+    &::before {
+      color: $btn-close-hover-color;
+    }
+  }
+}
+
+// White variant - for dark backgrounds
+// Remove Bootstrap's default filter
+.btn-close-white {
+  filter: none;
+}
+
+// Our custom styling for white variant
+.btn-close-white {
+  background-color: $btn-close-light-bg;
+  
+  &::before {
+    color: $btn-close-light-color;
+  }
+  
+  &:hover {
+    background-color: $btn-close-light-hover-bg;
+    &::before {
+      color: $btn-close-light-hover-color;
+    }
+  }
+}
+
+// Dark mode support
+[data-bs-theme="dark"] .btn-close {
+  background-color: $btn-close-light-bg;
+  
+  &::before {
+    color: $btn-close-light-color;
+  }
+  
+  &:hover {
+    background-color: $btn-close-light-hover-bg;
+    &::before {
+      color: $btn-close-light-hover-color;
+    }
+  }
+}
+.btn-close[data-bs-dismiss="modal"] {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+}

@@ -1,0 +1,47 @@
+<section class="wrapper bg-light">
+  <div class="container py-10 py-md-12">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6">
+        <div class="row gx-md-5 gy-5 position-relative align-items-center">
+          <div class="col-6">
+            <img class="img-fluid rounded shadow-lg d-flex ms-auto" data-cue="fadeIn" data-delay="300" src="{{ page.features2.images[0].image }}" srcset="{{ page.features2.images[0].image2x }} 2x" alt="" />
+          </div>
+          <!-- /column -->
+          <div class="col-6">
+            <img class="img-fluid rounded shadow-lg mb-5" data-cue="fadeIn" data-delay="900" src="{{ page.features2.images[1].image }}" srcset="{{ page.features2.images[1].image2x }} 2x" alt="" />
+            <img class="img-fluid rounded shadow-lg d-flex col-10" data-cue="fadeIn" data-delay="1200" src="{{ page.features2.images[2].image }}" srcset="{{ page.features2.images[2].image2x }} 2x" alt="" />
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h3 class="display-4 mb-5">{{ page.features2.title }}</h3>
+        <p class="mb-5">{{ page.features2.text }}</p>
+        <div class="row gy-3">
+          <div class="col-xl-6">
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              {% for feature in page.features2.features limit:2 %}
+              <li{% if forloop.index == 2 %} class="mt-3"{% endif %}><span><i class="uil uil-check"></i></span><span>{{ feature.text }}</span></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <!--/column -->
+          <div class="col-xl-6">
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              {% for feature in page.features2.features offset:2 limit:2 %}
+              <li{% if forloop.index == 2 %} class="mt-3"{% endif %}><span><i class="uil uil-check"></i></span><span>{{ feature.text }}</span></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>

@@ -1,0 +1,56 @@
+{% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" %}
+{% assign related_by_tags = "" | split: "" %}
+
+{% for post in related_posts %}
+  {% assign intersect = post.tags | intersection: page.tags %}
+  {% if intersect.size > 0 %}
+    {% assign related_by_tags = related_by_tags | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% assign needed = 4 | minus: related_by_tags.size %}
+{% if needed > 0 %}
+  {% assign related_by_category = related_posts | where: "category", page.category | where_exp: "post", "post not in related_by_tags" | limit: needed %}
+  {% assign final_related = related_by_tags | concat: related_by_category %}
+{% else %}
+  {% assign final_related = related_by_tags %}
+{% endif %}
+
+{% assign final_related = final_related | slice: 0, 4 %}
+
+{% if final_related.size > 0 %}
+<h3 class="mb-6">{{ include.heading | default: "You Might Also Like" }}</h3>
+<div class="swiper-container blog grid-view mb-16" data-margin="30" data-dots="true" data-items-md="2" data-items-xs="1">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {% for related_post in final_related %}
+      <div class="swiper-slide">
+        <article>
+          <figure class="overlay overlay-1 hover-scale rounded mb-5">
+            <a href="{{ related_post.url }}"> 
+              <img src="{{ related_post.featured_image }}" alt="{{ related_post.title }}" />
+            </a>
+            <figcaption>
+              <h5 class="from-top mb-0">Read More</h5>
+            </figcaption>
+          </figure>
+          <div class="post-header">
+            <div class="post-category text-line">
+              <a href="/blog/category/{{ related_post.category | slugify }}/" class="hover" rel="category">{{ related_post.category }}</a>
+            </div>
+            <h2 class="post-title h3 mt-1 mb-3">
+              <a class="link-dark" href="{{ related_post.url }}">{{ related_post.title }}</a>
+            </h2>
+          </div>
+          <div class="post-footer">
+            <ul class="post-meta mb-0">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ related_post.date | date: "%d %b %Y" }}</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

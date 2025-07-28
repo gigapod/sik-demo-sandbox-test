@@ -1,0 +1,19 @@
+<section class="wrapper bg-light">
+  <div class="container pb-15 pb-md-17">
+    <div class="row gx-md-5 gy-5 mt-n18 mt-md-n19">
+      {% for benefit in page.benefits.items %}
+      <div class="col-md-6 col-xl-3">
+        <div class="card lift">
+          <div class="card-body">
+            <img src="/assets/img/icons/solid/{{ benefit.icon }}.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
+            <h4>{{ benefit.title }}</h4>
+            <p class="mb-0">{{ benefit.text }}</p>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->

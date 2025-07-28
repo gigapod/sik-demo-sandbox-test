@@ -1,0 +1,11 @@
+{% unless page.author or page.layout == 'blog/author' %}
+<div class="widget">
+  <h4 class="widget-title mb-3">{{ include.widget.title | default: "About" }}</h4>
+  <p>{{ site.data.theme.description }}</p>
+  <nav class="nav social">
+    {% for item in site.data.social.social_accounts.links %}
+    <a href="{{ item.url }}"><i class="{{ item.icon }}"></i></a>
+    {% endfor %}
+  </nav>
+</div>
+{% endunless %}

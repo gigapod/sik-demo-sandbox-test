@@ -1,0 +1,21 @@
+<section class="wrapper {{ include.background_class | default: 'bg-soft-primary' }} position-relative">
+    <div class="container pt-10 pb-17 pt-md-14 text-center">
+      <div class="row">
+        <div class="col-lg-8 mx-auto mb-5">
+          <h1 class="fs-15 text-uppercase {{ include.small_heading_color | default: 'text-muted' }} mb-3">{{ include.small_heading | default: 'Join Our Team' }}</h1>
+          <h3 class="display-1 mb-6">{{ include.headline | default: 'We bring solutions to make life easier for our customers.' }}</h3>
+          {% if include.cta_text and include.cta_url %}
+            <a href="{{ include.cta_url }}" class="btn btn-lg btn-primary rounded-pill">{{ include.cta_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% if include.divider %}
+      <div class="overflow-hidden">
+        <div class="divider text-light mx-n2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60"><path fill="currentColor" d="M0,0V60H1440V0A5771,5771,0,0,1,0,0Z"/></svg>
+        </div>
+      </div>
+    {% endif %}
+  </section>
+  

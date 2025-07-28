@@ -1,0 +1,54 @@
+<section class="wrapper bg-light">
+  <div class="container pt-16 pt-md-18 mb-25">
+    <div class="row text-center">
+      <div class="col-md-10 col-lg-7 mx-auto position-relative">
+        {% for doodle in page.how_it_works.doodles %}
+        <img src="{{ doodle.image }}" class="{{ doodle.class }} position-absolute d-none d-lg-block" data-delay="1800" style="{{ doodle.style }}" alt="">
+        {% endfor %}
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.how_it_works.title }}</h2>
+        <h3 class="display-3 mb-8 px-xl-6">{{ page.how_it_works.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row mb-lg-20 mb-xl-23">
+      <div class="col-xxl-11 mx-auto">
+        <div class="row gy-10 gy-lg-0 text-center d-flex align-items-center">
+          <div class="col-md-6 col-lg-4 mx-auto mb-n10 mb-lg-0">
+            <figure class="mx-auto"><img src="{{ page.how_it_works.device_image }}" srcset="{{ page.how_it_works.device_image2x }} 2x" alt=""></figure>
+          </div>
+          <!-- /column -->
+          <div class="w-100 d-lg-none"></div>
+          <div class="col-md-6 col-lg-4 order-lg-first">
+            {% assign steps = page.how_it_works.steps | slice: 0, 2 %}
+            {% for step in steps %}
+            <div class="{% if forloop.first %}mb-8{% endif %}">
+              <span class="fs-60 lh-1 mb-3 fw-normal text-gradient gradient-7">{{ step.number }}</span>
+              <h4 class="fs-20">{{ step.title }}</h4>
+              <p class="mb-0 px-xl-7">{{ step.text }}</p>
+            </div>
+            <!-- /div -->
+            {% endfor %}
+          </div>
+          <!-- /column -->
+          <div class="col-md-6 col-lg-4">
+            {% assign steps = page.how_it_works.steps | slice: 2, 2 %}
+            {% for step in steps %}
+            <div class="{% if forloop.first %}mb-8{% endif %}">
+              <span class="fs-60 lh-1 mb-3 fw-normal text-gradient gradient-7">{{ step.number }}</span>
+              <h4 class="fs-20">{{ step.title }}</h4>
+              <p class="mb-0 px-xl-7">{{ step.text }}</p>
+            </div>
+            <!-- /div -->
+            {% endfor %}
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

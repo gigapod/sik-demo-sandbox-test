@@ -1,0 +1,79 @@
+{% assign cta_title = cta_title | default: cta_data.title %}
+{% assign cta_text = cta_text | default: cta_data.text %}
+{% assign cta_button_text = cta_button_text | default: cta_data.button_text %}
+{% assign cta_button_url = cta_button_url | default: cta_data.button_url %}
+{% if show_cta %}
+<div class="container ">
+  <div class="card shadow-lg mt-n16 mt-md-n21 mb-15 mb-md-14">
+    <div class="row gx-0">
+      <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start d-none d-md-block" data-image-src="{{ include.cta_image | default: '/assets/img/photos/tm1.jpg' | relative_url }}">
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <div class="p-10 p-md-11 p-lg-13">
+          <h2 class="display-4 mb-3">{{ include.cta_title | default: "Let's Talk" }}</h2>
+          <p class="lead fs-lg">{{ include.cta_text | default: "Let's make something great together. We are trusted by over 5000+ clients. Join them by using our services and grow your business." }}</p>
+          <p>{{ include.cta_description | default: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." }}</p>
+          <a href="{{ include.cta_button_url | default: '#' }}" class="btn btn-primary rounded-pill mt-2">{{ include.cta_button_text | default: "Join Us" }}</a>
+        </div>
+        <!--/div -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.card -->
+</div>
+{% endif %}
+
+<div class="container pb-12 text-center">
+  <div class="row mt-n10 mt-lg-0">
+    <div class="col-xl-10 mx-auto">
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <div class="widget">
+            <h4 class="widget-title {{ widget_title_class }}">{{ site.data.footer.centered.address.title | default: 'Address' }}</h4>
+            <address>{{ site.data.footer.centered.address.text | default: site.data.theme.address | default: 'Moonshine St. 14/05 <br class="d-none d-md-block" /> Light City, London, UK' }}</address>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!--/column -->
+        <div class="col-md-4">
+          <div class="widget">
+            <h4 class="widget-title {{ widget_title_class }}">{{ site.data.footer.centered.phone.title | default: 'Phone' }}</h4>
+            <p>{{ site.data.footer.centered.phone.primary | default: site.data.theme.phone | default: '00 (123) 456 78 90' }} <br />{{ site.data.footer.centered.phone.secondary | default: '00 (987) 654 32 10' }}</p>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!--/column -->
+        <div class="col-md-4">
+          <div class="widget">
+            <h4 class="widget-title {{ widget_title_class }}">{{ site.data.footer.centered.email.title | default: 'E-mail' }}</h4>
+            <p>
+              <a href="mailto:{{ site.data.footer.centered.email.primary | default: site.data.theme.email | default: 'sandbox@email.com' }}" class="link-body">
+                {{ site.data.footer.centered.email.primary | default: site.data.theme.email | default: 'sandbox@email.com' }}
+              </a>
+              <br class="d-none d-md-block" />
+              <a href="mailto:{{ site.data.footer.centered.email.secondary | default: 'help@sandbox.com' }}" class="link-body">
+                {{ site.data.footer.centered.email.secondary | default: 'help@sandbox.com' }}
+              </a>
+            </p>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      <p>© {{ site.time | date: '%Y' }} {{ site.data.theme.company_name | default: site.title | default: 'Sandbox' }}. All rights reserved.</p>
+      <nav class="nav social justify-content-center{% if include.light_text %} social-white{% endif %}">
+        {% for social in site.data.social.social_accounts.links  %}
+          <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+        {% endfor %}
+      </nav>
+      <!-- /.social -->
+    </div>
+    <!-- /column -->
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->

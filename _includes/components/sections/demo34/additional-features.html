@@ -1,0 +1,26 @@
+<section class="wrapper bg-gradient-primary">
+  <div class="container pb-17 pb-md-20">
+    <div class="row gx-0 mb-14 mb-md-16">
+      <div class="col-9 col-sm-10 col-lg-9 mx-auto mt-n15 mt-md-n23" data-cues data-group="images">
+        <img class="img-fluid mx-auto rounded shadow-lg" data-cue="fadeIn" src="/assets/img/demos/de1.jpg" srcset="/assets/img/demos/de1@2x.jpg 2x" alt="" />
+        <img class="position-absolute rounded shadow-lg" data-cue="slideInRight" src="/assets/img/demos/de2.jpg" srcset="/assets/img/demos/de2@2x.jpg 2x" style="top: 25%; right:-12%; max-width:30%; height: auto;" alt="" />
+        <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="/assets/img/demos/de3.jpg" srcset="/assets/img/demos/de3@2x.jpg 2x" style="top: 15%; left:-15%; max-width:30%; height: auto;" alt="" />
+        <img class="position-absolute rounded shadow-lg" data-cue="slideInLeft" src="/assets/img/demos/de4.jpg" srcset="/assets/img/demos/de4@2x.jpg 2x" style="bottom: 15%; left:-13%; max-width:30%; height: auto;" alt="" />
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 gx-md-8 gy-10 text-center justify-content-center" data-cues="slideInDown" data-group="features-3">
+      {% for item in page.additional_features.items %}
+      <div class="col">
+        <img class="mb-4" src="/assets/img/demos/{{ item.icon }}.png" srcset="/assets/img/demos/{{ item.icon }}@2x.png 2x" alt="" />
+        <h4>{{ item.title | newline_to_br }}</h4>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

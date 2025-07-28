@@ -1,0 +1,26 @@
+<section class="wrapper bg-light">
+  <div class="container py-15 py-md-17">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+      <div class="col-lg-4">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.clients_section.title }}</h2>
+        <h3 class="display-3 mb-3 pe-xxl-5">{{ page.clients_section.subtitle }}</h3>
+        <p class="lead fs-lg mb-0 pe-xxl-7">{{ page.clients_section.description }}</p>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-8 mt-lg-4">
+        <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
+          {% for client in site.data.clients.clients %}
+          <div class="col">
+            <figure class="px-3 px-md-0 px-xxl-2"><img src="{{ client.image }}" alt="" /></figure>
+          </div>
+          <!--/column -->
+          {% endfor %}
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

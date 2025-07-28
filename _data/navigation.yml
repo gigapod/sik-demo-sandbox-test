@@ -1,0 +1,415 @@
+main:
+  - title: Demos
+    type: mega-menu-img
+    items:
+      - title: Demo1
+        url: /demo1/
+        image: /assets/img/demos/mi1.webp
+        image2x: /assets/img/demos/mi1@2x.webp
+      - title: Demo2
+        url: /demo2/
+        image: /assets/img/demos/mi2.webp
+        image2x: /assets/img/demos/mi2@2x.webp
+      - title: Demo3
+        url: /demo3/
+        image: /assets/img/demos/mi3.webp
+        image2x: /assets/img/demos/mi3@2x.webp
+      - title: Demo4
+        url: /demo4/
+        image: /assets/img/demos/mi4.webp
+        image2x: /assets/img/demos/mi4@2x.webp
+      - title: Demo5
+        url: /demo5/
+        image: /assets/img/demos/mi5.webp
+        image2x: /assets/img/demos/mi5@2x.webp
+      - title: Demo6
+        url: /demo6/
+        image: /assets/img/demos/mi6.webp
+        image2x: /assets/img/demos/mi6@2x.webp
+      - title: Demo7
+        url: /demo7/
+        image: /assets/img/demos/mi7.webp
+        image2x: /assets/img/demos/mi7@2x.webp
+      - title: Demo8
+        url: /demo8/
+        image: /assets/img/demos/mi8.webp
+        image2x: /assets/img/demos/mi8@2x.webp
+      - title: Demo9
+        url: /demo9/
+        image: /assets/img/demos/mi9.webp
+        image2x: /assets/img/demos/mi9@2x.webp
+      - title: Demo10
+        url: /demo10/
+        image: /assets/img/demos/mi10.webp
+        image2x: /assets/img/demos/mi10@2x.webp
+      - title: Demo11
+        url: /demo11/
+        image: /assets/img/demos/mi11.webp
+        image2x: /assets/img/demos/mi11@2x.webp
+      - title: Demo12
+        url: /demo12/
+        image: /assets/img/demos/mi12.webp
+        image2x: /assets/img/demos/mi12@2x.webp
+      - title: Demo13
+        url: /demo13/
+        image: /assets/img/demos/mi13.webp
+        image2x: /assets/img/demos/mi13@2x.webp
+      - title: Demo14
+        url: /demo14/
+        image: /assets/img/demos/mi14.webp
+        image2x: /assets/img/demos/mi14@2x.webp
+      - title: Demo15
+        url: /demo15/
+        image: /assets/img/demos/mi15.webp
+        image2x: /assets/img/demos/mi15@2x.webp
+      - title: Demo16
+        url: /demo16/
+        image: /assets/img/demos/mi16.webp
+        image2x: /assets/img/demos/mi16@2x.webp
+      - title: Demo17
+        url: /demo17/
+        image: /assets/img/demos/mi17.webp
+        image2x: /assets/img/demos/mi17@2x.webp
+      - title: Demo18
+        url: /demo18/
+        image: /assets/img/demos/mi18.webp
+        image2x: /assets/img/demos/mi18@2x.webp
+      - title: Demo19
+        url: /demo19/
+        image: /assets/img/demos/mi19.webp
+        image2x: /assets/img/demos/mi19@2x.webp
+      - title: Demo20
+        url: /demo20/
+        image: /assets/img/demos/mi20.webp
+        image2x: /assets/img/demos/mi20@2x.webp
+      - title: Demo21
+        url: /demo21/
+        image: /assets/img/demos/mi21.webp
+        image2x: /assets/img/demos/mi21@2x.webp
+      - title: Demo22
+        url: /demo22/
+        image: /assets/img/demos/mi22.webp
+        image2x: /assets/img/demos/mi22@2x.webp
+      - title: Demo23
+        url: /demo23/
+        image: /assets/img/demos/mi23.webp
+        image2x: /assets/img/demos/mi23@2x.webp
+      - title: Demo24
+        url: /demo24/
+        image: /assets/img/demos/mi24.webp
+        image2x: /assets/img/demos/mi24@2x.webp
+      - title: Demo25
+        url: /demo25/
+        image: /assets/img/demos/mi25.webp
+        image2x: /assets/img/demos/mi25@2x.webp
+      - title: Demo26
+        url: /demo26/
+        image: /assets/img/demos/mi26.webp
+        image2x: /assets/img/demos/mi26@2x.webp
+      - title: Demo27
+        url: /demo27/
+        image: /assets/img/demos/mi27.webp
+        image2x: /assets/img/demos/mi27@2x.webp
+      - title: Demo28
+        url: /demo28/
+        image: /assets/img/demos/mi28.webp
+        image2x: /assets/img/demos/mi28@2x.webp
+      - title: Demo29
+        url: /demo29/
+        image: /assets/img/demos/mi29.webp
+        image2x: /assets/img/demos/mi29@2x.webp
+      - title: Demo30
+        url: /demo30/
+        image: /assets/img/demos/mi30.webp
+        image2x: /assets/img/demos/mi30@2x.webp
+      - title: Demo31
+        url: /demo31/
+        image: /assets/img/demos/mi31.webp
+        image2x: /assets/img/demos/mi31@2x.webp
+      - title: Demo32
+        url: /demo32/
+        image: /assets/img/demos/mi32.webp
+        image2x: /assets/img/demos/mi32@2x.webp
+      - title: Demo33
+        url: /demo33/
+        image: /assets/img/demos/mi33.webp
+        image2x: /assets/img/demos/mi33@2x.webp
+      - title: Demo34
+        url: /demo34/
+        image: /assets/img/demos/mi34.webp
+        image2x: /assets/img/demos/mi34@2x.webp
+
+  - title: Pages
+    type: dropdown
+    items:
+      - title: Services
+        submenu:
+          - title: Services I
+            url: /services/
+          - title: Services II
+            url: /services2/
+      - title: About
+        submenu:
+          - title: About I
+            url: /about/
+          - title: About II
+            url: /about2/
+      - title: Contact
+        submenu:
+          - title: Contact I
+            url: /contact/
+          - title: Contact II
+            url: /contact2/
+          - title: Contact III
+            url: /contact3/
+      - title: Career
+        submenu:
+          - title: Job Listing I
+            url: /career/
+          - title: Job Listing II
+            url: /career2/
+          - title: Job Description
+            url: /career-job/
+      - title: Utility
+        submenu:
+          - title: 404 Not Found
+            url: /404/
+          - title: Sign In I
+            url: /signin/
+          - title: Sign In II
+            url: /signin2/
+          - title: Sign Up I
+            url: /signup/
+          - title: Sign Up II
+            url: /signup2/
+          - title: Terms
+            url: /terms/
+      - title: Onepage
+        url: /onepage/
+
+  - title: Projects
+    type: dropdown-columns
+    items:
+      - title: Project Pages
+        submenu:
+          - title: Projects I
+            url: /projects-tiles
+          - title: Projects II
+            url: /projects-masonry
+          - title: Projects III
+            url: /projects-filter-grid
+          - title: Projects IV
+            url: /projects-alternating
+      - title: Single Projects
+        submenu:
+          - title: Single Project I
+            url: /projects/sample-with-slider/
+          - title: Single Project II
+            url: /projects/sample-banner-image/
+          - title: Single Project III
+            url: /projects/sample-bg-overlay/
+          - title: Single Project IV
+            url: /projects/sample-featured-image/
+
+  - title: Blog
+    type: dropdown
+    items:
+      - title: Blog without Sidebar
+        url: /blog/
+      - title: Blog with Sidebar
+        url: /blog-right-sidebar/
+      - title: Blog with Left Sidebar
+        url: /blog-left-sidebar/
+      - title: Blog Posts
+        submenu:
+          - title: Post without Sidebar
+            url: /blog/standard-post-layout-example/
+          - title: Post with Sidebar
+            url: /blog/overlay-post-layout-example/
+          - title: Post with Left Sidebar
+            url: /blog/sidebar-post-layout-example/
+
+  - title: Blocks
+    type: mega-menu-icon
+    items:
+      - title: About
+        url: /docs/blocks/about/
+        icon: /assets/img/demos/block1.svg
+      - title: Blog
+        url: /docs/blocks/blog/
+        icon: /assets/img/demos/block2.svg
+      - title: Call to Action
+        url: /docs/blocks/call-to-action/
+        icon: /assets/img/demos/block3.svg
+      - title: Clients
+        url: /docs/blocks/clients/
+        icon: /assets/img/demos/block4.svg
+      - title: Contact
+        url: /docs/blocks/contact/
+        icon: /assets/img/demos/block5.svg
+      - title: Facts
+        url: /docs/blocks/facts/
+        icon: /assets/img/demos/block6.svg
+      - title: FAQ
+        url: /docs/blocks/faq/
+        icon: /assets/img/demos/block7.svg
+      - title: Features
+        url: /docs/blocks/features/
+        icon: /assets/img/demos/block8.svg
+      - title: Footer
+        url: /docs/blocks/footer/
+        icon: /assets/img/demos/block9.svg
+      - title: Hero
+        url: /docs/blocks/hero/
+        icon: /assets/img/demos/block10.svg
+      - title: Misc
+        url: /docs/blocks/misc/
+        icon: /assets/img/demos/block17.svg
+      - title: Navbar
+        url: /docs/blocks/navbar/
+        icon: /assets/img/demos/block11.svg
+      - title: Portfolio
+        url: /docs/blocks/portfolio/
+        icon: /assets/img/demos/block12.svg
+      - title: Pricing
+        url: /docs/blocks/pricing/
+        icon: /assets/img/demos/block13.svg
+      - title: Process
+        url: /docs/blocks/process/
+        icon: /assets/img/demos/block14.svg
+      - title: Team
+        url: /docs/blocks/team/
+        icon: /assets/img/demos/block15.svg
+      - title: Testimonials
+        url: /docs/blocks/testimonials/
+        icon: /assets/img/demos/block16.svg
+
+  - title: Documentation
+    type: mega-menu
+    items:
+      - column: 0
+        col: 4
+        title: Usage
+        cc: 2
+        pb: 1
+        submenu:
+          - title: Get Started
+            url: /docs/index/
+          - title: Site Config
+            url: /docs/config/
+          - title: Settings
+            url: /docs/settings/
+          - title: Navigation
+            url: /docs/navigation/
+          - title: Authors
+            url: /docs/authors/
+          - title: Data Files
+            url: /docs/data-files/
+          - title: Projects
+            url: /docs/projects/
+          - title: Posts
+            url: /docs/posts/
+          - title: components
+            url: /docs/component-variations/
+          - title: Demo Pages
+            url: /docs/demo-pages/
+          - title: Rake Guide
+            url: /docs/rake-guide/
+          - title: Without Rake
+            url: /docs/without-rake-guide/
+          - title: Changelog
+            url: /docs/changelog/
+          - title: Credits
+            url: /docs/credits/
+        mt: 6
+        second_title: Styleguide
+        second_submenu:
+          - title: Colors
+            url: /docs/styleguide/colors/
+          - title: Fonts
+            url: /docs/styleguide/fonts/
+          - title: SVG Icons
+            url: /docs/styleguide/icons-svg/
+          - title: Font Icons
+            url: /docs/styleguide/icons-font/
+          - title: Illustrations
+            url: /docs/styleguide/illustrations/
+          - title: Backgrounds
+            url: /docs/styleguide/backgrounds/
+          - title: Misc
+            url: /docs/styleguide/misc/
+      - column: 1
+        col: 8
+        title: Elements
+        cc: 3
+        submenu:
+          - title: Accordion
+            url: /docs/elements/accordion/
+          - title: Alerts
+            url: /docs/elements/alerts/
+          - title: Animations
+            url: /docs/elements/animations/
+          - title: Avatars
+            url: /docs/elements/avatars/
+          - title: Background
+            url: /docs/elements/background/
+          - title: Badges
+            url: /docs/elements/badges/
+          - title: Buttons
+            url: /docs/elements/buttons/
+          - title: Card
+            url: /docs/elements/card/
+          - title: Carousel
+            url: /docs/elements/carousel/
+          - title: Dividers
+            url: /docs/elements/dividers/
+          - title: Form Elements
+            url: /docs/elements/form-elements/
+          - title: Image Hover
+            url: /docs/elements/image-hover/
+          - title: Image Mask
+            url: /docs/elements/image-mask/
+          - title: Lightbox
+            url: /docs/elements/lightbox/
+          - title: Media Player
+            url: /docs/elements/player/
+          - title: Modal
+            url: /docs/elements/modal/
+          - title: Pagination
+            url: /docs/elements/pagination/
+          - title: Progressbar
+            url: /docs/elements/progressbar/
+          - title: Shadows
+            url: /docs/elements/shadows/
+          - title: Shapes
+            url: /docs/elements/shapes/
+          - title: Tables
+            url: /docs/elements/tables/
+          - title: Tabs
+            url: /docs/elements/tabs/
+          - title: Text Animations
+            url: /docs/elements/text-animations/
+          - title: Text Highlight
+            url: /docs/elements/text-highlight/
+          - title: Tiles
+            url: /docs/elements/tiles/
+          - title: Tooltips & Popovers
+            url: /docs/elements/tooltips-popovers/
+          - title: Typography
+            url: /docs/elements/typography/
+
+# One-page navigation configuration
+onepage:
+  links:
+    - text: Home
+      url: "#home"
+    - text: About
+      url: "#about"
+    - text: Services
+      url: "#services"
+    - text: Process
+      url: "#process"
+    - text: Testimonials
+      url: "#testimonials"
+    - text: Contact
+      url: "#contact"

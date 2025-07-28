@@ -1,0 +1,29 @@
+<section class="wrapper bg-light">
+  <div class="container pt-14 pt-md-17">
+<div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center">
+  <div class="col-md-8 col-lg-6 position-relative">
+    <a href="{{ page.how_it_works.video_url }}" class="btn btn-circle btn-primary btn-play ripple mx-auto mb-5 position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>
+    <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
+    <figure class="rounded"><img src="{{ page.how_it_works.image }}" srcset="{{ page.how_it_works.image2x }} 2x" alt=""></figure>
+  </div>
+  <!--/column -->
+  <div class="col-lg-5 col-xl-4 offset-lg-1">
+    <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.how_it_works.title }}</h2>
+    <h3 class="display-4 mb-7">{{ page.how_it_works.subtitle }}</h3>
+    {% for feature in page.how_it_works.features %}
+    <div class="d-flex flex-row mb-5">
+      <div>
+        <img src="{{ feature.icon }}" class="svg-inject icon-svg icon-svg-md {{ feature.icon_color }} me-5" alt="" />
+      </div>
+      <div>
+        <h4 class="mb-1">{{ feature.title }}</h4>
+        <p class="mb-0">{{ feature.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!--/column -->
+</div>
+<!--/.row -->
+</div>
+</section>

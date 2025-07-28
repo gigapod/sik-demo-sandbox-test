@@ -1,0 +1,25 @@
+<section class="wrapper bg-light position-relative {{ page.hero.min_height }} d-lg-flex align-items-center">
+  <div class="rounded-4-lg-start col-lg-6 order-lg-2 position-lg-absolute top-0 end-0 image-wrapper bg-image bg-cover h-100 min-vh-50" data-image-src="{{ page.hero.image }}">
+  </div>
+  <!--/column -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="mt-10 mt-md-11 mt-lg-n10 px-10 px-md-11 ps-lg-0 pe-lg-13 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600">
+          <h1 class="display-1 mb-5">{{ page.hero.title }}</h1>
+          <p class="lead fs-25 lh-sm mb-7 pe-md-10">{{ page.hero.subtitle }}</p>
+          <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
+            {% for button in page.hero.buttons %}
+            <span><a href="{{ button.url }}" class="{{ button.class }}">{{ button.label }}</a></span>
+            {% endfor %}
+          </div>
+        </div>
+        <!--/div -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

@@ -1,0 +1,22 @@
+{% assign author_name = page.author | default: page.name %}
+
+{% assign author_data = site.authors | where: "name", author_name | first %}
+
+{% if author_data %}
+  <div class="widget">
+    <div class="author-info text-center">
+      <img src="{{ author_data.avatar }}" alt="{{ author_data.name }}" class="rounded-circle mb-3" width="100" height="100" />
+      <h5>{{ author_data.name }}</h5>
+      <p class="small">{{ author_data.position }} — {{ author_data.location }}</p>
+      <p>{{ author_data.bio }}</p>
+      <ul class="list-inline mt-2">
+        {% for social in author_data.social %}
+        <li class="list-inline-item">
+          <a href="{{ social.url }}" target="_blank"><i class="uil uil-{{ social.icon }}"></i></a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% else %}
+{% endif %}

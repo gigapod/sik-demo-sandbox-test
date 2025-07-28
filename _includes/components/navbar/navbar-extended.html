@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg extended navbar-light navbar-bg-light caret-none">
+  <div class="container flex-lg-column">
+    <div class="topbar d-flex flex-row w-100 justify-content-between align-items-center">
+      <div class="navbar-brand">
+        <a href="{{ '/' | relative_url }}">
+          {% if include.logoAlt %}
+            <img src="{{ '/assets/img/logo-dark.png' | relative_url }}" 
+                 srcset="{{ '/assets/img/logo-dark@2x.png' | relative_url }} 2x" alt="" />
+          {% else %}
+            <img src="{{ '/assets/img/logo.png' | relative_url }}" 
+                 srcset="{{ '/assets/img/logo@2x.png' | relative_url }} 2x" alt="" />
+          {% endif %}
+        </a>
+      </div>
+      <div class="navbar-other ms-auto">
+        <ul class="navbar-nav flex-row align-items-center">
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i class="uil uil-info-circle"></i></a></li>
+          {% if include.otherLanguageSelect %}
+        <li class="nav-item dropdown language-select text-uppercase">
+          <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ site.data.theme.default_language | default: 'En' }}
+          </a>
+          <ul class="dropdown-menu">
+            {% for language in site.data.theme.languages %}
+            <li class="nav-item"><a class="dropdown-item" href="{{ language.url }}">{{ language.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+          <li class="nav-item d-lg-none">
+            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+          </li>
+        </ul>
+        <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-other -->
+    </div>
+    <!-- /.d-flex -->
+    <div class="navbar-collapse-wrapper {{ include.classList | default: 'bg-white' }} d-flex flex-row align-items-center">
+      <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+        <div class="offcanvas-header d-lg-none">
+          <h3 class="text-white fs-30 mb-0">{{ site.data.theme.site_name | default: 'Sandbox' }}</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column h-100">
+          {% if include.onePage %}
+            {% include components/navigation/navigation-onepage.html %}
+          {% elsif include.onePageDemo %}
+            {% include components/navigation/navigation-onepage-demo.html %}
+          {% elsif include.docs %}
+            {% include components/navigation/navigation-docs.html %}
+          {% else %}
+            {% include components/navigation/navigation.html %}
+          {% endif %}
+          
+          <div class="offcanvas-footer d-lg-none">
+            <div>
+              <a href="mailto:{{ site.data.theme.email | default: 'info@email.com' }}" class="link-inverse">{{ site.data.theme.email | default: 'info@email.com' }}</a>
+              <br>{{ site.data.theme.phone_number | default: '00 (123) 456 78 90' }}<br>
+              <nav class="nav social social-white mt-4">
+                {% for social in site.data.theme.social_accounts.links limit:site.data.theme.social_accounts.links_shown %}
+                  <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                {% endfor %}
+              </nav>
+            </div>
+          </div>
+          <!-- /.offcanvas-footer -->
+        </div>
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="navbar-other ms-auto w-100 d-none d-lg-block">
+        <nav class="nav social social-muted justify-content-end text-end">
+          {% assign limit = site.data.social.social_accounts.links_shown | default: 4 %}
+            {% for social in site.data.social.social_accounts.links limit:limit %}
+            <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+            {% endfor %}
+        </nav>
+        <!-- /.social -->
+      </div>
+      <!-- /.navbar-other -->
+    </div>
+    <!-- /.navbar-collapse-wrapper -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- /.navbar -->

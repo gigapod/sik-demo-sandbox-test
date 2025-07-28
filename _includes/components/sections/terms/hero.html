@@ -1,0 +1,25 @@
+<section class="wrapper {{ page.hero.bg_color }}">
+  <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+        <h1 class="display-1 mb-3">{{ page.hero.title }}</h1>
+        <nav class="d-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            {% for item in page.hero.breadcrumb %}
+              {% if item.url != "" %}
+              <li class="breadcrumb-item"><a href="{{ item.url }}">{{ item.label }}</a></li>
+              {% else %}
+              <li class="breadcrumb-item active" aria-current="page">{{ item.label }}</li>
+              {% endif %}
+            {% endfor %}
+          </ol>
+        </nav>
+        <!-- /nav -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

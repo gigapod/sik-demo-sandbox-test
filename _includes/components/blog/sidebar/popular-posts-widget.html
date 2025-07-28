@@ -1,0 +1,15 @@
+<div class="widget">
+  <h4 class="widget-title mb-3">{{ include.widget.title | default: "Popular Posts" }}</h4>
+  {% assign post_limit = include.widget.limit | default: 3 %}
+  <ul class="image-list">
+    {% for post in site.posts limit:post_limit %}
+    <li>
+      <figure class="rounded"><a href="{{ post.url }}"><img src="{{ post.featured_image | default: '/assets/img/photos/a1.webp' }}" alt="{{ post.title }}" /></a></figure>
+      <div class="post-content">
+        <h6 class="mb-1"><a class="link-dark" href="{{ post.url }}">{{ post.title }}</a></h6>
+        <div class="post-meta"><span class="post-date"><i class="uil uil-calendar-alt"></i>{{ post.date | date: "%d %b %Y" }}</span></div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

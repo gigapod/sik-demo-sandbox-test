@@ -1,0 +1,39 @@
+<section class="wrapper bg-light">
+  <div class="container py-16 py-md-18">
+    <div class="row text-center">
+      <div class="col-md-11 col-lg-9 col-xl-8 col-xxl-7 mx-auto position-relative">
+        {% for doodle in page.why_choose.doodles %}
+        <img src="{{ doodle.image }}" class="{{ doodle.class }} position-absolute d-none d-lg-block" style="{{ doodle.style }}" alt="">
+        {% endfor %}
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.why_choose.title }}</h2>
+        <h3 class="display-3 mb-11 px-xl-10 px-xxl-13 text-center">{{ page.why_choose.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row d-flex align-items-start">
+      <div class="col-lg-6 position-lg-sticky" style="top: 8rem;">
+        <figure><img src="{{ page.why_choose.device_image }}" srcset="{{ page.why_choose.device_image2x }} 2x" alt=""></figure>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-5 ms-auto">
+        {% for reason in page.why_choose.reasons %}
+        <div class="d-flex flex-row mb-8">
+          <div>
+            <div class="svg-bg svg-bg-lg {{ reason.color }} rounded-xl me-5">
+              <img src="/assets/img/icons/solid/{{ reason.icon }}.svg" class="svg-inject icon-svg solid text-navy" alt="" />
+            </div>
+          </div>
+          <div>
+            <h4 class="fs-20">{{ reason.title }}</h4>
+            <p>{{ reason.text }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

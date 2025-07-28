@@ -1,0 +1,29 @@
+<section class="wrapper bg-white">
+  <div class="container mb-15 mb-md-17">
+    <div class="row">
+      <div class="col-xl-11 mx-auto">
+        <div class="row gx-md-8 gx-xl-12 gy-10 px-lg-5">
+          {% for faq in page.faqs.items %}
+          <div class="col-lg-6">
+            <div class="d-flex flex-row">
+              <div>
+                <img src="/assets/img/icons/lineal/{{ faq.icon }}.svg" class="svg-inject icon-svg icon-svg-sm text-{{ faq.icon_color }} me-5 mt-1" alt="" />
+              </div>
+              <div>
+                <h4 class="fs-20 ls-sm">{{ faq.title }}</h4>
+                <p class="mb-0">{{ faq.text }}</p>
+              </div>
+            </div>
+          </div>
+          <!-- /column -->
+          {% endfor %}
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

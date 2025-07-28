@@ -1,0 +1,72 @@
+<section class="wrapper bg-white">
+  <div class="container py-15 py-md-17">
+    <div class="row text-center">
+      <div class="col-lg-10 col-xl-7 col-xxl-6 mx-auto">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">{{ page.case_studies.title_tag }}</h2>
+        <h3 class="display-3 ls-sm mb-10">{{ page.case_studies.title }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="swiper-container blog grid-view mb-10" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% assign featured_projects = site.projects | where: "category", "Products" | reverse %}
+          {% for project in featured_projects limit: 6 %}
+          <div class="swiper-slide">
+            <article>
+              <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                <a href="{{ project.url | relative_url }}"> 
+                  <img src="{{ project.thumbnail | default: project.hero_image }}" alt="{{ project.title }}" />
+                </a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                {% if project.category %}
+                <div class="post-category text-line mb-3 text-{{ project.color | default: 'primary' }}">
+                  {{ project.category }}
+                </div>
+                {% endif %}
+                <h2 class="post-title h3 ls-sm mb-3">
+                  <a class="link-dark" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+                </h2>
+                {% if project.description %}
+                <p class="mb-3">{{ project.description | truncate: 100 }}</p>
+                {% endif %}
+              </div>
+              <!-- /.post-header -->
+              <div class="post-footer">
+                <ul class="post-meta">
+                  {% if project.date %}
+                  <li class="post-date">
+                    <i class="uil uil-calendar-alt"></i>
+                    <span>{{ project.date | date: "%d %b %Y" }}</span>
+                  </li>
+                  {% endif %}
+                  {% if project.client_name %}
+                  <li class="post-client">
+                    <i class="uil uil-user"></i>
+                    <span>{{ project.client_name }}</span>
+                  </li>
+                  {% endif %}
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+              <!-- /.post-footer -->
+            </article>
+            <!-- /article -->
+          </div>
+          <!--/.swiper-slide -->
+          {% endfor %}
+        </div>
+        <!--/.swiper-wrapper -->
+      </div>
+      <!-- /.swiper -->
+    </div>
+    <!-- /.swiper-container -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

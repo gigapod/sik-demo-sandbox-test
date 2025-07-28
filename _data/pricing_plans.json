@@ -1,0 +1,194 @@
+
+{
+  "plans": [
+   {
+     "name": "Basic Plan",
+     "svg_icon": "shopping-basket.svg",
+     "icon": "uil uil-shopping-bag",
+     "cardHighlightClass": "shadow-lg",
+     "iconButtonHighlightClass": "btn-soft-primary",
+     "planHighlightClass": "btn-soft-primary",
+     "pricing": {
+        "monthly": { "amount": 9, "currency": "$", "duration": "mo" },
+        "yearly": { "amount": 99, "currency": "$", "duration": "yr" }
+     },
+     "features": [
+       {
+         "name": "Project",
+         "values": ["1"],
+         "enabled": true
+       },
+       {
+         "name": "API Access",
+         "values": ["100K"],
+         "enabled": true
+       },
+       {
+         "name": "Storage",
+         "values": ["100MB"],
+         "enabled": true
+       },
+       {
+         "name": "Weekly Reports",
+         "values": ["-"],
+         "enabled": false
+       },
+       {
+         "name": "24/7 Support",
+         "values": ["-"],
+         "enabled": false
+       }
+     ],
+     "choose_plan_btn": [
+      {
+        "text": "Choose Plan",
+        "link": "#",
+        "shape": "rounded-pill",
+        "color": "btn-soft-primary"
+      }
+     ]
+   },
+   {
+     "name": "Premium Plan",
+     "svg_icon": "home.svg",
+     "icon": "uil uil-shopping-cart-alt",
+     "cardHighlightClass": "shadow-lg",
+     "iconButtonHighlightClass": "btn-soft-primary",
+     "planHighlightClass": "popular ",
+     "pricing": {
+      "monthly": { "amount": 19, "currency": "$", "duration": "mo" },
+      "yearly": { "amount": 199, "currency": "$", "duration": "yr" }
+    },
+     "features": [
+       {
+         "name": "Project",
+         "values": ["5"],
+         "enabled": true
+       },
+       {
+         "name": "API Access",
+         "values": ["200K"],
+         "enabled": true
+       },
+       {
+         "name": "Storage",
+         "values": ["200MB"],
+         "enabled": true
+       },
+       {
+         "name": "Weekly Reports",
+         "values": [""],
+         "enabled": true
+       },
+       {
+         "name": "24/7 Support",
+         "values": ["-"],
+         "enabled": false
+       }
+     ],
+     "choose_plan_btn": [
+      {
+        "text": "Choose Plan",
+        "link": "#",
+        "shape": "rounded-pill",
+        "color": "btn-soft-primary"
+      }
+     ]
+   },
+   {
+     "name": "Corporate Plan",
+     "svg_icon": "briefcase-2.svg",
+     "icon": "uil uil-store",
+     "cardHighlightClass": "bg-soft-primary",
+     "iconButtonHighlightClass": "btn-primary",
+     "planHighlightClass": "",
+     "pricing": {
+      "monthly": { "amount": 29, "currency": "$", "duration": "mo" },
+      "yearly": { "amount": 299, "currency": "$", "duration": "yr" }
+    },
+     "features": [
+       {
+         "name": "Project",
+         "values": ["20"],
+         "enabled": true
+       },
+       {
+         "name": "API Access",
+         "values": ["300K"],
+         "enabled": true
+       },
+       {
+         "name": "Storage",
+         "values": ["500MB"],
+         "enabled": true
+       },
+       {
+         "name": "Weekly Reports",
+         "values": [""],
+         "enabled": true
+       },
+       {
+         "name": "24/7 Support",
+         "values": [""],
+         "enabled": true
+       }
+     ],
+     "choose_plan_btn": [
+      {
+        "text": "Choose Plan",
+        "link": "#",
+        "shape": "rounded-pill",
+        "color": "btn-primary"
+      }
+     ]
+   },
+   {
+     "name": "Business Plan",
+     "svg_icon": "shopping-basket.svg",
+     "icon": "uil uil-store-alt",
+     "cardHighlightClass": "shadow-lg",
+     "iconButtonHighlightClass": "btn-soft-primary",
+     "planHighlightClass": "",
+     "pricing": {
+      "monthly": { "amount": 49, "currency": "$", "duration": "mo" },
+      "yearly": { "amount": 499, "currency": "$", "duration": "yr" }
+    },
+     "features": [
+       {
+         "name": "Project",
+         "values": ["90"],
+         "enabled": true
+       },
+       {
+         "name": "API Access",
+         "values": ["900K"],
+         "enabled": true
+       },
+       {
+         "name": "Storage",
+         "values": ["900MB"],
+         "enabled": true
+       },
+       {
+         "name": "Weekly Reports",
+         "values": [""],
+         "enabled": true
+       },
+       {
+         "name": "24/7 Support",
+         "values": [""],
+         "enabled": true
+       }
+     ],
+     "choose_plan_btn": [
+      {
+        "text": "Choose Plan",
+        "link": "#",
+        "shape": "rounded-pill",
+        "color": "btn-soft-primary"
+      }
+     ]
+   }
+  ]
+ }
+ 

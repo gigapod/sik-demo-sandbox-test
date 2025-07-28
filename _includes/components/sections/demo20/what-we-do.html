@@ -1,0 +1,33 @@
+<section class="wrapper bg-light">
+  <div class="container py-15 py-md-17">
+    <div class="row text-center mb-10">
+      <div class="col-md-10 col-lg-9 col-xxl-8 mx-auto">
+        <h2 class="fs-16 text-uppercase text-muted mb-3">{{ page.what_we_do.title }}</h2>
+        <h3 class="display-3 px-xl-10 mb-0">{{ page.what_we_do.subtitle }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    {% for service in page.what_we_do.services %}
+    <div class="row gx-lg-0 gy-10 {% unless forloop.last %}mb-15 mb-md-17{% endunless %} align-items-center">
+      <div class="col-lg-6 {% if service.image_right %}order-lg-2 ms-auto{% endif %}">
+        <figure class="rounded mb-0"><img class="img-fluid" src="{{ service.image }}" srcset="{{ service.image2x }} 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-5 {% if service.image_right %}{% else %}ms-auto{% endif %}">
+        <h3 class="fs-28 mb-3">{{ service.title }}</h3>
+        <p>{{ service.text }}</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          {% for feature in service.features %}
+          <li><span><i class="uil uil-check"></i></span><span>{{ feature }}</span></li>
+          {% endfor %}
+        </ul>
+        <a href="{{ service.button.url }}" class="btn btn-soft-primary rounded-pill mt-2 mb-0">{{ service.button.label }}</a>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    {% endfor %}
+  </div>
+  <!-- /.container -->
+</section>

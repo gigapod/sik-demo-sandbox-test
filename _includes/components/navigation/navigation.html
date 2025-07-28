@@ -1,0 +1,392 @@
+{% if include.centerLogo %}
+{% assign total_items = site.data.navigation.main.size %}
+{% assign middle_point = total_items | divided_by: 2 %}
+
+<div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
+  <ul class="navbar-nav ms-lg-auto">
+    {% for item in site.data.navigation.main %}
+    {% if forloop.index0 < middle_point %}
+    {% if item.type == "mega-menu-img" %}
+    <li class="nav-item dropdown dropdown-mega">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+        <li class="mega-menu-content mega-menu-scroll">
+          <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
+            {% for subitem in item.items %}
+            <li class="col">
+              <a class="dropdown-item" href="{{ subitem.url | relative_url }}">
+                <figure class="rounded lift d-none d-lg-block">
+                  <img src="{{ subitem.image | relative_url }}" srcset="{{ subitem.image2x | relative_url }} 2x" alt="{{ subitem.title }}">
+                </figure>
+                <span class="d-lg-none">{{ subitem.title }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <span class="d-none d-lg-flex"><i class="uil uil-direction"></i><strong>Scroll to view more</strong></span>
+        </li>
+      </ul>
+    </li>
+    {% elsif item.type == "dropdown" %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu">
+        {% for subitem in item.items %}
+        {% if subitem.submenu %}
+        <li class="dropdown dropdown-submenu dropend">
+          <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ subitem.title }}</a>
+          <ul class="dropdown-menu">
+            {% for subsubitem in subitem.submenu %}
+            <li class="nav-item"><a class="dropdown-item" href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item"><a class="dropdown-item" href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% elsif item.type == "dropdown-columns" %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <div class="dropdown-menu dropdown-lg">
+        <div class="dropdown-lg-content">
+          {% for column in item.items %}
+          <div>
+            <h6 class="dropdown-header">{{ column.title }}</h6>
+            <ul class="list-unstyled">
+              {% for subitem in column.submenu %}
+              <li><a class="dropdown-item" href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+    {% elsif item.type == "mega-menu" %}
+    <li class="nav-item dropdown dropdown-mega">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu mega-menu">
+        <li class="mega-menu-content">
+          <div class="row gx-0 gx-lg-3">
+            {% for column in (0..item.columns) %}
+              {% if column < item.columns %}
+                <div class="col-lg-{% if item.columns == 2 %}6{% elsif item.columns == 3 %}4{% elsif item.columns == 4 %}3{% else %}4{% endif %}">
+                  {% assign column_items = item.items | where: "column", column %}
+                  {% for subitem in column_items %}
+                    {% if subitem.title %}
+                      <h6 class="dropdown-header">{{ subitem.title }}</h6>
+                      {% if subitem.submenu %}
+                        <ul class="list-unstyled {% if subitem.cc %}cc-{{ subitem.cc }}{% endif %}{% if subitem.pb %} pb-lg-{{ subitem.pb }}{% endif %}">
+                          {% for subsubitem in subitem.submenu %}
+                            <li><a class="dropdown-item" href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                      
+                      {% if subitem.mt and subitem.second_title %}
+                        <h6 class="dropdown-header mt-lg-{{ subitem.mt }}">{{ subitem.second_title }}</h6>
+                        {% if subitem.second_submenu %}
+                          <ul class="list-unstyled {% if subitem.cc %}cc-{{ subitem.cc }}{% endif %}">
+                            {% for subsubitem in subitem.second_submenu %}
+                              <li><a class="dropdown-item" href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a></li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </li>
+      </ul>
+    </li>
+    {% elsif item.type == "mega-menu-icon" %}
+    <li class="nav-item dropdown dropdown-mega">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+        <li class="mega-menu-content">
+          <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled">
+            {% for subitem in item.items %}
+            <li class="col">
+              <a class="dropdown-item" href="{{ subitem.url | relative_url }}">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="{{ subitem.icon | relative_url }}" alt="{{ subitem.title }}">
+                </div>
+                <span>{{ subitem.title }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+<div class="w-100 order-3 order-lg-2 d-lg-flex offcanvas-body">
+  <ul class="navbar-nav me-lg-auto">
+    {% for item in site.data.navigation.main %}
+    {% if forloop.index0 >= middle_point %}
+    {% if item.type == "mega-menu-img" %}
+    <li class="nav-item dropdown dropdown-mega">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+        <li class="mega-menu-content mega-menu-scroll">
+          <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
+            {% for subitem in item.items %}
+            <li class="col">
+              <a class="dropdown-item" href="{{ subitem.url | relative_url }}">
+                <figure class="rounded lift d-none d-lg-block">
+                  <img src="{{ subitem.image | relative_url }}" srcset="{{ subitem.image2x | relative_url }} 2x" alt="{{ subitem.title }}">
+                </figure>
+                <span class="d-lg-none">{{ subitem.title }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <span class="d-none d-lg-flex"><i class="uil uil-direction"></i><strong>Scroll to view more</strong></span>
+        </li>
+      </ul>
+    </li>
+    {% elsif item.type == "dropdown" %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu">
+        {% for subitem in item.items %}
+        {% if subitem.submenu %}
+        <li class="dropdown dropdown-submenu dropend">
+          <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ subitem.title }}</a>
+          <ul class="dropdown-menu">
+            {% for subsubitem in subitem.submenu %}
+            <li class="nav-item"><a class="dropdown-item" href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item"><a class="dropdown-item" href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% elsif item.type == "dropdown-columns" %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <div class="dropdown-menu dropdown-lg">
+        <div class="dropdown-lg-content">
+          {% for column in item.items %}
+          <div>
+            <h6 class="dropdown-header">{{ column.title }}</h6>
+            <ul class="list-unstyled">
+              {% for subitem in column.submenu %}
+              <li><a class="dropdown-item" href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+    {% elsif item.type == "mega-menu" %}
+    <li class="nav-item dropdown dropdown-mega">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu mega-menu">
+        <li class="mega-menu-content">
+          <div class="row gx-0 gx-lg-3">
+            {% for column in (0..item.columns) %}
+              {% if column < item.columns %}
+                <div class="col-lg-{% if item.columns == 2 %}6{% elsif item.columns == 3 %}4{% elsif item.columns == 4 %}3{% else %}4{% endif %}">
+                  {% assign column_items = item.items | where: "column", column %}
+                  {% for subitem in column_items %}
+                    {% if subitem.title %}
+                      <h6 class="dropdown-header">{{ subitem.title }}</h6>
+                      {% if subitem.submenu %}
+                        <ul class="list-unstyled {% if subitem.cc %}cc-{{ subitem.cc }}{% endif %}{% if subitem.pb %} pb-lg-{{ subitem.pb }}{% endif %}">
+                          {% for subsubitem in subitem.submenu %}
+                            <li><a class="dropdown-item" href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                      
+                      {% if subitem.mt and subitem.second_title %}
+                        <h6 class="dropdown-header mt-lg-{{ subitem.mt }}">{{ subitem.second_title }}</h6>
+                        {% if subitem.second_submenu %}
+                          <ul class="list-unstyled {% if subitem.cc %}cc-{{ subitem.cc }}{% endif %}">
+                            {% for subsubitem in subitem.second_submenu %}
+                              <li><a class="dropdown-item" href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a></li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </li>
+      </ul>
+    </li>
+    {% elsif item.type == "mega-menu-icon" %}
+    <li class="nav-item dropdown dropdown-mega">
+      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+      <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+        <li class="mega-menu-content">
+          <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled">
+            {% for subitem in item.items %}
+            <li class="col">
+              <a class="dropdown-item" href="{{ subitem.url | relative_url }}">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="{{ subitem.icon | relative_url }}" alt="{{ subitem.title }}">
+                </div>
+                <span>{{ subitem.title }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+<ul class="navbar-nav"> 
+  {% for item in site.data.navigation.main %}
+  {% if item.type == "mega-menu-img" %}
+  <li class="nav-item dropdown dropdown-mega">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+    <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+      <li class="mega-menu-content mega-menu-scroll">
+        <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
+          {% for subitem in item.items %}
+          <li class="col">
+            <a class="dropdown-item" href="{{ subitem.url | relative_url }}">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="{{ subitem.image | relative_url }}" srcset="{{ subitem.image2x | relative_url }} 2x" alt="{{ subitem.title }}">
+              </figure>
+              <span class="d-lg-none">{{ subitem.title }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <span class="d-none d-lg-flex"><i class="uil uil-direction"></i><strong>Scroll to view more</strong></span>
+      </li>
+    </ul>
+  </li>
+  {% elsif item.type == "dropdown" %}
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+    <ul class="dropdown-menu">
+      {% for subitem in item.items %}
+      {% if subitem.submenu %}
+      <li class="dropdown dropdown-submenu dropend">
+        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ subitem.title }}</a>
+        <ul class="dropdown-menu">
+          {% for subsubitem in subitem.submenu %}
+          <li class="nav-item"><a class="dropdown-item" href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% else %}
+      <li class="nav-item"><a class="dropdown-item" href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </li>
+  {% elsif item.type == "dropdown-columns" %}
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+    <div class="dropdown-menu dropdown-lg">
+      <div class="dropdown-lg-content">
+        {% for column in item.items %}
+        <div>
+          <h6 class="dropdown-header">{{ column.title }}</h6>
+          <ul class="list-unstyled">
+            {% for subitem in column.submenu %}
+            <li><a class="dropdown-item" href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </li>
+  {% elsif item.type == "mega-menu" %}
+
+  <li class="nav-item dropdown dropdown-mega">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Documentation</a>
+    <ul class="dropdown-menu mega-menu">
+      <li class="mega-menu-content">
+        <div class="row gx-0 gx-lg-3">
+          {% assign doc_menu = site.data.navigation.main | where: "title", "Documentation" | first %}
+{% for column in doc_menu.items %}
+  <div class="col-lg-{{ column.col }}">
+    <h6 class="dropdown-header">{{ column.title }}</h6>
+    <ul class="list-unstyled cc-{{ column.cc }} pb-lg-{{ column.pb }}">
+      {% for link in column.submenu %}
+        <li><a class="dropdown-item" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% if column.second_title %}
+      <h6 class="dropdown-header mt-lg-{{ column.mt }}">{{ column.second_title }}</h6>
+      <ul class="list-unstyled cc-{{ column.cc }}">
+        {% for link in column.second_submenu %}
+          <li><a class="dropdown-item" href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endfor %}
+
+        </div>
+      </li>
+    </ul>
+  </li>
+  
+
+  {% elsif item.type == "mega-menu-icon" %}
+  <li class="nav-item dropdown dropdown-mega">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">{{ item.title }}</a>
+    <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+      <li class="mega-menu-content">
+        <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled">
+          {% for subitem in item.items %}
+            <li class="col">
+              <a class="dropdown-item" href="{{ subitem.url | relative_url }}">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="{{ subitem.icon | relative_url }}" alt="{{ subitem.title }}">
+                </div>
+                <span>{{ subitem.title }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </li>
+  {% else %}
+  <li class="nav-item">
+    <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

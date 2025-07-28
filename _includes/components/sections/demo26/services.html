@@ -1,0 +1,28 @@
+<section class="wrapper bg-white">
+  <div class="container pt-15">
+    <div class="row text-center">
+      <div class="col-md-10 offset-md-1 col-xxl-8 offset-xxl-2">
+        <h2 class="fs-16 text-uppercase text-primary mb-3">{{ page.services.title_tag }}</h2>
+        <h3 class="display-4 mb-9">{{ page.services.title }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-md-8 gy-8 text-center">
+      {% for service in page.services.service_items %}
+      <div class="col-md-6 col-lg-3">
+        <div class="px-md-3 px-lg-0 px-xl-3">
+          <img src="/assets/img/icons/solid/{{ service.icon }}.svg" class="svg-inject icon-svg icon-svg-md solid-mono text-grape mb-5" alt="" />
+          <h4>{{ service.title }}</h4>
+          <p class="mb-2">{{ service.text }}</p>
+          <a href="{{ service.link }}" class="more hover">{{ service.link_text }}</a>
+        </div>
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

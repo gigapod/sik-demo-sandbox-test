@@ -1,0 +1,32 @@
+<section class="wrapper bg-light">
+<div class="container">
+<div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
+  <div class="col-lg-4">
+    <h2 class="display-4 mb-3 pe-xxl-5">{{ page.clients.title }}</h2>
+    <p class="lead fs-lg mb-0 pe-xxl-5">{{ page.clients.subtitle | markdownify }}</p>
+  </div>
+  <!-- /column -->
+  <div class="col-lg-8">
+    <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-11 mt-n10">
+      {% for client in site.data.clients.clients %}
+      <div class="col">
+        <figure class="px-4 px-lg-3 px-xxl-5">
+          {% if client.url and client.url != "#" %}
+          <a href="{{ client.url }}">
+            <img src="{{ client.image }}" alt="{{ client.name }}" />
+          </a>
+          {% else %}
+          <img src="{{ client.image }}" alt="{{ client.name }}" />
+          {% endif %}
+        </figure>
+      </div>
+      {% endfor %}
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /column -->
+</div>
+<!-- /.row -->
+</div>
+</section>

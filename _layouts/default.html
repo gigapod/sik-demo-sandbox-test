@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en" }}">
+<head>
+  {% include helpers/meta.html %}
+  <!-- Stylesheets-->
+  {% include helpers/styles.html %}
+  {% if site.data.theme.google_analytics.enable %}
+  <!-- Google Analytics-->
+  {% include helpers/analytics.html %}
+  {% endif %}
+</head>
+<body class="{{ page.body_class }}">
+  {{ content }}
+  <!-- Modals -->
+  {% include helpers/modal-signin.html %}
+  {% include helpers/modal-signup.html %}
+  <!-- Scroll To Top Button -->
+  {% include helpers/scroll-to-top.html %}
+  <!-- Site Scripts-->
+  {% include helpers/scripts.html %}
+</body>
+</html>

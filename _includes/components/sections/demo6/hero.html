@@ -1,0 +1,25 @@
+<section class="wrapper bg-soft-primary">
+  <div class="container pt-5 pb-15 py-lg-17 py-xl-19 pb-xl-20 position-relative">
+    <img class="position-lg-absolute col-12 col-lg-10 col-xl-11 col-xxl-10 px-lg-5 px-xl-0 ms-n5 ms-sm-n8 ms-md-n10 ms-lg-0 mb-md-4 mb-lg-0" 
+         src="{{ page.hero.image }}" 
+         srcset="{{ page.hero.image2x }} 2x" 
+         data-cue="fadeIn" 
+         alt="" 
+         style="{{ page.hero.image_position }}" />
+    <div class="row gx-0 align-items-center">
+      <div class="col-md-10 offset-md-1 col-lg-5 offset-lg-7 offset-xxl-6 ps-xxl-12 mt-md-n9 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600">
+        <h1 class="display-2 mb-4 mx-sm-n2 mx-md-0">{{ page.hero.title }}</h1>
+        <p class="lead fs-lg mb-7 px-md-10 px-lg-0">{{ page.hero.subtitle }}</p>
+        <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
+          {% for button in page.hero.buttons %}
+          <span><a class="{{ button.class }}"><i class="{{ button.icon }}"></i> {{ button.label }}</a></span>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
