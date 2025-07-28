@@ -71,29 +71,29 @@ why_choose:
 
 # Solutions Section
 solutions:
-  title: Our Solutions
-  subtitle: We make your spending stress-free for you to have the perfect control.
-  text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.
-  image: /assets/img/illustrations/i17.webp
-  image2x: /assets/img/illustrations/i17@2x.webp
+  title: Learn and Use MicroPython
+  subtitle: Program using MicroPython and your Browser
+  text: MircoPython is the latest, interactive development environment for microcontrollers. Paired with an innovative notebook based interface, interactive learning and programming are combined to support learning and bring your projects to life!
+  image: /assets/img/photos/sik-home-software.webp
+  image2x: /assets/img/photos/sik-home-software@2x.webp
   features:
-    - text: Aenean quam ornare. Curabitur blandit.
-    - text: Nullam quis risus eget urna mollis ornare.
-    - text: Etiam porta euismod malesuada mollis.
-    - text: Vivamus sagittis lacus vel augue rutrum.
+    - text: Use MicroPython to program your projects.
+    - text: Use notebooks that combine knowledge and programming activities.
+    - text: No software installs - run the SIK from your browser
+    - text: Build your own projects, leveraging the SIK projects and programs
 
 # Stats Section
 stats:
-  background: /assets/img/photos/bg2.webp
+  background: /assets/img/photos/sik-demo-home-bg.png
   stats_items:
-    - count: 7518
-      text: Completed Projects
-    - count: 3472
-      text: Happy Customers
-    - count: 2184
-      text: Expert Employees
-    - count: 4523
-      text: Awards Won
+    - count: 6
+      text: Projects
+    - count: 22
+      text: Circuits
+    - count: 90
+      text: Parts
+    - count: 1000
+      text: Hours of fun!
 
 # Case Studies Section
 case_studies:
@@ -201,10 +201,12 @@ pricing:
 
 # Footer CTA
 footer_cta:
-  title: Join our community by using our services and grow your business.
+  title: Start your adventure with the SparkFun Inventor's Kit today!
   button:
-    text: Try It For Free
-    url: "#"
+    text: Visit SparkFun.com
+    url: "https://www.sparkfun.com/sparkfun-inventor-s-kit-v4-1-2.html"
+    
+  
 ---
 <div class="content-wrapper">
 <header class="wrapper bg-soft-primary">
@@ -241,7 +243,7 @@ footer_cta:
   bg_color="bg-navy"
   text_color="text-inverse"
   cta=true
-  cta_title="Join our community by using our services and grow your business."
-  cta_button_text="Try It For Free"
-  cta_button_url="#"
+  cta_title="Start your adventure with the SparkFun Inventor's Kit today!"
+  cta_button_text="Purchase at SparkFun.com"
+  cta_button_url="https://www.sparkfun.com/sparkfun-inventor-s-kit-v4-1-2.html"
 %}

@@ -12,16 +12,16 @@ newsletter: true       # Whether to include newsletter form (only applicable for
 # Call to Action Section
 cta:
   enabled: false
-  title: Join our community by using our services and grow your business.
-  button_text: Try It For Free
-  button_url: "#"
+  title: Get a SparkFun Inventor's Kit today at SparkFun.com!
+  button_text: Visit Sparkfun
+  button_url: "https://www.sparkfun.com/sparkfun-inventor-s-kit-v4-1-2.html"
  
 # Default Footer (4-column)
 column_2:
   title: Get in Touch
-  address: Moonshine St. 14/05 Light City, London, United Kingdom
-  email: info@email.com
-  phone: 00 (123) 456 78 90
+  address: 6333 Dry Creek Parkway, Niwot, CO 80503, USA
+  email: support@sparkfun.com
+  phone: 303-303-1234
   
 column_3:
   title: Learn More
@@ -260,12 +260,12 @@ minimal_alt:
     class: social-muted mb-0 text-md-end
     links:
       - icon: uil uil-twitter
-        url: "#"
+        url: "https://twitter.com/sparkfun"
       - icon: uil uil-facebook-f
-        url: "#"
-      - icon: uil uil-dribbble
-        url: "#"
+        url: "https://www.facebook.com/SparkFun"
+      - icon: uil uil-github
+        url: "https://github.com/sparkfun"
       - icon: uil uil-instagram
-        url: "#"
+        url: "https://www.instagram.com/sparkfun/"
       - icon: uil uil-youtube
-        url: "#"
+        url: "https://www.youtube.com/sparkfun"
