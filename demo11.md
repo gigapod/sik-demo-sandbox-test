@@ -54,19 +54,19 @@ services:
 
 # Why Choose Us Section
 why_choose:
-  title: Why Choose Us?
-  subtitle: We bring solutions to make life easier for our clients.
-  image: /assets/img/illustrations/i11.webp
-  image2x: /assets/img/illustrations/i11@2x.webp
+  title: Project Hardware
+  subtitle: The SIK contains all the hardware needed to build six interactive Projects!
+  image: /assets/img/photos/sik-home-hardware.webp
+  image2x: /assets/img/photos/sik-home-hardware@2x.webp
   accordion_items:
-    - title: Professional Design
-      content: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.
+    - title: The Latest Sparkfun RedBoard
+      content: At the heart of the SIK is the SparkFun RedBoard IoT - RP2350 - a microprocessor computer powered by a Raspberry Pi RP2350 microprocessor.
       active: true
-    - title: Top-Notch Support
-      content: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.
+    - title: Interactive Sensors and Displays
+      content: With a ultra-sonic distance sensor, an accelerometer and an OLED display, the SIK allows experimenation that interacts with your environment.
       active: false
-    - title: Header and Slider Options
-      content: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.
+    - title: Buttons, Motors, LEDs and more! 
+      content: When we say everything, we mean EVERYTHING! From the motors to drive a robot, to the resitors required to light and LED, the SIK inclues everything you need! Just plug-into your computer and beging learning electronics in minutes!
       active: false
 
 # Solutions Section
