@@ -15,8 +15,8 @@ hero:
     - label: Read More
       url: "#"
       class: btn btn-lg btn-primary rounded mb-5
-  image: /assets/img/photos/about15.jpg
-  image2x: /assets/img/photos/about15@2x.jpg
+  image: /assets/img/photos/about15..webp
+  image2x: /assets/img/photos/about15@2x..webp
 
 # Services Section
 services:
@@ -45,14 +45,14 @@ features1:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa9.jpg
-      image2x: /assets/img/photos/sa9@2x.jpg
-    - image: /assets/img/photos/sa10.jpg
-      image2x: /assets/img/photos/sa10@2x.jpg
-    - image: /assets/img/photos/sa11.jpg
-      image2x: /assets/img/photos/sa11@2x.jpg
-    - image: /assets/img/photos/sa12.jpg
-      image2x: /assets/img/photos/sa12@2x.jpg
+    - image: /assets/img/photos/sa9..webp
+      image2x: /assets/img/photos/sa9@2x..webp
+    - image: /assets/img/photos/sa10..webp
+      image2x: /assets/img/photos/sa10@2x..webp
+    - image: /assets/img/photos/sa11..webp
+      image2x: /assets/img/photos/sa11@2x..webp
+    - image: /assets/img/photos/sa12..webp
+      image2x: /assets/img/photos/sa12@2x..webp
 
 # Features Section 2
 features2:
@@ -64,12 +64,12 @@ features2:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa13.jpg
-      image2x: /assets/img/photos/sa13@2x.jpg
-    - image: /assets/img/photos/sa14.jpg
-      image2x: /assets/img/photos/sa14@2x.jpg
-    - image: /assets/img/photos/sa15.jpg
-      image2x: /assets/img/photos/sa15@2x.jpg
+    - image: /assets/img/photos/sa13..webp
+      image2x: /assets/img/photos/sa13@2x..webp
+    - image: /assets/img/photos/sa14..webp
+      image2x: /assets/img/photos/sa14@2x..webp
+    - image: /assets/img/photos/sa15..webp
+      image2x: /assets/img/photos/sa15@2x..webp
 
 # Projects Section
 projects:
@@ -99,12 +99,12 @@ about:
     - text: Etiam porta sem malesuada magna mollis euismod.
     - text: Fermentum massa vivamus faucibus amet euismod.
   images:
-    - image: /assets/img/photos/ab1.jpg
-      image2x: /assets/img/photos/ab1@2x.jpg
-    - image: /assets/img/photos/ab2.jpg
-      image2x: /assets/img/photos/ab2@2x.jpg
-    - image: /assets/img/photos/ab3.jpg
-      image2x: /assets/img/photos/ab3@2x.jpg
+    - image: /assets/img/photos/ab1..webp
+      image2x: /assets/img/photos/ab1@2x..webp
+    - image: /assets/img/photos/ab2..webp
+      image2x: /assets/img/photos/ab2@2x..webp
+    - image: /assets/img/photos/ab3..webp
+      image2x: /assets/img/photos/ab3@2x..webp
 
 # Values Section
 values:
@@ -131,10 +131,10 @@ lets_talk:
     count: 5000+
     text: Satisfied Customers
   images:
-    - image: /assets/img/photos/g5.jpg
-      image2x: /assets/img/photos/g5@2x.jpg
-    - image: /assets/img/photos/g6.jpg
-      image2x: /assets/img/photos/g6@2x.jpg
+    - image: /assets/img/photos/g5..webp
+      image2x: /assets/img/photos/g5@2x..webp
+    - image: /assets/img/photos/g6..webp
+      image2x: /assets/img/photos/g6@2x..webp
 
 # Clients Section
 clients:

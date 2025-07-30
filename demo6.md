@@ -20,8 +20,8 @@ hero:
       url: "#"
       class: btn btn-green btn-icon btn-icon-start rounded
       icon: uil uil-google-play
-  image: /assets/img/photos/devices.png
-  image2x: /assets/img/photos/devices@2x.png
+  image: /assets/img/photos/devices..webp
+  image2x: /assets/img/photos/devices@2x..webp
   image_position: "top: -1%; left: -21%;"
 
 # Features Section
@@ -59,8 +59,8 @@ how_it_works:
   title: How It Works
   subtitle: Download the app, create your profile and voilà, you're all set!
   text: Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo.
-  image: /assets/img/photos/device.png
-  image2x: /assets/img/photos/device@2x.png
+  image: /assets/img/photos/device..webp
+  image2x: /assets/img/photos/device@2x..webp
   steps:
     - icon: cloud-computing
       title: 1. Download
@@ -80,8 +80,8 @@ video:
   title: FAQ
   subtitle: If you don't see an answer to your question, you can send us an email from our contact form.
   video_url: /assets/media/movie.mp4
-  poster: /assets/img/photos/v1.jpg
-  poster2x: /assets/img/photos/v1@2x.jpg
+  poster: /assets/img/photos/v1..webp
+  poster2x: /assets/img/photos/v1@2x..webp
   faq_groups:
     - id: accordion-1
       items:
@@ -125,8 +125,8 @@ cta:
       url: "#"
       class: btn btn-green btn-icon btn-icon-start rounded
       icon: uil uil-google-play
-  image: /assets/img/photos/devices2.png
-  image2x: /assets/img/photos/devices2@2x.png
+  image: /assets/img/photos/devices2..webp
+  image2x: /assets/img/photos/devices2@2x..webp
   image_position: "top: 50%; left: -23%;"
 ---
 <div class="content-wrapper">

@@ -20,8 +20,8 @@ hero:
     - label: Free Trial
       url: "#"
       class: btn-lg btn-outline-primary rounded-pill
-  image: /assets/img/photos/about7.jpg
-  image2x: /assets/img/photos/about7@2x.jpg
+  image: /assets/img/photos/about7..webp
+  image2x: /assets/img/photos/about7@2x..webp
 
 # Services Section
 services:
@@ -55,8 +55,8 @@ how_it_works:
     - number: 3
       title: Finalize Product
       text: Cras mattis consectetur purus sit amet. Aenean lacinia bibendum nulla sed.
-  image: /assets/img/photos/about9.jpg
-  image2x: /assets/img/photos/about9@2x.jpg
+  image: /assets/img/photos/about9..webp
+  image2x: /assets/img/photos/about9@2x..webp
 
 # Projects Section
 projects:
@@ -75,8 +75,8 @@ about_video:
     - text: Etiam porta sem malesuada magna mollis euismod.
     - text: Fermentum massa vivamus faucibus amet euismod.
   video_url: /assets/media/movie.mp4
-  image: /assets/img/photos/about12.jpg
-  image2x: /assets/img/photos/about12@2x.jpg
+  image: /assets/img/photos/about12..webp
+  image2x: /assets/img/photos/about12@2x..webp
 
 # Team Section
 team:
@@ -90,8 +90,8 @@ team:
 # Testimonial Section
 testimonial:
   # Data will be pulled from _data/testimonials.json
-  image: /assets/img/photos/co2.png
-  image2x: /assets/img/photos/co2@2x.png
+  image: /assets/img/photos/co2..webp
+  image2x: /assets/img/photos/co2@2x..webp
 ---
 <div class="content-wrapper">
 <!-- HEADER -->

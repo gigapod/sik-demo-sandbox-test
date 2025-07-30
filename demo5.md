@@ -43,17 +43,17 @@ features_1:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa5.jpg
-      image2x: /assets/img/photos/sa5@2x.jpg
+    - image: /assets/img/photos/sa5..webp
+      image2x: /assets/img/photos/sa5@2x..webp
       delay: 300
-    - image: /assets/img/photos/sa6.jpg
-      image2x: /assets/img/photos/sa6@2x.jpg
+    - image: /assets/img/photos/sa6..webp
+      image2x: /assets/img/photos/sa6@2x..webp
       delay: 600
-    - image: /assets/img/photos/sa7.jpg
-      image2x: /assets/img/photos/sa7@2x.jpg
+    - image: /assets/img/photos/sa7..webp
+      image2x: /assets/img/photos/sa7@2x..webp
       delay: 900
-    - image: /assets/img/photos/sa8.jpg
-      image2x: /assets/img/photos/sa8@2x.jpg
+    - image: /assets/img/photos/sa8..webp
+      image2x: /assets/img/photos/sa8@2x..webp
       delay: 1200
   color: red
 
@@ -67,17 +67,17 @@ features_2:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa9.jpg
-      image2x: /assets/img/photos/sa9@2x.jpg
+    - image: /assets/img/photos/sa9..webp
+      image2x: /assets/img/photos/sa9@2x..webp
       delay: 300
-    - image: /assets/img/photos/sa10.jpg
-      image2x: /assets/img/photos/sa10@2x.jpg
+    - image: /assets/img/photos/sa10..webp
+      image2x: /assets/img/photos/sa10@2x..webp
       delay: 600
-    - image: /assets/img/photos/sa11.jpg
-      image2x: /assets/img/photos/sa11@2x.jpg
+    - image: /assets/img/photos/sa11..webp
+      image2x: /assets/img/photos/sa11@2x..webp
       delay: 900
-    - image: /assets/img/photos/sa12.jpg
-      image2x: /assets/img/photos/sa12@2x.jpg
+    - image: /assets/img/photos/sa12..webp
+      image2x: /assets/img/photos/sa12@2x..webp
       delay: 1200
   color: green
 
@@ -91,14 +91,14 @@ features_3:
     - text: Etiam porta euismod malesuada mollis nisl ornare.
     - text: Vivamus sagittis lacus augue rutrum maecenas odio.
   images:
-    - image: /assets/img/photos/sa13.jpg
-      image2x: /assets/img/photos/sa13@2x.jpg
+    - image: /assets/img/photos/sa13..webp
+      image2x: /assets/img/photos/sa13@2x..webp
       delay: 300
-    - image: /assets/img/photos/sa14.jpg
-      image2x: /assets/img/photos/sa14@2x.jpg
+    - image: /assets/img/photos/sa14..webp
+      image2x: /assets/img/photos/sa14@2x..webp
       delay: 900
-    - image: /assets/img/photos/sa15.jpg
-      image2x: /assets/img/photos/sa15@2x.jpg
+    - image: /assets/img/photos/sa15..webp
+      image2x: /assets/img/photos/sa15@2x..webp
       delay: 1200
   color: yellow
 
@@ -106,7 +106,7 @@ features_3:
 video:
   title: Find out everything you need to know about creating a business process model
   video_url: /assets/media/movie.mp4
-  poster: /assets/img/photos/movie.jpg
+  poster: /assets/img/photos/movie..webp
   webm_url: /assets/media/movie.webm
   process_steps:
     - icon: shield

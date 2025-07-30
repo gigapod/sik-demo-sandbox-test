@@ -12,13 +12,13 @@ hero:
   title: We bring rapid solutions for your business
   subtitle: Hello! This is Sandbox
   video_url: /assets/media/movie.mp4
-  background: /assets/img/photos/bg2.jpg
+  background: /assets/img/photos/bg2..webp
 
 # About Section
 about:
-  image: /assets/img/photos/about5.jpg
-  image2x: /assets/img/photos/about5@2x.jpg
-  stats_background: /assets/img/photos/bg2.jpg
+  image: /assets/img/photos/about5..webp
+  image2x: /assets/img/photos/about5@2x..webp
+  stats_background: /assets/img/photos/bg2..webp
   stats_items:
     - count: 7518
       text: Completed Projects
@@ -72,7 +72,7 @@ process:
 # Testimonials Section
 testimonials:
   title: Happy Customers
-  background: /assets/img/photos/bg2.jpg
+  background: /assets/img/photos/bg2..webp
   
 
 # Portfolio Section
@@ -142,10 +142,10 @@ lets_talk:
     count: 5000+
     text: Satisfied Customers
   images:
-    - image: /assets/img/photos/g5.jpg
-      image2x: /assets/img/photos/g5@2x.jpg 
-    - image: /assets/img/photos/g6.jpg
-      image2x: /assets/img/photos/g6@2x.jpg
+    - image: /assets/img/photos/g5..webp
+      image2x: /assets/img/photos/g5@2x..webp 
+    - image: /assets/img/photos/g6..webp
+      image2x: /assets/img/photos/g6@2x..webp
 ---
 <div class="content-wrapper">
 <header class="wrapper bg-soft-primary">

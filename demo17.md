@@ -17,7 +17,7 @@ hero:
     - label: Contact Us
       url: "#"
       class: btn btn-lg btn-outline-primary rounded-pill
-  background_image: /assets/img/photos/bg11.jpg
+  background_image: /assets/img/photos/bg11..webp
 
 # Services Section
 services:
@@ -81,7 +81,7 @@ facts:
 
 # Testimonials Section
 testimonials:
-  image: /assets/img/photos/tm1.jpg
+  image: /assets/img/photos/tm1..webp
   testimonials_list:
     - text: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper."
       name: Coriss Ambady
@@ -98,19 +98,19 @@ case_studies:
   subtitle: Case Studies
   title: Check out some of our awesome projects with creative ideas and great design.
   projects:
-    - image: /assets/img/photos/b4.jpg
+    - image: /assets/img/photos/b4..webp
       title: Ligula tristique quis risus
       date: 14 Apr 2022
       category: Coding
-    - image: /assets/img/photos/b5.jpg
+    - image: /assets/img/photos/b5..webp
       title: Nullam id dolor elit id nibh
       date: 29 Mar 2022
       category: Workspace
-    - image: /assets/img/photos/b6.jpg
+    - image: /assets/img/photos/b6..webp
       title: Ultricies fusce porta elit
       date: 26 Feb 2022
       category: Meeting
-    - image: /assets/img/photos/b7.jpg
+    - image: /assets/img/photos/b7..webp
       title: Morbi leo risus porta eget
       date: 7 Jan 2022
       category: Business Tips
@@ -120,8 +120,8 @@ team:
   subtitle: Our Team
   title: Save your time by choosing our professional team.
   text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-  image: /assets/img/photos/about24.jpg
-  image2x: /assets/img/photos/about24@2x.jpg
+  image: /assets/img/photos/about24..webp
+  image2x: /assets/img/photos/about24@2x..webp
   features:
     - text: Aenean eu leo quam ornare curabitur blandit tempus.
     - text: Nullam quis risus eget urna mollis ornare donec elit.
@@ -132,8 +132,8 @@ team:
 why_choose:
   subtitle: Why Choose Us?
   title: A few reasons why our valued customers choose us.
-  image: /assets/img/photos/about25.jpg
-  image2x: /assets/img/photos/about25@2x.jpg
+  image: /assets/img/photos/about25..webp
+  image2x: /assets/img/photos/about25@2x..webp
   accordions:
     - id: headingOne
       collapse_id: collapseOne

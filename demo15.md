@@ -106,8 +106,8 @@ stats:
 contact:
   title: Convinced yet? Let's make something great together.
   icon: /assets/img/icons/lineal/telemarketer.svg
-  image: /assets/img/photos/about4.jpg
-  image2x: /assets/img/photos/about4@2x.jpg
+  image: /assets/img/photos/about4..webp
+  image2x: /assets/img/photos/about4@2x..webp
   contact_info:
     - icon: uil uil-location-pin-alt
       title: Address

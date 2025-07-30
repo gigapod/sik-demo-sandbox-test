@@ -11,8 +11,8 @@ scroll_top_btn:
 modal:
   enabled: true
   id: modal-02
-  image: /assets/img/illustrations/i7.png
-  image2x: /assets/img/illustrations/i7@2x.png
+  image: /assets/img/illustrations/i7..webp
+  image2x: /assets/img/illustrations/i7@2x..webp
   title: Join the mailing list and get %10 off
   text: Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
 
@@ -27,8 +27,8 @@ hero:
     - label: Learn More
       url: "#"
       class: btn btn-yellow rounded
-  image: /assets/img/illustrations/i6.png
-  image2x: /assets/img/illustrations/i6@2x.png
+  image: /assets/img/illustrations/i6..webp
+  image2x: /assets/img/illustrations/i6@2x..webp
 
 # Services Section
 services:
@@ -57,8 +57,8 @@ services:
 # Process Section
 process:
   title: Our three process steps on creating awesome projects.
-  image: /assets/img/illustrations/i8.png
-  image2x: /assets/img/illustrations/i8@2x.png
+  image: /assets/img/illustrations/i8..webp
+  image2x: /assets/img/illustrations/i8@2x..webp
   steps:
     - number: 1
       title: Collect Ideas
@@ -73,8 +73,8 @@ process:
 # Why Choose Us Section
 why_choose:
   title: Few reasons why our valued customers choose us.
-  image: /assets/img/illustrations/i2.png
-  image2x: /assets/img/illustrations/i2@2x.png
+  image: /assets/img/illustrations/i2..webp
+  image2x: /assets/img/illustrations/i2@2x..webp
   accordion_items:
     - title: Professional Design
       content: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.
@@ -114,8 +114,8 @@ portfolio:
 # Contact Section
 contact:
   title: Got any questions? Don't hesitate to get in touch.
-  image: /assets/img/illustrations/i5.png
-  image2x: /assets/img/illustrations/i5@2x.png
+  image: /assets/img/illustrations/i5..webp
+  image2x: /assets/img/illustrations/i5@2x..webp
   contact_info:
     - icon: uil uil-location-pin-alt
       title: Address

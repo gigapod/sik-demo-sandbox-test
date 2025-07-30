@@ -10,7 +10,7 @@ scroll_top_btn:
 
 # Hero Section
 hero:
-  bg_image: "/assets/img/photos/bg22.png"
+  bg_image: "/assets/img/photos/bg22..webp"
   overlay: "bg-overlay-light-500"
   title: "Networking <span class=\"text-gradient gradient-1\">solutions</span> for worldwide communication"
   subtitle: "We're a company that focuses on establishing long-term relationships with customers."
@@ -18,8 +18,8 @@ hero:
     label: "Explore Now"
     url: "#"
     class: "btn btn-lg btn-gradient gradient-1 rounded"
-  image: "/assets/img/illustrations/3d6.png"
-  image2x: "/assets/img/illustrations/3d6@2x.png"
+  image: "/assets/img/illustrations/3d6..webp"
+  image2x: "/assets/img/illustrations/3d6@2x..webp"
 
 # Features Section
 features:
@@ -55,8 +55,8 @@ perfect_control:
     - text: "Nullam quis risus eget urna mollis ornare."
     - text: "Etiam porta euismod malesuada mollis."
     - text: "Vivamus sagittis lacus vel augue rutrum."
-  image: "/assets/img/illustrations/3d2.png"
-  image2x: "/assets/img/illustrations/3d2@2x.png"
+  image: "/assets/img/illustrations/3d2..webp"
+  image2x: "/assets/img/illustrations/3d2@2x..webp"
 
 # What Makes Us Different Section
 what_makes_different:
@@ -67,8 +67,8 @@ what_makes_different:
     - text: "Aenean eu leo quam. Pellentesque ornare."
     - text: "Nullam quis risus eget urna mollis ornare."
     - text: "Donec id elit non mi porta gravida at eget."
-  image: "/assets/img/photos/about27.jpg"
-  image2x: "/assets/img/photos/about27@2x.jpg"
+  image: "/assets/img/photos/about27..webp"
+  image2x: "/assets/img/photos/about27@2x..webp"
   card1:
     icon: "/assets/img/icons/solid/cloud-group.svg"
     count: "25000+"
@@ -113,12 +113,12 @@ who_are_we:
     - text: "Etiam porta sem malesuada magna mollis euismod."
     - text: "Fermentum massa vivamus faucibus amet euismod."
   images:
-    - image: "/assets/img/photos/g12.jpg"
-      image2x: "/assets/img/photos/g12@2x.jpg"
-    - image: "/assets/img/photos/g13.jpg"
-      image2x: "/assets/img/photos/g13@2x.jpg"
-    - image: "/assets/img/photos/g11.jpg"
-      image2x: "/assets/img/photos/g11@2x.jpg"
+    - image: "/assets/img/photos/g12..webp"
+      image2x: "/assets/img/photos/g12@2x..webp"
+    - image: "/assets/img/photos/g13..webp"
+      image2x: "/assets/img/photos/g13@2x..webp"
+    - image: "/assets/img/photos/g11..webp"
+      image2x: "/assets/img/photos/g11@2x..webp"
 
 # Values Section
 values:
@@ -149,12 +149,12 @@ contact:
     icon: "/assets/img/icons/solid/emails.svg"
     title: "E-mail"
     text: "sandbox@email.com"
-  image: "/assets/img/illustrations/3d3.png"
-  image2x: "/assets/img/illustrations/3d3@2x.png"
+  image: "/assets/img/illustrations/3d3..webp"
+  image2x: "/assets/img/illustrations/3d3@2x..webp"
 
 # Call to Action Section
 cta:
-  bg_image: "/assets/img/photos/bg22.png"
+  bg_image: "/assets/img/photos/bg22..webp"
   overlay: "bg-overlay-light-500"
   title_tag: "Join Our Community"
   title: "We are trusted by over 5000+ clients. Join them now and grow your business."

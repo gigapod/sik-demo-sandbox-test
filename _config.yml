@@ -1,5 +1,4 @@
-baseurl: "/" # for amazon s3 deployment
-# baseurl: "/sik-demo-sandbox-test"
+baseurl: ""
 url: "https://gigapod.dev"
 
 # Build settings
