@@ -1,4 +1,4 @@
-baseurl: "sik-demo-sandbox-test"
+baseurl: /sik-demo-sandbox-test
 url: ""
 
 # Build settings
