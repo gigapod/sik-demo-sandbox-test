@@ -1,5 +1,5 @@
-baseurl: /sik-demo-sandbox-test
-url: ""
+baseurl: "/sik-demo-sandbox-test"
+url: "https://gigapod.dev"
 
 # Build settings
 markdown: kramdown
