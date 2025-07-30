@@ -1,4 +1,5 @@
-baseurl: "/sik-demo-sandbox-test"
+baseurl: "" # for amazon
+# baseurl: "/sik-demo-sandbox-test"
 url: "https://gigapod.dev"
 
 # Build settings
