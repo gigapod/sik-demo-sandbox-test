@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SparkFun Inventor's Kit
-permalink: /demo11/
+permalink: /
 custom_color: red
 custom_font: thicccboi
 scroll_top_btn:

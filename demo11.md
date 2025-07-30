@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-permalink: /
+permalink: /index11/
 custom_color: grape
 custom_font: space
 scroll_top_btn:
