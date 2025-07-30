@@ -1,4 +1,4 @@
-baseurl: "" # for amazon
+baseurl: "/" # for amazon s3 deployment
 # baseurl: "/sik-demo-sandbox-test"
 url: "https://gigapod.dev"
 
