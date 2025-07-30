@@ -15,8 +15,8 @@ hero:
 
 # Benefits Section
 benefits:
-  image: /assets/img/photos/about18.jpg
-  image2x: /assets/img/photos/about18@2x.jpg
+  image: /assets/img/photos/about18.webp
+  image2x: /assets/img/photos/about18@2x.webp
   items:
     - icon: "target"
       title: "Career Growth"
@@ -48,38 +48,38 @@ testimonials:
   items:
     - rating: "five"
       text: "\"Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis.\""
-      avatar: /assets/img/avatars/te1.jpg
-      avatar2x: /assets/img/avatars/te1@2x.jpg
+      avatar: /assets/img/avatars/te1.webp
+      avatar2x: /assets/img/avatars/te1@2x.webp
       name: "Coriss Ambady"
       role: "Financial Analyst"
     - rating: "five"
       text: "\"Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia.\""
-      avatar: /assets/img/avatars/te2.jpg
-      avatar2x: /assets/img/avatars/te2@2x.jpg
+      avatar: /assets/img/avatars/te2.webp
+      avatar2x: /assets/img/avatars/te2@2x.webp
       name: "Cory Zamora"
       role: "Marketing Specialist"
     - rating: "five"
       text: "\"Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum. Donec sed odio dui.\""
-      avatar: /assets/img/avatars/te3.jpg
-      avatar2x: /assets/img/avatars/te3@2x.jpg
+      avatar: /assets/img/avatars/te3.webp
+      avatar2x: /assets/img/avatars/te3@2x.webp
       name: "Nikolas Brooten"
       role: "Sales Manager"
     - rating: "five"
       text: "\"Etiam adipiscing tincidunt elit convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor.\""
-      avatar: /assets/img/avatars/te4.jpg
-      avatar2x: /assets/img/avatars/te4@2x.jpg
+      avatar: /assets/img/avatars/te4.webp
+      avatar2x: /assets/img/avatars/te4@2x.webp
       name: "Coriss Ambady"
       role: "Financial Analyst"
     - rating: "five"
       text: "\"Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus magnis dis montes, nascetur ridiculus mus. Donec sed odio.\""
-      avatar: /assets/img/avatars/te5.jpg
-      avatar2x: /assets/img/avatars/te5@2x.jpg
+      avatar: /assets/img/avatars/te5.webp
+      avatar2x: /assets/img/avatars/te5@2x.webp
       name: "Jackie Sanders"
       role: "Investment Planner"
     - rating: "five"
       text: "\"Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient.\""
-      avatar: /assets/img/avatars/te6.jpg
-      avatar2x: /assets/img/avatars/te6@2x.jpg
+      avatar: /assets/img/avatars/te6.webp
+      avatar2x: /assets/img/avatars/te6@2x.webp
       name: "Laura Widerski"
       role: "Sales Specialist"
 

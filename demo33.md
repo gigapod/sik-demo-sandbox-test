@@ -67,8 +67,8 @@ testimonials:
 
 # About Section
 about:
-  image: "/assets/img/avatars/avatar.jpg"
-  image2x: "/assets/img/avatars/avatar@2x.jpg"
+  image: "/assets/img/avatars/avatar.webp"
+  image2x: "/assets/img/avatars/avatar@2x.webp"
   title: "More about me"
   lead: "👋 Hello! I'm Camille, a multidisciplinary product designer 🧸 based in New York City 🚕. I'm very passionate about the work 💌 that I do."
   description:

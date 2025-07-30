@@ -12,7 +12,7 @@ hero:
   subtitle: We are a creative company that focuses on long term relationships with customers.
   button_text: Read More
   button_url: "#"
-  image: /assets/img/photos/bg37.jpg
+  image: /assets/img/photos/bg37.webp
   
 # Services Section
 services:
@@ -48,7 +48,7 @@ services:
 how_it_works:
   title_tag: How It Works?
   title: Here are the 3 working steps on success.
-  bg_image: /assets/img/photos/bg38.jpg
+  bg_image: /assets/img/photos/bg38.webp
   steps:
     - icon: light-bulb
       icon_color: blue
@@ -74,7 +74,7 @@ solutions:
   title_tag: Our Solutions
   title: Just sit & relax while we take care of your business needs.
   text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna.
-  bg_image: /assets/img/photos/bg39.jpg
+  bg_image: /assets/img/photos/bg39.webp
   stats:
     - value: 99.7%
       label: Customer Satisfaction
@@ -92,12 +92,12 @@ about:
     - text: Etiam porta sem malesuada magna mollis euismod.
     - text: Fermentum massa vivamus faucibus amet euismod.
   images:
-    - image: /assets/img/photos/g14.jpg
-      image2x: /assets/img/photos/g14@2x.jpg
-    - image: /assets/img/photos/g15.jpg
-      image2x: /assets/img/photos/g15@2x.jpg
-    - image: /assets/img/photos/g16.jpg
-      image2x: /assets/img/photos/g16@2x.jpg
+    - image: /assets/img/photos/g14.webp
+      image2x: /assets/img/photos/g14@2x.webp
+    - image: /assets/img/photos/g15.webp
+      image2x: /assets/img/photos/g15@2x.webp
+    - image: /assets/img/photos/g16.webp
+      image2x: /assets/img/photos/g16@2x.webp
 
 # Vision and Mission Section
 vision_mission:
@@ -117,8 +117,8 @@ vision_mission:
 
 # Testimonial Section
 testimonial:
-  image: /assets/img/photos/tei1.jpg
-  image2x: /assets/img/photos/tei1@2x.jpg
+  image: /assets/img/photos/tei1.webp
+  image2x: /assets/img/photos/tei1@2x.webp
   
 
 # Pricing Section

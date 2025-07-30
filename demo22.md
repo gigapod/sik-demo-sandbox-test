@@ -14,7 +14,7 @@ hero:
   video_btn:
     enable: true
     url: /assets/media/movie.mp4
-  bg_image: /assets/img/photos/bg26.jpg
+  bg_image: /assets/img/photos/bg26.webp
 
 # Services Section
 services:
@@ -168,7 +168,7 @@ cta:
   button:
     text: Join Us
     url: "#"
-  bg_image: /assets/img/photos/bg27.jpg
+  bg_image: /assets/img/photos/bg27.webp
 ---
 <div class="py-md-6">
   <div class="content-wrapper">

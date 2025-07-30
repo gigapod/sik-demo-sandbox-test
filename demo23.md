@@ -12,36 +12,36 @@ hero:
   title: I'm Julia Sandbox
   subtitle: couples & wedding photographer
   slides:
-    - image: /assets/img/photos/bg28.jpg
-      thumbnail: /assets/img/photos/bg28-th.jpg
-      thumbnail2x: /assets/img/photos/bg28-th@2x.jpg
-    - image: /assets/img/photos/bg29.jpg
-      thumbnail: /assets/img/photos/bg29-th.jpg
-      thumbnail2x: /assets/img/photos/bg29-th@2x.jpg
-    - image: /assets/img/photos/bg30.jpg
-      thumbnail: /assets/img/photos/bg30-th.jpg
-      thumbnail2x: /assets/img/photos/bg30-th@2x.jpg
-    - image: /assets/img/photos/bg31.jpg
-      thumbnail: /assets/img/photos/bg31-th.jpg
-      thumbnail2x: /assets/img/photos/bg31-th@2x.jpg
+    - image: /assets/img/photos/bg28.webp
+      thumbnail: /assets/img/photos/bg28-th.webp
+      thumbnail2x: /assets/img/photos/bg28-th@2x.webp
+    - image: /assets/img/photos/bg29.webp
+      thumbnail: /assets/img/photos/bg29-th.webp
+      thumbnail2x: /assets/img/photos/bg29-th@2x.webp
+    - image: /assets/img/photos/bg30.webp
+      thumbnail: /assets/img/photos/bg30-th.webp
+      thumbnail2x: /assets/img/photos/bg30-th@2x.webp
+    - image: /assets/img/photos/bg31.webp
+      thumbnail: /assets/img/photos/bg31-th.webp
+      thumbnail2x: /assets/img/photos/bg31-th@2x.webp
 
 # Introduction Section
 introduction:
   text: I absolutely love shooting weddings and couples because there are so many feelings to capture.
   categories:
     - title: Wedding
-      image: /assets/img/photos/fs1.jpg
-      image2x: /assets/img/photos/fs1@2x.jpg
+      image: /assets/img/photos/fs1.webp
+      image2x: /assets/img/photos/fs1@2x.webp
     - title: Couples
-      image: /assets/img/photos/fs2.jpg
-      image2x: /assets/img/photos/fs2@2x.jpg
+      image: /assets/img/photos/fs2.webp
+      image2x: /assets/img/photos/fs2@2x.webp
     - title: Engagement
-      image: /assets/img/photos/fs3.jpg
-      image2x: /assets/img/photos/fs3@2x.jpg
+      image: /assets/img/photos/fs3.webp
+      image2x: /assets/img/photos/fs3@2x.webp
 
 # Testimonials Section
 testimonials:
-  bg_image: /assets/img/photos/bg32.jpg
+  bg_image: /assets/img/photos/bg32.webp
   
 
 # Video Intro Section
@@ -56,38 +56,38 @@ portfolio:
     - title: Lucy & David
       count: 5
       category: Wedding
-      image: /assets/img/photos/fc1.jpg
-      image2x: /assets/img/photos/fc1@2x.jpg
+      image: /assets/img/photos/fc1.webp
+      image2x: /assets/img/photos/fc1@2x.webp
     - title: Stacy & Thomas
       count: 8
       category: Wedding
-      image: /assets/img/photos/fc2.jpg
-      image2x: /assets/img/photos/fc2@2x.jpg
+      image: /assets/img/photos/fc2.webp
+      image2x: /assets/img/photos/fc2@2x.webp
     - title: Katherine & Jack
       count: 7
       category: Couples
-      image: /assets/img/photos/fc3.jpg
-      image2x: /assets/img/photos/fc3@2x.jpg
+      image: /assets/img/photos/fc3.webp
+      image2x: /assets/img/photos/fc3@2x.webp
     - title: Jolene & William
       count: 9
       category: Wedding
-      image: /assets/img/photos/fc4.jpg
-      image2x: /assets/img/photos/fc4@2x.jpg
+      image: /assets/img/photos/fc4.webp
+      image2x: /assets/img/photos/fc4@2x.webp
     - title: Jenn & Richard
       count: 6
       category: Engagement
-      image: /assets/img/photos/fc5.jpg
-      image2x: /assets/img/photos/fc5@2x.jpg
+      image: /assets/img/photos/fc5.webp
+      image2x: /assets/img/photos/fc5@2x.webp
     - title: Gloria & Leo
       count: 8
       category: Wedding
-      image: /assets/img/photos/fc6.jpg
-      image2x: /assets/img/photos/fc6@2x.jpg
+      image: /assets/img/photos/fc6.webp
+      image2x: /assets/img/photos/fc6@2x.webp
     - title: Grace & Finn
       count: 7
       category: Engagement
-      image: /assets/img/photos/fc7.jpg
-      image2x: /assets/img/photos/fc7@2x.jpg
+      image: /assets/img/photos/fc7.webp
+      image2x: /assets/img/photos/fc7@2x.webp
 
 # Call to Action Section
 cta:
@@ -95,14 +95,14 @@ cta:
   button:
     text: Contact Me
     url: "#"
-  bg_image: /assets/img/photos/bg33.jpg
+  bg_image: /assets/img/photos/bg33.webp
 
 # About Section
 about:
   title: Hi, I'm Julia, a documentary wedding and couples photographer currently working from and based in London.
   text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio. Sed posuere consectetur est at lobortis facilisis in.
-  image: /assets/img/photos/about29.jpg
-  image2x: /assets/img/photos/about29@2x.jpg
+  image: /assets/img/photos/about29.webp
+  image2x: /assets/img/photos/about29@2x.webp
   counters:
     - count: 500K+
       text: Shots Taken

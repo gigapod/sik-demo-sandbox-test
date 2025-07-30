@@ -15,9 +15,9 @@ hero:
 
 # Stats Section
 stats:
-  image: /assets/img/photos/about5.jpg
-  image2x: /assets/img/photos/about5@2x.jpg
-  card_bg_image: /assets/img/photos/bg3.jpg
+  image: /assets/img/photos/about5.webp
+  image2x: /assets/img/photos/about5@2x.webp
+  card_bg_image: /assets/img/photos/bg3.webp
   items:
     - count: 7518
       label: "Completed Projects"
@@ -46,17 +46,17 @@ what_we_do:
       title: "Market Research"
       text: "Aenean lacinia bibendum nulla sed consectetur."
   images:
-    - src: /assets/img/photos/g1.jpg
-      src2x: /assets/img/photos/g1@2x.jpg
+    - src: /assets/img/photos/g1.webp
+      src2x: /assets/img/photos/g1@2x.webp
       class: "col-md-4 offset-md-2 align-self-end"
-    - src: /assets/img/photos/g2.jpg
-      src2x: /assets/img/photos/g2@2x.jpg
+    - src: /assets/img/photos/g2.webp
+      src2x: /assets/img/photos/g2@2x.webp
       class: "col-md-6 align-self-end"
-    - src: /assets/img/photos/g3.jpg
-      src2x: /assets/img/photos/g3@2x.jpg
+    - src: /assets/img/photos/g3.webp
+      src2x: /assets/img/photos/g3@2x.webp
       class: "col-md-6 offset-md-1"
-    - src: /assets/img/photos/g4.jpg
-      src2x: /assets/img/photos/g4@2x.jpg
+    - src: /assets/img/photos/g4.webp
+      src2x: /assets/img/photos/g4@2x.webp
       class: "col-md-4 align-self-start"
 
 # Process Section
@@ -83,7 +83,7 @@ process:
 
 # Video Section
 video:
-  bg_image: /assets/img/photos/bg1.jpg
+  bg_image: /assets/img/photos/bg1.webp
   video_url: "https://www.youtube.com/watch?v=26TbMXXOe0I"
   title: "Find out everything you need to know about creating a business process model."
 
@@ -147,10 +147,10 @@ lets_talk:
     value: "5000+"
     label: "Satisfied Customers"
   images:
-    - src: /assets/img/photos/g5.jpg
-      src2x: /assets/img/photos/g5@2x.jpg
-    - src: /assets/img/photos/g6.jpg
-      src2x: /assets/img/photos/g6@2x.jpg
+    - src: /assets/img/photos/g5.webp
+      src2x: /assets/img/photos/g5@2x.webp
+    - src: /assets/img/photos/g6.webp
+      src2x: /assets/img/photos/g6@2x.webp
      
 ---
 <div class="content-wrapper">

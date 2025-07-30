@@ -45,14 +45,14 @@ about_us:
       title: "Our Values"
       text: "Curabitur blandit lacus porttitor ridiculus mus."
   images:
-    - src: /assets/img/photos/g8.jpg
-      src2x: /assets/img/photos/g8@2x.jpg
+    - src: /assets/img/photos/g8.webp
+      src2x: /assets/img/photos/g8@2x.webp
       class: "col-12"
-    - src: /assets/img/photos/g9.jpg
-      src2x: /assets/img/photos/g9@2x.jpg
+    - src: /assets/img/photos/g9.webp
+      src2x: /assets/img/photos/g9@2x.webp
       class: "col-md-6"
-    - src: /assets/img/photos/g10.jpg
-      src2x: /assets/img/photos/g10@2x.jpg
+    - src: /assets/img/photos/g10.webp
+      src2x: /assets/img/photos/g10@2x.webp
       class: "col-md-6"
 
 # Jobs Section

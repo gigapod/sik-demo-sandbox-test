@@ -22,29 +22,29 @@ hero:
     url: "#demos"
     class: btn btn-lg btn-primary rounded-pill me-2 scroll
   images:
-    - image: /assets/img/demos/vc1.jpg
-      image2x: /assets/img/demos/vc1@2x.jpg
+    - image: /assets/img/demos/vc1.webp
+      image2x: /assets/img/demos/vc1@2x.webp
       delay: 900
-    - image: /assets/img/demos/vc2.jpg
-      image2x: /assets/img/demos/vc2@2x.jpg
+    - image: /assets/img/demos/vc2.webp
+      image2x: /assets/img/demos/vc2@2x.webp
       delay: 900
-    - image: /assets/img/demos/vc3.jpg
-      image2x: /assets/img/demos/vc3@2x.jpg
+    - image: /assets/img/demos/vc3.webp
+      image2x: /assets/img/demos/vc3@2x.webp
       delay: 900
-    - image: /assets/img/demos/vc4.jpg
-      image2x: /assets/img/demos/vc4@2x.jpg
+    - image: /assets/img/demos/vc4.webp
+      image2x: /assets/img/demos/vc4@2x.webp
       delay: 0
-    - image: /assets/img/demos/vc5.jpg
-      image2x: /assets/img/demos/vc5@2x.jpg
+    - image: /assets/img/demos/vc5.webp
+      image2x: /assets/img/demos/vc5@2x.webp
       delay: 0
-    - image: /assets/img/demos/vc6.jpg
-      image2x: /assets/img/demos/vc6@2x.jpg
+    - image: /assets/img/demos/vc6.webp
+      image2x: /assets/img/demos/vc6@2x.webp
       delay: 0
-    - image: /assets/img/demos/vc7.jpg
-      image2x: /assets/img/demos/vc7@2x.jpg
+    - image: /assets/img/demos/vc7.webp
+      image2x: /assets/img/demos/vc7@2x.webp
       delay: 900
-    - image: /assets/img/demos/vc8.jpg
-      image2x: /assets/img/demos/vc8@2x.jpg
+    - image: /assets/img/demos/vc8.webp
+      image2x: /assets/img/demos/vc8@2x.webp
       delay: 900
   jquery_badge:
     enable: true
@@ -69,11 +69,11 @@ demos:
         url: /demo18.html
         class: btn btn-sm btn-grape rounded-pill mt-1
       images:
-        - image: /assets/img/demos/d18.jpg
-          image2x: /assets/img/demos/d18@2x.jpg
+        - image: /assets/img/demos/d18.webp
+          image2x: /assets/img/demos/d18@2x.webp
           class: shadow-lg rounded-top
-        - image: /assets/img/demos/d18-2.jpg
-          image2x: /assets/img/demos/d18-2@2x.jpg
+        - image: /assets/img/demos/d18-2.webp
+          image2x: /assets/img/demos/d18-2@2x.webp
           class: shadow-lg rounded-bottom
     - background: fuchsia
       title: Demo Layout XIX
@@ -87,11 +87,11 @@ demos:
         url: /demo19.html
         class: btn btn-sm btn-fuchsia rounded-pill mt-1
       images:
-        - image: /assets/img/demos/d19-1.jpg
-          image2x: /assets/img/demos/d19-1@2x.jpg
+        - image: /assets/img/demos/d19-1.webp
+          image2x: /assets/img/demos/d19-1@2x.webp
           class: shadow-lg rounded-top
-        - image: /assets/img/demos/d19-2.jpg
-          image2x: /assets/img/demos/d19-2@2x.jpg
+        - image: /assets/img/demos/d19-2.webp
+          image2x: /assets/img/demos/d19-2@2x.webp
           class: shadow-lg rounded-bottom
     - background: purple
       title: Demo Layout XX
@@ -105,11 +105,11 @@ demos:
         url: /demo20.html
         class: btn btn-sm btn-purple rounded-pill mt-1
       images:
-        - image: /assets/img/demos/d20-1.jpg
-          image2x: /assets/img/demos/d20-1@2x.jpg
+        - image: /assets/img/demos/d20-1.webp
+          image2x: /assets/img/demos/d20-1@2x.webp
           class: shadow-lg rounded-top
-        - image: /assets/img/demos/d20-2.jpg
-          image2x: /assets/img/demos/d20-2@2x.jpg
+        - image: /assets/img/demos/d20-2.webp
+          image2x: /assets/img/demos/d20-2@2x.webp
           class: shadow-lg rounded-bottom
   more_demos_button:
     label: See All Demos
@@ -133,17 +133,17 @@ features1:
   text: Build and manage an eye-catching and impressive portfolio fast and without effort.
   icon: uil uil-images
   images:
-    - image: /assets/img/demos/fe1.jpg
-      image2x: /assets/img/demos/fe1@2x.jpg
+    - image: /assets/img/demos/fe1.webp
+      image2x: /assets/img/demos/fe1@2x.webp
       delay: 300
-    - image: /assets/img/demos/fe2.jpg
-      image2x: /assets/img/demos/fe2@2x.jpg
+    - image: /assets/img/demos/fe2.webp
+      image2x: /assets/img/demos/fe2@2x.webp
       delay: 600
-    - image: /assets/img/demos/fe3.jpg
-      image2x: /assets/img/demos/fe3@2x.jpg
+    - image: /assets/img/demos/fe3.webp
+      image2x: /assets/img/demos/fe3@2x.webp
       delay: 900
-    - image: /assets/img/demos/fe4.jpg
-      image2x: /assets/img/demos/fe4@2x.jpg
+    - image: /assets/img/demos/fe4.webp
+      image2x: /assets/img/demos/fe4@2x.webp
       delay: 1200
 
 # Features Section 2
@@ -164,17 +164,17 @@ features4:
   text: Choose from various gorgeous header and footer styles to serve you best for your needs.
   icon: uil uil-web-grid-alt
   images:
-    - image: /assets/img/demos/fe5.jpg
-      image2x: /assets/img/demos/fe5@2x.jpg
+    - image: /assets/img/demos/fe5.webp
+      image2x: /assets/img/demos/fe5@2x.webp
       delay: 300
-    - image: /assets/img/demos/fe6.jpg
-      image2x: /assets/img/demos/fe6@2x.jpg
+    - image: /assets/img/demos/fe6.webp
+      image2x: /assets/img/demos/fe6@2x.webp
       delay: 600
-    - image: /assets/img/demos/fe7.jpg
-      image2x: /assets/img/demos/fe7@2x.jpg
+    - image: /assets/img/demos/fe7.webp
+      image2x: /assets/img/demos/fe7@2x.webp
       delay: 900
-    - image: /assets/img/demos/fe8.jpg
-      image2x: /assets/img/demos/fe8@2x.jpg
+    - image: /assets/img/demos/fe8.webp
+      image2x: /assets/img/demos/fe8@2x.webp
       delay: 1200
 
 # Features Section 5
@@ -234,63 +234,63 @@ inner_pages:
   pages:
     - title: Services Modern
       url: services.html
-      image: /assets/img/demos/dc1.jpg
-      image2x: /assets/img/demos/dc1@2x.jpg
+      image: /assets/img/demos/dc1.webp
+      image2x: /assets/img/demos/dc1@2x.webp
       category: services
     - title: Services Concept
       url: services2.html
-      image: /assets/img/demos/dc2.jpg
-      image2x: /assets/img/demos/dc2@2x.jpg
+      image: /assets/img/demos/dc2.webp
+      image2x: /assets/img/demos/dc2@2x.webp
       category: services
     - title: About Modern
       url: about.html
-      image: /assets/img/demos/dc3.jpg
-      image2x: /assets/img/demos/dc3@2x.jpg
+      image: /assets/img/demos/dc3.webp
+      image2x: /assets/img/demos/dc3@2x.webp
       category: about
     - title: Contact with Facts
       url: /contact.html
-      image: /assets/img/demos/dc5.jpg
-      image2x: /assets/img/demos/dc5@2x.jpg
+      image: /assets/img/demos/dc5.webp
+      image2x: /assets/img/demos/dc5@2x.webp
       category: contact
     - title: About Concept
       url: about2.html
-      image: /assets/img/demos/dc4.jpg
-      image2x: /assets/img/demos/dc4@2x.jpg
+      image: /assets/img/demos/dc4.webp
+      image2x: /assets/img/demos/dc4@2x.webp
       category: about
     - title: Contact Minimalist
       url: /contact2.html
-      image: /assets/img/demos/dc6.jpg
-      image2x: /assets/img/demos/dc6@2x.jpg
+      image: /assets/img/demos/dc6.webp
+      image2x: /assets/img/demos/dc6@2x.webp
       category: contact
     - title: Contact Modern
       url: /contact3.html
-      image: /assets/img/demos/dc7.jpg
-      image2x: /assets/img/demos/dc7@2x.jpg
+      image: /assets/img/demos/dc7.webp
+      image2x: /assets/img/demos/dc7@2x.webp
       category: contact
     - title: Pricing
       url: pricing.html
-      image: /assets/img/demos/dc8.jpg
-      image2x: /assets/img/demos/dc8@2x.jpg
+      image: /assets/img/demos/dc8.webp
+      image2x: /assets/img/demos/dc8@2x.webp
       category: pricing
     - title: Projects with Tiles
       url: projects.html
-      image: /assets/img/demos/dc9.jpg
-      image2x: /assets/img/demos/dc9@2x.jpg
+      image: /assets/img/demos/dc9.webp
+      image2x: /assets/img/demos/dc9@2x.webp
       category: projects
     - title: Projects Masonry
       url: projects4.html
-      image: /assets/img/demos/dc12.jpg
-      image2x: /assets/img/demos/dc12@2x.jpg
+      image: /assets/img/demos/dc12.webp
+      image2x: /assets/img/demos/dc12@2x.webp
       category: projects
     - title: Projects Masonry Large
       url: projects3.html
-      image: /assets/img/demos/dc11.jpg
-      image2x: /assets/img/demos/dc11@2x.jpg
+      image: /assets/img/demos/dc11.webp
+      image2x: /assets/img/demos/dc11@2x.webp
       category: projects
     - title: Projects Overflow
       url: projects2.html
-      image: /assets/img/demos/dc10.jpg
-      image2x: /assets/img/demos/dc10@2x.jpg
+      image: /assets/img/demos/dc10.webp
+      image2x: /assets/img/demos/dc10@2x.webp
       category: projects
 
 # Responsive Section
@@ -301,8 +301,8 @@ responsive:
   image: /assets/img/demos/devices.png
   image2x: /assets/img/demos/devices@2x.png
   qr_code:
-    image: /assets/img/demos/qrcode.jpg
-    image2x: /assets/img/demos/qrcode@2x.jpg
+    image: /assets/img/demos/qrcode.webp
+    image2x: /assets/img/demos/qrcode@2x.webp
 
 # Call to Action
 cta:

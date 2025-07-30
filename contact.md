@@ -10,7 +10,7 @@ scroll_top_btn:
 # Header / Hero Section
 hero:
   title: "Get in Touch"
-  bg_image: /assets/img/photos/bg3.jpg
+  bg_image: /assets/img/photos/bg3.webp
   overlay: true
   overlay_color: "bg-overlay-400"
   breadcrumb:

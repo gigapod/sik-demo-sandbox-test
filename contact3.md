@@ -16,7 +16,7 @@ hero:
 
 # Contact Card Section
 contact_card:
-  image: "/assets/img/photos/tm1.jpg"
+  image: "/assets/img/photos/tm1.webp"
   title: "Let's Talk"
   lead_text: "Let's make something great together. We are trusted by over 5000+ clients. Join them by using our services and grow your business."
   text: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."

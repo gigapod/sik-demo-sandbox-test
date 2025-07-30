@@ -24,7 +24,7 @@ signin_form:
   title: "Welcome Back"
   subtitle: "Fill your email and password to sign in."
   image: 
-    src: "/assets/img/photos/tm3.jpg"
+    src: "/assets/img/photos/tm3.webp"
     position: "left"
   form:
     fields:

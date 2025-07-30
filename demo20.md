@@ -11,7 +11,7 @@ scroll_top_btn:
 
 # Hero Section
 hero_video:
-  poster: /assets/img/photos/movie2.jpg
+  poster: /assets/img/photos/movie2.webp
   video_src: /assets/media/movie2.mp4
   title: "<span class=\"rotator-zoom\">Rapid Solutions,Innovative Thinking,Top-Notch Support</span>"
   subtitle: We are a digital agency specializing in web design, mobile development and seo optimization.
@@ -58,7 +58,7 @@ what_we_do:
 
 # Video Section
 video_section:
-  poster: /assets/img/photos/movie.jpg
+  poster: /assets/img/photos/movie.webp
   video_mp4: /assets/media/movie.mp4
   video_webm: /assets/media/movie.webm
   shapes:
@@ -104,8 +104,8 @@ different_section:
   title: What Makes Us Different?
   subtitle: We make spending stress free so you have the perfect control.
   video:
-    image: /assets/img/photos/about12.jpg
-    image2x: /assets/img/photos/about12@2x.jpg
+    image: /assets/img/photos/about12.webp
+    image2x: /assets/img/photos/about12@2x.webp
     video_url: /assets/media/movie.mp4
   features:
     - icon: lamp

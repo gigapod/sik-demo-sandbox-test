@@ -23,10 +23,10 @@ hero:
 # Contact Info Section
 contact_info:
   title: "Convinced yet? Let's make something great together."
-  image1: /assets/img/photos/g5.jpg
-  image1_2x: /assets/img/photos/g5@2x.jpg
-  image2: /assets/img/photos/g6.jpg
-  image2_2x: /assets/img/photos/g6@2x.jpg
+  image1: /assets/img/photos/g5.webp
+  image1_2x: /assets/img/photos/g5@2x.webp
+  image2: /assets/img/photos/g6.webp
+  image2_2x: /assets/img/photos/g6@2x.webp
   counter:
     value: "5000+"
     label: "Satisfied Customers"

@@ -85,8 +85,8 @@ solutions:
 testimonials:
   title_tag: "Happy Customers"
   title: "Don't take our word for it. See what customers are saying about us."
-  image: /assets/img/photos/about28.jpg
-  image2x: /assets/img/photos/about28@2x.jpg
+  image: /assets/img/photos/about28.webp
+  image2x: /assets/img/photos/about28@2x.webp
   
 
 # Pricing Section

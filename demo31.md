@@ -90,8 +90,8 @@ testimonials:
   title_class: "fs-16 text-uppercase text-muted mb-3"
   main_title: "Don't take our word for it. See what our <span class=\"underline-3 style-1 primary\"><em>customers</em></span> are saying about us."
   main_title_class: "display-2 ls-sm mb-10 px-xxl-10"
-  image: "/assets/img/photos/about13.jpg"
-  image2x: "/assets/img/photos/about13@2x.jpg"
+  image: "/assets/img/photos/about13.webp"
+  image2x: "/assets/img/photos/about13@2x.webp"
   
 
 # Projects Section

@@ -51,23 +51,23 @@ hero:
 # Projects Slider Section
 projects_slider:
   projects:
-    - image: /assets/img/photos/bp1.jpg
-      image2x: /assets/img/photos/bp1@2x.jpg
+    - image: /assets/img/photos/bp1.webp
+      image2x: /assets/img/photos/bp1@2x.webp
       url: "/single-project.html"
-    - image: /assets/img/photos/bp2.jpg
-      image2x: /assets/img/photos/bp2@2x.jpg
+    - image: /assets/img/photos/bp2.webp
+      image2x: /assets/img/photos/bp2@2x.webp
       url: "/single-project.html"
-    - image: /assets/img/photos/bp3.jpg
-      image2x: /assets/img/photos/bp3@2x.jpg
+    - image: /assets/img/photos/bp3.webp
+      image2x: /assets/img/photos/bp3@2x.webp
       url: "/single-project.html"
-    - image: /assets/img/photos/bp4.jpg
-      image2x: /assets/img/photos/bp4@2x.jpg
+    - image: /assets/img/photos/bp4.webp
+      image2x: /assets/img/photos/bp4@2x.webp
       url: "/single-project.html"
-    - image: /assets/img/photos/bp5.jpg
-      image2x: /assets/img/photos/bp5@2x.jpg
+    - image: /assets/img/photos/bp5.webp
+      image2x: /assets/img/photos/bp5@2x.webp
       url: "/single-project.html"
-    - image: /assets/img/photos/bp6.jpg
-      image2x: /assets/img/photos/bp6@2x.jpg
+    - image: /assets/img/photos/bp6.webp
+      image2x: /assets/img/photos/bp6@2x.webp
       url: "/single-project.html"
 
 # Services Section
@@ -175,35 +175,35 @@ portfolio:
   title: "Creative. Smart. Awesome."
   subtitle: "Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna."
   autoplay1:
-    - image: /assets/img/photos/ma8.jpg
-      image2x: /assets/img/photos/ma8@2x.jpg
-    - image: /assets/img/photos/ma9.jpg
-      image2x: /assets/img/photos/ma9@2x.jpg
-    - image: /assets/img/photos/ma10.jpg
-      image2x: /assets/img/photos/ma10@2x.jpg
-    - image: /assets/img/photos/ma11.jpg
-      image2x: /assets/img/photos/ma11@2x.jpg
-    - image: /assets/img/photos/ma12.jpg
-      image2x: /assets/img/photos/ma12@2x.jpg
-    - image: /assets/img/photos/ma13.jpg
-      image2x: /assets/img/photos/ma13@2x.jpg
-    - image: /assets/img/photos/ma14.jpg
-      image2x: /assets/img/photos/ma14@2x.jpg
+    - image: /assets/img/photos/ma8.webp
+      image2x: /assets/img/photos/ma8@2x.webp
+    - image: /assets/img/photos/ma9.webp
+      image2x: /assets/img/photos/ma9@2x.webp
+    - image: /assets/img/photos/ma10.webp
+      image2x: /assets/img/photos/ma10@2x.webp
+    - image: /assets/img/photos/ma11.webp
+      image2x: /assets/img/photos/ma11@2x.webp
+    - image: /assets/img/photos/ma12.webp
+      image2x: /assets/img/photos/ma12@2x.webp
+    - image: /assets/img/photos/ma13.webp
+      image2x: /assets/img/photos/ma13@2x.webp
+    - image: /assets/img/photos/ma14.webp
+      image2x: /assets/img/photos/ma14@2x.webp
   autoplay2:
-    - image: /assets/img/photos/ma1.jpg
-      image2x: /assets/img/photos/ma1@2x.jpg
-    - image: /assets/img/photos/ma2.jpg
-      image2x: /assets/img/photos/ma2@2x.jpg
-    - image: /assets/img/photos/ma3.jpg
-      image2x: /assets/img/photos/ma3@2x.jpg
-    - image: /assets/img/photos/ma4.jpg
-      image2x: /assets/img/photos/ma4@2x.jpg
-    - image: /assets/img/photos/ma5.jpg
-      image2x: /assets/img/photos/ma5@2x.jpg
-    - image: /assets/img/photos/ma6.jpg
-      image2x: /assets/img/photos/ma6@2x.jpg
-    - image: /assets/img/photos/ma7.jpg
-      image2x: /assets/img/photos/ma7@2x.jpg
+    - image: /assets/img/photos/ma1.webp
+      image2x: /assets/img/photos/ma1@2x.webp
+    - image: /assets/img/photos/ma2.webp
+      image2x: /assets/img/photos/ma2@2x.webp
+    - image: /assets/img/photos/ma3.webp
+      image2x: /assets/img/photos/ma3@2x.webp
+    - image: /assets/img/photos/ma4.webp
+      image2x: /assets/img/photos/ma4@2x.webp
+    - image: /assets/img/photos/ma5.webp
+      image2x: /assets/img/photos/ma5@2x.webp
+    - image: /assets/img/photos/ma6.webp
+      image2x: /assets/img/photos/ma6@2x.webp
+    - image: /assets/img/photos/ma7.webp
+      image2x: /assets/img/photos/ma7@2x.webp
   button_text: "See Our Projects"
   button_url: "#"
 
@@ -213,8 +213,8 @@ about:
   subtitle: "Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis elit interdum. Duis mollis, est non commodo luctus."
   link_text: "Learn More"
   link_url: "#"
-  image: /assets/img/photos/about18.jpg
-  image2x: /assets/img/photos/about18@2x.jpg
+  image: /assets/img/photos/about18.webp
+  image2x: /assets/img/photos/about18@2x.webp
 
 # Testimonials Section
 testimonials:
@@ -263,7 +263,7 @@ cta:
   title: "We are trusted by over 5000+ clients. Join them now and grow your business."
   button_text: "Join Us"
   button_url: "#"
-  bg_image: /assets/img/photos/bg27.jpg
+  bg_image: /assets/img/photos/bg27.webp
 
 ---
 <div class="content-wrapper">

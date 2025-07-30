@@ -29,15 +29,15 @@ intro:
 categories:
   items:
     - title: About Me
-      image: /assets/img/photos/f1.jpg
+      image: /assets/img/photos/f1.webp
       link: "#"
       details: Read Details
     - title: Destinations
-      image: /assets/img/photos/f2.jpg
+      image: /assets/img/photos/f2.webp
       link: "#"
       details: See Destinations
     - title: Instagram
-      image: /assets/img/photos/f3.jpg
+      image: /assets/img/photos/f3.webp
       link: "#"
       details: Follow Me
 

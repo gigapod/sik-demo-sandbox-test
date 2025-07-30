@@ -24,7 +24,7 @@ hero2:
 signup_form:
   title: "Sign up to Sandbox"
   subtitle: "Registration takes less than a minute."
-  bg_image: "/assets/img/photos/tm3.jpg"
+  bg_image: "/assets/img/photos/tm3.webp"
   form_fields:
     - type: "text"
       id: "loginName"

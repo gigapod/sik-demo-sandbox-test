@@ -69,8 +69,8 @@ tabs:
       content_button: Learn More
       content_button_url: "#"
       content_button_color: fuchsia
-      content_image: /assets/img/photos/se5.jpg
-      content_image2x: /assets/img/photos/se5@2x.jpg
+      content_image: /assets/img/photos/se5.webp
+      content_image2x: /assets/img/photos/se5@2x.webp
       active: true
     - icon: /assets/img/icons/solid/compare.svg
       icon_color: violet
@@ -85,8 +85,8 @@ tabs:
       content_button: Learn More
       content_button_url: "#"
       content_button_color: violet
-      content_image: /assets/img/photos/se6.jpg
-      content_image2x: /assets/img/photos/se6@2x.jpg
+      content_image: /assets/img/photos/se6.webp
+      content_image2x: /assets/img/photos/se6@2x.webp
       content_image_order: 2
     - icon: /assets/img/icons/solid/delivery-box.svg
       icon_color: green
@@ -101,8 +101,8 @@ tabs:
       content_button: Learn More
       content_button_url: "#"
       content_button_color: green
-      content_image: /assets/img/photos/se7.jpg
-      content_image2x: /assets/img/photos/se7@2x.jpg
+      content_image: /assets/img/photos/se7.webp
+      content_image2x: /assets/img/photos/se7@2x.webp
 
 # Progress Section
 progress:
@@ -118,7 +118,7 @@ progress:
 
 # Testimonials Section
 testimonials:
-  image: /assets/img/photos/tm2.jpg
+  image: /assets/img/photos/tm2.webp
  
 
 # Projects Section
@@ -149,14 +149,14 @@ features:
       title: Top-Notch Support
       text: Curabitur blandit lacus porttitor ridiculus mus.
   images:
-    - image: /assets/img/photos/g8.jpg
-      image2x: /assets/img/photos/g8@2x.jpg
+    - image: /assets/img/photos/g8.webp
+      image2x: /assets/img/photos/g8@2x.webp
       class: col-12
-    - image: /assets/img/photos/g9.jpg
-      image2x: /assets/img/photos/g9@2x.jpg
+    - image: /assets/img/photos/g9.webp
+      image2x: /assets/img/photos/g9@2x.webp
       class: col-md-6
-    - image: /assets/img/photos/g10.jpg
-      image2x: /assets/img/photos/g10@2x.jpg
+    - image: /assets/img/photos/g10.webp
+      image2x: /assets/img/photos/g10@2x.webp
       class: col-md-6
 
 # Call to Action Section

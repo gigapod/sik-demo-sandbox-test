@@ -11,7 +11,7 @@ scroll_top_btn:
 hero:
   title: "Our Services"
   subtitle: "We are a creative company that focuses on establishing long-term relationships with customers."
-  bg_image: "/assets/img/photos/bg1.jpg"
+  bg_image: "/assets/img/photos/bg1.webp"
   bg_overlay: true
 
 # What We Do Section
@@ -42,7 +42,7 @@ what_we_do:
 
 # Video Section
 video:
-  poster: "/assets/img/photos/movie.jpg"
+  poster: "/assets/img/photos/movie.webp"
   url: "/assets/media/movie.mp4"
   webm_url: "/assets/media/movie.webm"
 

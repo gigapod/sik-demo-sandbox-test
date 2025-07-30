@@ -11,8 +11,8 @@ scroll_top_btn:
 hero:
   enable: true
   bg_class: "bg-gradient-blend"
-  profile_image: /assets/img/photos/about28.jpg
-  profile_image2x: /assets/img/photos/about28@2x.jpg
+  profile_image: /assets/img/photos/about28.webp
+  profile_image2x: /assets/img/photos/about28@2x.webp
   greeting: "Hello! I'm Julia"
   title: I'm a corporate <em>brand designer</em> based in New York City.
   content: I'm very passionate about the work that I do, and if you are curious you can find my works on <a href="#" class="hover" style="color var(--bs-dribbble);">Dribbble</a>, my portfolio on <a href="#" class="hover" style="color var(--bs-behance);">Behance</a>, and my shots on <a href="#" class="hover" style="color var(--bs-instagram);">Instagram</a>.
@@ -71,8 +71,8 @@ testimonials:
 
 # About Section
 about:
-  image: /assets/img/photos/about28.jpg
-  image2x: /assets/img/photos/about28@2x.jpg
+  image: /assets/img/photos/about28.webp
+  image2x: /assets/img/photos/about28@2x.webp
   title: More <em>about</em> me
   subtitle: I'm Julia Sandbox, a corporate brand designer based in New York City. I'm very passionate about the work that I do.
   text1: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula.
