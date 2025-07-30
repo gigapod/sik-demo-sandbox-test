@@ -1,4 +1,4 @@
-baseurl: ""
+baseurl: "sik-demo-sandbox-test"
 url: ""
 
 # Build settings
@@ -10,7 +10,6 @@ sass:
   sass_dir: _sass
   # Enable source maps in development, disable in production
   sourcemap: never # Valid values: 'development' (default), 'always', 'never'
-  
 
 # Plugins
 plugins:
@@ -19,18 +18,18 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate-v2
   - jekyll-watch
-  - jekyll-toc   #Documentation TOC 
+  - jekyll-toc #Documentation TOC
 
 # TOC Settings for documentation
 toc:
   min_level: 2
   max_level: 3
-  list_class: 'list-unstyled fs-sm lh-sm text-reset'
-  sublist_class: 'list-unstyled pt-2 ps-2 fs-sm lh-sm text-reset'
-  item_class: 'nav-link scroll'
-  item_prefix: 'snippet-'
+  list_class: "list-unstyled fs-sm lh-sm text-reset"
+  sublist_class: "list-unstyled pt-2 ps-2 fs-sm lh-sm text-reset"
+  item_class: "nav-link scroll"
+  item_prefix: "snippet-"
   ordered: false
-  no_toc_section_class: 'no-toc'
+  no_toc_section_class: "no-toc"
   numbered_items: true
   auto_ids: true
   sanitize: false
@@ -40,14 +39,14 @@ pagination:
   enabled: true
   debug: true
   collections:
-    - name: 'projects'
+    - name: "projects"
       per_page: 9
-      permalink: '/projects/page:num/'
-      title: ':title - Page :num'
-    - name: 'posts'
+      permalink: "/projects/page:num/"
+      title: ":title - Page :num"
+    - name: "posts"
       per_page: 6
-      permalink: '/blog/page:num/'
-      title: ':title - Page :num'
+      permalink: "/blog/page:num/"
+      title: ":title - Page :num"
 
 # Collections
 collections:
@@ -74,7 +73,6 @@ defaults:
       type: "projects"
     values:
       layout: "project"
-      
 
 # Exclude from processing and watching
 exclude:
@@ -115,7 +113,7 @@ jekyll-archives:
     tag: blog/archive-tag
     category: blog/archive-category
   permalinks:
-    year: '/blog/:year/'
-    month: '/blog/:year/:month/'
-    tag: '/blog/tag/:name/'
-    category: '/blog/category/:name/'
+    year: "/blog/:year/"
+    month: "/blog/:year/:month/"
+    tag: "/blog/tag/:name/"
+    category: "/blog/category/:name/"
