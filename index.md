@@ -1,354 +1,249 @@
 ---
 layout: default
-title: Home
-permalink: /
-custom_color: grape
-custom_font: space
+title: SparkFun Inventor's Kit
+permalink: /demo11/
+custom_color: red
+custom_font: thicccboi
 scroll_top_btn:
   enable: true
 
-# Banner Section
-banner:
-  enable: true
-  text: "✨ Jekyll version of Sandbox is released! Grab a copy <a href=\"#\" class=\"link-white hover d-inline-flex align-items-center\" target=\"_blank\">here <i class=\"uil uil-arrow-up-right\"></i></a>"
-
 # Hero Section
 hero:
-  title: "Create a powerful but effortless website for <br /><span class=\"rotator-fade text-primary\">your business.,your portfolio.,your startup.,digital marketing.</span>"
-  subtitle: "You can create your website in minutes with the help of countless amazing features of Sandbox."
+  title: SparkFun Inventor’s Kit
+  subtitle: The SparkFun Inventor’s Kit (SIK) is a great way to get started with programming and hardware interaction with MicroPython.
   buttons:
-    - label: "See Demo Pages"
-      url: "#demos"
-      class: "btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl mx-md-1 mb-2 mb-md-0 scroll"
-      icon: "uil uil-arrow-down-right"
-    - label: "Wordpress Version"
+    - label: Explore Now
       url: "#"
-      class: "btn btn-lg btn-fuchsia btn-icon btn-icon-end rounded-xl mx-md-1"
-      icon: "uil uil-arrow-up-right"
-      target: "_blank"
-  shapes:
-    - position: "top: -5%; left: -15%;"
-      image: "/assets/img/svg/pie.svg"
-      class: "shape grape w-5 d-none d-lg-block"
-      delay: 1500
-    - position: "bottom: 30%; left: -20%;"
-      image: "/assets/img/svg/scribble.svg"
-      class: "shape violet w-10 d-none d-lg-block"
-      delay: 1500
-    - position: "top: 0%; right: -25%; transform: rotate(70deg);"
-      image: "/assets/img/svg/tri.svg"
-      class: "shape fuchsia w-6 d-none d-lg-block"
-      delay: 1500
-    - position: "bottom: 25%; right: -17%;"
-      image: "/assets/img/svg/circle.svg"
-      class: "shape yellow w-6 d-none d-lg-block"
-      delay: 1500
+      class: btn btn-lg btn-white rounded-pill me-2
+    - label: Need an SIK? Get one at SparkFun!
+      url: "https://www.sparkfun.com/sparkfun-inventor-s-kit-v4-1-2.html"
+      class: btn btn-lg btn-outline-white rounded-pill
+  background: /assets/img/photos/sik-demo-home-bg.png
+  slider:
+    - image: /assets/img/photos/sik-home-slider-1.webp
+      image2x: /assets/img/photos/sik-home-slider-1@2x.webp
+    - image: /assets/img/photos/sik-home-slider-2.webp
+      image2x: /assets/img/photos/sik-home-slider-2@2x.webp
+      video: /assets/media/movie.mp4
+    - image: /assets/img/photos/sik-home-slider-3.webp
+      image2x: /assets/img/photos/sik-home-slider-3@2x.webp
+    - image: /assets/img/photos/sik-home-slider-4.webp
+      image2x: /assets/img/photos/sik-home-slider-4@2x.webp
 
-# Slideshow Section
-slideshow1:
-  enable: true
-  slides:
-    - image: /assets/img/photos/ma8.webp
-      image2x: /assets/img/photos/ma8@2x.webp
-    - image: /assets/img/photos/ma9.webp
-      image2x: /assets/img/photos/ma9@2x.webp
-    - image: /assets/img/photos/ma10.webp
-      image2x: /assets/img/photos/ma10@2x.webp
-    - image: /assets/img/photos/ma11.webp
-      image2x: /assets/img/photos/ma11@2x.webp
-    - image: /assets/img/photos/ma12.webp
-      image2x: /assets/img/photos/ma12@2x.webp
-    - image: /assets/img/photos/ma13.webp
-      image2x: /assets/img/photos/ma13@2x.webp
-    - image: /assets/img/photos/ma14.webp
-      image2x: /assets/img/photos/ma14@2x.webp
+# Services Section
+services:
+  title: The SparkFun Inventor's Kit
+  subtitle: Learn electronics, micropython programming and sensors while building an automated robot!
+  service_items:
+    - icon: uil uil-book-open
+      title: Get to Know the SIK
+      text: From an powerful SparkFun RedBoard IOT, to a breadboard, the SIK has all the parts needed for 16 projects!
+      link: "#"
+    - icon: uil uil-ticket
+      title: Start Today
+      text:  With no tedious software installs or setup, the SIK delivers a frictionless eploration environment.
+      link: "#"
+    - icon: uil uil-sliders-v-alt
+      title: Interactive Development
+      text: The SIK delviers hands-on project construction and interactive, notebook-based MicroPython development.
+      link: "#"
+    - icon: uil uil-robot
+      title: Innovative Projects
+      text: With Interactive and on-line development, the SIK includes 16 electronics projects that leverage MicroPython.
+      link: "#"
 
-slideshow2:
-  enable: true
-  rtl: true
-  slides:
-    - image: /assets/img/photos/ma1.webp
-      image2x: /assets/img/photos/ma1@2x.webp
-    - image: /assets/img/photos/ma2.webp
-      image2x: /assets/img/photos/ma2@2x.webp
-    - image: /assets/img/photos/ma3.webp
-      image2x: /assets/img/photos/ma3@2x.webp
-    - image: /assets/img/photos/ma4.webp
-      image2x: /assets/img/photos/ma4@2x.webp
-    - image: /assets/img/photos/ma5.webp
-      image2x: /assets/img/photos/ma5@2x.webp
-    - image: /assets/img/photos/ma6.webp
-      image2x: /assets/img/photos/ma6@2x.webp
-    - image: /assets/img/photos/ma7.webp
-      image2x: /assets/img/photos/ma7@2x.webp
+# Why Choose Us Section
+why_choose:
+  title: Project Hardware
+  subtitle: The SIK contains all the hardware needed to build six interactive Projects!
+  image: /assets/img/photos/sik-home-hardware.webp
+  image2x: /assets/img/photos/sik-home-hardware@2x.webp
+  accordion_items:
+    - title: The Latest Sparkfun RedBoard
+      content: At the heart of the SIK is the SparkFun RedBoard IoT - RP2350 - a microprocessor computer powered by a Raspberry Pi RP2350 microprocessor.
+      active: true
+    - title: Interactive Sensors and Displays
+      content: With a ultra-sonic distance sensor, an accelerometer and an OLED display, the SIK allows experimenation that interacts with your environment.
+      active: false
+    - title: Buttons, Motors, LEDs and more! 
+      content: When we say everything, we mean EVERYTHING! From the motors to drive a robot, to the resitors required to light and LED, the SIK inclues everything you need! Just plug-into your computer and beging learning electronics in minutes!
+      active: false
 
-# Demos Section
-demos:
-  title: Functional, impressive and rich demos to start with
-  count: 34
-  new_demos:
-    subtitle: "New Demos"
-    items:
-      - number: 18
-        image: /assets/img/demos/d18.webp
-        image2x: /assets/img/demos/d18@2x.webp
-      - number: 19
-        image: /assets/img/demos/d19.webp
-        image2x: /assets/img/demos/d19@2x.webp
-      - number: 20
-        image: /assets/img/demos/d20.webp
-        image2x: /assets/img/demos/d20@2x.webp
-      - number: 21
-        image: /assets/img/demos/d21.webp
-        image2x: /assets/img/demos/d21@2x.webp
-      - number: 22
-        image: /assets/img/demos/d22.webp
-        image2x: /assets/img/demos/d22@2x.webp
-      - number: 23
-        image: /assets/img/demos/d23.webp
-        image2x: /assets/img/demos/d23@2x.webp
-      - number: 24
-        image: /assets/img/demos/d24.webp
-        image2x: /assets/img/demos/d24@2x.webp
-      - number: 25
-        image: /assets/img/demos/d25.webp
-        image2x: /assets/img/demos/d25@2x.webp
-      - number: 26
-        image: /assets/img/demos/d26.webp
-        image2x: /assets/img/demos/d26@2x.webp
-      - number: 27
-        image: /assets/img/demos/d27.webp
-        image2x: /assets/img/demos/d27@2x.webp
-      - number: 28
-        image: /assets/img/demos/d28.webp
-        image2x: /assets/img/demos/d28@2x.webp
-      - number: 29
-        image: /assets/img/demos/d29.webp
-        image2x: /assets/img/demos/d29@2x.webp
-      - number: 30
-        image: /assets/img/demos/d30.webp
-        image2x: /assets/img/demos/d30@2x.webp
-      - number: 31
-        image: /assets/img/demos/d31.webp
-        image2x: /assets/img/demos/d31@2x.webp
-      - number: 32
-        image: /assets/img/demos/d32.webp
-        image2x: /assets/img/demos/d32@2x.webp
-      - number: 33
-        image: /assets/img/demos/d33.webp
-        image2x: /assets/img/demos/d33@2x.webp
-      - number: 34
-        image: /assets/img/demos/d34.webp
-        image2x: /assets/img/demos/d34@2x.webp
-  prev_demos:
-    subtitle: "Previous Demos"
-    items:
-      - number: 1
-        image: /assets/img/demos/d1.webp
-        image2x: /assets/img/demos/d1@2x.webp
-      - number: 2
-        image: /assets/img/demos/d2.webp
-        image2x: /assets/img/demos/d2@2x.webp
-      - number: 3
-        image: /assets/img/demos/d3.webp
-        image2x: /assets/img/demos/d3@2x.webp
-      - number: 4
-        image: /assets/img/demos/d4.webp
-        image2x: /assets/img/demos/d4@2x.webp
-      - number: 5
-        image: /assets/img/demos/d5.webp
-        image2x: /assets/img/demos/d5@2x.webp
-      - number: 6
-        image: /assets/img/demos/d6.webp
-        image2x: /assets/img/demos/d6@2x.webp
-      - number: 7
-        image: /assets/img/demos/d7.webp
-        image2x: /assets/img/demos/d7@2x.webp
-      - number: 8
-        image: /assets/img/demos/d8.webp
-        image2x: /assets/img/demos/d8@2x.webp
-      - number: 9
-        image: /assets/img/demos/d9.webp
-        image2x: /assets/img/demos/d9@2x.webp
-      - number: 10
-        image: /assets/img/demos/d10.webp
-        image2x: /assets/img/demos/d10@2x.webp
-      - number: 11
-        image: /assets/img/demos/d11.webp
-        image2x: /assets/img/demos/d11@2x.webp
-      - number: 12
-        image: /assets/img/demos/d12.webp
-        image2x: /assets/img/demos/d12@2x.webp
-      - number: 13
-        image: /assets/img/demos/d13.webp
-        image2x: /assets/img/demos/d13@2x.webp
-      - number: 14
-        image: /assets/img/demos/d14.webp
-        image2x: /assets/img/demos/d14@2x.webp
-      - number: 15
-        image: /assets/img/demos/d15.webp
-        image2x: /assets/img/demos/d15@2x.webp
-      - number: 16
-        image: /assets/img/demos/d16.webp
-        image2x: /assets/img/demos/d16@2x.webp
-      - number: 17
-        image: /assets/img/demos/d17.webp
-        image2x: /assets/img/demos/d17@2x.webp
-
-# Benefits Section
-benefits:
-  title: Save your time and money by choosing Sandbox for your website.
-  counters:
-    - count: 250+
-      text: UI elements
-    - count: 150+
-      text: Pre-made blocks
-    - count: 100+
-      text: Neatly coded pages
-
-# Features Section 1
-features1:
-  image: /assets/img/photos/mi1.webp
-  image2x: /assets/img/photos/mi1@2x.webp
+# Solutions Section
+solutions:
+  title: Learn and Use MicroPython
+  subtitle: Program using MicroPython and your Browser
+  text: MircoPython is the latest, interactive development environment for microcontrollers. Paired with an innovative notebook based interface, interactive learning and programming are combined to support learning and bring your projects to life!
+  image: /assets/img/photos/sik-home-software.webp
+  image2x: /assets/img/photos/sik-home-software@2x.webp
   features:
-    - icon: puzzle
-      title: Color and Font Options
-      text: Easily customize colors and fonts, or choose from provided options.
-    - icon: pen-tool
-      title: Cool Features & Elements
-      text: Equipped with stunning features and elements for designing appealing pages.
-    - icon: share
-      title: Modern Portfolio Layouts
-      text: Effortlessly create and maintain a visually stunning and impactful portfolio.
+    - text: Use MicroPython to program your projects.
+    - text: Use notebooks that combine knowledge and programming activities.
+    - text: No software installs - run the SIK from your browser
+    - text: Build your own projects, leveraging the SIK projects and programs
 
-# Features Section 2
-features2:
-  image: /assets/img/photos/mi2.webp
-  image2x: /assets/img/photos/mi2@2x.webp
+# Stats Section
+stats:
+  background: /assets/img/photos/sik-demo-home-bg.png
+  stats_items:
+    - count: 6
+      text: Projects
+    - count: 22
+      text: Circuits
+    - count: 90
+      text: Parts
+    - count: 1000
+      text: Hours of fun!
+
+# Case Studies Section
+case_studies:
+  title: Case Studies
+  subtitle: Check out some of our awesome projects with creative ideas and great design.
+  case_items:
+    - image: /assets/img/photos/b4.webp
+      title: Ligula tristique quis risus
+      text: Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.
+      date: 14 Apr 2022
+      category: Coding
+    - image: /assets/img/photos/b5.webp
+      title: Nullam id dolor elit id nibh
+      text: Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.
+      date: 29 Mar 2022
+      category: Workspace
+    - image: /assets/img/photos/b6.webp
+      title: Ultricies fusce porta elit
+      text: Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.
+      date: 26 Feb 2022
+      category: Meeting
+    - image: /assets/img/photos/b7.webp
+      title: Morbi leo risus porta eget
+      text: Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor.
+      date: 7 Jan 2022
+      category: Business Tips
+
+# About Section
+about:
+  title: Who Are We?
+  subtitle: Company that believes in the power of creative strategy.
+  text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+  video_image: /assets/img/photos/about12.webp
+  video_image2x: /assets/img/photos/about12@2x.webp
+  video_url: /assets/media/movie.mp4
   features:
-    - icon: devices
-      title: Well-Written Code
-      text: Pixel-perfect and easily editable code with comprehensive comments.
-    - icon: safe
-      title: Gorgeous Shop Layouts
-      text: Present your products to your visitors in an efficient and visually appealing manner.
-    - icon: globe-2
-      title: Fully Responsive Layouts
-      text: Adjusts to varying screen sizes, ensuring seamless compatibility across all devices.
+    - text: Aenean eu leo quam ornare curabitur blandit tempus.
+    - text: Nullam quis risus eget urna mollis ornare donec elit.
+    - text: Etiam porta sem malesuada magna mollis euismod.
+    - text: Fermentum massa vivamus faucibus amet euismod.
 
-# Projects Carousel
-projects_carousel:
-  enable: true
-  images:
-    - image: /assets/img/photos/bp1.webp
-      image2x: /assets/img/photos/bp1@2x.webp
-    - image: /assets/img/photos/bp2.webp
-      image2x: /assets/img/photos/bp2@2x.webp
-    - image: /assets/img/photos/bp3.webp
-      image2x: /assets/img/photos/bp3@2x.webp
-    - image: /assets/img/photos/bp4.webp
-      image2x: /assets/img/photos/bp4@2x.webp
-    - image: /assets/img/photos/bp5.webp
-      image2x: /assets/img/photos/bp5@2x.webp
-    - image: /assets/img/photos/bp6.webp
-      image2x: /assets/img/photos/bp6@2x.webp
+# Team Section
+team:
+  title: Our Team
+  subtitle: Think unique and be innovative. Make a difference with Sandbox.
+  
 
-# Features Grid
-features_grid:
-  items:
-    - image: /assets/img/demos/fi1.webp
-      image2x: /assets/img/demos/fi1@2x.webp
-      title: Built with Sass <br> & Bootstrap 5
-    - image: /assets/img/demos/fi2.webp
-      image2x: /assets/img/demos/fi2@2x.webp
-      title: SEO-friendly <br> Coding
-    - image: /assets/img/demos/fi3.webp
-      image2x: /assets/img/demos/fi3@2x.webp
-      title: Valid W3C <br> HTML5 & CSS3
-    - image: /assets/img/demos/fi4.webp
-      image2x: /assets/img/demos/fi4@2x.webp
-      title: Retina-ready <br> Graphics
-    - image: /assets/img/demos/fi5.webp
-      image2x: /assets/img/demos/fi5@2x.webp
-      title: One-page <br> Layout Option
-    - image: /assets/img/demos/fi6.webp
-      image2x: /assets/img/demos/fi6@2x.webp
-      title: Isotope <br> Filterable Gallery
-    - image: /assets/img/demos/fi7.webp
-      image2x: /assets/img/demos/fi7@2x.webp
-      title: Mailchimp <br> Compatible
-    - image: /assets/img/demos/fi8.webp
-      image2x: /assets/img/demos/fi8@2x.webp
-      title: Contact Form <br> w/o Page Refresh
-    - image: /assets/img/demos/fi9.webp
-      image2x: /assets/img/demos/fi9@2x.webp
-      title: Animations <br> on Page Scroll
-    - image: /assets/img/demos/fi10.webp
-      image2x: /assets/img/demos/fi10@2x.webp
-      title: Top-Notch Support <br> & Free Updates
-
-# Testimonials
+# Testimonials Section
 testimonials:
-  title: Our top priority is ensuring customer satisfaction.
-  subtitle: Don't take our word for it. Hear from customers about Sandbox.
-  button:
-    label: All Reviews
-    url: #
-    class: btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl
-    icon: uil uil-arrow-up-right
-    target: _blank
-  items:
-    - text: "Sandbox is really attractive and it saves my time. The support team is really amazing."
-      name: stevenstrange
-    - text: "This is just next level stuff in terms of quality, docs and features. I don't think I'm going to need or tolerate any other template from now on."
-      name: 70656e6973
-    - text: "I've been a Themeforest user for almost 10 years and I have purchased well over 100 themes during my time. This theme is amongst the best here."
-      name: bmwe92m3
-    - text: "Simply the best templates that I have bought so far. Super clean code, intuitive documentations, and most important of all the best design."
-      name: oziuji
+  background: /assets/img/photos/bg2.webp
+  
 
-# Call to Action
-cta:
-  icon: /assets/img/demos/icon-grape.webp
-  icon2x: /assets/img/demos/icon-grape@2x.webp
-  title: Think unique and make a difference with Sandbox.
-  subtitle: We are trusted by thousands of clients. Join them now and easily create your stunning website in no time.
+# Pricing Section
+pricing:
+  title: Our Pricing
+  subtitle: We offer great prices, premium products and quality service for your business.
+  pricing_plans:
+    - title: Basic Plan
+      price_monthly: 9
+      price_yearly: 99
+      features:
+        - text: <strong>1</strong> Project
+        - text: <strong>100K</strong> API Access
+        - text: <strong>100MB</strong> Storage
+        - text: Weekly <strong>Reports</strong>
+        - text: 7/24 <strong>Support</strong>
+      button_text: Choose Plan
+      button_url: "#"
+    - title: Premium Plan
+      price_monthly: 19
+      price_yearly: 199
+      popular: true
+      features:
+        - text: <strong>5</strong> Projects
+        - text: <strong>100K</strong> API Access
+        - text: <strong>200MB</strong> Storage
+        - text: Weekly <strong>Reports</strong>
+        - text: 7/24 <strong>Support</strong>
+      button_text: Choose Plan
+      button_url: "#"
+    - title: Corporate Plan
+      price_monthly: 49
+      price_yearly: 499
+      features:
+        - text: <strong>20</strong> Projects
+        - text: <strong>300K</strong> API Access
+        - text: <strong>500MB</strong> Storage
+        - text: Weekly <strong>Reports</strong>
+        - text: 7/24 <strong>Support</strong>
+      button_text: Choose Plan
+      button_url: "#"
+  faqs:
+    - question: Can I cancel my subscription?
+      answer: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod maecenas.
+      icon: uil uil-comment-exclamation
+    - question: Which payment methods do you accept?
+      answer: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod maecenas.
+      icon: uil uil-comment-exclamation
+    - question: How can I manage my Account?
+      answer: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod maecenas.
+      icon: uil uil-comment-exclamation
+    - question: Is my credit card information secure?
+      answer: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod maecenas.
+      icon: uil uil-comment-exclamation
+
+# Footer CTA
+footer_cta:
+  title: Start your adventure with the SparkFun Inventor's Kit today!
   button:
-    label: Buy Sandbox
-    url: #
-    class: btn btn-lg btn-primary btn-icon btn-icon-end rounded-xl
-    icon: uil uil-arrow-up-right
-    target: _blank
-  image: /assets/img/demos/f1.webp
-  image2x: /assets/img/demos/f1@2x.webp
+    text: Visit SparkFun.com
+    url: "https://www.sparkfun.com/sparkfun-inventor-s-kit-v4-1-2.html"
+    
+  
 ---
 <div class="content-wrapper">
-<header class="position-absolute w-100">
-{% include components/sections/home/banner.html %}
-
+<header class="wrapper bg-soft-primary">
 {% include components/navbar/navbar.html 
-  classList="center-nav transparent navbar-light"
-  logoAlt="logo-dark"
-  otherClassList="w-100 d-flex ms-auto"
-  otherBtn=true
-  otherBtnClassList="btn btn-primary rounded-xl"
-  otherBtnText="Purchase Now"
-  otherBtnLink="#"
-  otherLinksNewTab=true
+    topAlert=false
+    wrapperClass="bg-soft-primary"
+    classList="classic transparent position-absolute navbar-dark"
+    logoBoth=true
+    logoAlt="logo-dark"
+    otherClassList="ms-lg-4"
+    otherBtn=true
+    otherBtnClassList="btn btn-sm btn-white rounded-pill"
+    otherBtnText="Free Trial"
+    otherBtnLink="#"
+    
 %}
 </header>
 <!-- /header -->
 
-{% include components/sections/home/hero.html %}
-{% include components/sections/home/slideshow1.html %}
-{% include components/sections/home/slideshow2.html %}
-{% include components/sections/home/demos.html %}
-{% include components/sections/home/benefits.html %}
-{% include components/sections/home/features1.html %}
-{% include components/sections/home/features2.html %}
-{% include components/sections/home/projects-carousel.html %}
-{% include components/sections/home/features-grid.html %}
-{% include components/sections/home/testimonials.html %}
-{% include components/sections/home/cta.html %}
+{% include components/sections/demo11/hero.html %}
+{% include components/sections/demo11/services.html %}
+{% include components/sections/demo11/why-choose.html %}
+{% include components/sections/demo11/solutions.html %}
+{% include components/sections/demo11/stats.html %}
+{% include components/sections/demo11/case-studies.html %}
+{% include components/sections/demo11/about.html %}
+{% include components/sections/demo11/team.html %}
+{% include components/sections/demo11/testimonials.html %}
+{% include components/sections/demo11/pricing.html %}
+
 </div>
-```
+{% include components/footer/footer.html 
+  style="default"
+  bg_color="bg-navy"
+  text_color="text-inverse"
+  cta=true
+  cta_title="Start your adventure with the SparkFun Inventor's Kit today!"
+  cta_button_text="Purchase at SparkFun.com"
+  cta_button_url="https://www.sparkfun.com/sparkfun-inventor-s-kit-v4-1-2.html"
+%}
