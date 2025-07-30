@@ -18,18 +18,18 @@ hero:
       url: "#"
       class: btn btn-lg btn-green rounded
   gallery:
-    - image: /assets/img/photos/sa20..webp
-      image2x: /assets/img/photos/sa20@2x..webp
-    - image: /assets/img/photos/sa18..webp
-      image2x: /assets/img/photos/sa18@2x..webp
-    - image: /assets/img/photos/sa16..webp
-      image2x: /assets/img/photos/sa16@2x..webp
-    - image: /assets/img/photos/sa21..webp
-      image2x: /assets/img/photos/sa21@2x..webp
-    - image: /assets/img/photos/sa19..webp
-      image2x: /assets/img/photos/sa19@2x..webp
-    - image: /assets/img/photos/sa17..webp
-      image2x: /assets/img/photos/sa17@2x..webp
+    - image: /assets/img/photos/sa20.webp
+      image2x: /assets/img/photos/sa20@2x.webp
+    - image: /assets/img/photos/sa18.webp
+      image2x: /assets/img/photos/sa18@2x.webp
+    - image: /assets/img/photos/sa16.webp
+      image2x: /assets/img/photos/sa16@2x.webp
+    - image: /assets/img/photos/sa21.webp
+      image2x: /assets/img/photos/sa21@2x.webp
+    - image: /assets/img/photos/sa19.webp
+      image2x: /assets/img/photos/sa19@2x.webp
+    - image: /assets/img/photos/sa17.webp
+      image2x: /assets/img/photos/sa17@2x.webp
 
 # Clients Section
 clients:
@@ -47,12 +47,12 @@ why_choose_us:
       title: Easy Usage
       description: Duis mollis commodo luctus cursus commodo tortor mauris.
       image_group:
-        - image: /assets/img/photos/sa13..webp
-          image2x: /assets/img/photos/sa13@2x..webp
-        - image: /assets/img/photos/sa14..webp
-          image2x: /assets/img/photos/sa14@2x..webp
-        - image: /assets/img/photos/sa15..webp
-          image2x: /assets/img/photos/sa15@2x..webp
+        - image: /assets/img/photos/sa13.webp
+          image2x: /assets/img/photos/sa13@2x.webp
+        - image: /assets/img/photos/sa14.webp
+          image2x: /assets/img/photos/sa14@2x.webp
+        - image: /assets/img/photos/sa15.webp
+          image2x: /assets/img/photos/sa15@2x.webp
       content_title: Easy Usage
       content_text: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna.
       features:
@@ -70,14 +70,14 @@ why_choose_us:
       title: Fast Transactions
       description: Vivamus sagittis lacus augue fusce dapibus tellus nibh.
       image_group:
-        - image: /assets/img/photos/sa9..webp
-          image2x: /assets/img/photos/sa9@2x..webp
-        - image: /assets/img/photos/sa10..webp
-          image2x: /assets/img/photos/sa10@2x..webp
-        - image: /assets/img/photos/sa11..webp
-          image2x: /assets/img/photos/sa11@2x..webp
-        - image: /assets/img/photos/sa12..webp
-          image2x: /assets/img/photos/sa12@2x..webp
+        - image: /assets/img/photos/sa9.webp
+          image2x: /assets/img/photos/sa9@2x.webp
+        - image: /assets/img/photos/sa10.webp
+          image2x: /assets/img/photos/sa10@2x.webp
+        - image: /assets/img/photos/sa11.webp
+          image2x: /assets/img/photos/sa11@2x.webp
+        - image: /assets/img/photos/sa12.webp
+          image2x: /assets/img/photos/sa12@2x.webp
       content_title: Fast Transactions
       content_text: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna.
       features:
@@ -95,14 +95,14 @@ why_choose_us:
       title: Secure Payments
       description: Vestibulum ligula porta felis maecenas faucibus mollis.
       image_group:
-        - image: /assets/img/photos/sa5..webp
-          image2x: /assets/img/photos/sa5@2x..webp
-        - image: /assets/img/photos/sa6..webp
-          image2x: /assets/img/photos/sa6@2x..webp
-        - image: /assets/img/photos/sa7..webp
-          image2x: /assets/img/photos/sa7@2x..webp
-        - image: /assets/img/photos/sa8..webp
-          image2x: /assets/img/photos/sa8@2x..webp
+        - image: /assets/img/photos/sa5.webp
+          image2x: /assets/img/photos/sa5@2x.webp
+        - image: /assets/img/photos/sa6.webp
+          image2x: /assets/img/photos/sa6@2x.webp
+        - image: /assets/img/photos/sa7.webp
+          image2x: /assets/img/photos/sa7@2x.webp
+        - image: /assets/img/photos/sa8.webp
+          image2x: /assets/img/photos/sa8@2x.webp
       content_title: Secure Payments
       content_text: Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna.
       features:
@@ -126,8 +126,8 @@ how_it_works:
   title: How It Works?
   subtitle: Here are the 3 working steps on success.
   video_url: /assets/media/movie.mp4
-  image: /assets/img/photos/about8..webp
-  image2x: /assets/img/photos/about8@2x..webp
+  image: /assets/img/photos/about8.webp
+  image2x: /assets/img/photos/about8@2x.webp
   features:
     - icon: /assets/img/icons/lineal/shield.svg
       icon_color: text-yellow

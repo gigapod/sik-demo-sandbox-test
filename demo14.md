@@ -26,16 +26,16 @@ hero:
     label: Learn More
     url: "#"
     class: more hover
-  image: /assets/img/photos/about18..webp
-  image2x: /assets/img/photos/about18@2x..webp
+  image: /assets/img/photos/about18.webp
+  image2x: /assets/img/photos/about18@2x.webp
 
 # What We Do Section
 what_we_do:
   title: What We Do
   subtitle: We make your spending stress-free for you to have the perfect control.
   services:
-    - image: /assets/img/photos/se3..webp
-      image2x: /assets/img/photos/se3@2x..webp
+    - image: /assets/img/photos/se3.webp
+      image2x: /assets/img/photos/se3@2x.webp
       title: Package Design
       text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius.
       features:
@@ -47,8 +47,8 @@ what_we_do:
         label: More Details
         url: "#"
         class: btn btn-soft-leaf rounded-pill mt-6 mb-0
-    - image: /assets/img/photos/se4..webp
-      image2x: /assets/img/photos/se4@2x..webp
+    - image: /assets/img/photos/se4.webp
+      image2x: /assets/img/photos/se4@2x.webp
       title: Corporate Design
       text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
       features:
@@ -70,7 +70,7 @@ community:
     label: Join Us
     url: "#"
     class: btn btn-white rounded-pill mb-0 text-nowrap
-  background: /assets/img/photos/bg10..webp
+  background: /assets/img/photos/bg10.webp
 
 # Projects Section
 projects:
@@ -100,8 +100,8 @@ strategy:
   subtitle: Just sit and relax while we take care of your business needs.
   process:
     title: Our Working Process
-    image: /assets/img/photos/about20..webp
-    image2x: /assets/img/photos/about20@2x..webp
+    image: /assets/img/photos/about20.webp
+    image2x: /assets/img/photos/about20@2x.webp
     steps:
       - number: 1
         title: Collect Ideas
@@ -115,8 +115,8 @@ strategy:
   why_choose:
     title: Why Choose Us?
     text: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius.
-    image: /assets/img/photos/about19..webp
-    image2x: /assets/img/photos/about19@2x..webp
+    image: /assets/img/photos/about19.webp
+    image2x: /assets/img/photos/about19@2x.webp
     features:
       - text: Aenean quam ornare curabitur blandit consectetur.
       - text: Nullam quis risus eget urna mollis ornare aenean leo.

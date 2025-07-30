@@ -18,8 +18,8 @@ hero:
     - label: Contact Us
       url: "#"
       class: btn btn-lg btn-outline-primary rounded-pill mx-1
-  image: /assets/img/illustrations/i12..webp
-  image2x: /assets/img/illustrations/i12@2x..webp
+  image: /assets/img/illustrations/i12.webp
+  image2x: /assets/img/illustrations/i12@2x.webp
 
 # What We Do Section
 what_we_do:
@@ -29,15 +29,15 @@ what_we_do:
   button_text: More Details
   button_url: "#"
   services:
-    - image: /assets/img/photos/se1..webp
-      image2x: /assets/img/photos/se1@2x..webp
+    - image: /assets/img/photos/se1.webp
+      image2x: /assets/img/photos/se1@2x.webp
       icon: uil uil-monitor
       icon_color: purple
       title: Web Design
       text: Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida.
       learn_more_url: "#"
-    - image: /assets/img/photos/se2..webp
-      image2x: /assets/img/photos/se2@2x..webp
+    - image: /assets/img/photos/se2.webp
+      image2x: /assets/img/photos/se2@2x.webp
       icon: uil uil-mobile-android
       icon_color: purple
       title: Mobile Design
@@ -82,15 +82,15 @@ control:
     - text: Nullam quis risus eget urna mollis ornare.
     - text: Etiam porta euismod malesuada mollis.
     - text: Vivamus sagittis lacus vel augue rutrum.
-  image: /assets/img/illustrations/i9..webp
-  image2x: /assets/img/illustrations/i9@2x..webp
+  image: /assets/img/illustrations/i9.webp
+  image2x: /assets/img/illustrations/i9@2x.webp
 
 # Why Choose Us Section
 why_choose_us:
   title: Why Choose Us?
   subtitle: Find out everything you need to know about creating a business process model.
-  image: /assets/img/illustrations/i17..webp
-  image2x: /assets/img/illustrations/i17@2x..webp
+  image: /assets/img/illustrations/i17.webp
+  image2x: /assets/img/illustrations/i17@2x.webp
   accordion:
     - title: Professional Design
       content: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.
