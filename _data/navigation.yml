@@ -202,8 +202,8 @@ main:
             url: /projects-alternating
       - title: Single Projects
         submenu:
-          - title: Single Project I
-            url: /projects/sample-with-slider/
+          - title: SIK Project 1 - Test
+            url: /projects/sfe-test-project/
           - title: Single Project II
             url: /projects/sample-banner-image/
           - title: Single Project III

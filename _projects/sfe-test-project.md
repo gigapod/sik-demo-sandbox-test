@@ -1,26 +1,26 @@
 ---
 title: "Project 1 - Circuit A"
 category: "Project 1"
+description: "Learning about LEDs and controlling them with embedded programming"
 layout: project/sfe_banner_image_prj
-thumbnail: "/assets/img/photos/rp3.webp"
-banner_image: "/assets/img/photos/rp3.webp"
+thumbnail: "assets/img/photos/sik-proj1-a/sik-docs-prj-01.png"
+bg_image: "/assets/img/photos/sik-proj1-a/sik-docs-prj-01.png"
 about_title: "Project Overview"
 previous_project: "/projects/sample-banner-image-3"
 next_project: "/projects/sample-bg-overlay-3"
 featured: true
 
-# Additional content displayed after main content
+# Additional content displayed  after main content
 about_content: |
-  <p>This branding campaign for Innovative Brands focused on creating a cohesive visual identity that resonates with their target audience. The campaign included logo design, marketing materials, and a comprehensive brand guideline.</p>
-  <p>The new branding has successfully positioned the client as a leader in their industry, with increased brand recognition and customer engagement.</p>
+  <p>You can find LEDs in just about any source of light, from the bulbs lighting your home
+  to the tiny status lights flashing on your home electronics. Blinking an LED is the
+  classic starting point for learning how to program embedded electronics. It’s the
+  “Hello, World!” of microcontrollers. In this circuit, you’ll write code that makes an LED blink on and off. </p>
 
 ---
 
 
-You can find LEDs in just about any source of light, from the bulbs lighting your home
-to the tiny status lights flashing on your home electronics. Blinking an LED is the
-classic starting point for learning how to program embedded electronics. It’s the
-“Hello, World!” of microcontrollers. In this circuit, you’ll write code that makes an LED blink on and off.
+
 
 <figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Circuit 1A - what is needed</p>'>
     <img src="/assets/img/photos/sik-proj1-a/sik-demo-prj1-ca-need.png"  alt="" />
@@ -36,8 +36,8 @@ through them in one direction. LEDs can also burn out if too much electricity fl
 through them, so you should always use a resistor to limit the current when you wire
 an LED into a circuit.
 
-<figure>
-  <img src="{{ '/assets/images/sik-docs-prj1-ca-leds.png' | relative_url }}" alt="LEDs">
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">LEDs</p>'>
+    <img src="/assets/img/photos/sik-proj1-a/sik-docs-prj1-ca-leds.png"  alt="" />
 </figure>
 
 ### Resistors
@@ -56,9 +56,10 @@ should) flow through them in only one direction. Polarized components, like an L
 through them in one direction. Some components, like resistors,
 do not have polarity; electricity can flow through them in either direction.
 
-<figure>
-  <img src="{{ '/assets/images/sik-docs-prj1-ca-polo.png' | relative_url }}" alt="Polarity">
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Polarity</p>'>
+    <img src="/assets/img/photos/sik-proj1-a/sik-docs-prj1-ca-polo.png"  alt="" />
 </figure>
+
 
 ### OHM's Law
 
@@ -77,8 +78,8 @@ This equation is used to calculate what resistor values are suitable to sufficie
 
 ### Digital Output 
 
-<figure>
-  <img src="{{ '/assets/images/sik-demo-prj1-ca-digout.png' | relative_url }}" alt="Digital Output Pins">
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Digital Output Pins</p>'>
+    <img src="/assets/img/photos/sik-proj1-a/sik-demo-prj1-ca-digout.png"  alt="" />
 </figure>
 
 When working with microcontrollers such as the RedBoard, there are a variety of pins to which you can connect electronic components. Knowing which pins perform which functions is important when building your circuit. In this circuit, we will be using what is known as a digital output. There are 14 of these pins found on the RedBoard. A digital output only has **two states: ON or OFF**. These two states can also be thought of as **HIGH or LOW, TRUE or FALSE**. When an LED is connected to one of these pins, the pin can only perform two jobs: turning on the LED and turning off the LED. We’ll explore the other pins and their functions in later circuits.
@@ -93,17 +94,18 @@ the new components will be given before each circuit diagram. Many components ha
 polarity and have only one correct orientation, while others are nonpolarized.
 {: .notice--info}
 
-<figure>
-  <img src="{{ '/assets/images/sik-demo-prj1-ca-new-ideas1.png' | relative_url }}" alt="New Ideas">
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">New Ideas</p>'>
+    <img src="/assets/img/photos/sik-proj1-a/sik-demo-prj1-ca-new-ideas1.png"  alt="" />
 </figure>
+
 
 ## Hookup Guide
 
 **READY TO START HOOKING EVERYTHING UP?** Check out the circuit diagram and
 hookup table below to see how everything is connected.
 
-<figure>
-  <img src="{{ '/assets/images/sik-demo-prj1-ca-hookup-diag.png' | relative_url }}" alt="Hookup Diagram">
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Hookup Diagram</p>'>
+    <img src="/assets/img/photos/sik-proj1-a/sik-demo-prj1-ca-hookup-diag.png"  alt="" />
 </figure>
 
 ### Hookup Tables
@@ -111,16 +113,17 @@ hookup table below to see how everything is connected.
 Many electronics beginners find it helpful to have a coordinate system when building their circuits. For each circuit, you’ll find a hookup table that lists the coordinates of each component or wire and where it connects to the RedBoard, the breadboard, or both. The breadboard has a letter/number coordinate system, just
 like the game Battleship.
 
-<figure>
-  <img src="{{ '/assets/images/sik-demo-prj1-ca-hu-ex.png' | relative_url }}" alt="Hookup Diagram Example">
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Hookup Diagram Example</p>'>
+    <img src="/assets/img/photos/sik-proj1-a/sik-demo-prj1-ca-hu-ex.png"  alt="" />
 </figure>
 
 …means one end of a component connects to digital pin 13 on your RedBoard and
 the other connects to J2 on the breadboard
 
-<figure>
-  <img src="{{ '/assets/images/sik-demo-prj1-ca-hu-table.png' | relative_url }}" alt="Hookup Diagram">
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Hookup Diagram</p>'>
+    <img src="/assets/img/photos/sik-demo-prj1-ca-hu-table.png"  alt="" />
 </figure>
+
 
 ## Programming the RedBoard
 
@@ -193,7 +196,6 @@ for i in range(10):
     led_pin.low()
     sleep(1)
 ```
-
 When this command runs, it blinks the LED 10 times by setting the LED high, then low and sleeping inbetween each step. 
 
 ## You've Completed Circuit 1A!
@@ -201,13 +203,6 @@ When this command runs, it blinks the LED 10 times by setting the LED high, then
 Continue to circuit 1B to learn about analog signals and potentiometers
 
 
-<figure>
-  <img src="{{ '/assets/images/sik-demo-prj1-ca-next.png' | relative_url }}" alt="Next - Circuit 1B">
-</figure>
-The branding campaign for Innovative Brands aimed to create a strong visual identity that reflects the company's values and mission. Our design team developed a comprehensive brand system that includes logo variations, typography guidelines, marketing materials, and digital assets. The new branding has helped the client differentiate themselves in a competitive market, with increased brand recognition and customer engagement.
-
-<figure class="itooltip itooltip-dark hover-scale rounded" title='<h5 class="mb-1">Some Title</h5><p class="mb-0">Quam Sit Ornare</p>'>
-  <!-- <a href="#">  -->
-    <img src="/assets/img/photos/pp30.webp" srcset="/assets/img/photos/pp30@2x.webp 2x" alt="" />
-  <!-- </a> -->
+<figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Next - Circuit 1B</p>'>
+    <img src="/assets/img/photos/sik-proj1-a/sik-demo-prj1-ca-next.png"  alt="" />
 </figure>
