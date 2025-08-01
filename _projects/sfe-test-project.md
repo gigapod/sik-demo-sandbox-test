@@ -121,7 +121,7 @@ like the game Battleship.
 the other connects to J2 on the breadboard
 
 <figure class="itooltip itooltip-dark hover-scale rounded" title='<p class="mb-0">Hookup Diagram</p>'>
-    <img src="/assets/img/photos/sik-demo-prj1-ca-hu-table.png"  alt="" />
+    <img src="/assets/img/photos/sik-proj1-a/sik-demo-prj1-ca-hu-table.png"  alt="" />
 </figure>
 
 
