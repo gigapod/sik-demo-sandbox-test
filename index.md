@@ -29,6 +29,52 @@ hero:
       image2x: /assets/img/photos/sik-home-slider-3@2x.webp
     - image: /assets/img/photos/sik-home-slider-4.webp
       image2x: /assets/img/photos/sik-home-slider-4@2x.webp
+    
+# Projects Section
+<section class="wrapper bg-light wrapper-border">
+  <div class="overflow-hidden">
+    <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
+      <div class="row">
+        <div class="{{ page.portfolio7.layout.header_column }}">
+          <h2 class="{{ page.portfolio7.content.subtitle_classes }}">{{ page.portfolio7.content.subtitle }}</h2>
+          <h3 class="{{ page.portfolio7.content.title_classes }}">{{ page.portfolio7.content.title }}</h3>
+        </div>
+      </div>
+
+      <div class="swiper-container {{ page.portfolio7.swiper.classes }}" 
+           data-margin="{{ page.portfolio7.swiper.margin }}" 
+           data-dots="{{ page.portfolio7.swiper.dots }}" 
+           data-nav="{{ page.portfolio7.swiper.nav }}" 
+           data-items-md="{{ page.portfolio7.swiper.items.md }}" 
+           data-items-xs="{{ page.portfolio7.swiper.items.xs }}">
+        <div class="swiper overflow-visible">
+          <div class="swiper-wrapper">
+            {% assign projects = site.projects | where: "category", "Augmented Reality" %}
+            {% for project in projects %}
+            <div class="swiper-slide">
+              <figure class="{{ page.portfolio7.project.figure_classes }}">
+                <a href="{{ project.url }}">
+                  <img src="{{ project.thumbnail }}" 
+                       srcset="{{ project.thumbnail | replace: '.webp', '@2x.webp' }} 2x" 
+                       alt="{{ project.title }}" />
+                </a>
+              </figure>
+              <div class="project-details {{ page.portfolio7.project.details_classes }}">
+                <div class="post-header">
+                  <h2 class="{{ page.portfolio7.project.title_classes }}">
+                    <a href="{{ project.url }}" class="link-dark">{{ project.title }}</a>
+                  </h2>
+                  <div class="{{ page.portfolio7.project.category_classes }}">{{ project.category }}</div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>    
 
 # Services Section
 services:
