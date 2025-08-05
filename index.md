@@ -276,6 +276,8 @@ footer_cta:
 {% include components/sections/demo11/team.html %}
 {% include components/sections/demo11/testimonials.html %}
 {% include components/sections/demo11/pricing.html %}
+{% include components/sections/demo2/how-it-works.html %}
+{% include components/sections/demo16/projects.html %}
 
 </div>
 {% include components/footer/footer.html 
