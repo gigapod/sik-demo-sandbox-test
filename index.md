@@ -46,28 +46,33 @@ how_it_works:
   image: /assets/img/photos/homepage/sik-robot-collage.png
     
 # Projects Section
-portfolio7:
+portfolio6:
   enable: true
   content:
-    subtitle: "Latest Projects"
-    subtitle_classes: "fs-16 text-uppercase text-primary mb-3"
-    title: "Check out some of our awesome projects with creative ideas and great design."
-    title_classes: "display-3 mb-10"
+    title: "Latest Projects"
+    title_classes: "display-4 mb-3"
+    subtitle: "Check out some of my latest projects with creative ideas."
+    subtitle_classes: "lead fs-20 mb-0"
+    button:
+      text: "See all Projects"
+      url: "#"
+      classes: "btn btn-primary rounded-pill mb-0"
   layout:
-    header_column: "col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center"
-  swiper:
-    margin: 30
-    dots: false
-    nav: true
-    items:
-      md: 2
-      xs: 1
-    classes: "grid-view nav-bottom nav-color mb-14"
-  project:
-    figure_classes: "rounded mb-7"
-    details_classes: "d-flex justify-content-center flex-column"
-    title_classes: "post-title h3"
-    category_classes: "post-category text-ash"
+    header_column: "col-md-8 col-lg-9 col-xl-8 col-xxl-7 pe-xl-20"
+    button_column: "col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0"
+  featured_projects:
+    - color: "violet"
+      layout: "image-right"
+      column_content: "col-lg-4 pb-12 align-self-center"
+      column_image: "col-lg-7 offset-lg-1 align-self-end"
+    - color: "blue"
+      layout: "image-left"
+      column_content: "col-lg-4 order-lg-2 offset-lg-1"
+      column_image: "col-lg-7"
+  small_projects:
+    column_classes: "col-lg-6"
+    colors: ["leaf", "pink"]
+              
 
 # Footer CTA
 footer_cta:
