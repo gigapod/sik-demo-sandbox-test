@@ -1,0 +1,101 @@
+<style>
+.code-block-container {
+  background: #f5f5f7;
+  border-radius: 6px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5em 1em 0.5em 0;
+  background: transparent;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.code-header + .highlighter-rouge {
+  margin-top: -1.7em;
+}
+
+.copy-code-button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  z-index: 2;
+}
+
+.copy-code-button:hover,
+.copy-code-button:focus {
+  background: #1d4ed8;
+  outline: none;
+}
+
+.copy-code-button.copied {
+  background: #22c55e;
+  color: #fff;
+}
+
+.highlighter-rouge {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.highlighter-rouge pre {
+  margin: 0;
+  padding: 0.7em 1em 0.7em 1em;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge');
+  const copyCodeButtons = document.querySelectorAll('.copy-code-button');
+
+  copyCodeButtons.forEach((copyCodeButton, index) => {
+    const code = codeBlocks[index]?.innerText;
+
+    copyCodeButton.addEventListener('click', () => {
+      if (!code) return;
+      window.navigator.clipboard.writeText(code);
+
+      const { innerText: originalText } = copyCodeButton;
+      copyCodeButton.innerText = 'Copied!';
+      copyCodeButton.classList.add('copied');
+
+      setTimeout(() => {
+        copyCodeButton.innerText = originalText;
+        copyCodeButton.classList.remove('copied');
+      }, 2000);
+    });
+  });
+});
+</script>
+
+<div class="code-block-container">
+  <div class="code-header">
+    <button class="copy-code-button">
+      Copy code to clipboard
+    </button>
+  </div>
+  <div class="highlighter-rouge language-python">
+    <pre><code class="language-python">
+    {{ include.code }}
+    </code></pre>
+  </div>
+</div>

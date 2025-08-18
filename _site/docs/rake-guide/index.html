@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!-- Primary Meta Tags -->
+<title> Rake Build System </title>
+<meta name="title" content=" Rake Build System ">
+<meta name="description" content=" Comprehensive guide to the Rake build system in the Sandbox theme ">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content=" /docs/rake-guide/ ">
+<meta property="og:title" content=" Rake Build System ">
+<meta property="og:description" content=" Comprehensive guide to the Rake build system in the Sandbox theme ">
+
+<meta property="og:image" content="/assets/img/meta-image.webp" />
+
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="/docs/rake-guide/">
+<meta property="twitter:title" content=" Rake Build System ">
+<meta property="twitter:description" content=" Comprehensive guide to the Rake build system in the Sandbox theme ">
+
+<meta property="twitter:image" content="/assets/img/meta-image.webp" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Stylesheets-->
+  <link rel="shortcut icon" href="/assets/img/favicon-sfe.png" />
+<link rel="stylesheet" href="/assets/css/plugins.css">
+
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+
+<!-- Global Color Scheme for all Pages-->
+
+<link rel="stylesheet" type="text/css" href="/assets/css/colors/red.css">
+
+
+
+
+
+
+  
+</head>
+<body class="">
+    <div class="content-wrapper">
+        <header class="wrapper bg-soft-primary">
+        
+
+<nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+  
+    <div class="container flex-lg-row flex-nowrap align-items-center">
+  
+    <div class="navbar-brand w-100">
+      <a href="/">
+        
+          <img src="/assets/img/sfe-logo-dark.webp" 
+               srcset="/assets/img/sfe-logo-dark@2x.webp 2x" alt="" />
+        
+      </a>
+    </div>
+    <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+      <!-- DEBUG START -->
+      <div class="offcanvas-header d-lg-none">
+        <h3 class="text-white fs-30 mb-0">SparkFun Inventor's Kit</h3>
+        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <!-- DEBUG END -->
+      <div class="offcanvas-body  d-flex flex-column h-100">
+        
+          <!-- Standard Navigation -->
+          
+<ul class="navbar-nav"> 
+  
+  
+  <li class="nav-item dropdown dropdown-mega">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Demos</a>
+    <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+      <li class="mega-menu-content mega-menu-scroll">
+        <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo1/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi1.webp" srcset="/assets/img/demos/mi1@2x.webp 2x" alt="Demo1">
+              </figure>
+              <span class="d-lg-none">Demo1</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo2/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi2.webp" srcset="/assets/img/demos/mi2@2x.webp 2x" alt="Demo2">
+              </figure>
+              <span class="d-lg-none">Demo2</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo3/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi3.webp" srcset="/assets/img/demos/mi3@2x.webp 2x" alt="Demo3">
+              </figure>
+              <span class="d-lg-none">Demo3</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo4/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi4.webp" srcset="/assets/img/demos/mi4@2x.webp 2x" alt="Demo4">
+              </figure>
+              <span class="d-lg-none">Demo4</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo5/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi5.webp" srcset="/assets/img/demos/mi5@2x.webp 2x" alt="Demo5">
+              </figure>
+              <span class="d-lg-none">Demo5</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo6/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi6.webp" srcset="/assets/img/demos/mi6@2x.webp 2x" alt="Demo6">
+              </figure>
+              <span class="d-lg-none">Demo6</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo7/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi7.webp" srcset="/assets/img/demos/mi7@2x.webp 2x" alt="Demo7">
+              </figure>
+              <span class="d-lg-none">Demo7</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo8/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi8.webp" srcset="/assets/img/demos/mi8@2x.webp 2x" alt="Demo8">
+              </figure>
+              <span class="d-lg-none">Demo8</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo9/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi9.webp" srcset="/assets/img/demos/mi9@2x.webp 2x" alt="Demo9">
+              </figure>
+              <span class="d-lg-none">Demo9</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo10/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi10.webp" srcset="/assets/img/demos/mi10@2x.webp 2x" alt="Demo10">
+              </figure>
+              <span class="d-lg-none">Demo10</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo11/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi11.webp" srcset="/assets/img/demos/mi11@2x.webp 2x" alt="Demo11">
+              </figure>
+              <span class="d-lg-none">Demo11</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo12/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi12.webp" srcset="/assets/img/demos/mi12@2x.webp 2x" alt="Demo12">
+              </figure>
+              <span class="d-lg-none">Demo12</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo13/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi13.webp" srcset="/assets/img/demos/mi13@2x.webp 2x" alt="Demo13">
+              </figure>
+              <span class="d-lg-none">Demo13</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo14/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi14.webp" srcset="/assets/img/demos/mi14@2x.webp 2x" alt="Demo14">
+              </figure>
+              <span class="d-lg-none">Demo14</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo15/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi15.webp" srcset="/assets/img/demos/mi15@2x.webp 2x" alt="Demo15">
+              </figure>
+              <span class="d-lg-none">Demo15</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo16/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi16.webp" srcset="/assets/img/demos/mi16@2x.webp 2x" alt="Demo16">
+              </figure>
+              <span class="d-lg-none">Demo16</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo17/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi17.webp" srcset="/assets/img/demos/mi17@2x.webp 2x" alt="Demo17">
+              </figure>
+              <span class="d-lg-none">Demo17</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo18/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi18.webp" srcset="/assets/img/demos/mi18@2x.webp 2x" alt="Demo18">
+              </figure>
+              <span class="d-lg-none">Demo18</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo19/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi19.webp" srcset="/assets/img/demos/mi19@2x.webp 2x" alt="Demo19">
+              </figure>
+              <span class="d-lg-none">Demo19</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo20/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi20.webp" srcset="/assets/img/demos/mi20@2x.webp 2x" alt="Demo20">
+              </figure>
+              <span class="d-lg-none">Demo20</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo21/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi21.webp" srcset="/assets/img/demos/mi21@2x.webp 2x" alt="Demo21">
+              </figure>
+              <span class="d-lg-none">Demo21</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo22/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi22.webp" srcset="/assets/img/demos/mi22@2x.webp 2x" alt="Demo22">
+              </figure>
+              <span class="d-lg-none">Demo22</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo23/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi23.webp" srcset="/assets/img/demos/mi23@2x.webp 2x" alt="Demo23">
+              </figure>
+              <span class="d-lg-none">Demo23</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo24/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi24.webp" srcset="/assets/img/demos/mi24@2x.webp 2x" alt="Demo24">
+              </figure>
+              <span class="d-lg-none">Demo24</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo25/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi25.webp" srcset="/assets/img/demos/mi25@2x.webp 2x" alt="Demo25">
+              </figure>
+              <span class="d-lg-none">Demo25</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo26/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi26.webp" srcset="/assets/img/demos/mi26@2x.webp 2x" alt="Demo26">
+              </figure>
+              <span class="d-lg-none">Demo26</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo27/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi27.webp" srcset="/assets/img/demos/mi27@2x.webp 2x" alt="Demo27">
+              </figure>
+              <span class="d-lg-none">Demo27</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo28/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi28.webp" srcset="/assets/img/demos/mi28@2x.webp 2x" alt="Demo28">
+              </figure>
+              <span class="d-lg-none">Demo28</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo29/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi29.webp" srcset="/assets/img/demos/mi29@2x.webp 2x" alt="Demo29">
+              </figure>
+              <span class="d-lg-none">Demo29</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo30/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi30.webp" srcset="/assets/img/demos/mi30@2x.webp 2x" alt="Demo30">
+              </figure>
+              <span class="d-lg-none">Demo30</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo31/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi31.webp" srcset="/assets/img/demos/mi31@2x.webp 2x" alt="Demo31">
+              </figure>
+              <span class="d-lg-none">Demo31</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo32/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi32.webp" srcset="/assets/img/demos/mi32@2x.webp 2x" alt="Demo32">
+              </figure>
+              <span class="d-lg-none">Demo32</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo33/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi33.webp" srcset="/assets/img/demos/mi33@2x.webp 2x" alt="Demo33">
+              </figure>
+              <span class="d-lg-none">Demo33</span>
+            </a>
+          </li>
+          
+          <li class="col">
+            <a class="dropdown-item" href="/demo34/">
+              <figure class="rounded lift d-none d-lg-block">
+                <img src="/assets/img/demos/mi34.webp" srcset="/assets/img/demos/mi34@2x.webp 2x" alt="Demo34">
+              </figure>
+              <span class="d-lg-none">Demo34</span>
+            </a>
+          </li>
+          
+        </ul>
+        <span class="d-none d-lg-flex"><i class="uil uil-direction"></i><strong>Scroll to view more</strong></span>
+      </li>
+    </ul>
+  </li>
+  
+  
+  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+    <ul class="dropdown-menu">
+      
+      
+      <li class="dropdown dropdown-submenu dropend">
+        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+        <ul class="dropdown-menu">
+          
+          <li class="nav-item"><a class="dropdown-item" href="/services/">Services I</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/services2/">Services II</a></li>
+          
+        </ul>
+      </li>
+      
+      
+      
+      <li class="dropdown dropdown-submenu dropend">
+        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+        <ul class="dropdown-menu">
+          
+          <li class="nav-item"><a class="dropdown-item" href="/about/">About I</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/about2/">About II</a></li>
+          
+        </ul>
+      </li>
+      
+      
+      
+      <li class="dropdown dropdown-submenu dropend">
+        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Contact</a>
+        <ul class="dropdown-menu">
+          
+          <li class="nav-item"><a class="dropdown-item" href="/contact/">Contact I</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/contact2/">Contact II</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/contact3/">Contact III</a></li>
+          
+        </ul>
+      </li>
+      
+      
+      
+      <li class="dropdown dropdown-submenu dropend">
+        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Career</a>
+        <ul class="dropdown-menu">
+          
+          <li class="nav-item"><a class="dropdown-item" href="/career/">Job Listing I</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/career2/">Job Listing II</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/career-job/">Job Description</a></li>
+          
+        </ul>
+      </li>
+      
+      
+      
+      <li class="dropdown dropdown-submenu dropend">
+        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Utility</a>
+        <ul class="dropdown-menu">
+          
+          <li class="nav-item"><a class="dropdown-item" href="/404/">404 Not Found</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/signin/">Sign In I</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/signin2/">Sign In II</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/signup/">Sign Up I</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/signup2/">Sign Up II</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/terms/">Terms</a></li>
+          
+        </ul>
+      </li>
+      
+      
+      
+      <li class="nav-item"><a class="dropdown-item" href="/onepage/">Onepage</a></li>
+      
+      
+    </ul>
+  </li>
+  
+  
+  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
+    <div class="dropdown-menu dropdown-lg">
+      <div class="dropdown-lg-content">
+        
+        <div>
+          <h6 class="dropdown-header">SIK Project 1 - Light</h6>
+          <ul class="list-unstyled">
+            
+            <li><a class="dropdown-item" href="/projects/project1-light">SIK Project 1 Overview</a></li>
+            
+            <li><a class="dropdown-item" href="/projects/circuit-1a">Circuit 1A: Blink an LED</a></li>
+            
+            <li><a class="dropdown-item" href="/projects/circuit-1b">Circuit 1B: Potentiometer</a></li>
+            
+            <li><a class="dropdown-item" href="/projects/circuit-1c">Circuit 1C: Photoresistor</a></li>
+            
+            <li><a class="dropdown-item" href="/projects/circuit-1d">Circuit 1D: RGB Night-Light</a></li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </li>
+  
+  
+  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+    <ul class="dropdown-menu">
+      
+      
+      <li class="nav-item"><a class="dropdown-item" href="/blog/">Blog without Sidebar</a></li>
+      
+      
+      
+      <li class="nav-item"><a class="dropdown-item" href="/blog-right-sidebar/">Blog with Sidebar</a></li>
+      
+      
+      
+      <li class="nav-item"><a class="dropdown-item" href="/blog-left-sidebar/">Blog with Left Sidebar</a></li>
+      
+      
+      
+      <li class="dropdown dropdown-submenu dropend">
+        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog Posts</a>
+        <ul class="dropdown-menu">
+          
+          <li class="nav-item"><a class="dropdown-item" href="/blog/standard-post-layout-example/">Post without Sidebar</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/blog/overlay-post-layout-example/">Post with Sidebar</a></li>
+          
+          <li class="nav-item"><a class="dropdown-item" href="/blog/sidebar-post-layout-example/">Post with Left Sidebar</a></li>
+          
+        </ul>
+      </li>
+      
+      
+    </ul>
+  </li>
+  
+  
+  
+  <li class="nav-item dropdown dropdown-mega">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blocks</a>
+    <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+      <li class="mega-menu-content">
+        <ul class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled">
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/about/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block1.svg" alt="About">
+                </div>
+                <span>About</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/blog/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block2.svg" alt="Blog">
+                </div>
+                <span>Blog</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/call-to-action/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block3.svg" alt="Call to Action">
+                </div>
+                <span>Call to Action</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/clients/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block4.svg" alt="Clients">
+                </div>
+                <span>Clients</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/contact/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block5.svg" alt="Contact">
+                </div>
+                <span>Contact</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/facts/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block6.svg" alt="Facts">
+                </div>
+                <span>Facts</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/faq/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block7.svg" alt="FAQ">
+                </div>
+                <span>FAQ</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/features/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block8.svg" alt="Features">
+                </div>
+                <span>Features</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/footer/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block9.svg" alt="Footer">
+                </div>
+                <span>Footer</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/hero/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block10.svg" alt="Hero">
+                </div>
+                <span>Hero</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/misc/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block17.svg" alt="Misc">
+                </div>
+                <span>Misc</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/navbar/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block11.svg" alt="Navbar">
+                </div>
+                <span>Navbar</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/portfolio/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block12.svg" alt="Portfolio">
+                </div>
+                <span>Portfolio</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/pricing/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block13.svg" alt="Pricing">
+                </div>
+                <span>Pricing</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/process/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block14.svg" alt="Process">
+                </div>
+                <span>Process</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/team/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block15.svg" alt="Team">
+                </div>
+                <span>Team</span>
+              </a>
+            </li>
+          
+            <li class="col">
+              <a class="dropdown-item" href="/docs/blocks/testimonials/">
+                <div class="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
+                  <img class="rounded-0" src="/assets/img/demos/block16.svg" alt="Testimonials">
+                </div>
+                <span>Testimonials</span>
+              </a>
+            </li>
+          
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+  
+  
+
+  <li class="nav-item dropdown dropdown-mega">
+    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Documentation</a>
+    <ul class="dropdown-menu mega-menu">
+      <li class="mega-menu-content">
+        <div class="row gx-0 gx-lg-3">
+          
+
+  <div class="col-lg-4">
+    <h6 class="dropdown-header">Usage</h6>
+    <ul class="list-unstyled cc-2 pb-lg-1">
+      
+        <li><a class="dropdown-item" href="/docs/index/">Get Started</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/config/">Site Config</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/settings/">Settings</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/navigation/">Navigation</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/authors/">Authors</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/data-files/">Data Files</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/projects/">Projects</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/posts/">Posts</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/component-variations/">components</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/demo-pages/">Demo Pages</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/rake-guide/">Rake Guide</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/without-rake-guide/">Without Rake</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/changelog/">Changelog</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/credits/">Credits</a></li>
+      
+    </ul>
+
+    
+      <h6 class="dropdown-header mt-lg-6">Styleguide</h6>
+      <ul class="list-unstyled cc-2">
+        
+          <li><a class="dropdown-item" href="/docs/styleguide/colors/">Colors</a></li>
+        
+          <li><a class="dropdown-item" href="/docs/styleguide/fonts/">Fonts</a></li>
+        
+          <li><a class="dropdown-item" href="/docs/styleguide/icons-svg/">SVG Icons</a></li>
+        
+          <li><a class="dropdown-item" href="/docs/styleguide/icons-font/">Font Icons</a></li>
+        
+          <li><a class="dropdown-item" href="/docs/styleguide/illustrations/">Illustrations</a></li>
+        
+          <li><a class="dropdown-item" href="/docs/styleguide/backgrounds/">Backgrounds</a></li>
+        
+          <li><a class="dropdown-item" href="/docs/styleguide/misc/">Misc</a></li>
+        
+      </ul>
+    
+  </div>
+
+  <div class="col-lg-8">
+    <h6 class="dropdown-header">Elements</h6>
+    <ul class="list-unstyled cc-3 pb-lg-">
+      
+        <li><a class="dropdown-item" href="/docs/elements/accordion/">Accordion</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/alerts/">Alerts</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/animations/">Animations</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/avatars/">Avatars</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/background/">Background</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/badges/">Badges</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/buttons/">Buttons</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/card/">Card</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/carousel/">Carousel</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/dividers/">Dividers</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/form-elements/">Form Elements</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/image-hover/">Image Hover</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/image-mask/">Image Mask</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/lightbox/">Lightbox</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/player/">Media Player</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/modal/">Modal</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/pagination/">Pagination</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/progressbar/">Progressbar</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/shadows/">Shadows</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/shapes/">Shapes</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/tables/">Tables</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/tabs/">Tabs</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/text-animations/">Text Animations</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/text-highlight/">Text Highlight</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/tiles/">Tiles</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/tooltips-popovers/">Tooltips & Popovers</a></li>
+      
+        <li><a class="dropdown-item" href="/docs/elements/typography/">Typography</a></li>
+      
+    </ul>
+
+    
+  </div>
+
+
+        </div>
+      </li>
+    </ul>
+  </li>
+  
+
+  
+  
+</ul>
+
+
+        
+        
+        <div class="offcanvas-footer d-lg-none">
+          <div>
+            <a href="mailto:support@sparkfun.com" class="link-inverse">support@sparkfun.com</a>
+            <br>00 (123) 456 78 90<br>
+            <nav class="nav social social-white mt-4">
+              
+            </nav>
+          </div>
+        </div>
+        <!-- /.offcanvas-footer -->
+      </div>
+      <!-- /.offcanvas-body -->
+    </div>
+    <!-- /.navbar-collapse -->
+    
+    <div class="navbar-other w-100 d-flex ms-auto">
+      <ul class="navbar-nav flex-row align-items-center ms-auto">
+        
+        <li class="nav-item dropdown language-select text-uppercase">
+          <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            En
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item"><a class="dropdown-item" href="#">En</a></li>
+            
+            <li class="nav-item"><a class="dropdown-item" href="#">De</a></li>
+            
+            <li class="nav-item"><a class="dropdown-item" href="#">Es</a></li>
+            
+          </ul>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="nav-item d-none d-md-block">
+          
+          <a href="/contact" 
+             class="btn btn-sm btn-primary rounded-pill"
+             >Contact</a>
+          
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-item d-lg-none">
+          <button class="hamburger offcanvas-nav-btn"><span></span></button>
+        </li>
+      </ul>
+    </div>
+  
+    </div>
+    <!-- /.container -->
+  
+</nav>
+<!-- /.navbar -->
+
+
+
+
+
+
+
+
+
+
+        </header>
+        <!-- /header -->
+        <section class="wrapper bg-soft-primary">
+          <div class="container pt-10 pb-12 pt-md-14 pb-md-16 text-center">
+            <div class="row">
+              <div class="col-md-9 col-lg-7 col-xl-5 mx-auto">
+                <h1 class="display-1 mb-3">Rake Build System</h1>
+                <p class="lead px-xxl-11">Comprehensive guide to the Rake build system in the Sandbox theme</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+         <div class="container">
+          <div class="row">
+            <aside class="col-xl-2 sidebar doc-sidebar mt-md-0 py-16 d-none d-xl-block">
+    
+    
+      <div class="widget pb-3">
+        <h6 class="widget-title fs-17 mb-2">Usage</h6>
+        <nav>
+          <ul class="list-unstyled fs-sm lh-sm text-reset">
+            
+              <li>
+                <a href="/docs/index/" >
+                  Get Started
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/config/" >
+                  Site Config
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/settings/" >
+                  Settings
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/navigation/" >
+                  Navigation
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/authors/" >
+                  Authors
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/data-files/" >
+                  Data Files
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/projects/" >
+                  Projects
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/posts/" >
+                  Posts
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/component-variations/" >
+                  components
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/demo-pages/" >
+                  Demo Pages
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/rake-guide/" class="active">
+                  Rake Guide
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/without-rake-guide/" >
+                  Without Rake
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/changelog/" >
+                  Changelog
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/credits/" >
+                  Credits
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+  
+      
+        <div class="widget pb-3">
+          <h6 class="widget-title fs-17 mb-2">Styleguide</h6>
+          <nav>
+            <ul class="list-unstyled fs-sm lh-sm text-reset">
+              
+                <li>
+                  <a href="/docs/styleguide/colors/" >
+                    Colors
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/docs/styleguide/fonts/" >
+                    Fonts
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/docs/styleguide/icons-svg/" >
+                    SVG Icons
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/docs/styleguide/icons-font/" >
+                    Font Icons
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/docs/styleguide/illustrations/" >
+                    Illustrations
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/docs/styleguide/backgrounds/" >
+                    Backgrounds
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="/docs/styleguide/misc/" >
+                    Misc
+                  </a>
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      
+    
+      <div class="widget pb-3">
+        <h6 class="widget-title fs-17 mb-2">Elements</h6>
+        <nav>
+          <ul class="list-unstyled fs-sm lh-sm text-reset">
+            
+              <li>
+                <a href="/docs/elements/accordion/" >
+                  Accordion
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/alerts/" >
+                  Alerts
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/animations/" >
+                  Animations
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/avatars/" >
+                  Avatars
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/background/" >
+                  Background
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/badges/" >
+                  Badges
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/buttons/" >
+                  Buttons
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/card/" >
+                  Card
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/carousel/" >
+                  Carousel
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/dividers/" >
+                  Dividers
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/form-elements/" >
+                  Form Elements
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/image-hover/" >
+                  Image Hover
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/image-mask/" >
+                  Image Mask
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/lightbox/" >
+                  Lightbox
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/player/" >
+                  Media Player
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/modal/" >
+                  Modal
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/pagination/" >
+                  Pagination
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/progressbar/" >
+                  Progressbar
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/shadows/" >
+                  Shadows
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/shapes/" >
+                  Shapes
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/tables/" >
+                  Tables
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/tabs/" >
+                  Tabs
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/text-animations/" >
+                  Text Animations
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/text-highlight/" >
+                  Text Highlight
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/tiles/" >
+                  Tiles
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/tooltips-popovers/" >
+                  Tooltips & Popovers
+                </a>
+              </li>
+            
+              <li>
+                <a href="/docs/elements/typography/" >
+                  Typography
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+  
+      
+    
+  </aside>
+  
+            <aside class="col-xl-2 order-xl-3 sidebar sticky-sidebar mt-md-0 py-16 d-none d-xl-block">
+              <div class="widget">
+                <h6 class="widget-title fs-17 mb-2 ps-xl-5">On this page</h6>
+                <nav class="ps-xl-5" id="sidebar-nav">
+                  <ul id="toc" class="list-unstyled fs-sm lh-sm text-reset">
+<li class="nav-link scroll snippet-h2"><a href="#understanding-rake">Understanding Rake</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#what-is-rake">What is Rake?</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#prerequisites">Prerequisites</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#windows-installation-guide">Windows Installation Guide</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#system-requirements">System Requirements</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#core-functionality">Core Functionality</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#development-server">Development Server</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#production-build">Production Build</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#image-processing">Image Processing</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#webp-conversion">WebP Conversion</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#best-practices">Best Practices</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#development-workflow">Development Workflow</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#performance-tips">Performance Tips</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#troubleshooting">Troubleshooting</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#common-issues">Common Issues</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#debugging">Debugging</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#advanced-usage">Advanced Usage</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#custom-tasks">Custom Tasks</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#command-reference">Command Reference</a></li>
+<li class="nav-link scroll snippet-h2"><a href="#available-commands">Available Commands</a></li>
+</ul>
+                </nav>
+              </div>
+            </aside>
+        
+            <div class="col-xl-8 order-xl-2">
+              <div class="content"> 
+                <section id="snippet-1" class="wrapper pt-16">
+  <h2 class="display-5 mb-8">Understanding Rake</h2>
+
+  <section id="snippet-1-1">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">What is Rake?</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Rake (Ruby Make) is a build automation tool written in Ruby. In the Sandbox theme, it handles:</p>
+        <ul>
+          <li>Development server management</li>
+          <li>Production builds</li>
+          <li>Asset optimization</li>
+          <li>Image processing</li>
+          <li>Task automation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="snippet-1-2">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Prerequisites</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Required software and dependencies:</p>
+        <ul>
+          <li>Ruby (version 2.7.0 or higher)</li>
+          <li>RubyGems</li>
+          <li>Bundler gem</li>
+          <li>ImageMagick or Vips (for image processing)</li>
+        </ul>
+      </div>
+      <div class="card-footer position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-1-2">View installation commands</a>
+      </div>
+      <div id="collapse-1-2" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+<pre class="language-bash"><code># Install Ruby dependencies
+gem install bundler
+
+# Install ImageMagick (MacOS)
+brew install imagemagick
+
+# Install ImageMagick (Ubuntu/Debian)
+sudo apt-get install imagemagick
+
+# Install project dependencies
+bundle install</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="snippet-1-3">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Windows Installation Guide</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Installing ImageMagick on Windows:</p>
+        <ol>
+          <li>Download the appropriate installer:
+            <ul>
+              <li>Visit the <a href="https://imagemagick.org/script/download.php#windows" target="_blank">ImageMagick Windows Download Page</a></li>
+              <li>Choose the appropriate version (recommended: Q16-HDRI-x64)</li>
+              <li>Example filename: <code>ImageMagick-7.1.1-21-Q16-HDRI-x64-dll.exe</code></li>
+            </ul>
+          </li>
+          <li>During installation:
+            <ul>
+              <li>Check "Add to system PATH"</li>
+              <li>Check "Install development headers and libraries for C and C++"</li>
+              <li>Check "Install legacy utilities (e.g. convert)"</li>
+            </ul>
+          </li>
+          <li>Verify installation:
+            <ul>
+              <li>Open Command Prompt</li>
+              <li>Run <code>magick -version</code></li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="card-footer position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-1-3">View troubleshooting steps</a>
+      </div>
+      <div id="collapse-1-3" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+<pre class="language-plaintext"><code>Common Windows Issues:
+
+1. "Convert not found" error:
+   - Rename "convert.exe" to "imagemagick-convert.exe" in ImageMagick installation directory
+   - This prevents conflicts with Windows system convert.exe
+
+2. PATH issues:
+   - Open System Properties
+   - Click "Environment Variables"
+   - Add ImageMagick directory to Path (typically C:\Program Files\ImageMagick-7.x.x-Q16)
+
+3. Ruby gem installation fails:
+   - Install Visual Studio Build Tools
+   - Run: `ridk install` (select options 1, 2, and 3)
+   - Reinstall the gem
+
+4. DLL load failed:
+   - Install Visual C++ Redistributable
+   - Download from Microsoft's website
+   - Install both x86 and x64 versions if unsure</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="snippet-1-4">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">System Requirements</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Windows-specific requirements:</p>
+        <ul>
+          <li>Windows 10 or later (recommended)</li>
+          <li>Visual C++ Redistributable 2015-2022</li>
+          <li>Visual Studio Build Tools (for gem installation)</li>
+          <li>At least 2GB free disk space</li>
+          <li>Administrator privileges for installation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="snippet-2" class="wrapper pt-16">
+  <h2 class="display-5 mb-8">Core Functionality</h2>
+
+  <section id="snippet-2-1">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Development Server</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">The <code>serve</code> task provides a development environment with:</p>
+        <ul>
+          <li>Live reload capability</li>
+          <li>Automatic Sass compilation</li>
+          <li>Vendor file processing</li>
+          <li>Asset watching</li>
+        </ul>
+      </div>
+      <div class="card-footer position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-2-1">View implementation</a>
+      </div>
+      <div id="collapse-2-1" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+<pre class="language-ruby"><code>desc "Serve the site"
+task :serve =&gt; [:prepare] do
+  begin
+    $logger.info "Starting development server..."
+    sh "bundle exec jekyll serve --livereload --livereload-min-delay 5 --trace"
+  rescue =&gt; e
+    $logger.error "Serve error: #{e.message}"
+    raise
+  end
+end</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="snippet-2-2">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Production Build</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">The <code>build</code> task creates production-ready assets:</p>
+        <ul>
+          <li>Minified CSS and JavaScript</li>
+          <li>Optimized images</li>
+          <li>Compiled Jekyll site</li>
+          <li>Environment-specific configurations</li>
+        </ul>
+      </div>
+      <div class="card-footer position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-2-2">View implementation</a>
+      </div>
+      <div id="collapse-2-2" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+<pre class="language-ruby"><code>desc "Build the site"
+task :build =&gt; [:prepare] do
+  begin
+    $logger.info "Building site for production..."
+    sh "JEKYLL_ENV=production bundle exec jekyll build"
+  rescue =&gt; e
+    $logger.error "Build error: #{e.message}"
+    raise
+  end
+end</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="snippet-3" class="wrapper pt-16">
+  <h2 class="display-5 mb-8">Image Processing</h2>
+
+  <section id="snippet-3-1">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">WebP Conversion</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Automated image optimization features:</p>
+        <ul>
+          <li>Batch conversion to WebP format</li>
+          <li>Original file preservation options</li>
+          <li>Size optimization reporting</li>
+          <li>Configurable quality settings</li>
+        </ul>
+      </div>
+      <div class="card-footer position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-3-1">View usage</a>
+      </div>
+      <div id="collapse-3-1" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+<pre class="language-bash"><code># Convert images to WebP
+bundle exec rake convert_to_webp
+
+# Optimize and remove originals
+bundle exec rake optimize_images[true]
+
+# Remove original files
+bundle exec rake remove_originals</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="snippet-4" class="wrapper pt-16">
+  <h2 class="display-5 mb-8">Best Practices</h2>
+
+  <section id="snippet-4-1">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Development Workflow</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Recommended development workflow:</p>
+        <ol>
+          <li>Start development server: <code>bundle exec rake serve</code></li>
+          <li>Make changes to source files</li>
+          <li>Test in development environment</li>
+          <li>Optimize images if needed</li>
+          <li>Build for production: <code>bundle exec rake build</code></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="snippet-4-2">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Performance Tips</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Optimize build performance:</p>
+        <ul>
+          <li>Use incremental builds during development</li>
+          <li>Process images in batches</li>
+          <li>Maintain clean asset directories</li>
+          <li>Regular cache clearing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="snippet-5" class="wrapper pt-16">
+  <h2 class="display-5 mb-8">Troubleshooting</h2>
+
+  <section id="snippet-5-1">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Common Issues</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Solutions for frequent problems:</p>
+        <ul>
+          <li><strong>Missing Dependencies:</strong> Run <code>bundle install</code></li>
+          <li><strong>Port Conflicts:</strong> Change port in configuration</li>
+          <li><strong>Build Failures:</strong> Check error logs and Jekyll environment</li>
+          <li><strong>Image Processing Errors:</strong> Verify ImageMagick installation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="snippet-5-2">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Debugging</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Debug Rake tasks:</p>
+        <ul>
+          <li>Enable verbose mode: <code>rake -v task_name</code></li>
+          <li>Check Jekyll logs in <code>_site/build.log</code></li>
+          <li>Use <code>--trace</code> flag for detailed stack traces</li>
+          <li>Monitor system resources during builds</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="snippet-6" class="wrapper pt-16">
+  <h2 class="display-5 mb-8">Advanced Usage</h2>
+
+  <section id="snippet-6-1">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Custom Tasks</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <p class="mb-0">Create custom Rake tasks in <code>Rakefile</code>:</p>
+      </div>
+      <div class="card-footer position-relative">
+        <a class="collapse-link collapsed stretched-link" data-bs-toggle="collapse" href="#collapse-6-1">View example</a>
+      </div>
+      <div id="collapse-6-1" class="card-footer bg-dark p-0 accordion-collapse collapse">
+        <div class="code-wrapper">
+          <div class="code-wrapper-inner">
+<pre class="language-ruby"><code>desc "Custom task description"
+task :custom_task do
+  puts "Executing custom task..."
+  # Add your custom logic here
+end
+
+# Task with dependencies
+task :custom_task_with_deps =&gt; [:prepare, :build] do
+  # This task runs after prepare and build
+end</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="snippet-7" class="wrapper pt-16">
+  <h2 class="display-5 mb-8">Command Reference</h2>
+
+  <section id="snippet-7-1">
+    <h2 class="mb-5 mt-n15 pt-15 zindex-n">Available Commands</h2>
+    <div class="card mb-12">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Command</th>
+                <th>Description</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>serve</code></td>
+                <td>Start development server</td>
+                <td><code>bundle exec rake serve</code></td>
+              </tr>
+              <tr>
+                <td><code>build</code></td>
+                <td>Build for production</td>
+                <td><code>bundle exec rake build</code></td>
+              </tr>
+              <tr>
+                <td><code>convert_to_webp</code></td>
+                <td>Convert images to WebP</td>
+                <td><code>bundle exec rake convert_to_webp</code></td>
+              </tr>
+              <tr>
+                <td><code>optimize_images</code></td>
+                <td>Convert and optionally remove originals</td>
+                <td><code>bundle exec rake optimize_images[true]</code></td>
+              </tr>
+              <tr>
+                <td><code>prepare</code></td>
+                <td>Run preparation tasks</td>
+                <td><code>bundle exec rake prepare</code></td>
+              </tr>
+              <tr>
+                <td><code>remove_originals</code></td>
+                <td>Remove original images</td>
+                <td><code>bundle exec rake remove_originals</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-dark text-inverse">
+  
+  
+  
+  
+  
+  
+    
+  <div class="container py-13 py-md-15">
+    
+    <div class="row gy-6 gy-lg-0">
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      
+        <img class="mb-4" src="/assets/img/sfe-logo-light.webp" 
+             srcset="/assets/img/sfe-logo-light@2x.webp 2x" alt="" />
+      
+      <p class="mb-4">© 2025 SparkFun Electronics, Inc.. <br class="d-none d-lg-block" />All rights reserved.</p>
+      <nav class="nav social social-white">
+        
+          <a href="#"><i class="uil uil-twitter"></i></a>
+        
+          <a href="#"><i class="uil uil-facebook-f"></i></a>
+        
+          <a href="#"><i class="uil uil-instagram"></i></a>
+        
+          <a href="#"><i class="uil uil-youtube"></i></a>
+        
+          <a href="#"><i class="uil uil-dribbble"></i></a>
+        
+      </nav>
+      <!-- /.social -->
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title text-white mb-3">Get in Touch</h4>
+      <address class="pe-xl-15 pe-xxl-17">6333 Dry Creek Parkway, Niwot, CO 80503, USA</address>
+      <a href="mailto:support@sparkfun.com" class="link-body">
+        support@sparkfun.com
+      </a><br /> 
+      303-303-1234
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title text-white mb-3">Learn More</h4>
+      <ul class="list-unstyled  text-reset mb-0">
+        
+          <li><a href="/about">About Us</a></li>
+        
+          <li><a href="/about#story">Our Story</a></li>
+        
+          <li><a href="/projects">Projects</a></li>
+        
+          <li><a href="/terms">Terms of Use</a></li>
+        
+          <li><a href="/privacy">Privacy Policy</a></li>
+        
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  
+  <div class="col-md-4 col-lg-3">
+    <div class="widget">
+      <h4 class="widget-title text-white mb-3">Our Newsletter</h4>
+      <p class="mb-5">Subscribe to our newsletter to get our news & deals delivered to you.</p>
+      <div class="newsletter-wrapper">
+        
+        <!-- Begin Mailchimp Signup Form -->
+        <div id="mc_embed_signup">
+          <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a" 
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" 
+                class="validate dark-fields" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <div class="mc-field-group input-group form-floating">
+                <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL">
+                <label for="mce-EMAIL">Email Address</label>
+                <input type="submit" value="Join" 
+                       name="subscribe" id="mc-embedded-subscribe" 
+                       class="btn btn-primary ">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1" value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--End mc_embed_signup-->
+        
+      </div>
+      <!-- /.newsletter-wrapper -->
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /column -->
+  
+</div>
+<!--/.row -->
+
+  </div>
+  
+  <!-- /.container -->
+</footer>
+
+  <!-- Modals -->
+  
+
+  
+
+  <!-- Scroll To Top Button -->
+  
+  <!-- Site Scripts-->
+  <script src="/assets/js/bootstrap.bundle.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/theme.js"></script>
+
+</body>
+</html>

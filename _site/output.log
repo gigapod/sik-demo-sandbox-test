@@ -1,0 +1,30 @@
+  Logging at level: debug
+    Jekyll Version: 4.4.1
+Configuration file: /home/malcolm/source/sik-demo-sandbox-test/_config.yml
+  Logging at level: debug
+    Jekyll Version: 4.4.1
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.4.1   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+/var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/cache.rb:181:in `initialize': Permission denied @ rb_sysopen - /home/malcolm/source/sik-demo-sandbox-test/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910 (Errno::EACCES)
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/cache.rb:181:in `open'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/cache.rb:181:in `dump'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/cache.rb:97:in `[]='
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/cache.rb:41:in `clear_if_config_changed'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:118:in `reset'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:35:in `initialize'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:30:in `new'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:30:in `process'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `each'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:85:in `block (2 levels) in init_with_program'
+	from /var/lib/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /var/lib/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /var/lib/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /var/lib/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /var/lib/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /var/lib/gems/3.2.0/gems/jekyll-4.4.1/exe/jekyll:15:in `<top (required)>'
+	from /usr/local/bin/jekyll:25:in `load'
+	from /usr/local/bin/jekyll:25:in `<main>'

@@ -190,26 +190,58 @@ main:
   - title: Projects
     type: dropdown-columns
     items:
-      - title: Project Pages
+      - title: SIK Project 1 - Light
         submenu:
-          - title: Projects I
-            url: /projects-tiles
-          - title: Projects II
-            url: /projects-masonry
-          - title: Projects III
-            url: /projects-filter-grid
-          - title: Projects IV
-            url: /projects-alternating
-      - title: Single Projects
-        submenu:
-          - title: SIK Project 1 - Test
-            url: /projects/sfe-test-project/
-          - title: Single Project II
-            url: /projects/sample-banner-image/
-          - title: Single Project III
-            url: /projects/sample-bg-overlay/
-          - title: Single Project IV
-            url: /projects/sample-featured-image/
+          - title: SIK Project 1 Overview
+            url: /projects/project1-light
+          - title: "Circuit 1A: Blink an LED"
+            url: /projects/circuit-1a
+          - title: "Circuit 1B: Potentiometer"
+            url: /projects/circuit-1b
+          - title: "Circuit 1C: Photoresistor"
+            url: /projects/circuit-1c
+          - title: "Circuit 1D: RGB Night-Light"
+            url: /projects/circuit-1d
+      # - title: SIK Project 2 - Sound
+      #   submenu:
+      #     - title: SIK Project 2 Overview
+      #       url: /projects/project2-sound/
+      #     - title: "Circuit 2A: Buzzer"
+      #       url: /projects/circuit-2a
+      #     - title: "Circuit 2B: Digital Trumpet"
+      #       url: /projects/circuit-2b
+      #     - title: "Circuit 2C: Simon Says Game"
+      #       url: /projects/circuit-2c
+      # - title: SIK Project 3 - Motion
+      #   submenu:
+      #     - title: SIK Project 3 Overview
+      #       url: /projects/project3-motion/
+      #     - title: "Circuit 3A: Servo Motors"
+      #       url: /projects/circuit-3a
+      #     - title: "Circuit 3B: Distance Sensor"
+      #       url: /projects/circuit-3b
+      #     - title: "Circuit 3C: Motion Alarm"
+      #       url: /projects/circuit-3c
+      # - title: SIK Project 4 - Display
+      #   submenu:
+      #     - title: SIK Project 4 Overview
+      #       url: /projects/project4-display/
+      #     - title: "Circuit 4A: OLED \"Hello World\""
+      #       url: /projects/circuit-4a
+      #     - title: "Circuit 4B: Temperature Sensor"
+      #       url: /projects/circuit-4b
+      #     - title: "Circuit 4C: DIY Who am I? Game"
+      #       url: /projects/circuit-4c
+      # - title: SIK Project 5 - Robotics
+      #   submenu:
+      #     - title: SIK Project 5 Overview
+      #       url: /projects/project5-robotics/
+      #     - title: "Circuit 5A: Motor Basics"
+      #       url: /projects/circuit-5a
+      #     - title: "Circuit 5B: Remote-Controlled Robot"
+      #       url: /projects/circuit-5b
+      #     - title: "Circuit 5C: Autonomous Robot"
+      #       url: /projects/circuit-5c
 
   - title: Blog
     type: dropdown

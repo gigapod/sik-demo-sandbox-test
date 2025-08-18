@@ -1,0 +1,128 @@
+Configuration file: /home/malcolm/source/sik-demo-sandbox-test/_config.yml
+            Source: /home/malcolm/source/sik-demo-sandbox-test
+       Destination: /home/malcolm/source/sik-demo-sandbox-test/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: ----------------------------
+        Pagination: Page: blog-left-sidebar.md
+        Pagination:  Active configuration
+        Pagination:   Enabled:          true
+        Pagination:   Items per page:   10
+        Pagination:   Permalink:        /page:num/
+        Pagination:   Title:            :title - page :num
+        Pagination:   Limit:            0
+        Pagination:   Sort by:          date
+        Pagination:   Sort reverse:     false
+        Pagination:  Active Filters
+        Pagination:   Collection:       posts
+        Pagination:   Offset:           0
+        Pagination:   Category:         [Not set]
+        Pagination:   Tag:              [Not set]
+        Pagination:   Locale:           [Not set]
+        Pagination:  Filtering by: Category   21 => 21
+        Pagination:  Filtering by: Tag        21 => 21
+        Pagination:  Filtering by: Locale     21 => 21
+        Pagination: Rolling through the date fields for all documents
+        Pagination: ----------------------------
+        Pagination: Page: blog-right-sidebar.md
+        Pagination:  Active configuration
+        Pagination:   Enabled:          true
+        Pagination:   Items per page:   10
+        Pagination:   Permalink:        /page:num/
+        Pagination:   Title:            :title - page :num
+        Pagination:   Limit:            0
+        Pagination:   Sort by:          date
+        Pagination:   Sort reverse:     false
+        Pagination:  Active Filters
+        Pagination:   Collection:       posts
+        Pagination:   Offset:           0
+        Pagination:   Category:         [Not set]
+        Pagination:   Tag:              [Not set]
+        Pagination:   Locale:           [Not set]
+        Pagination:  Filtering by: Category   21 => 21
+        Pagination:  Filtering by: Tag        21 => 21
+        Pagination:  Filtering by: Locale     21 => 21
+        Pagination: Rolling through the date fields for all documents
+        Pagination: ----------------------------
+        Pagination: Page: blog.md
+        Pagination:  Active configuration
+        Pagination:   Enabled:          true
+        Pagination:   Items per page:   10
+        Pagination:   Permalink:        /page:num/
+        Pagination:   Title:            :title - page :num
+        Pagination:   Limit:            0
+        Pagination:   Sort by:          date
+        Pagination:   Sort reverse:     false
+        Pagination:  Active Filters
+        Pagination:   Collection:       posts
+        Pagination:   Offset:           0
+        Pagination:   Category:         [Not set]
+        Pagination:   Tag:              [Not set]
+        Pagination:   Locale:           [Not set]
+        Pagination:  Filtering by: Category   21 => 21
+        Pagination:  Filtering by: Tag        21 => 21
+        Pagination:  Filtering by: Locale     21 => 21
+        Pagination: Rolling through the date fields for all documents
+        Pagination: ----------------------------
+        Pagination: Page: projects-alternating.md
+        Pagination:  Active configuration
+        Pagination:   Enabled:          true
+        Pagination:   Items per page:   5
+        Pagination:   Permalink:        /page:num/
+        Pagination:   Title:            :title - page :num
+        Pagination:   Limit:            0
+        Pagination:   Sort by:          date
+        Pagination:   Sort reverse:     true
+        Pagination:  Active Filters
+        Pagination:   Collection:       projects
+        Pagination:   Offset:           0
+        Pagination:   Category:         [Not set]
+        Pagination:   Tag:              [Not set]
+        Pagination:   Locale:           [Not set]
+        Pagination:  Filtering by: Category   59 => 59
+        Pagination:  Filtering by: Tag        59 => 59
+        Pagination:  Filtering by: Locale     59 => 59
+        Pagination: Rolling through the date fields for all documents
+        Pagination: ----------------------------
+        Pagination: Page: projects-masonry.md
+        Pagination:  Active configuration
+        Pagination:   Enabled:          true
+        Pagination:   Items per page:   4
+        Pagination:   Permalink:        /page:num/
+        Pagination:   Title:            :title - page :num
+        Pagination:   Limit:            0
+        Pagination:   Sort by:          date
+        Pagination:   Sort reverse:     true
+        Pagination:  Active Filters
+        Pagination:   Collection:       projects
+        Pagination:   Offset:           0
+        Pagination:   Category:         [Not set]
+        Pagination:   Tag:              [Not set]
+        Pagination:   Locale:           [Not set]
+        Pagination:  Filtering by: Category   59 => 59
+        Pagination:  Filtering by: Tag        59 => 59
+        Pagination:  Filtering by: Locale     59 => 59
+        Pagination: Rolling through the date fields for all documents
+        Pagination: ----------------------------
+        Pagination: Page: projects-tiles.md
+        Pagination:  Active configuration
+        Pagination:   Enabled:          true
+        Pagination:   Items per page:   9
+        Pagination:   Permalink:        /page:num/
+        Pagination:   Title:            :title - page :num
+        Pagination:   Limit:            0
+        Pagination:   Sort by:          date
+        Pagination:   Sort reverse:     true
+        Pagination:  Active Filters
+        Pagination:   Collection:       projects
+        Pagination:   Offset:           0
+        Pagination:   Category:         [Not set]
+        Pagination:   Tag:              [Not set]
+        Pagination:   Locale:           [Not set]
+        Pagination:  Filtering by: Category   59 => 59
+        Pagination:  Filtering by: Tag        59 => 59
+        Pagination:  Filtering by: Locale     59 => 59
+        Pagination: Rolling through the date fields for all documents
+        Pagination: Complete, processed 6 pagination page(s)
